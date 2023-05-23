@@ -32,10 +32,7 @@ import './editor.scss';
 export default function edit() {
 	return (
 		<p { ...useBlockProps() }>
-			{ __(
-				'Example – hello from the editor!',
-				'yard-gutenberg'
-			) }
+			{ __( 'Example – hello from the editor!', 'yard-gutenberg' ) }
 		</p>
 	);
 }

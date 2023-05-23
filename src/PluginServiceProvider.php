@@ -12,7 +12,10 @@ class PluginServiceProvider
         add_action('admin_enqueue_scripts', [$this, 'enqueueAdminAssets']);
     }
 
-    public function bootProviders()
+    /**
+     * Boot all providers
+     */
+    public function bootProviders(): void
     {
         $providers = [
             Patterns\PatternServiceProvider::class,
@@ -31,10 +34,11 @@ class PluginServiceProvider
      * through the block editor in the corresponding context.
      *
      * @see https://developer.wordpress.org/reference/functions/register_block_type/
+     *
+     * @todo AUTOMATE THIS
      */
     public function registerBlocks()
     {
-        // TODO: Automate this
         register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example');
         register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example-dynamic', [
             'render_callback' => [$this, 'renderDynamicBlock'],
@@ -46,10 +50,11 @@ class PluginServiceProvider
         return '<h3>asdf</h3>';
     }
 
-    public function enqueueAdminAssets()
+    /**
+     * Enqueue admin assets
+     */
+    public function enqueueAdminAssets(): void
     {
-        // Enqueue admin.js and style-admin.css build files located in PLUGIN PATH -> build/admin.js
-        // and PLUGIN PATH -> build/admin.css
         wp_enqueue_script(
             'yard-gutenberg-admin',
             plugins_url('build/admin.js', __DIR__),

@@ -1,0 +1,23 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"css.validate": false,
+	"scss.validate": false,
+	"eslint.workingDirectories": [
+		{
+			"directory": "htdocs/wp-content/themes/theme-fusion",
+			"changeProcessCWD": true
+		}
+	],
+	"prettier.configPath": ".prettierrc.js",
+	"stylelint.validate": [ "css", "scss" ],
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[php]": {
+		"editor.defaultFormatter": "junstyle.php-cs-fixer"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.prettier": true
+	}
+}

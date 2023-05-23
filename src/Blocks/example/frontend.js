@@ -1,1 +1,1 @@
-console.log("frontend.js");
+console.log( 'frontend.js' );
