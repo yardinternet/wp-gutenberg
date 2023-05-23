@@ -1,0 +1,31 @@
+# Copyright (C) 2023 Yard | Digital Agency
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Yard Gutenberg 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/yard-gutenberg\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-05-23T08:47:48+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: sage\n"
+
+#. Plugin Name of the plugin
+msgid "Yard Gutenberg"
+msgstr ""
+
+#. Description of the plugin
+msgid "A collection of components for the WordPress Gutenberg editor."
+msgstr ""
+
+#. Author of the plugin
+msgid "Yard | Digital Agency"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.yard.nl/"
+msgstr ""
