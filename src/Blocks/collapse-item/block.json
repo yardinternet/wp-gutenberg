@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "yard-gutenberg/collapse-item",
+	"version": "0.1.0",
+	"title": "Uitklap item",
+	"category": "theme",
+	"icon": "arrow-down-alt2",
+	"description": "Uitklapbaar component.",
+	"attributes": {
+		"hasStructuredData": {
+			"type": "boolean",
+			"default": false
+		},
+		"headingLevel": {
+			"type": "string",
+			"default": "h3"
+		},
+		"headingText": {
+			"type": "string",
+			"default": " "
+		},
+		"isOpen": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"parent": [ "yard-gutenberg/collapse" ],
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"textdomain": "collapse-item",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
