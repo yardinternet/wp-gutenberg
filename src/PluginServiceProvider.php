@@ -38,6 +38,8 @@ class PluginServiceProvider
      */
     public function registerBlocks()
     {
+		\register_block_type(dirname(__DIR__, 1) . '/build/Blocks/collapse');
+		\register_block_type(dirname(__DIR__, 1) . '/build/Blocks/collapse-item');
         \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/icon');
         \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example');
         \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example-dynamic', [
