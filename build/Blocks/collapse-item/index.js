@@ -94,7 +94,7 @@ const edit = props => {
     headingText
   } = attributes;
   const TEMPLATE = [['core/paragraph', {
-    placeholder: 'Vul hier de uitklap content in'
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Vul hier de uitklap inhoud in')
   }]];
   const [isOpen, setIsOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_components_Inspector__WEBPACK_IMPORTED_MODULE_5__["default"], props), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), {
@@ -111,7 +111,7 @@ const edit = props => {
     className: "wp-block-yard-gutenberg-collapse-item__header-toggle-button",
     onClick: () => setIsOpen(current => !current),
     variant: "primary",
-    "aria-label": "Toggle uitklap"
+    "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Toggle uitklap')
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 512 512"
