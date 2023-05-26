@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Yard\Gutenberg\Patterns;
 
-class PatternServiceProvider
+class PatternManager
 {
     public function boot()
     {
@@ -18,7 +18,7 @@ class PatternServiceProvider
      */
     public function registerAsBlockPatterns(): void
     {
-        $enablePatterns = apply_filters('yard-gutenberg/enablePatterns', true);
+        $enablePatterns = \apply_filters('yard-gutenberg/enablePatterns', true);
 
         if (! $enablePatterns) {
             return;
@@ -33,14 +33,14 @@ class PatternServiceProvider
      */
     private function registerTermsAsCategories(): void
     {
-        $terms = get_terms('yard-pattern-category', ['orderby' => 'name', 'order' => 'asc', 'hide_empty' => true]);
+        $terms = \get_terms('yard-pattern-category', ['orderby' => 'name', 'order' => 'asc', 'hide_empty' => true]);
 
-        if (empty($terms) || is_wp_error($terms)) {
+        if (empty($terms) || \is_wp_error($terms)) {
             return;
         }
 
         foreach($terms as $term) {
-            register_block_pattern_category(
+            \register_block_pattern_category(
                 $term->slug,
                 ['label' => $term->name]
             );
@@ -53,16 +53,16 @@ class PatternServiceProvider
      */
     private function registerPostsAsBlockPatterns(): void
     {
-        $pageCreationCategory   = apply_filters('yard-gutenberg/pageCreationCategory', 'paginas');
+        $pageCreationCategory   = \apply_filters('yard-gutenberg/pageCreationCategory', 'paginas');
         $patternPosts           = $this->getPatternPosts();
 
         foreach ($patternPosts as $pattern) {
-            $terms     = get_the_terms($pattern->ID, 'yard-pattern-category');
+            $terms     = \get_the_terms($pattern->ID, 'yard-pattern-category');
             $termSlugs = $terms ? array_map(fn ($term) => $term->slug, $terms) : [];
 
             $blockTypes = in_array($pageCreationCategory, $termSlugs) ? ['core/post-content'] : [];
 
-            register_block_pattern(
+            \register_block_pattern(
                 'yard-gutenberg/' . $pattern->post_name,
                 [
                     'title'      => $pattern->post_title,
@@ -79,7 +79,7 @@ class PatternServiceProvider
      */
     private function getPatternPosts(): array
     {
-        $patternPosts = get_posts([
+        $patternPosts = \get_posts([
             'post_type'      => 'yard-pattern',
             'order'          => 'ASC',
             'order_by'       => 'post_title',
@@ -95,6 +95,6 @@ class PatternServiceProvider
      */
     public function removeCoreBlockPatterns(): void
     {
-        remove_theme_support('core-block-patterns');
+        \remove_theme_support('core-block-patterns');
     }
 }

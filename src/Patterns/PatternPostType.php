@@ -49,7 +49,7 @@ class PatternPostType
             'supports'           => ['title', 'editor', 'thumbnail', 'revisions'],
         ];
 
-        register_post_type($this->name, $args);
+        \register_post_type($this->name, $args);
     }
 
 
@@ -58,7 +58,7 @@ class PatternPostType
      */
     public function registerPatternCategoryTaxonomy(): void
     {
-        register_taxonomy(
+        \register_taxonomy(
             $this->name . '-category',
             'yard-pattern',
             [

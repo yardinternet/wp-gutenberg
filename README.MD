@@ -14,3 +14,4 @@ TODO: automate this
 
 1. Update plugin versions and run `npm build` to build assets. Push to remote.
 2. Add tag `git tag v0.1.0` and push to remote `git push origin v0.1.0`
+csadfpsdfs

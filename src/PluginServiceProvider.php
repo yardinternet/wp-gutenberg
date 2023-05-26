@@ -8,8 +8,7 @@ class PluginServiceProvider
     {
         $this->bootProviders();
 
-        add_action('init', [$this, 'registerBlocks']);
-        add_action('admin_enqueue_scripts', [$this, 'enqueueAdminAssets']);
+        \add_action('init', [$this, 'registerBlocks']);
     }
 
     /**
@@ -18,8 +17,8 @@ class PluginServiceProvider
     public function bootProviders(): void
     {
         $providers = [
-            Patterns\PatternServiceProvider::class,
-            Settings\SettingsServiceProvider::class,
+            Menu\MenuManager::class,
+            Patterns\PatternManager::class,
         ];
 
         foreach ($providers as $provider) {
@@ -39,33 +38,15 @@ class PluginServiceProvider
      */
     public function registerBlocks()
     {
-        register_block_type(dirname(__DIR__, 1) . '/build/Blocks/icon');
-        register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example');
-        register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example-dynamic', [
+        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/icon');
+        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example');
+        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example-dynamic', [
             'render_callback' => [$this, 'renderDynamicBlock'],
         ]);
     }
 
     public function renderDynamicBlock($attributes)
     {
-        return '<h3>asdf</h3>';
-    }
-
-    /**
-     * Enqueue admin assets
-     */
-    public function enqueueAdminAssets(): void
-    {
-        wp_enqueue_script(
-            'yard-gutenberg-admin',
-            plugins_url('build/admin.js', __DIR__),
-            [],
-        );
-
-        wp_enqueue_style(
-            'yard-gutenberg-admin',
-            plugins_url('build/style-admin.css', __DIR__),
-            [],
-        );
+        return '<h3>Render Dynamic</h3>';
     }
 }

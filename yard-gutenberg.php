@@ -20,6 +20,9 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
+define('YARD_GUTENBERG_PLUGIN_VERSION', '0.1.1');
+define('YARD_GUTENBERG_PLUGIN_DIR_URL', \plugin_dir_url(__FILE__));
+
 /**
  * Require autoloader.
  */

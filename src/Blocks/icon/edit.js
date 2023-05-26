@@ -10,7 +10,7 @@ import Inspector from './components/inspector';
 import Icon from './components/icon';
 import './editor.scss';
 
-export default function edit( props ) {
+const edit = ( props ) => {
 	const { attributes } = props;
 	const { iconSize } = attributes;
 
@@ -20,4 +20,6 @@ export default function edit( props ) {
 			<Icon { ...props } />
 		</div>
 	);
-}
+};
+
+export default edit;
