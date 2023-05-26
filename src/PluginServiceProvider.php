@@ -59,14 +59,12 @@ class PluginServiceProvider
             'yard-gutenberg-admin',
             plugins_url('build/admin.js', __DIR__),
             [],
-            time()
         );
 
         wp_enqueue_style(
             'yard-gutenberg-admin',
             plugins_url('build/style-admin.css', __DIR__),
             [],
-            time()
         );
     }
 }
