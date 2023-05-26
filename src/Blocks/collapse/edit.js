@@ -8,6 +8,7 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import Inspector from './components/inspector';
+import './editor.scss';
 
 const edit = ( props ) => {
 	const TEMPLATE = [ [ 'yard-gutenberg/collapse-item' ] ];
@@ -20,6 +21,7 @@ const edit = ( props ) => {
 			<div { ...useBlockProps() }>
 				<InnerBlocks
 					allowedBlocks={ ALLOWED_BLOCKS }
+					renderAppender={ () => <InnerBlocks.ButtonBlockAppender /> }
 					template={ TEMPLATE }
 				/>
 			</div>
