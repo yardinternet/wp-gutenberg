@@ -1,9 +1,4 @@
 /**
- * External dependencies
- */
-import parse from 'html-react-parser';
-
-/**
  * WordPress dependencies
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
@@ -11,24 +6,11 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 const save = ( props ) => {
 	const { attributes } = props;
 	const { hasStructuredData, headingLevel, headingText, isOpen } = attributes;
+	const HeadingWithLevel = headingLevel;
 
 	const blockProps = useBlockProps.save( {
 		className: 'wp-block-yard-gutenberg-collapse-item | ac',
 	} );
-
-	const header = () => {
-		return `
-			<${ headingLevel } className="wp-block-yard-gutenberg-collapse-item__header | ac-header">
-				<button
-					type="button"
-					className="wp-block-yard-gutenberg-collapse-item__header-button | ac-trigger"
-					${ hasStructuredData ? 'itemprop="name"' : '' }
-				>
-					${ headingText }
-				</button>
-			</${ headingLevel }>
-		`;
-	};
 
 	return (
 		<div
@@ -40,7 +22,15 @@ const save = ( props ) => {
 				hasStructuredData ? 'https://schema.org/Question' : null
 			}
 		>
-			{ parse( header() ) }
+			<HeadingWithLevel className="wp-block-yard-gutenberg-collapse-item__header | ac-header">
+				<button
+					type="button"
+					className="wp-block-yard-gutenberg-collapse-item__header-button | ac-trigger"
+					itemProp={ hasStructuredData ? 'name' : null }
+				>
+					{ headingText }
+				</button>
+			</HeadingWithLevel>
 			<div
 				className="wp-block-yard-gutenberg-collapse-item__panel | ac-panel"
 				itemScope={ hasStructuredData }
