@@ -31,7 +31,7 @@ const edit = ( props ) => {
 		<>
 			<Inspector { ...props } />
 
-			<div { ...useBlockProps() }>
+			<div { ...useBlockProps() } data-open={ isOpen }>
 				<div className="wp-block-yard-gutenberg-collapse-item__header">
 					<PlainText
 						className="wp-block-yard-gutenberg-collapse-item__header-input"
@@ -44,8 +44,14 @@ const edit = ( props ) => {
 						className="wp-block-yard-gutenberg-collapse-item__header-toggle-button"
 						onClick={ () => setIsOpen( ( current ) => ! current ) }
 						variant="primary"
+						aria-label="Toggle uitklap"
 					>
-						Open/sluit
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 512 512"
+						>
+							<path d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z" />
+						</svg>
 					</Button>
 				</div>
 				<div

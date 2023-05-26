@@ -1,5 +1,19 @@
-.wp-block-yard-gutenberg-collapse-item {
+$block: 'wp-block-yard-gutenberg-collapse-item';
+
+.#{$block} {
+	&[data-open='true'] {
+		.#{$block}__header-toggle-button svg {
+			transform: rotate( 180deg );
+		}
+	}
+
 	&__header {
 		display: flex;
+		gap: 1rem;
+
+		&-toggle-button svg {
+			width: 20px;
+			transition: 0.2s all ease;
+		}
 	}
 }

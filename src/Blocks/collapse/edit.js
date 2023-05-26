@@ -8,7 +8,6 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import Inspector from './components/inspector';
-import './editor.scss';
 
 const edit = ( props ) => {
 	const TEMPLATE = [ [ 'yard-gutenberg/collapse-item' ] ];
