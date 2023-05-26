@@ -49,6 +49,12 @@ const Inspector = props => {
   const {
     updateBlockAttributes
   } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useDispatch)('core/block-editor');
+
+  /**
+   * Handles the change event for heading level.
+   *
+   * @param {string} value - The new value for heading level.
+   */
   const onChangeHeadingLevel = value => {
     setAttributes({
       headingLevel: value
@@ -58,6 +64,12 @@ const Inspector = props => {
       headingLevel: value
     }));
   };
+
+  /**
+   * Handles the change event for structured data.
+   *
+   * @param {boolean} value - The new value for structured data.
+   */
   const onChangeHasStructuredData = value => {
     setAttributes({
       hasStructuredData: value
