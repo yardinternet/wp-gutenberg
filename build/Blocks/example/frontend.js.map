@@ -1,1 +1,0 @@
-{"version":3,"file":"Blocks/example/frontend.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAE,aAAc,CAAC,C","sources":["webpack://yard-gutenberg/./src/Blocks/example/frontend.js"],"sourcesContent":["console.log( 'frontend.js' );\n"],"names":["console","log"],"sourceRoot":""}

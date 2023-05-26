@@ -6,7 +6,7 @@ import { PanelBody, TextControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
- * External dependencies
+ * Internal dependencies
  */
 import IconPickerControl from '../../../EditorComponents/icon-picker-control';
 

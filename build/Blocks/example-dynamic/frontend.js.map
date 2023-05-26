@@ -1,1 +1,0 @@
-{"version":3,"file":"Blocks/example-dynamic/frontend.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAG,CAAE,+BAAgC,CAAC,C","sources":["webpack://yard-gutenberg/./src/Blocks/example-dynamic/frontend.js"],"sourcesContent":["console.log( 'example-dynamic - frontend.js' );\n"],"names":["console","log"],"sourceRoot":""}

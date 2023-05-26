@@ -13,10 +13,10 @@ const save = ( props ) => {
 	const { altText, iconSize } = attributes;
 
 	return (
-		<p { ...useBlockProps.save() }>
+		<div { ...useBlockProps.save() }>
 			<Icon { ...props } />
 			{ altText && <span className="sr-only">{ altText }</span> }
-		</p>
+		</div>
 	);
 };
 
