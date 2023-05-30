@@ -13,10 +13,12 @@ class SettingsManager
 
     public function enqueueAssets()
     {
+        \wp_enqueue_style('wp-components');
+
         \wp_enqueue_script(
             'yard-gutenberg-settings-js',
             YARD_GUTENBERG_PLUGIN_DIR_URL . 'build/settings.js',
-            ['wp-element', 'wp-components'], // TODO: Get the dependencies from settings.asset.php
+            ['wp-element', 'wp-components', 'wp-blocks'], // TODO: Get the dependencies from settings.asset.php
             YARD_GUTENBERG_PLUGIN_VERSION,
             true
         );

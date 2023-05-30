@@ -33,22 +33,62 @@ class PluginServiceProvider
      * through the block editor in the corresponding context.
      *
      * @see https://developer.wordpress.org/reference/functions/register_block_type/
-     *
-     * @todo AUTOMATE THIS
      */
     public function registerBlocks()
     {
-        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/collapse');
-        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/collapse-item');
-        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/icon');
-        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example');
-        \register_block_type(dirname(__DIR__, 1) . '/build/Blocks/example-dynamic', [
-            'render_callback' => [$this, 'renderDynamicBlock'],
-        ]);
+        $blocksPath = dirname(__DIR__, 1) . '/build/Blocks/';
+        $folders    = array_filter(glob($blocksPath . '*'), 'is_dir');
+
+        foreach ($folders as $folder) {
+            $blockName = basename($folder);
+            $blockPath = $blocksPath . $blockName;
+
+            if ($this->isDynamicBlock($blockName)) {
+                \register_block_type($blockPath, [
+                    'render_callback' => $this->getRenderCallback($blockName),
+                ]);
+            } else {
+                \register_block_type($blockPath);
+            }
+
+        }
     }
 
-    public function renderDynamicBlock($attributes)
+
+    /**
+     * Check if the block is dynamic.
+     *
+     * @param string $blockName The name of the block.
+     */
+    public function isDynamicBlock($blockName): bool
     {
-        return '<h3>Render Dynamic</h3>';
+        return strpos($blockName, '-dynamic') !== false;
+    }
+
+    /**
+     * @todo: FIX THIS - Get the render callback for a dynamic block if it exists.
+     *
+     * @param string $blockName The name of the block.
+     * @param string $blockPath The path to the block folder.
+     *
+     * @return callable|null The render callback or null if not found.
+     */
+    public function getRenderCallback($blockName)
+    {
+        $className      = ucwords(str_replace('-', ' ', $blockName));
+        $className      = str_replace(' ', '', $className);
+        $className      = str_replace('Dynamic', '', $className);
+        $classPath      = dirname(__DIR__, 1) . '/src/Blocks/' . $blockName . '/' . $className . '.php';
+
+        if (file_exists($classPath)) {
+            require_once $classPath;
+
+            $nameSpacedClass = 'Yard\\Gutenberg\\Blocks\\' . $className . '\\' . $className;
+
+            return [ $nameSpacedClass, 'renderCallback'];
+        }
+
+
+        return null;
     }
 }

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export default function useWordpress() {
 	const http = axios.create( {
+		// Refractor to apiFetch
 		baseURL: window.wpApiSettings.root,
 		timeout: 1000,
 		headers: { 'X-WP-Nonce': window.wpApiSettings.nonce },
