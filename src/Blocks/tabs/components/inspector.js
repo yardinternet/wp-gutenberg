@@ -2,15 +2,15 @@
  * WordPress dependencies
  */
 import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, SelectControl } from '@wordpress/components';
+import { PanelBody, SelectControl, ToggleControl } from '@wordpress/components';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 const Inspector = ( props ) => {
 	const { clientId, setAttributes, attributes } = props;
-	const { headingLevel } = attributes;
+	const { defaultTab, defaultTabEnabled, headingLevel } = attributes;
 
-	const { getBlocksByClientId } = useSelect( ( select ) => ( {
+	const { getBlocksByClientId, innerblocks } = useSelect( ( select ) => ( {
 		/**
 		 * Get current block by client id
 		 *
@@ -18,6 +18,8 @@ const Inspector = ( props ) => {
 		 */
 		getBlocksByClientId:
 			select( 'core/block-editor' ).getBlocksByClientId( clientId ),
+
+		innerblocks: select( 'core/block-editor' ).getBlocks( clientId ),
 	} ) );
 
 	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
@@ -42,8 +44,31 @@ const Inspector = ( props ) => {
 	return (
 		<InspectorControls>
 			<PanelBody title={ __( 'Instellingen' ) }>
-				{ /* TODO: Add toggle control for defaultTab */ }
-				{ /* TODO: Add select control to select the defaultTab */ }
+				<ToggleControl
+					label={ __( 'Actief tabblad opgeven' ) }
+					checked={ defaultTabEnabled }
+					onChange={ () =>
+						setAttributes( {
+							defaultTabEnabled: ! defaultTabEnabled,
+						} )
+					}
+				/>
+				{ defaultTabEnabled && (
+					<SelectControl
+						label={ __( 'Tabblad' ) }
+						value={ defaultTab }
+						options={ innerblocks?.map( ( block ) => ( {
+							label: block.attributes.headingText,
+							value: block.attributes.id,
+						} ) ) }
+						onChange={ ( value ) => {
+							setAttributes( { defaultTab: value } );
+						} }
+						help={ __(
+							'Selecteer het tabblad dat standaard geopend moet zijn.'
+						) }
+					/>
+				) }
 			</PanelBody>
 			<PanelBody title={ __( 'Toegankelijkheid' ) }>
 				<SelectControl

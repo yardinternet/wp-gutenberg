@@ -4,6 +4,7 @@ const init = () => {
 	);
 
 	tabsBlocks?.forEach( ( tabs ) => {
+		const defaultTabId = tabs.dataset.defaultTab;
 		const tabsButtons = tabs.querySelectorAll(
 			'.wp-block-yard-gutenberg-tabs-item__button'
 		);
@@ -11,12 +12,12 @@ const init = () => {
 			'.wp-block-yard-gutenberg-tabs-item__panel'
 		);
 
-		setDefaultTab( tabsButtons );
+		setDefaultTab( tabs, defaultTabId, tabsButtons );
 
 		tabsButtons.forEach( ( btn ) => {
 			btn.addEventListener( 'click', () => {
 				resetAllTabs( tabsButtons, tabsPanels );
-				setActiveTab( btn );
+				setActiveTab( tabs, btn );
 			} );
 		} );
 	} );
@@ -32,21 +33,26 @@ const resetAllTabs = ( tabsButtons, tabsPanels ) => {
 	} );
 };
 
-const setActiveTab = ( btn ) => {
+const setActiveTab = ( tabs, btn ) => {
 	btn?.setAttribute( 'aria-selected', 'true' );
 
-	const tabPanel = document.querySelector(
-		btn?.getAttribute( 'aria-controls' )
-	);
+	const tabPanel = tabs.querySelector( btn?.getAttribute( 'aria-controls' ) );
 
 	if ( ! tabPanel ) return;
 
 	tabPanel.setAttribute( 'aria-hidden', 'false' );
 };
 
-// TODO: Change to setting instead of default first tab
-const setDefaultTab = ( tabsButtons ) => {
-	setActiveTab( tabsButtons[ 0 ] );
+const setDefaultTab = ( tabs, defaultTabId, tabsButtons ) => {
+	let defaultButton = tabsButtons[ 0 ];
+
+	if ( defaultTabId ) {
+		defaultButton = tabs.querySelector(
+			`#tabs-item-button-${ defaultTabId }`
+		);
+	}
+
+	setActiveTab( tabs, defaultButton );
 };
 
 init();

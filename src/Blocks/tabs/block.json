@@ -8,6 +8,13 @@
 	"icon": "category",
 	"description": "Groepeer gemakkelijk content in verschillende tabbladen.",
 	"attributes": {
+		"defaultTab": {
+			"type": "string"
+		},
+		"defaultTabEnabled": {
+			"type": "boolean",
+			"default": false
+		},
 		"headingLevel": {
 			"type": "string",
 			"default": "h3"

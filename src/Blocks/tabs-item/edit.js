@@ -49,8 +49,9 @@ const edit = ( props ) => {
 	);
 
 	useEffect( () => {
+		// TODO: Duplicating a block does not work well because it keeps the same id (which is a error). But it is important to have the same id for the select control in the inspector of the parent block
 		setAttributes( {
-			id: clientId,
+			id: ! id || id.length <= 0 ? clientId : id,
 			headingLevel: parentAttributes.headingLevel ?? 'h3',
 		} );
 	}, [] );

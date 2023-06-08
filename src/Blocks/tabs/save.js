@@ -3,9 +3,12 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-const save = () => {
+const save = ( props ) => {
+	const { attributes } = props;
+	const { defaultTab } = attributes;
+
 	return (
-		<div { ...useBlockProps.save() }>
+		<div { ...useBlockProps.save() } data-default-tab={ defaultTab }>
 			<InnerBlocks.Content />
 		</div>
 	);
