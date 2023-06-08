@@ -9,6 +9,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import metadata from './block.json';
 import edit from './edit';
 import save from './save';
+import './style.scss';
 
 registerBlockType( metadata.name, {
 	edit,
@@ -17,12 +18,12 @@ registerBlockType( metadata.name, {
 		to: [
 			{
 				type: 'block',
-				blocks: [ 'yard-gutenberg/tabs' ],
+				blocks: [ 'yard-gutenberg/collapse' ],
 				transform: function ( attributes, innerBlocks ) {
 					const transformedInnerBlocks = innerBlocks?.map(
 						( { attributes, innerBlocks } ) => {
 							return wp.blocks.createBlock(
-								'yard-gutenberg/tabs-item',
+								'yard-gutenberg/collapse-item',
 								{ headingText: attributes.headingText },
 								innerBlocks
 							);
@@ -30,7 +31,7 @@ registerBlockType( metadata.name, {
 					);
 
 					return wp.blocks.createBlock(
-						'yard-gutenberg/tabs',
+						'yard-gutenberg/collapse',
 						{ attributes },
 						transformedInnerBlocks
 					);

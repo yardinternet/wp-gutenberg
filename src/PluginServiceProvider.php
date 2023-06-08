@@ -50,7 +50,6 @@ class PluginServiceProvider
             } else {
                 \register_block_type($blockPath);
             }
-
         }
     }
 

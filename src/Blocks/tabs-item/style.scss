@@ -1,0 +1,25 @@
+$parent: 'wp-block-yard-gutenberg-tabs';
+$block: 'wp-block-yard-gutenberg-tabs-item';
+
+.#{$parent} .#{$block} {
+	&__panel {
+		order: 100;
+		width: 100%;
+
+		&[aria-hidden='true'] {
+			display: none;
+		}
+	}
+}
+
+.#{$parent}.is-style-vertical .#{$block} {
+	&__button {
+		grid-column-start: 1;
+	}
+
+	&__panel {
+		grid-column-start: 2;
+		grid-row-start: 1;
+		grid-row-end: 100;
+	}
+}
