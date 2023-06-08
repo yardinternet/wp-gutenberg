@@ -13,7 +13,7 @@ $block: 'wp-block-yard-gutenberg-tabs-item';
 }
 
 .#{$parent}.is-style-vertical .#{$block} {
-	&__button {
+	&__heading {
 		grid-column-start: 1;
 	}
 

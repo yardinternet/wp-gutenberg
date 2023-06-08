@@ -7,7 +7,12 @@
 	"category": "theme",
 	"icon": "category",
 	"description": "Groepeer gemakkelijk content in verschillende tabbladen.",
-	"attributes": {},
+	"attributes": {
+		"headingLevel": {
+			"type": "string",
+			"default": "h3"
+		}
+	},
 	"supports": {
 		"html": false,
 		"align": [ "wide", "full" ]

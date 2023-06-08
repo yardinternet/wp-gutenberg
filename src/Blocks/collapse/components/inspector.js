@@ -11,7 +11,8 @@ const Inspector = ( props ) => {
 	const { hasStructuredData, headingLevel, showMultiple } = attributes;
 
 	const { getBlocksByClientId } = useSelect( ( select ) => ( {
-		getBlocksByClientId: select( 'core/block-editor' ).getBlocksByClientId,
+		getBlocksByClientId:
+			select( 'core/block-editor' ).getBlocksByClientId( clientId ),
 	} ) );
 
 	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
@@ -24,10 +25,13 @@ const Inspector = ( props ) => {
 	const onChangeHeadingLevel = ( value ) => {
 		setAttributes( { headingLevel: value } );
 
-		const children = getBlocksByClientId( clientId )[ 0 ].innerBlocks;
-		children.forEach( ( child ) =>
-			updateBlockAttributes( child.clientId, { headingLevel: value } )
-		);
+		if ( getBlocksByClientId.length > 0 ) {
+			const children = getBlocksByClientId[ 0 ].innerBlocks;
+
+			children.forEach( ( child ) =>
+				updateBlockAttributes( child.clientId, { headingLevel: value } )
+			);
+		}
 	};
 
 	/**

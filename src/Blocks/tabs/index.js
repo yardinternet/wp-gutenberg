@@ -24,7 +24,10 @@ registerBlockType( metadata.name, {
 						( { attributes, innerBlocks } ) => {
 							return wp.blocks.createBlock(
 								'yard-gutenberg/collapse-item',
-								{ headingText: attributes.headingText },
+								{
+									headingLevel: attributes.headingLevel,
+									headingText: attributes.headingText,
+								},
 								innerBlocks
 							);
 						}
@@ -32,7 +35,7 @@ registerBlockType( metadata.name, {
 
 					return wp.blocks.createBlock(
 						'yard-gutenberg/collapse',
-						{ attributes },
+						{ headingLevel: attributes.headingLevel },
 						transformedInnerBlocks
 					);
 				},
