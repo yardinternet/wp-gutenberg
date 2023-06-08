@@ -5,20 +5,27 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 const save = ( props ) => {
 	const { attributes } = props;
-	const { id, headingText } = attributes;
+	const { id, headingLevel, headingText } = attributes;
+	const HeadingWithLevel = headingLevel;
 
 	return (
 		<>
-			<button
+			<HeadingWithLevel
 				{ ...useBlockProps.save( {
-					className: 'wp-block-yard-gutenberg-tabs-item__button',
+					id: `tabs-item-heading-${ id }`,
+					className: 'wp-block-yard-gutenberg-tabs-item__heading',
 				} ) }
-				id={ `tabs-item-button-${ id }` }
-				aria-controls={ `#tabs-item-panel-${ id }` }
-				type="button"
 			>
-				{ headingText }
-			</button>
+				<button
+					id={ `tabs-item-button-${ id }` }
+					className="wp-block-yard-gutenberg-tabs-item__button"
+					aria-controls={ `#tabs-item-panel-${ id }` }
+					type="button"
+				>
+					{ headingText }
+				</button>
+			</HeadingWithLevel>
+
 			<div
 				{ ...useBlockProps.save( {
 					className: 'wp-block-yard-gutenberg-tabs-item__panel',

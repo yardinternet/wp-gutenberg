@@ -11,6 +11,10 @@
 		"id": {
 			"type": "string"
 		},
+		"headingLevel": {
+			"type": "string",
+			"default": "h3"
+		},
 		"headingText": {
 			"type": "string",
 			"default": " "

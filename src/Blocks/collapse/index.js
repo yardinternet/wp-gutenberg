@@ -23,7 +23,10 @@ registerBlockType( metadata.name, {
 						( { attributes, innerBlocks } ) => {
 							return wp.blocks.createBlock(
 								'yard-gutenberg/tabs-item',
-								{ headingText: attributes.headingText },
+								{
+									headingLevel: attributes.headingLevel,
+									headingText: attributes.headingText,
+								},
 								innerBlocks
 							);
 						}
@@ -31,7 +34,7 @@ registerBlockType( metadata.name, {
 
 					return wp.blocks.createBlock(
 						'yard-gutenberg/tabs',
-						{ attributes },
+						{ headingLevel: attributes.headingLevel },
 						transformedInnerBlocks
 					);
 				},
