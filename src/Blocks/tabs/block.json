@@ -8,6 +8,9 @@
 	"icon": "category",
 	"description": "Groepeer gemakkelijk content in verschillende tabbladen.",
 	"attributes": {
+		"currentTab": {
+			"type": "string"
+		},
 		"defaultTab": {
 			"type": "string"
 		},

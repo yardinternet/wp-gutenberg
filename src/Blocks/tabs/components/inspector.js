@@ -19,6 +19,11 @@ const Inspector = ( props ) => {
 		getBlocksByClientId:
 			select( 'core/block-editor' ).getBlocksByClientId( clientId ),
 
+		/**
+		 * Get all innerblocks by client id
+		 *
+		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
+		 */
 		innerblocks: select( 'core/block-editor' ).getBlocks( clientId ),
 	} ) );
 

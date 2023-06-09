@@ -20,10 +20,11 @@ registerBlockType( metadata.name, {
 				blocks: [ 'yard-gutenberg/tabs' ],
 				transform: function ( attributes, innerBlocks ) {
 					const transformedInnerBlocks = innerBlocks?.map(
-						( { attributes, innerBlocks } ) => {
+						( { attributes, clientId, innerBlocks } ) => {
 							return wp.blocks.createBlock(
 								'yard-gutenberg/tabs-item',
 								{
+									id: clientId,
 									headingLevel: attributes.headingLevel,
 									headingText: attributes.headingText,
 								},
