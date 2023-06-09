@@ -9,12 +9,13 @@ import { __ } from '@wordpress/i18n';
 /**
  * Internal dependencies
  */
-import Inspector from './components/Inspector';
+import Icon from '../../EditorComponents/icon';
+import Inspector from './components/inspector';
 import './editor.scss';
 
 const edit = ( props ) => {
 	const { clientId, attributes, setAttributes, isSelected } = props;
-	const { id, headingText } = attributes;
+	const { headingText, icon, id } = attributes;
 
 	const TEMPLATE = [
 		[
@@ -131,17 +132,19 @@ const edit = ( props ) => {
 	return (
 		<>
 			<Inspector { ...props } />
-
-			<PlainText
-				{ ...useBlockProps( {
-					className:
-						'wp-block-yard-gutenberg-tabs-item__heading-input',
-				} ) }
-				onChange={ ( value ) =>
-					setAttributes( { headingText: value } )
-				}
-				value={ headingText }
-			/>
+			<div className="wp-block-yard-gutenberg-tabs-item__heading">
+				{ icon && <Icon { ...props } /> }
+				<PlainText
+					{ ...useBlockProps( {
+						className:
+							'wp-block-yard-gutenberg-tabs-item__heading-input',
+					} ) }
+					onChange={ ( value ) =>
+						setAttributes( { headingText: value } )
+					}
+					value={ headingText }
+				/>
+			</div>
 
 			<div
 				className="wp-block-yard-gutenberg-tabs-item__panel"
