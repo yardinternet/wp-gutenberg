@@ -25,36 +25,75 @@ const edit = ( props ) => {
 		],
 	];
 
-	const { hasSelectedInnerBlock, parentAttributes } = useSelect(
-		( select ) => ( {
-			/**
-			 * Checks if one of the block’s inner blocks is selected
-			 *
-			 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#hasselectedinnerblock
-			 */
-			hasSelectedInnerBlock: select(
-				'core/block-editor'
-			).hasSelectedInnerBlock( clientId, true ),
+	const {
+		hasSelectedInnerBlock,
+		parentAttributes,
+		getClientIdsWithDescendants,
+		getBlockAttributes,
+	} = useSelect( ( select ) => ( {
+		/**
+		 * Checks if one of the block’s inner blocks is selected
+		 *
+		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#hasselectedinnerblock
+		 */
+		hasSelectedInnerBlock: select(
+			'core/block-editor'
+		).hasSelectedInnerBlock( clientId, true ),
 
-			/**
-			 * Get parent block attributes
-			 *
-			 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
-			 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
-			 */
-			parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
-				select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ]
-			),
-		} )
-	);
+		/**
+		 * Get parent block attributes
+		 *
+		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
+		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
+		 */
+		parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
+			select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ]
+		),
+
+		/**
+		 * Get all clientIds
+		 *
+		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getclientidsofdescendants
+		 */
+		getClientIdsWithDescendants:
+			select( 'core/block-editor' ).getClientIdsWithDescendants(),
+
+		/**
+		 * Get block attributes with a clientId
+		 *
+		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
+		 */
+		getBlockAttributes: select( 'core/block-editor' ).getBlockAttributes,
+	} ) );
 
 	useEffect( () => {
-		// TODO: Duplicating a block does not work well because it keeps the same id (which is a error). But it is important to have the same id for the select control in the inspector of the parent block
 		setAttributes( {
-			id: ! id || id.length <= 0 ? clientId : id,
+			id: getBlockId(),
 			headingLevel: parentAttributes.headingLevel ?? 'h3',
 		} );
 	}, [] );
+
+	const getBlockId = () => {
+		// Check if the id already exist on an other block attribute
+		const idAlreadyExist = getClientIdsWithDescendants?.some(
+			( _clientId ) => {
+				const { id: _id } = getBlockAttributes( _clientId );
+				return clientId !== _clientId && id === _id;
+			}
+		);
+
+		/**
+		 * The id needs to be changed to the clientId only in the following scenarios:
+		 * 1. There is no ID at all yet
+		 * 2. There is already another block that has that ID as an attribute (that happens if you duplicate a block)
+		 */
+		if ( ! id || id.length <= 0 || idAlreadyExist ) {
+			return clientId;
+		}
+
+		// Return the current ID stored in the attributes
+		return id;
+	};
 
 	return (
 		<>
