@@ -27,6 +27,8 @@ registerBlockType( metadata.name, {
 								{
 									headingLevel: attributes.headingLevel,
 									headingText: attributes.headingText,
+									icon: attributes.icon,
+									iconAltText: attributes.iconAltText,
 								},
 								innerBlocks
 							);

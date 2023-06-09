@@ -24,9 +24,11 @@ registerBlockType( metadata.name, {
 							return wp.blocks.createBlock(
 								'yard-gutenberg/tabs-item',
 								{
-									id: clientId,
 									headingLevel: attributes.headingLevel,
 									headingText: attributes.headingText,
+									icon: attributes.icon,
+									iconAltText: attributes.iconAltText,
+									id: clientId,
 								},
 								innerBlocks
 							);

@@ -20,6 +20,12 @@
 			"type": "string",
 			"default": " "
 		},
+		"icon": {
+			"type": "string"
+		},
+		"iconAltText": {
+			"type": "string"
+		},
 		"isOpen": {
 			"type": "boolean",
 			"default": false
