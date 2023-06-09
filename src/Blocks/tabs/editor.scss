@@ -6,24 +6,11 @@ $block: 'wp-block-yard-gutenberg-tabs';
 	> .block-editor-inner-blocks > .block-editor-block-list__layout {
 		display: flex;
 		flex-wrap: wrap;
+		gap: 1rem;
 	}
 
 	.block-list-appender {
 		order: 99;
 		position: static;
-		margin-bottom: 1rem;
-	}
-}
-
-.#{$block}.is-style-vertical {
-	display: block;
-
-	> .block-editor-inner-blocks > .block-editor-block-list__layout {
-		display: grid;
-		grid-template-columns: 40% 60%;
-	}
-
-	.block-list-appender {
-		grid-column-start: 1;
 	}
 }

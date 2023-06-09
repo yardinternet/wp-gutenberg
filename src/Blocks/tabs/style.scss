@@ -3,9 +3,5 @@ $block: 'wp-block-yard-gutenberg-tabs';
 .#{$block} {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.#{$block}.is-style-vertical {
-	display: grid;
-	grid-template-columns: 40% 60%;
+	gap: 1rem;
 }

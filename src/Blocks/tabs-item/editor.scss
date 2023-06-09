@@ -14,19 +14,3 @@ $block: 'wp-block-yard-gutenberg-tabs-item';
 		width: 100%;
 	}
 }
-
-.#{$parent}.is-style-vertical
-	> .block-editor-inner-blocks
-	> .block-editor-block-list__layout
-	.#{$block} {
-	&__heading-input {
-		grid-column-start: 1;
-		grid-row: auto;
-	}
-
-	&__panel {
-		grid-column-start: 2;
-		grid-row-start: 1;
-		grid-row-end: 100;
-	}
-}
