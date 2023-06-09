@@ -26,21 +26,25 @@ const init = () => {
 const resetAllTabs = ( tabsButtons, tabsPanels ) => {
 	tabsButtons?.forEach( ( btn ) => {
 		btn.setAttribute( 'aria-selected', 'false' );
+		btn.classList.remove( 'active' );
 	} );
 
 	tabsPanels?.forEach( ( item ) => {
 		item.setAttribute( 'aria-hidden', 'true' );
+		item.classList.remove( 'active' );
 	} );
 };
 
 const setActiveTab = ( tabs, btn ) => {
 	btn?.setAttribute( 'aria-selected', 'true' );
+	btn?.classList.add( 'active' );
 
 	const tabPanel = tabs.querySelector( btn?.getAttribute( 'aria-controls' ) );
 
 	if ( ! tabPanel ) return;
 
 	tabPanel.setAttribute( 'aria-hidden', 'false' );
+	tabPanel.classList.add( 'active' );
 };
 
 const setDefaultTab = ( tabs, defaultTabId, tabsButtons ) => {
