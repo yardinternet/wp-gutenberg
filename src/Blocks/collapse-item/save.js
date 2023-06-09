@@ -3,9 +3,15 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
+/**
+ * Internal dependencies
+ */
+import Icon from '../../EditorComponents/icon';
+
 const save = ( props ) => {
 	const { attributes } = props;
-	const { hasStructuredData, headingLevel, headingText, isOpen } = attributes;
+	const { hasStructuredData, headingLevel, headingText, icon, isOpen } =
+		attributes;
 	const HeadingWithLevel = headingLevel;
 
 	const blockProps = useBlockProps.save( {
@@ -28,6 +34,7 @@ const save = ( props ) => {
 					className="wp-block-yard-gutenberg-collapse-item__header-button | ac-trigger"
 					itemProp={ hasStructuredData ? 'name' : null }
 				>
+					{ icon && <Icon { ...props } /> }
 					{ headingText }
 				</button>
 			</HeadingWithLevel>

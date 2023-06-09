@@ -12,9 +12,10 @@ const Icon = ( props ) => {
 			<i
 				className={ `wp-block-yard-icon-component ${ icon } ` }
 				title={ iconAltText ? iconAltText : null }
+				aria-hidden="true"
 			></i>
 			{ iconAltText && (
-				<span class="wp-block-yard-icon-component__sr-only">
+				<span className="wp-block-yard-icon-component__sr-only">
 					{ iconAltText }
 				</span>
 			) }

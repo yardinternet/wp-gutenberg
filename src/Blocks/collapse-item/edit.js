@@ -10,12 +10,13 @@ import { __ } from '@wordpress/i18n';
 /**
  * Internal dependencies
  */
+import Icon from '../../EditorComponents/icon';
 import Inspector from './components/Inspector';
 import './editor.scss';
 
 const edit = ( props ) => {
 	const { attributes, setAttributes, clientId } = props;
-	const { headingText } = attributes;
+	const { headingText, icon } = attributes;
 
 	const TEMPLATE = [
 		[
@@ -52,6 +53,7 @@ const edit = ( props ) => {
 
 			<div { ...useBlockProps() } data-open={ isOpen }>
 				<div className="wp-block-yard-gutenberg-collapse-item__header">
+					{ icon && <Icon { ...props } /> }
 					<PlainText
 						className="wp-block-yard-gutenberg-collapse-item__header-input"
 						onChange={ ( value ) =>
