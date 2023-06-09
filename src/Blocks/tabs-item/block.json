@@ -8,9 +8,6 @@
 	"icon": "category",
 	"description": "Tabblad item.",
 	"attributes": {
-		"id": {
-			"type": "string"
-		},
 		"headingLevel": {
 			"type": "string",
 			"default": "h3"
@@ -18,6 +15,15 @@
 		"headingText": {
 			"type": "string",
 			"default": " "
+		},
+		"icon": {
+			"type": "string"
+		},
+		"iconAltText": {
+			"type": "string"
+		},
+		"id": {
+			"type": "string"
 		}
 	},
 	"parent": [ "yard-gutenberg/tabs" ],

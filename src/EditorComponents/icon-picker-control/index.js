@@ -20,7 +20,7 @@ const IconPickerControl = ( { onChange, icon } ) => {
 
 	const { createNotice } = useDispatch( noticesStore );
 
-	const allowedStyles = applyFilters( 'yard-blocks.fontawesome-styles', [
+	const allowedStyles = applyFilters( 'yard-gutenberg.fontawesome-styles', [
 		'solid',
 		'regular',
 		'light',

@@ -3,9 +3,14 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
+/**
+ * Internal dependencies
+ */
+import Icon from '../../EditorComponents/icon';
+
 const save = ( props ) => {
 	const { attributes } = props;
-	const { id, headingLevel, headingText } = attributes;
+	const { headingLevel, headingText, icon, id } = attributes;
 	const HeadingWithLevel = headingLevel;
 
 	return (
@@ -21,6 +26,7 @@ const save = ( props ) => {
 					aria-controls={ `#tabs-item-panel-${ id }` }
 					type="button"
 				>
+					{ icon && <Icon { ...props } /> }
 					{ headingText }
 				</button>
 			</HeadingWithLevel>
