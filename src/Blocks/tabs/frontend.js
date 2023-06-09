@@ -44,7 +44,7 @@ const setActiveTab = ( tabs, btn ) => {
 };
 
 const setDefaultTab = ( tabs, defaultTabId, tabsButtons ) => {
-	let defaultButton = tabsButtons[ 0 ];
+	let defaultButton;
 
 	if ( defaultTabId ) {
 		defaultButton = tabs.querySelector(
@@ -52,7 +52,7 @@ const setDefaultTab = ( tabs, defaultTabId, tabsButtons ) => {
 		);
 	}
 
-	setActiveTab( tabs, defaultButton );
+	setActiveTab( tabs, defaultButton ?? tabsButtons[ 0 ] );
 };
 
 init();
