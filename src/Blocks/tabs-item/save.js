@@ -12,7 +12,6 @@ const save = ( props ) => {
 		<>
 			<HeadingWithLevel
 				{ ...useBlockProps.save( {
-					id: `tabs-item-heading-${ id }`,
 					className: 'wp-block-yard-gutenberg-tabs-item__heading',
 				} ) }
 			>

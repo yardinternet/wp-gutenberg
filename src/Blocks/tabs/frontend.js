@@ -12,7 +12,12 @@ const init = () => {
 			'.wp-block-yard-gutenberg-tabs-item__panel'
 		);
 
+		resetAllTabs( tabsButtons, tabsPanels );
 		setDefaultTab( tabs, defaultTabId, tabsButtons );
+
+		if ( window.location.hash !== '' ) {
+			setActiveTabOnHash( tabs, tabsButtons, tabsPanels );
+		}
 
 		tabsButtons.forEach( ( btn ) => {
 			btn.addEventListener( 'click', () => {
@@ -59,4 +64,19 @@ const setDefaultTab = ( tabs, defaultTabId, tabsButtons ) => {
 	setActiveTab( tabs, defaultButton ?? tabsButtons[ 0 ] );
 };
 
+const setActiveTabOnHash = ( tabs, tabsButtons, tabsPanels ) => {
+	const heading = tabs.querySelector( window.location.hash );
+
+	if ( heading ) {
+		const btn = heading.querySelector(
+			'.wp-block-yard-gutenberg-tabs-item__button'
+		);
+
+		resetAllTabs( tabsButtons, tabsPanels );
+		setActiveTab( tabs, btn );
+	}
+};
+
 init();
+
+window.addEventListener( 'hashchange', init, false );
