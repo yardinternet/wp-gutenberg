@@ -6,17 +6,14 @@ import { useBlockProps } from '@wordpress/block-editor';
 /**
  * Internal dependencies
  */
-import Icon from './components/icon';
+import Icon from '../../EditorComponents/icon';
 
 const save = ( props ) => {
 	const { attributes } = props;
-	const { altText, iconSize } = attributes;
+	const { icon } = attributes;
 
 	return (
-		<div { ...useBlockProps.save() }>
-			<Icon { ...props } />
-			{ altText && <span className="sr-only">{ altText }</span> }
-		</div>
+		<div { ...useBlockProps.save() }>{ icon && <Icon { ...props } /> }</div>
 	);
 };
 

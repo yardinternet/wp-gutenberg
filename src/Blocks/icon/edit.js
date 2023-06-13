@@ -6,18 +6,18 @@ import { useBlockProps } from '@wordpress/block-editor';
 /**
  * Internal dependencies
  */
+import Icon from '../../EditorComponents/icon';
 import Inspector from './components/inspector';
-import Icon from './components/icon';
 import './editor.scss';
 
 const edit = ( props ) => {
 	const { attributes } = props;
-	const { iconSize } = attributes;
+	const { icon } = attributes;
 
 	return (
 		<div { ...useBlockProps() }>
 			<Inspector { ...props } />
-			<Icon { ...props } />
+			{ icon && <Icon { ...props } /> }
 		</div>
 	);
 };
