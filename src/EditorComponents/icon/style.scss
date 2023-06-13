@@ -1,6 +1,18 @@
 .wp-block-yard-icon-component {
 	font-family: 'Font Awesome 6 Pro' !important;
 
+	&.fa-sharp {
+		font-family: 'Font Awesome 6 Sharp' !important;
+	}
+
+	&.fa-duotone {
+		font-family: 'Font Awesome 6 Duotone' !important;
+	}
+
+	&.fa-brands {
+		font-family: 'Font Awesome 6 Brands' !important;
+	}
+
 	&__sr-only {
 		position: absolute;
 		width: 1px;

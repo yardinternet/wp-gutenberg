@@ -20,14 +20,20 @@ const IconPickerControl = ( { onChange, icon } ) => {
 
 	const { createNotice } = useDispatch( noticesStore );
 
-	const allowedStyles = applyFilters( 'yard-gutenberg.fontawesome-styles', [
-		'solid',
-		'regular',
-		'light',
-		'thin',
-		'duotone',
-		'brands',
-	] );
+	const allowedFamilyStyles = applyFilters(
+		'yard-gutenberg.fontawesome-family-styles',
+		[
+			{ family: 'classic', style: 'solid' },
+			{ family: 'classic', style: 'regular' },
+			{ family: 'classic', style: 'light' },
+			{ family: 'classic', style: 'thin' },
+			{ family: 'classic', style: 'brands' },
+			{ family: 'duotone', style: 'solid' },
+			{ family: 'sharp', style: 'solid' },
+			{ family: 'sharp', style: 'regular' },
+			{ family: 'sharp', style: 'light' },
+		]
+	);
 
 	const searchFontAwesomeIcons = async ( searchValue ) => {
 		const response = await getFontAwesomeIcons( searchValue );
@@ -50,8 +56,29 @@ const IconPickerControl = ( { onChange, icon } ) => {
 		setOpen( () => true );
 	};
 
+	/**
+	 * Use FontAwesome API to search for icons
+	 *
+	 * @see https://fontawesome.com/docs/apis/graphql/objects#icon
+	 * @see https://fontawesome.com/docs/apis/graphql/objects#familystylesbylicense
+	 * @see https://fontawesome.com/docs/apis/graphql/objects#familystyle
+	 */
 	const getFontAwesomeIcons = ( search ) => {
-		const query = `{ search(version: "6.4.0", first: 100, query: "${ search }") { id styles } }`;
+		const query = `{ search(version: "6.4.0", first: 100, query: "${ search }")
+			{
+				id
+				familyStylesByLicense {
+					free {
+						family
+						style
+					}
+					pro {
+						family
+						style
+					}
+				}
+			}
+		}`;
 
 		return fetch( 'https://api.fontawesome.com', {
 			method: 'POST',
@@ -65,10 +92,41 @@ const IconPickerControl = ( { onChange, icon } ) => {
 			.catch( () => showErrorNotice() );
 	};
 
+	// Create a classname based on the response with only the allowed familyStyles
 	const convertResponseToClassnames = ( response ) => {
-		return response.styles
-			.filter( ( style ) => allowedStyles.includes( style ) ?? false )
-			.map( ( style ) => `fa-${ style } fa-${ response.id }` );
+		const allFamilyStyles = getAllFamilyStyles( response );
+
+		return allFamilyStyles
+			.filter( ( familyStyle ) => checkIfStyleIsAllowed( familyStyle ) )
+			.map(
+				( familyStyle ) =>
+					`fa-${ familyStyle.family } fa-${ familyStyle.style } fa-${ response.id }`
+			);
+	};
+
+	// Returns one array with free and pro familyStyles
+	const getAllFamilyStyles = ( response ) => {
+		const freeFamilyStyles = response.familyStylesByLicense.free;
+		const proFamilyStyles = response.familyStylesByLicense.pro;
+		const allFamilyStyles = freeFamilyStyles.concat( proFamilyStyles );
+
+		// Remove duplicated familyStyles
+		return allFamilyStyles.filter(
+			( obj, index ) =>
+				allFamilyStyles.findIndex(
+					( item ) =>
+						item.family === obj.family && item.style === obj.style
+				) === index
+		);
+	};
+
+	// Check if the current familyStyle exist in allowedFamilyStyles
+	const checkIfStyleIsAllowed = ( familyStyle ) => {
+		return allowedFamilyStyles.some(
+			( obj ) =>
+				obj.family === familyStyle.family &&
+				obj.style === familyStyle.style
+		);
 	};
 
 	const showErrorNotice = () => {

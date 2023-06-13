@@ -9,12 +9,15 @@ By default all the styles from Font Awesome are loaded. Use this filter to chang
 ```JS
 import { addFilter } from '@wordpress/hooks';
 
-addFilter( 'yard-gutenberg.fontawesome-styles', 'yard-gutenberg', () => [
-  'solid',
-  'regular',
-  'light',
-  'thin',
-  'duotone',
-  'brands',
-] );
+addFilter('yard-gutenberg.fontawesome-family-styles', 'yard-gutenberg', () => [
+  { family: 'classic', style: 'solid' },
+  { family: 'classic', style: 'regular' },
+  { family: 'classic', style: 'light' },
+  { family: 'classic', style: 'thin' },
+  { family: 'classic', style: 'brands' },
+  { family: 'duotone', style: 'solid' },
+  { family: 'sharp', style: 'solid' },
+  { family: 'sharp', style: 'regular' },
+  { family: 'sharp', style: 'light' },
+]);
 ```
