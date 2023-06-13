@@ -10,22 +10,24 @@
 	"supports": {
 		"align": true,
 		"ariaLabel": true,
-		"color": true,
+		"color": {
+			"background": true,
+			"color": true
+		},
 		"spacing": {
 			"margin": true,
 			"padding": true
+		},
+		"typography": {
+			"fontSize": true
 		}
 	},
 	"attributes": {
 		"icon": {
 			"type": "string",
-			"default": "fal fa-envelope"
+			"default": "fa-light fa-envelope"
 		},
-		"iconSize": {
-			"type": "string",
-			"default": "18px"
-		},
-		"altText": {
+		"iconAltText": {
 			"type": "string",
 			"default": ""
 		}
