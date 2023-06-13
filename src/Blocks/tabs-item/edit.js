@@ -14,7 +14,7 @@ import Inspector from './components/inspector';
 import './editor.scss';
 
 const edit = ( props ) => {
-	const { clientId, attributes, setAttributes, isSelected } = props;
+	const { attributes, clientId, context, setAttributes, isSelected } = props;
 	const { headingText, icon, id } = attributes;
 
 	const TEMPLATE = [
@@ -63,7 +63,7 @@ const edit = ( props ) => {
 		),
 
 		/**
-		 * Get all clientIds
+		 * Get all client ids
 		 *
 		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getclientidsofdescendants
 		 */
@@ -71,7 +71,7 @@ const edit = ( props ) => {
 			select( 'core/block-editor' ).getClientIdsWithDescendants(),
 
 		/**
-		 * Get block attributes with a clientId
+		 * Get block attributes with a client id
 		 *
 		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
 		 */
@@ -80,6 +80,7 @@ const edit = ( props ) => {
 
 	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
 
+	// Update attributes id and heading level on init
 	useEffect( () => {
 		setAttributes( {
 			id: getBlockId(),
@@ -87,17 +88,18 @@ const edit = ( props ) => {
 		} );
 	}, [] );
 
+	// Set isOpen state based on context 'yard-gutenberg/tabs-current-tab'
 	useEffect( () => {
 		// Open panel when this block is saved as the currentTab
-		if ( parentAttributes.currentTab === id ) {
+		if ( context[ 'yard-gutenberg/tabs-current-tab' ] === id ) {
 			setIsOpen( true );
 		} else {
 			setIsOpen( false );
 		}
-	}, [ parentAttributes.currentTab ] );
+	}, [ context ] );
 
+	// When the current block or inner blocks are selected, open the panel and update the parent currentTab attribute to close other tabs
 	useEffect( () => {
-		// When the current block or inner blocks are selected, open the panel and update the parent currentTab attribute to close other tabs
 		if ( isSelected || hasSelectedInnerBlock ) {
 			updateBlockAttributes( getParentClientId, {
 				currentTab: id ?? clientId,

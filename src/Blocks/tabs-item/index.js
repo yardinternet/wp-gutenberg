@@ -14,4 +14,5 @@ import './style.scss';
 registerBlockType( metadata.name, {
 	edit,
 	save,
+	usesContext: [ 'yard-gutenberg/tabs-current-tab' ],
 } );

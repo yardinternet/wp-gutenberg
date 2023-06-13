@@ -1,7 +1,5 @@
 $block: 'wp-block-yard-gutenberg-tabs-item';
 
-.#{$block} {
-	&__panel {
-		width: 100%;
-	}
+.#{$block}__panel {
+	width: 100%;
 }

@@ -7,7 +7,7 @@ import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 const Inspector = ( props ) => {
-	const { clientId, setAttributes, attributes } = props;
+	const { attributes, clientId, setAttributes } = props;
 	const { defaultTab, defaultTabEnabled, headingLevel } = attributes;
 
 	const { getBlocksByClientId, innerblocks } = useSelect( ( select ) => ( {
@@ -37,6 +37,7 @@ const Inspector = ( props ) => {
 	const onChangeHeadingLevel = ( value ) => {
 		setAttributes( { headingLevel: value } );
 
+		// Update also the heading level on all childs
 		if ( getBlocksByClientId.length > 0 ) {
 			const children = getBlocksByClientId[ 0 ].innerBlocks;
 
