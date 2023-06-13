@@ -13,7 +13,7 @@ import Inspector from './components/inspector';
 import './editor.scss';
 
 const edit = ( props ) => {
-	const { clientId, setAttributes, attributes } = props;
+	const { attributes, clientId, setAttributes } = props;
 	const { defaultTab, defaultTabEnabled } = attributes;
 
 	const TEMPLATE = [ [ 'yard-gutenberg/tabs-item' ] ];
@@ -28,6 +28,7 @@ const edit = ( props ) => {
 		innerblocks: select( 'core/block-editor' ).getBlocks( clientId ),
 	} ) );
 
+	// Set current tab attribute to use context 'yard-gutenberg/tabs-current-tab' in child blocks
 	useEffect( () => {
 		if ( defaultTabEnabled && defaultTab ) {
 			// When a defaultTab is selected, set the tab as currentTab
