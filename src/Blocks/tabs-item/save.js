@@ -23,8 +23,8 @@ const save = ( props ) => {
 				<button
 					id={ `tabs-item-button-${ id }` }
 					className="wp-block-yard-gutenberg-tabs-item__button"
-					aria-controls={ `#tabs-item-panel-${ id }` }
-					type="button"
+					aria-controls={ `tabs-item-panel-${ id }` }
+					aria-selected="false"
 				>
 					{ icon && <Icon { ...props } /> }
 					{ headingText }
@@ -37,6 +37,7 @@ const save = ( props ) => {
 				} ) }
 				id={ `tabs-item-panel-${ id }` }
 				aria-hidden="true"
+				aria-labelledby={ `tabs-item-button-${ id }` }
 			>
 				<InnerBlocks.Content />
 			</div>

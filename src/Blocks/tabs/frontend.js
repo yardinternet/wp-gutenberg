@@ -64,7 +64,9 @@ const setActiveTab = ( tabs, btn ) => {
 	btn?.classList.add( 'active' );
 
 	// Get the corresponding tab panel
-	const tabPanel = tabs.querySelector( btn?.getAttribute( 'aria-controls' ) );
+	const tabPanel = tabs.querySelector(
+		`#${ btn?.getAttribute( 'aria-controls' ) }`
+	);
 
 	if ( ! tabPanel ) return;
 
