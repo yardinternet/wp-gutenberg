@@ -8,7 +8,6 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 import Icon from '../../EditorComponents/icon';
 import Inspector from './components/inspector';
-import './editor.scss';
 
 const edit = ( props ) => {
 	const { attributes } = props;
