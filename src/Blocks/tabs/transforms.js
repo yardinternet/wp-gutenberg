@@ -8,18 +8,21 @@ const transforms = {
 		{
 			type: 'block',
 			blocks: [ 'yard-gutenberg/collapse' ],
-			transform: function ( attributes, innerBlocks ) {
+			transform: ( attributes, innerBlocks ) => {
 				const transformedInnerBlocks = innerBlocks?.map(
-					( { attributes, innerBlocks } ) => {
+					( {
+						attributes: childAttributes,
+						innerBlocks: childInnerBlocks,
+					} ) => {
 						return createBlock(
 							'yard-gutenberg/collapse-item',
 							{
-								headingLevel: attributes.headingLevel,
-								headingText: attributes.headingText,
-								icon: attributes.icon,
-								iconAltText: attributes.iconAltText,
+								headingLevel: childAttributes.headingLevel,
+								headingText: childAttributes.headingText,
+								icon: childAttributes.icon,
+								iconAltText: childAttributes.iconAltText,
 							},
-							innerBlocks
+							childInnerBlocks
 						);
 					}
 				);

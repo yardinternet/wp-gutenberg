@@ -8,10 +8,10 @@ $block: 'wp-block-yard-gutenberg-tabs-item';
 	&__heading {
 		display: flex;
 		align-items: center;
-	}
 
-	&__heading-input {
-		width: auto;
+		&-input {
+			width: auto;
+		}
 	}
 
 	&__panel {

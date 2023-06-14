@@ -8,7 +8,7 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  */
 import Icon from '@components/icon';
 
-const save = ( props ) => {
+const Save = ( props ) => {
 	const { attributes } = props;
 	const { hasStructuredData, headingLevel, headingText, icon, isOpen } =
 		attributes;
@@ -57,4 +57,4 @@ const save = ( props ) => {
 	);
 };
 
-export default save;
+export default Save;

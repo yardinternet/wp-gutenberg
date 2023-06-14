@@ -1,11 +1,9 @@
 $block: 'wp-block-yard-gutenberg-collapse-item';
 
 .#{$block} {
-	&__header {
-		&-button {
-			text-align: left;
-			width: 100%;
-		}
+	&__header-button {
+		text-align: left;
+		width: 100%;
 	}
 
 	&__panel {

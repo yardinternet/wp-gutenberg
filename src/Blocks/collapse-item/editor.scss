@@ -1,10 +1,8 @@
 $block: 'wp-block-yard-gutenberg-collapse-item';
 
 .#{$block} {
-	&[data-open='true'] {
-		.#{$block}__header-toggle-button svg {
-			transform: rotate( 180deg );
-		}
+	&[data-open='true'] .#{$block}__header-toggle-button svg {
+		transform: rotate( 180deg );
 	}
 
 	&__header {

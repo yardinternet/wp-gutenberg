@@ -9,7 +9,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 import Icon from '@components/icon';
 import Inspector from './components/inspector';
 
-const edit = ( props ) => {
+const Edit = ( props ) => {
 	const { attributes } = props;
 	const { icon } = attributes;
 
@@ -21,4 +21,4 @@ const edit = ( props ) => {
 	);
 };
 
-export default edit;
+export default Edit;

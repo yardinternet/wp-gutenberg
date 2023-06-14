@@ -11,10 +11,10 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import Icon from '@components/icon';
-import Inspector from './components/Inspector';
+import Inspector from './components/inspector';
 import './editor.scss';
 
-const edit = ( props ) => {
+const Edit = ( props ) => {
 	const { attributes, setAttributes, clientId } = props;
 	const { headingText, icon } = attributes;
 
@@ -86,4 +86,4 @@ const edit = ( props ) => {
 	);
 };
 
-export default edit;
+export default Edit;

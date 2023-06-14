@@ -59,6 +59,8 @@ const IconPickerControl = ( { onChange, icon } ) => {
 	/**
 	 * Use FontAwesome API to search for icons
 	 *
+	 * @param {string} search - The value to search for icons.
+	 *
 	 * @see https://fontawesome.com/docs/apis/graphql/objects#icon
 	 * @see https://fontawesome.com/docs/apis/graphql/objects#familystylesbylicense
 	 * @see https://fontawesome.com/docs/apis/graphql/objects#familystyle

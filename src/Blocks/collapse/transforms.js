@@ -8,19 +8,23 @@ const transforms = {
 		{
 			type: 'block',
 			blocks: [ 'yard-gutenberg/tabs' ],
-			transform: function ( attributes, innerBlocks ) {
+			transform: ( attributes, innerBlocks ) => {
 				const transformedInnerBlocks = innerBlocks?.map(
-					( { attributes, clientId, innerBlocks } ) => {
+					( {
+						attributes: childAttributes,
+						clientId: childClientId,
+						innerBlocks: childInnerBlocks,
+					} ) => {
 						return createBlock(
 							'yard-gutenberg/tabs-item',
 							{
-								headingLevel: attributes.headingLevel,
-								headingText: attributes.headingText,
-								icon: attributes.icon,
-								iconAltText: attributes.iconAltText,
-								id: clientId,
+								headingLevel: childAttributes.headingLevel,
+								headingText: childAttributes.headingText,
+								icon: childAttributes.icon,
+								iconAltText: childAttributes.iconAltText,
+								id: childClientId,
 							},
-							innerBlocks
+							childInnerBlocks
 						);
 					}
 				);

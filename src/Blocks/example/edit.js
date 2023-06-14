@@ -14,10 +14,12 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 import './editor.scss';
 
-export default function edit() {
+const Edit = () => {
 	return (
 		<p { ...useBlockProps() }>
 			{ __( 'Example – hello from the editor!', 'yard-gutenberg' ) }
 		</p>
 	);
-}
+};
+
+export default Edit;

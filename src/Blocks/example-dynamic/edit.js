@@ -9,7 +9,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 import './editor.scss';
 
-export default function edit() {
+const Edit = () => {
 	return (
 		<p { ...useBlockProps() }>
 			{ __(
@@ -18,4 +18,6 @@ export default function edit() {
 			) }
 		</p>
 	);
-}
+};
+
+export default Edit;

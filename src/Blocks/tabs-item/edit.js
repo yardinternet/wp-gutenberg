@@ -13,7 +13,7 @@ import Icon from '@components/icon';
 import Inspector from './components/inspector';
 import './editor.scss';
 
-const edit = ( props ) => {
+const Edit = ( props ) => {
 	const { attributes, clientId, context, setAttributes, isSelected } = props;
 	const { headingText, icon, id } = attributes;
 
@@ -71,7 +71,7 @@ const edit = ( props ) => {
 		} else {
 			setIsOpen( false );
 		}
-	}, [ context ] );
+	}, [ context, id ] );
 
 	// When the current block or inner blocks are selected, open the panel and update the parent currentTab attribute to close other tabs
 	useEffect( () => {
@@ -91,7 +91,7 @@ const edit = ( props ) => {
 	 * - There is no ID at all
 	 * - Another block already has the same ID as an attribute (can happen when duplicating a block)
 	 *
-	 * @returns {string} The block ID.
+	 * @return {string} The block ID.
 	 */
 	const getBlockId = () => {
 		const idAlreadyExist = getClientIdsWithDescendants?.some(
@@ -137,4 +137,4 @@ const edit = ( props ) => {
 	);
 };
 
-export default edit;
+export default Edit;

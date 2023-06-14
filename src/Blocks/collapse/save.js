@@ -3,7 +3,7 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-const save = ( props ) => {
+const Save = ( props ) => {
 	const { attributes } = props;
 	const { hasStructuredData, showMultiple } = attributes;
 
@@ -19,4 +19,4 @@ const save = ( props ) => {
 	);
 };
 
-export default save;
+export default Save;
