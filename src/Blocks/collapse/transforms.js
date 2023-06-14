@@ -1,3 +1,8 @@
+/**
+ * WordPress dependencies
+ */
+import { createBlock } from '@wordpress/blocks';
+
 const transforms = {
 	to: [
 		{
@@ -6,7 +11,7 @@ const transforms = {
 			transform: function ( attributes, innerBlocks ) {
 				const transformedInnerBlocks = innerBlocks?.map(
 					( { attributes, clientId, innerBlocks } ) => {
-						return wp.blocks.createBlock(
+						return createBlock(
 							'yard-gutenberg/tabs-item',
 							{
 								headingLevel: attributes.headingLevel,
@@ -20,7 +25,7 @@ const transforms = {
 					}
 				);
 
-				return wp.blocks.createBlock(
+				return createBlock(
 					'yard-gutenberg/tabs',
 					{ headingLevel: attributes.headingLevel },
 					transformedInnerBlocks

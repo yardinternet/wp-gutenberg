@@ -10,6 +10,9 @@ const Inspector = ( props ) => {
 	const { clientId, setAttributes, attributes } = props;
 	const { hasStructuredData, headingLevel, showMultiple } = attributes;
 
+	/**
+	 * getBlocksByClientId @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocksbyclientid
+	 */
 	const { getBlocksByClientId } = useSelect( ( select ) => ( {
 		getBlocksByClientId:
 			select( 'core/block-editor' ).getBlocksByClientId( clientId ),
@@ -18,7 +21,7 @@ const Inspector = ( props ) => {
 	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
 
 	/**
-	 * Handles the change event for heading level.
+	 * Handles the change event for heading level and update childs attribute.
 	 *
 	 * @param {string} value - The new value for heading level.
 	 */
@@ -35,7 +38,7 @@ const Inspector = ( props ) => {
 	};
 
 	/**
-	 * Handles the change event for structured data.
+	 * Handles the change event for structured data  and update childs attribute.
 	 *
 	 * @param {boolean} value - The new value for structured data.
 	 */

@@ -29,13 +29,11 @@ const edit = ( props ) => {
 
 	const [ isOpen, setIsOpen ] = useState( false );
 
+	/**
+	 * getBlockAttributes @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
+	 * getBlockParents @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
+	 */
 	const { parentAttributes } = useSelect( ( select ) => ( {
-		/**
-		 * Get parent block attributes
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
-		 */
 		parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
 			select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ]
 		),
@@ -45,7 +43,7 @@ const edit = ( props ) => {
 		setAttributes( {
 			headingLevel: parentAttributes.headingLevel ?? 'h3',
 		} );
-	}, [] );
+	}, [ parentAttributes ] );
 
 	return (
 		<>

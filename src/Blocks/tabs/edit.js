@@ -19,22 +19,22 @@ const edit = ( props ) => {
 	const TEMPLATE = [ [ 'yard-gutenberg/tabs-item' ] ];
 	const ALLOWED_BLOCKS = [ 'yard-gutenberg/tabs-item' ];
 
+	/**
+	 * getBlocks @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
+	 */
 	const { innerblocks } = useSelect( ( select ) => ( {
-		/**
-		 * Get all innerblocks by client id
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
-		 */
 		innerblocks: select( 'core/block-editor' ).getBlocks( clientId ),
 	} ) );
 
-	// Set current tab attribute to use context 'yard-gutenberg/tabs-current-tab' in child blocks
+	/**
+	 * Set current tab attribute to use context 'yard-gutenberg/tabs-current-tab' in child blocks.
+	 * 1. When a defaultTab is selected, set the tab as currentTab
+	 * 2. Fallback to open the first tab
+	 */
 	useEffect( () => {
 		if ( defaultTabEnabled && defaultTab ) {
-			// When a defaultTab is selected, set the tab as currentTab
 			setAttributes( { currentTab: defaultTab } );
 		} else if ( innerblocks && innerblocks.length > 0 ) {
-			// Fallback to open the first tab
 			setAttributes( { currentTab: innerblocks[ 0 ]?.attributes.id } );
 		}
 	}, [] );

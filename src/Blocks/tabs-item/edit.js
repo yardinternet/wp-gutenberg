@@ -28,6 +28,12 @@ const edit = ( props ) => {
 
 	const [ isOpen, setIsOpen ] = useState( false );
 
+	/**
+	 * hasSelectedInnerBlock @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#hasselectedinnerblock
+	 * getBlockParents @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
+	 * getBlockAttributes @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
+	 * getClientIdsWithDescendants @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getclientidsofdescendants
+	 */
 	const {
 		hasSelectedInnerBlock,
 		getParentClientId,
@@ -35,46 +41,16 @@ const edit = ( props ) => {
 		getClientIdsWithDescendants,
 		getBlockAttributes,
 	} = useSelect( ( select ) => ( {
-		/**
-		 * Checks if one of the block’s inner blocks is selected
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#hasselectedinnerblock
-		 */
 		hasSelectedInnerBlock: select(
 			'core/block-editor'
 		).hasSelectedInnerBlock( clientId, true ),
-
-		/**
-		 * Get parent block client id
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
-		 */
 		getParentClientId:
 			select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ],
-
-		/**
-		 * Get parent block attributes
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
-		 */
 		parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
 			select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ]
 		),
-
-		/**
-		 * Get all client ids
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getclientidsofdescendants
-		 */
 		getClientIdsWithDescendants:
 			select( 'core/block-editor' ).getClientIdsWithDescendants(),
-
-		/**
-		 * Get block attributes with a client id
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
-		 */
 		getBlockAttributes: select( 'core/block-editor' ).getBlockAttributes,
 	} ) );
 
@@ -86,11 +62,10 @@ const edit = ( props ) => {
 			id: getBlockId(),
 			headingLevel: parentAttributes.headingLevel ?? 'h3',
 		} );
-	}, [] );
+	}, [ parentAttributes ] );
 
 	// Set isOpen state based on context 'yard-gutenberg/tabs-current-tab'
 	useEffect( () => {
-		// Open panel when this block is saved as the currentTab
 		if ( context[ 'yard-gutenberg/tabs-current-tab' ] === id ) {
 			setIsOpen( true );
 		} else {
@@ -109,8 +84,16 @@ const edit = ( props ) => {
 		}
 	}, [ isSelected, hasSelectedInnerBlock ] );
 
+	/**
+	 * Get the block ID, ensuring it is unique.
+	 * 1. Check if the ID already exists on other block attributes
+	 * 2. The ID needs to be changed to the client ID in the following scenarios:
+	 * - There is no ID at all
+	 * - Another block already has the same ID as an attribute (can happen when duplicating a block)
+	 *
+	 * @returns {string} The block ID.
+	 */
 	const getBlockId = () => {
-		// Check if the id already exist on an other block attribute
 		const idAlreadyExist = getClientIdsWithDescendants?.some(
 			( _clientId ) => {
 				const { id: _id } = getBlockAttributes( _clientId );
@@ -118,16 +101,10 @@ const edit = ( props ) => {
 			}
 		);
 
-		/**
-		 * The id needs to be changed to the clientId only in the following scenarios:
-		 * 1. There is no id at all yet
-		 * 2. There is already another block that has that id as an attribute (that happens if you duplicate a block)
-		 */
 		if ( ! id || id.length <= 0 || idAlreadyExist ) {
 			return clientId;
 		}
 
-		// Return the current id stored in the attributes
 		return id;
 	};
 

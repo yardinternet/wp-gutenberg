@@ -10,34 +10,26 @@ const Inspector = ( props ) => {
 	const { attributes, clientId, setAttributes } = props;
 	const { defaultTab, defaultTabEnabled, headingLevel } = attributes;
 
+	/**
+	 * getBlocksByClientId @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocksbyclientid
+	 * getBlocks @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
+	 */
 	const { getBlocksByClientId, innerblocks } = useSelect( ( select ) => ( {
-		/**
-		 * Get current block by client id
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocksbyclientid
-		 */
 		getBlocksByClientId:
 			select( 'core/block-editor' ).getBlocksByClientId( clientId ),
-
-		/**
-		 * Get all innerblocks by client id
-		 *
-		 * @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
-		 */
 		innerblocks: select( 'core/block-editor' ).getBlocks( clientId ),
 	} ) );
 
 	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
 
 	/**
-	 * Handles the change event for heading level.
+	 * Handles the change event for heading level and update childs attribute.
 	 *
 	 * @param {string} value - The new value for heading level.
 	 */
 	const onChangeHeadingLevel = ( value ) => {
 		setAttributes( { headingLevel: value } );
 
-		// Update also the heading level on all childs
 		if ( getBlocksByClientId.length > 0 ) {
 			const children = getBlocksByClientId[ 0 ].innerBlocks;
 
