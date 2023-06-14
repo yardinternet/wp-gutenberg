@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "yard-gutenberg/iconlist-item",
+	"version": "0.1.0",
+	"title": "Iconenlijst item",
+	"category": "theme",
+	"icon": "list-view",
+	"description": "Een enkele iconenlijst item.",
+	"attributes": {
+		"icon": {
+			"type": "string",
+			"default": "fa-light fa-envelope"
+		},
+		"iconAltText": {
+			"type": "string",
+			"default": ""
+		},
+		"iconColor": {
+			"type": "string"
+		},
+		"listText": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"parent": [ "yard-gutenberg/iconlist" ],
+	"supports": {
+		"align": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"reusable": false,
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"textdomain": "iconlist-item",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

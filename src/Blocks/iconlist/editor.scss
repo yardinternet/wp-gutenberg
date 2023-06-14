@@ -1,0 +1,10 @@
+$block: 'wp-block-yard-gutenberg-iconlist';
+
+.#{$block} {
+	list-style: none !important;
+	padding-left: 0 !important;
+
+	.block-list-appender {
+		position: static;
+	}
+}
