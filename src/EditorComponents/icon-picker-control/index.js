@@ -17,6 +17,7 @@ const IconPickerControl = ( { onChange, icon } ) => {
 	const [ isOpen, setOpen ] = useState( false );
 	const [ searchInput, setSearchInput ] = useState( '' );
 	const [ searchResults, setSearchResults ] = useState( [] );
+	const [ popoverAnchor, setPopoverAnchor ] = useState();
 
 	const { createNotice } = useDispatch( noticesStore );
 
@@ -158,9 +159,11 @@ const IconPickerControl = ( { onChange, icon } ) => {
 					setSearchInput( () => searchValue );
 					searchFontAwesomeIcons( searchValue );
 				} }
+				ref={ setPopoverAnchor }
 			/>
 			{ isOpen && searchInput && (
 				<Popover
+					anchor={ popoverAnchor }
 					title={ __( 'Kies een icoon' ) }
 					onClose={ () => setOpen( () => false ) }
 					focusOnMount={ false }

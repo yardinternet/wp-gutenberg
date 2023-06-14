@@ -1,0 +1,7 @@
+$block: 'wp-block-yard-gutenberg-iconlist-item';
+
+.#{$block} {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+}
