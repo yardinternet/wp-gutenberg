@@ -6,7 +6,7 @@ import { useBlockProps } from '@wordpress/block-editor';
 /**
  * Internal dependencies
  */
-import Icon from '../../EditorComponents/icon';
+import Icon from '@components/icon';
 
 const save = ( props ) => {
 	const { attributes } = props;
