@@ -10,7 +10,7 @@ import { __ } from '@wordpress/i18n';
 /**
  * Internal dependencies
  */
-import Icon from '../../EditorComponents/icon';
+import Icon from '@components/icon';
 import Inspector from './components/Inspector';
 import './editor.scss';
 

@@ -8,7 +8,7 @@ import { __ } from '@wordpress/i18n';
 /**
  * Internal dependencies
  */
-import IconPickerControl from '../../../EditorComponents/icon-picker-control';
+import IconPickerControl from '@components/icon-picker-control';
 
 const Inspector = ( props ) => {
 	const { setAttributes, attributes } = props;
