@@ -1,0 +1,12 @@
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/Blocks/iconlist/editor.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-yard-gutenberg-iconlist {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+.wp-block-yard-gutenberg-iconlist .block-list-appender {
+  position: static;
+}
+
+/*# sourceMappingURL=index.css.map*/

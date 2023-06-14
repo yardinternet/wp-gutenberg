@@ -330,6 +330,7 @@ const IconPickerControl = _ref => {
   const [isOpen, setOpen] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [searchInput, setSearchInput] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
   const [searchResults, setSearchResults] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  const [popoverAnchor, setPopoverAnchor] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)();
   const {
     createNotice
   } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_2__.useDispatch)(_wordpress_notices__WEBPACK_IMPORTED_MODULE_3__.store);
@@ -449,8 +450,10 @@ const IconPickerControl = _ref => {
     onChange: searchValue => {
       setSearchInput(() => searchValue);
       searchFontAwesomeIcons(searchValue);
-    }
+    },
+    ref: setPopoverAnchor
   }), isOpen && searchInput && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Popover, {
+    anchor: popoverAnchor,
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Kies een icoon'),
     onClose: () => setOpen(() => false),
     focusOnMount: false
@@ -499,12 +502,16 @@ const Icon = props => {
   } = props;
   const {
     icon,
-    iconAltText
+    iconAltText,
+    iconColor
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: `wp-block-yard-icon-component ${icon} `,
+    className: `wp-block-yard-icon-component fa-fw ${icon} `,
     title: iconAltText ? iconAltText : null,
-    "aria-hidden": "true"
+    "aria-hidden": "true",
+    style: {
+      color: iconColor
+    }
   }), iconAltText && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "wp-block-yard-icon-component__sr-only"
   }, iconAltText));

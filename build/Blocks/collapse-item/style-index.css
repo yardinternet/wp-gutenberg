@@ -13,6 +13,9 @@
 .wp-block-yard-icon-component.fa-brands {
   font-family: "Font Awesome 6 Brands" !important;
 }
+.wp-block-yard-icon-component.fa-fw {
+  min-width: 1.25em;
+}
 .wp-block-yard-icon-component__sr-only {
   position: absolute;
   width: 1px;
