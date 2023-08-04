@@ -8,7 +8,7 @@ class PluginServiceProvider
     {
         $this->bootProviders();
 
-		\add_filter('block_categories_all', [$this, 'addBlockCategory']);
+        \add_filter('block_categories_all', [$this, 'addBlockCategory']);
         \add_action('init', [$this, 'registerBlocks']);
     }
 
@@ -18,7 +18,7 @@ class PluginServiceProvider
     public function bootProviders(): void
     {
         $providers = [
-			EditorSettings\EditorSettingsManager::class,
+            EditorSettings\EditorSettingsManager::class,
             Menu\MenuManager::class,
             Patterns\PatternManager::class,
         ];
@@ -29,7 +29,7 @@ class PluginServiceProvider
         }
     }
 
-	/**
+    /**
      * Add a custom block category
      */
     public function addBlockCategory(array $categories)
