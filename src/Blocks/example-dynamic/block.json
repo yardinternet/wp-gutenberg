@@ -4,7 +4,7 @@
 	"name": "yard-gutenberg/example-dynamic",
 	"version": "0.1.0",
 	"title": "Example Dynamic",
-	"category": "widgets",
+	"category": "yard-gutenberg",
 	"icon": "smiley",
 	"description": "Example block scaffolded with Create Block tool.",
 	"supports": {

@@ -4,7 +4,7 @@
 	"name": "yard-gutenberg/iconlist",
 	"version": "0.1.0",
 	"title": "Iconenlijst",
-	"category": "theme",
+	"category": "yard-gutenberg",
 	"icon": "list-view",
 	"description": "Voeg een lijst met Font Awesome iconen toe. Verander de tekst en iconen afzonderlijk van elkaar.",
 	"attributes": {},

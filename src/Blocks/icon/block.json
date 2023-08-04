@@ -4,7 +4,7 @@
 	"name": "yard-gutenberg/icon",
 	"version": "0.1.0",
 	"title": "Icon",
-	"category": "layout",
+	"category": "yard-gutenberg",
 	"icon": "smiley",
 	"description": "Voeg een Font Awesome icoon toe.",
 	"supports": {

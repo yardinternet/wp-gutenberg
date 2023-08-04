@@ -4,7 +4,7 @@
 	"name": "yard-gutenberg/iconlist-item",
 	"version": "0.1.0",
 	"title": "Iconenlijst item",
-	"category": "theme",
+	"category": "yard-gutenberg",
 	"icon": "list-view",
 	"description": "Een enkele iconenlijst item.",
 	"attributes": {

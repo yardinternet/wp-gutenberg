@@ -4,7 +4,7 @@
 	"name": "yard-gutenberg/tabs",
 	"version": "0.1.0",
 	"title": "Tabbladen",
-	"category": "theme",
+	"category": "yard-gutenberg",
 	"icon": "category",
 	"description": "Groepeer gemakkelijk content in verschillende tabbladen.",
 	"attributes": {

@@ -8,6 +8,7 @@ class PluginServiceProvider
     {
         $this->bootProviders();
 
+		\add_filter('block_categories_all', [$this, 'addBlockCategory']);
         \add_action('init', [$this, 'registerBlocks']);
     }
 
@@ -26,6 +27,21 @@ class PluginServiceProvider
             $provider = new $provider();
             $provider->boot();
         }
+    }
+
+	/**
+     * Add a custom block category
+     */
+    public function addBlockCategory(array $categories)
+    {
+        $categories = array_merge($categories, [
+            [
+                'slug'  => 'yard-gutenberg',
+                'title' => 'Yard Gutenberg'
+            ],
+        ]);
+
+        return $categories;
     }
 
     /**

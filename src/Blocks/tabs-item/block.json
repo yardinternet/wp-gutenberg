@@ -4,7 +4,7 @@
 	"name": "yard-gutenberg/tabs-item",
 	"version": "0.1.0",
 	"title": "Tabblad",
-	"category": "theme",
+	"category": "yard-gutenberg",
 	"icon": "category",
 	"description": "Tabblad item.",
 	"attributes": {
