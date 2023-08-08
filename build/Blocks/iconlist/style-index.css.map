@@ -1,0 +1,1 @@
+{"version":3,"file":"Blocks/iconlist/style-index.css","mappings":";;;AAEA;EACC;EACA;AADD,C","sources":["webpack://yard-gutenberg/./src/Blocks/iconlist/style.scss"],"sourcesContent":["$block: 'wp-block-yard-iconlist';\n\n.#{$block} {\n\tlist-style: none;\n\tpadding-left: 0;\n}\n"],"names":[],"sourceRoot":""}

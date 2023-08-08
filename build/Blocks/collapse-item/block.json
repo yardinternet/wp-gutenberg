@@ -4,8 +4,7 @@
   "name": "yard-gutenberg/collapse-item",
   "version": "0.1.0",
   "title": "Uitklap item",
-  "category": "theme",
-  "icon": "arrow-down-alt2",
+  "category": "yard-gutenberg",
   "description": "Uitklapbaar component.",
   "attributes": {
     "hasStructuredData": {

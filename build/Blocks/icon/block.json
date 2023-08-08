@@ -3,9 +3,8 @@
   "apiVersion": 2,
   "name": "yard-gutenberg/icon",
   "version": "0.1.0",
-  "title": "Icon",
-  "category": "layout",
-  "icon": "smiley",
+  "title": "Icoon",
+  "category": "yard-gutenberg",
   "description": "Voeg een Font Awesome icoon toe.",
   "supports": {
     "align": true,

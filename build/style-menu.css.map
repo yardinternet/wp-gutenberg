@@ -1,0 +1,1 @@
+{"version":3,"file":"./style-menu.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://yard-gutenberg/./src/Menu/resources/scss/style.scss"],"sourcesContent":["#adminmenu div.wp-menu-image.svg {\n\tbackground-size: 15px auto !important;\n}\n"],"names":[],"sourceRoot":""}
