@@ -1,7 +1,6 @@
 /**
  * WordPress dependencies
  */
-import apiFetch from '@wordpress/api-fetch';
 import { applyFilters } from '@wordpress/hooks';
 
 export const excludePostTypes = [
@@ -17,10 +16,6 @@ export const excludePostTypes = [
 	'wp_template_part',
 	'yard-pattern',
 ];
-
-export const fetchRegisteredPosttypes = () => {
-	return apiFetch( { path: 'wp/v2/types?per_page=100' } );
-};
 
 export const filterPosttypes = ( posttypes = {} ) => {
 	const excluded = applyFilters(

@@ -8,11 +8,8 @@ import { __ } from '@wordpress/i18n';
 /**
  * Internal dependencies
  */
-import {
-	fetchRegisteredPosttypes,
-	filterPosttypes,
-	mapPosttypes,
-} from '../../utils/posttypes';
+import { fetchRegisteredPosttypes } from '../../utils/api';
+import { filterPosttypes, mapPosttypes } from '../../utils/posttypes';
 
 const PosttypeSelectControl = ( props ) => {
 	const { query, setParameter } = props;

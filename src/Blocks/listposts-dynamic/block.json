@@ -17,6 +17,10 @@
 				"orderby": "date"
 			}
 		},
+		"hasStickyPost": {
+			"type": "boolean",
+			"default": false
+		},
 		"template": {
 			"type": "string",
 			"default": "default"
