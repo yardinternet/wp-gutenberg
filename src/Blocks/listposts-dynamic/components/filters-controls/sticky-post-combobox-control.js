@@ -8,6 +8,7 @@ import { useEffect, useState } from '@wordpress/element';
 /**
  * Internal dependencies
  */
+import { mapDataToOptions } from '../../utils/options';
 import { searchPosts, fetchPostById } from '../../utils/api';
 
 const StickyPostComboboxControl = ( props ) => {
@@ -15,26 +16,30 @@ const StickyPostComboboxControl = ( props ) => {
 	const { hasStickyPost } = attributes;
 	const [ options, setOptions ] = useState( [] );
 
+	/**
+	 * Check if post__in is set
+	 */
 	useEffect( () => {
 		if ( query.post__in ) {
 			getSelectedPost();
 		}
 	}, [] );
 
-	const mapOptions = ( optionsToMap ) => {
-		return optionsToMap.map( ( item ) => ( {
-			value: item.id,
-			label: `#${ item.id }: ${ item.title }`,
-		} ) );
-	};
-
+	/**
+	 * Fetch saved post by id
+	 */
 	const getSelectedPost = async () => {
 		const post = await fetchPostById( query.post__in );
 
-		setOptions( mapOptions( post ) );
+		setOptions( mapDataToOptions( post ) );
 	};
 
-	const onValueChange = async ( searchValue ) => {
+	/**
+	 * Fetch new options based on the entered search term
+	 *
+	 * @param {string} searchValue - Entered search term
+	 */
+	const onFilterValueChange = async ( searchValue ) => {
 		let subtype = 'any';
 
 		if ( query.post_type.length > 0 ) {
@@ -43,7 +48,7 @@ const StickyPostComboboxControl = ( props ) => {
 
 		const posts = await searchPosts( searchValue, subtype );
 
-		setOptions( mapOptions( posts ) );
+		setOptions( mapDataToOptions( posts ) );
 	};
 
 	return (
@@ -57,7 +62,7 @@ const StickyPostComboboxControl = ( props ) => {
 				help={ __(
 					'Selecteer het item wat als eerste in de lijst getoond moet worden'
 				) }
-				onFilterValueChange={ onValueChange }
+				onFilterValueChange={ onFilterValueChange }
 			/>
 		)
 	);

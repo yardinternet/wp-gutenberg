@@ -8,6 +8,11 @@ const PostParentRadioControl = ( props ) => {
 	const { setParameter, removeParameter, setAttributes, attributes } = props;
 	const { postParentOption } = attributes;
 
+	/**
+	 * Save option in attributes and set/remove post_parent query parameter
+	 *
+	 * @param {string} value - Selected option
+	 */
 	const onChange = ( value ) => {
 		setAttributes( { postParentOption: value } );
 
