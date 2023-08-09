@@ -7,25 +7,15 @@
 	"category": "yard-gutenberg",
 	"description": "Voeg een lijst van een specifiek type content toe en pas de instellingen aan.",
 	"attributes": {
-		"posttypes": {
-			"type": "array",
-			"default": []
-		},
-		"numberOfItems": {
-			"type": "number",
-			"default": 3
-		},
-		"offset": {
-			"type": "number",
-			"default": 0
-		},
-		"orderby": {
-			"type": "string",
-			"default": "date"
-		},
-		"order": {
-			"type": "string",
-			"default": "DESC"
+		"query": {
+			"type": "object",
+			"default": {
+				"post_type": [],
+				"posts_per_page": 3,
+				"offset": 0,
+				"order": "DESC",
+				"orderby": "date"
+			}
 		},
 		"template": {
 			"type": "string",

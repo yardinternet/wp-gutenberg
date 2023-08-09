@@ -5,9 +5,10 @@ import { SelectControl } from '@wordpress/components';
 import { useEffect, useState } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
-const defaultOrderByOptions = [
+const defaultOrderbyOptions = [
 	{ label: __( 'Publicatiedatum' ), value: 'date' },
 	{ label: __( 'Titel' ), value: 'title' },
+	{ label: __( 'Attribuut volgorde' ), value: 'menu_order' },
 	{ label: __( 'Willekeurig' ), value: 'rand' },
 ];
 
@@ -17,32 +18,31 @@ const tribeEventsDateOption = {
 };
 
 const OrderbySelectControl = ( props ) => {
-	const { setAttributes, attributes } = props;
-	const { posttypes, orderby } = attributes;
-	const [ options, setOptions ] = useState( defaultOrderByOptions );
+	const { query, setParameter } = props;
+	const [ options, setOptions ] = useState( defaultOrderbyOptions );
 
 	useEffect( () => {
 		if (
-			posttypes.includes( 'tribe_events' ) &&
+			query.post_type.includes( 'tribe_events' ) &&
 			! options.includes( tribeEventsDateOption )
 		) {
 			setOptions( [ ...options, tribeEventsDateOption ] );
 		}
 
 		if (
-			! posttypes.includes( 'tribe_events' ) &&
+			! query.post_type.includes( 'tribe_events' ) &&
 			options.includes( tribeEventsDateOption )
 		) {
-			setOptions( defaultOrderByOptions );
+			setOptions( defaultOrderbyOptions );
 		}
-	}, [ posttypes ] );
+	}, [ query.post_type ] );
 
 	return (
 		<SelectControl
 			label={ __( 'Sorteer op' ) }
-			value={ orderby }
+			value={ query.orderby }
 			options={ options }
-			onChange={ ( value ) => setAttributes( { orderby: value } ) }
+			onChange={ ( value ) => setParameter( 'orderby', value ) }
 			__nextHasNoMarginBottom
 		/>
 	);

@@ -15,8 +15,7 @@ import {
 } from '../../utils/posttypes';
 
 const PosttypeSelectControl = ( props ) => {
-	const { setAttributes, attributes } = props;
-	const { posttypes } = attributes;
+	const { query, setParameter } = props;
 	const [ options, setOptions ] = useState( [] );
 
 	// TODO: Add external options
@@ -37,9 +36,9 @@ const PosttypeSelectControl = ( props ) => {
 		<SelectControl
 			multiple
 			label={ __( 'Selecteer content type' ) }
-			value={ posttypes }
+			value={ query.post_type }
 			options={ options }
-			onChange={ ( value ) => setAttributes( { posttypes: value } ) }
+			onChange={ ( value ) => setParameter( 'post_type', value ) }
 			__nextHasNoMarginBottom
 		/>
 	) : (

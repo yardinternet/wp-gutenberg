@@ -4,10 +4,12 @@
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
+import { useEffect } from '@wordpress/element';
 
 /**
  * Internal dependencies
  */
+import useQueryReducer from '../hooks/useQueryReducer';
 import DisplayDateToggleControl from './display-controls/display-date-toggle-control';
 import DisplayExcerptToggleControl from './display-controls/display-excerpt-toggle-control';
 import DisplayImageToggleControl from './display-controls/display-image-toggle-control';
@@ -21,14 +23,37 @@ import PosttypeSelectControl from './settings-controls/posttype-select-control';
 import TemplateSelectControl from './display-controls/template-select-control';
 
 const Inspector = ( props ) => {
+	const { setAttributes, attributes } = props;
+	const { query } = attributes;
+	const { queryState, setParameter } = useQueryReducer( query );
+
+	useEffect( () => {
+		setAttributes( { query: queryState } );
+	}, [ JSON.stringify( queryState ) ] );
+
 	return (
 		<InspectorControls>
 			<PanelBody title={ __( 'Instellingen' ) } initialOpen={ true }>
-				<PosttypeSelectControl { ...props } />
-				<NumberOfItemsRangeControl { ...props } />
-				<OffsetRangeControl { ...props } />
-				<OrderbySelectControl { ...props } />
-				<OrderSelectControl { ...props } />
+				<PosttypeSelectControl
+					query={ queryState }
+					setParameter={ setParameter }
+				/>
+				<NumberOfItemsRangeControl
+					query={ queryState }
+					setParameter={ setParameter }
+				/>
+				<OffsetRangeControl
+					query={ queryState }
+					setParameter={ setParameter }
+				/>
+				<OrderbySelectControl
+					query={ queryState }
+					setParameter={ setParameter }
+				/>
+				<OrderSelectControl
+					query={ queryState }
+					setParameter={ setParameter }
+				/>
 			</PanelBody>
 			<PanelBody title={ __( 'Filters' ) } initialOpen={ false }>
 				{ /* Handmatige selectie */ }
