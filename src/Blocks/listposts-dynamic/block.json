@@ -17,13 +17,25 @@
 				"orderby": "date"
 			}
 		},
-		"hasStickyPost": {
+		"enableManuelSelection": {
+			"type": "boolean",
+			"default": false
+		},
+		"enableStickyPost": {
+			"type": "boolean",
+			"default": false
+		},
+		"enableExcludePosts": {
+			"type": "boolean",
+			"default": false
+		},
+		"enablePostParent": {
 			"type": "boolean",
 			"default": false
 		},
 		"postParentOption": {
 			"type": "string",
-			"default": "any"
+			"default": "only-parents"
 		},
 		"template": {
 			"type": "string",

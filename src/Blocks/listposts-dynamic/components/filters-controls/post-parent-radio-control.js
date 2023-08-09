@@ -6,7 +6,8 @@ import { __ } from '@wordpress/i18n';
 
 const PostParentRadioControl = ( props ) => {
 	const { setParameter, removeParameter, setAttributes, attributes } = props;
-	const { postParentOption } = attributes;
+	const { postParentOption, enableManuelSelection, enablePostParent } =
+		attributes;
 
 	/**
 	 * Save option in attributes and set/remove post_parent query parameter
@@ -24,22 +25,27 @@ const PostParentRadioControl = ( props ) => {
 	};
 
 	return (
-		<RadioControl
-			label={ __( 'Hoofd- en subitems' ) }
-			selected={ postParentOption }
-			options={ [
-				{ label: __( 'Toon zowel hoofd- als subitems' ), value: 'any' },
-				{
-					label: __( 'Toon alleen hoofditems' ),
-					value: 'only-parents',
-				},
-				{
-					label: __( 'Toon subitems van een specifieke hoofditem' ),
-					value: 'specific-parent',
-				},
-			] }
-			onChange={ onChange }
-		/>
+		! enableManuelSelection &&
+		enablePostParent && (
+			<RadioControl
+				label={ __( 'Hoofd- en subitems' ) }
+				hideLabelFromVision={ true }
+				selected={ postParentOption }
+				options={ [
+					{
+						label: __( 'Toon alleen hoofditems' ),
+						value: 'only-parents',
+					},
+					{
+						label: __(
+							'Toon subitems van een specifieke hoofditem'
+						),
+						value: 'specific-parent',
+					},
+				] }
+				onChange={ onChange }
+			/>
+		)
 	);
 };
 

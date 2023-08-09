@@ -4,32 +4,32 @@
 import { ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
-const StickyPostToggleControl = ( props ) => {
+const PostParentToggleControl = ( props ) => {
 	const { removeParameter, setAttributes, attributes } = props;
-	const { enableStickyPost, enableManuelSelection } = attributes;
+	const { enablePostParent, enableManuelSelection } = attributes;
 
 	/**
-	 * Save state in attributes and remove post__in parameter if the toggle is disabled
+	 * Save state in attributes and remove post_parent parameter if the toggle is disabled
 	 *
 	 * @param {boolean} state - State of toggle
 	 */
 	const onChange = ( state ) => {
-		setAttributes( { enableStickyPost: state } );
+		setAttributes( { enablePostParent: state } );
 
 		if ( ! state ) {
-			removeParameter( 'post__in' );
+			removeParameter( 'post_parent' );
 		}
 	};
 
 	return (
 		! enableManuelSelection && (
 			<ToggleControl
-				label={ __( 'Klevend item' ) }
-				checked={ enableStickyPost }
+				label={ __( 'Filter op hoofditems' ) }
+				checked={ enablePostParent }
 				onChange={ onChange }
 			/>
 		)
 	);
 };
 
-export default StickyPostToggleControl;
+export default PostParentToggleControl;

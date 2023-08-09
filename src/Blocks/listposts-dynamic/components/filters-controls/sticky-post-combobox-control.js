@@ -13,7 +13,7 @@ import { searchPosts, fetchPostById } from '../../utils/api';
 
 const StickyPostComboboxControl = ( props ) => {
 	const { query, setParameter, attributes } = props;
-	const { hasStickyPost } = attributes;
+	const { enableStickyPost } = attributes;
 	const [ options, setOptions ] = useState( [] );
 
 	/**
@@ -52,7 +52,7 @@ const StickyPostComboboxControl = ( props ) => {
 	};
 
 	return (
-		hasStickyPost && (
+		enableStickyPost && (
 			<ComboboxControl
 				label={ __( 'Selecteer item' ) }
 				hideLabelFromVision={ true }
