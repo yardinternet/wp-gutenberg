@@ -17,6 +17,11 @@ export const excludePostTypes = [
 	'yard-pattern',
 ];
 
+/**
+ * Remove unwanted post types from all posttypes
+ *
+ * @param {Object} posttypes - All post types
+ */
 export const filterPosttypes = ( posttypes = {} ) => {
 	const excluded = applyFilters(
 		'yard-gutenberg.listpost-exclude-posttypes',
@@ -28,6 +33,11 @@ export const filterPosttypes = ( posttypes = {} ) => {
 		.map( ( item ) => posttypes[ item ] );
 };
 
+/**
+ * Map post types array to an array to use for options
+ *
+ * @param {Array} posttypes - Post types to map
+ */
 export const mapPosttypes = ( posttypes = [] ) => {
 	return posttypes.map( ( item ) => ( {
 		label: item.name.replace( '&#39;', "'" ),

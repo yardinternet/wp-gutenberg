@@ -15,7 +15,15 @@ const PosttypeSelectControl = ( props ) => {
 	const { query, setParameter } = props;
 	const [ options, setOptions ] = useState( [] );
 
-	// TODO: Add external options
+	useEffect( () => {
+		getOptions();
+	}, [] );
+
+	/**
+	 * Fetch and map all post types without the unwanted post types
+	 *
+	 * @todo Add external options
+	 */
 	const getOptions = async () => {
 		const allPosttypes = await fetchRegisteredPosttypes();
 		const filteredPosttypes = filterPosttypes( allPosttypes );
@@ -24,11 +32,9 @@ const PosttypeSelectControl = ( props ) => {
 		setOptions( mappedPosttypes );
 	};
 
-	useEffect( () => {
-		getOptions();
-	}, [] );
-
-	// TODO: A better multi select
+	/**
+	 * @todo A better multi select
+	 */
 	return options.length > 0 ? (
 		<SelectControl
 			multiple

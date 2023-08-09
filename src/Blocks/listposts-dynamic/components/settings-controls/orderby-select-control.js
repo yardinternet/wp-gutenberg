@@ -21,6 +21,9 @@ const OrderbySelectControl = ( props ) => {
 	const { query, setParameter } = props;
 	const [ options, setOptions ] = useState( defaultOrderbyOptions );
 
+	/**
+	 * Change options if tribe_events post type is selected
+	 */
 	useEffect( () => {
 		if (
 			query.post_type.includes( 'tribe_events' ) &&

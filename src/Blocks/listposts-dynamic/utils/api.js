@@ -31,3 +31,12 @@ export const searchPosts = ( search = '', subtype = 'any' ) => {
 export const fetchPostById = ( id = '' ) => {
 	return apiFetch( { path: `wp/v2/search?include=${ id }` } );
 };
+
+/**
+ * Fetch all taxonomies
+ *
+ * @see https://developer.wordpress.org/rest-api/reference/taxonomies/
+ */
+export const fetchAllTaxonomies = () => {
+	return apiFetch( { path: 'wp/v2/taxonomies?per_page=100' } );
+};

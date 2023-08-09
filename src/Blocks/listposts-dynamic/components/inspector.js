@@ -43,51 +43,59 @@ const Inspector = ( props ) => {
 					query={ queryState }
 					setParameter={ setParameter }
 				/>
-				<NumberOfItemsRangeControl
-					query={ queryState }
-					setParameter={ setParameter }
-				/>
-				<OffsetRangeControl
-					query={ queryState }
-					setParameter={ setParameter }
-				/>
-				<OrderbySelectControl
-					query={ queryState }
-					setParameter={ setParameter }
-				/>
-				<OrderSelectControl
-					query={ queryState }
-					setParameter={ setParameter }
-				/>
+				{ query.post_type.length > 0 && (
+					<>
+						<NumberOfItemsRangeControl
+							query={ queryState }
+							setParameter={ setParameter }
+						/>
+						<OffsetRangeControl
+							query={ queryState }
+							setParameter={ setParameter }
+						/>
+						<OrderbySelectControl
+							query={ queryState }
+							setParameter={ setParameter }
+						/>
+						<OrderSelectControl
+							query={ queryState }
+							setParameter={ setParameter }
+						/>
+					</>
+				) }
 			</PanelBody>
-			<PanelBody title={ __( 'Filters' ) } initialOpen={ false }>
-				{ /* Handmatige selectie */ }
-				{ /* Posts uitsluiten */ }
-				{ /* Huidige post uitsluiten */ }
-				<StickyPostToggleControl
-					removeParameter={ removeParameter }
-					{ ...props }
-				/>
-				<StickyPostComboboxControl
-					query={ queryState }
-					setParameter={ setParameter }
-					{ ...props }
-				/>
-				<PostParentRadioControl
-					setParameter={ setParameter }
-					removeParameter={ removeParameter }
-					{ ...props }
-				/>
-				<PostParentComboboxControl
-					query={ queryState }
-					setParameter={ setParameter }
-					{ ...props }
-				/>
-			</PanelBody>
-			<PanelBody title={ __( 'Taxonomy filters' ) } initialOpen={ false }>
-				{ /* Taxonomy filteren */ }
-				{ /* Taxonomy uitsluiten */ }
-			</PanelBody>
+			{ query.post_type.length > 0 && (
+				<PanelBody title={ __( 'Filters' ) } initialOpen={ false }>
+					{ /* Handmatige selectie */ }
+					{ /* Posts uitsluiten */ }
+					{ /* Huidige post uitsluiten */ }
+					<StickyPostToggleControl
+						removeParameter={ removeParameter }
+						{ ...props }
+					/>
+					<StickyPostComboboxControl
+						query={ queryState }
+						setParameter={ setParameter }
+						{ ...props }
+					/>
+					<PostParentRadioControl
+						setParameter={ setParameter }
+						removeParameter={ removeParameter }
+						{ ...props }
+					/>
+					<PostParentComboboxControl
+						query={ queryState }
+						setParameter={ setParameter }
+						{ ...props }
+					/>
+				</PanelBody>
+			) }
+			{ query.post_type.length > 0 && (
+				<PanelBody title={ __( 'Taxonomy' ) } initialOpen={ false }>
+					{ /* Taxonomy filteren */ }
+					{ /* Taxonomy uitsluiten */ }
+				</PanelBody>
+			) }
 			<PanelBody title={ __( 'Weergave' ) } initialOpen={ false }>
 				<TemplateSelectControl { ...props } />
 				<DisplayImageToggleControl { ...props } />

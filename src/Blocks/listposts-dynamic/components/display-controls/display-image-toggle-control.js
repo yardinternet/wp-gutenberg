@@ -8,7 +8,9 @@ const DisplayImageToggleControl = ( props ) => {
 	const { setAttributes, attributes } = props;
 	const { displayImage } = attributes;
 
-	// TODO: Retrieve from template if option is available
+	/**
+	 * @todo Retrieve from template if option is available
+	 */
 	return (
 		<ToggleControl
 			label={ __( 'Toon afbeelding' ) }

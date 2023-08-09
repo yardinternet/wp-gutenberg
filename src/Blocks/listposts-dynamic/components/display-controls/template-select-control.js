@@ -8,15 +8,18 @@ const TemplateSelectControl = ( props ) => {
 	const { setAttributes, attributes } = props;
 	const { template } = attributes;
 
-	// TODO: Retrieve all options
-	// Options:
-	// - Template name (not the file name)
-	// - Enable image
-	// - Enable date
-	// - Enable excerpt
-	// - Enable label
-	// - Add label options (array with label and value)
-	// - Add tekst if no posts are available
+	/**
+	 * @todo Retrieve from template if option is available and what the options are
+	 *
+	 * Options:
+	 * - Template name (not the file name)
+	 * - Enable image
+	 * - Enable date
+	 * - Enable excerpt
+	 * - Enable label
+	 * - Add label options (array with label and value)
+	 * - Add text if no posts are available
+	 */
 	return (
 		<SelectControl
 			label={ __( 'Sjabloon' ) }

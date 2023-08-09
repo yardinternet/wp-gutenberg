@@ -8,7 +8,9 @@ const LabelTypeSelectControl = ( props ) => {
 	const { setAttributes, attributes } = props;
 	const { displayLabel, labelType } = attributes;
 
-	// TODO: Retrieve from template if option is available and what the options are
+	/**
+	 * @todo Retrieve from template if option is available and what the options are
+	 */
 	return (
 		displayLabel && (
 			<SelectControl

@@ -8,7 +8,9 @@ const DisplayDateToggleControl = ( props ) => {
 	const { setAttributes, attributes } = props;
 	const { displayDate } = attributes;
 
-	// TODO: Retrieve from template if option is available
+	/**
+	 * @todo Retrieve from template if option is available
+	 */
 	return (
 		<ToggleControl
 			label={ __( 'Toon datum' ) }

@@ -8,6 +8,7 @@ import { useEffect, useState } from '@wordpress/element';
 /**
  * Internal dependencies
  */
+import { mapDataToOptions } from '../../utils/options';
 import { searchPosts, fetchPostById } from '../../utils/api';
 
 const PostParentComboboxControl = ( props ) => {
@@ -15,26 +16,30 @@ const PostParentComboboxControl = ( props ) => {
 	const { postParentOption } = attributes;
 	const [ options, setOptions ] = useState( [] );
 
+	/**
+	 * Check if post_parent is set
+	 */
 	useEffect( () => {
 		if ( query.post_parent && query.post_parent !== 0 ) {
 			getSelectedPost();
 		}
 	}, [] );
 
-	const mapOptions = ( optionsToMap ) => {
-		return optionsToMap.map( ( item ) => ( {
-			value: item.id,
-			label: `#${ item.id }: ${ item.title }`,
-		} ) );
-	};
-
+	/**
+	 * Fetch saved post by id
+	 */
 	const getSelectedPost = async () => {
 		const post = await fetchPostById( query.post_parent );
 
-		setOptions( mapOptions( post ) );
+		setOptions( mapDataToOptions( post ) );
 	};
 
-	const onValueChange = async ( searchValue ) => {
+	/**
+	 * Fetch new options based on the entered search term
+	 *
+	 * @param {string} searchValue - Entered search term
+	 */
+	const onFilterValueChange = async ( searchValue ) => {
 		let subtype = 'any';
 
 		if ( query.post_type.length > 0 ) {
@@ -43,7 +48,7 @@ const PostParentComboboxControl = ( props ) => {
 
 		const posts = await searchPosts( searchValue, subtype );
 
-		setOptions( mapOptions( posts ) );
+		setOptions( mapDataToOptions( posts ) );
 	};
 
 	return (
@@ -57,7 +62,7 @@ const PostParentComboboxControl = ( props ) => {
 				help={ __(
 					'Selecteer het hoofditem waar de subitems van getoond moeten worden.'
 				) }
-				onFilterValueChange={ onValueChange }
+				onFilterValueChange={ onFilterValueChange }
 			/>
 		)
 	);
