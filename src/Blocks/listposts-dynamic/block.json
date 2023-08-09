@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "yard-gutenberg/listposts-dynamic",
+	"version": "0.1.0",
+	"title": "Berichtenlijst",
+	"category": "yard-gutenberg",
+	"description": "Voeg een lijst van een specifiek type content toe en pas de instellingen aan.",
+	"attributes": {
+		"posttypes": {
+			"type": "array",
+			"default": []
+		},
+		"numberOfItems": {
+			"type": "number",
+			"default": 3
+		},
+		"offset": {
+			"type": "number",
+			"default": 0
+		},
+		"orderby": {
+			"type": "string",
+			"default": "date"
+		},
+		"order": {
+			"type": "string",
+			"default": "DESC"
+		},
+		"template": {
+			"type": "string",
+			"default": "default"
+		},
+		"displayImage": {
+			"type": "boolean",
+			"default": true
+		},
+		"displayDate": {
+			"type": "boolean",
+			"default": true
+		},
+		"displayExcerpt": {
+			"type": "boolean",
+			"default": true
+		},
+		"displayLabel": {
+			"type": "boolean",
+			"default": false
+		},
+		"labelType": {
+			"type": "string"
+		},
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"textdomain": "yard-gutenberg",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./frontend.js"
+}
