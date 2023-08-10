@@ -13,7 +13,8 @@ import { searchPosts, fetchPostById } from '../../utils/api';
 
 const PostParentComboboxControl = ( props ) => {
 	const { query, setParameter, attributes } = props;
-	const { postParentOption } = attributes;
+	const { postParentOption, enableManuelSelection, enablePostParent } =
+		attributes;
 	const [ options, setOptions ] = useState( [] );
 
 	/**
@@ -52,6 +53,8 @@ const PostParentComboboxControl = ( props ) => {
 	};
 
 	return (
+		! enableManuelSelection &&
+		enablePostParent &&
 		postParentOption === 'specific-parent' && (
 			<ComboboxControl
 				label={ __( 'Selecteer item' ) }
