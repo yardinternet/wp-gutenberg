@@ -88,26 +88,19 @@ class PluginServiceProvider
     }
 
     /**
-     * @todo: FIX THIS - Get the render callback for a dynamic block if it exists.
+     * Get the render callback for a dynamic block if it exists.
      *
      * @param string $blockName The name of the block.
-     * @param string $blockPath The path to the block folder.
      *
      * @return callable|null The render callback or null if not found.
      */
-    public function getRenderCallback($blockName)
+    public function getRenderCallback(string $blockName)
     {
-        $className      = ucwords(str_replace('-', ' ', $blockName));
-        $className      = str_replace(' ', '', $className);
-        $className      = str_replace('Dynamic', '', $className);
-        $classPath      = dirname(__DIR__, 1) . '/src/Blocks/' . $blockName . '/' . $className . '.php';
+		$nameSpacedClass = 'Yard\\Gutenberg\\Blocks\\' . $blockName . '\\' . ucfirst($blockName);
 
-        if (file_exists($classPath)) {
-			require_once $classPath;
-
-            $nameSpacedClass = 'Yard\\Gutenberg\\Blocks\\' . $className . '\\' . $className;
-
-            return [ $nameSpacedClass, 'renderCallback'];
+		if (class_exists($nameSpacedClass)) {
+            $blockClass = new $nameSpacedClass;
+            return [$blockClass, 'renderCallback'];
         }
 
         return null;
