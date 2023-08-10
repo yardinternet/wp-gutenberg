@@ -9,7 +9,8 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import { fetchRegisteredPosttypes } from '../../utils/api';
-import { filterPosttypes, mapPosttypes } from '../../utils/posttypes';
+import { mapPosttypesToOptions } from '../../utils/helpers';
+import { filterPosttypes } from '../../utils/posttypes';
 
 const PosttypeSelectControl = ( props ) => {
 	const { query, setParameter } = props;
@@ -27,7 +28,7 @@ const PosttypeSelectControl = ( props ) => {
 	const getOptions = async () => {
 		const allPosttypes = await fetchRegisteredPosttypes();
 		const filteredPosttypes = filterPosttypes( allPosttypes );
-		const mappedPosttypes = mapPosttypes( filteredPosttypes );
+		const mappedPosttypes = mapPosttypesToOptions( filteredPosttypes );
 
 		setOptions( mappedPosttypes );
 	};

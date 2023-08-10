@@ -32,15 +32,3 @@ export const filterPosttypes = ( posttypes = {} ) => {
 		.filter( ( item ) => excluded.indexOf( item ) === -1 )
 		.map( ( item ) => posttypes[ item ] );
 };
-
-/**
- * Map post types array to an array to use for options
- *
- * @param {Array} posttypes - Post types to map
- */
-export const mapPosttypes = ( posttypes = [] ) => {
-	return posttypes.map( ( item ) => ( {
-		label: item.name.replace( '&#39;', "'" ),
-		value: item.slug,
-	} ) );
-};

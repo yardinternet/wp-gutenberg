@@ -8,7 +8,7 @@ import { useEffect, useState } from '@wordpress/element';
 /**
  * Internal dependencies
  */
-import { mapDataToOptions } from '../../utils/options';
+import { mapPostsToOptions } from '../../utils/helpers';
 import { searchPosts, fetchPostById } from '../../utils/api';
 
 const StickyPostComboboxControl = ( props ) => {
@@ -31,7 +31,7 @@ const StickyPostComboboxControl = ( props ) => {
 	const getSelectedPost = async () => {
 		const post = await fetchPostById( query.post__in );
 
-		setOptions( mapDataToOptions( post ) );
+		setOptions( mapPostsToOptions( post ) );
 	};
 
 	/**
@@ -48,7 +48,7 @@ const StickyPostComboboxControl = ( props ) => {
 
 		const posts = await searchPosts( searchValue, subtype );
 
-		setOptions( mapDataToOptions( posts ) );
+		setOptions( mapPostsToOptions( posts ) );
 	};
 
 	return (
