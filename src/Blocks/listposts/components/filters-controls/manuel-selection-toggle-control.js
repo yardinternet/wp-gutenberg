@@ -26,6 +26,7 @@ const ManuelSelectionToggleControl = ( props ) => {
 			} );
 			setParameter( 'post__in', [] );
 			removeParameter( 'post_parent' );
+			removeParameter( 'tax_query' );
 		}
 	};
 

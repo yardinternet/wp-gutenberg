@@ -33,10 +33,10 @@ export const fetchPostById = ( id = '' ) => {
 };
 
 /**
- * Fetch all taxonomies
+ * Fetch taxonomies by post type
  *
  * @see https://developer.wordpress.org/rest-api/reference/taxonomies/
  */
-export const fetchAllTaxonomies = () => {
-	return apiFetch( { path: 'wp/v2/taxonomies?per_page=100' } );
+export const fetchTaxonomiesByPosttype = ( type = '' ) => {
+	return apiFetch( { path: `wp/v2/taxonomies?type=${ type }&per_page=100` } );
 };

@@ -26,6 +26,7 @@ import PostParentToggleControl from './filters-controls/post-parent-toggle-contr
 import PosttypeSelectControl from './settings-controls/posttype-select-control';
 import StickyPostComboboxControl from './filters-controls/sticky-post-combobox-control';
 import StickyPostToggleControl from './filters-controls/sticky-post-toggle-control';
+import TaxonomyControl from './filters-controls/taxonomy-control';
 import TemplateSelectControl from './display-controls/template-select-control';
 import useQueryReducer from '../hooks/useQueryReducer';
 
@@ -100,12 +101,12 @@ const Inspector = ( props ) => {
 						setParameter={ setParameter }
 						{ ...props }
 					/>
-				</PanelBody>
-			) }
-			{ query.post_type.length > 0 && (
-				<PanelBody title={ __( 'Taxonomy' ) } initialOpen={ false }>
-					{ /* Taxonomy filteren */ }
-					{ /* Taxonomy uitsluiten */ }
+					<TaxonomyControl
+						query={ queryState }
+						setParameter={ setParameter }
+						removeParameter={ removeParameter }
+						{ ...props }
+					/>
 				</PanelBody>
 			) }
 			<PanelBody title={ __( 'Weergave' ) } initialOpen={ false }>

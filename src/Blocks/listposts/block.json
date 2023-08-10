@@ -37,6 +37,10 @@
 			"type": "string",
 			"default": "only-parents"
 		},
+		"enableTaxonomie": {
+			"type": "boolean",
+			"default": false
+		},
 		"template": {
 			"type": "string",
 			"default": "default"
