@@ -29,7 +29,7 @@ const StickyPostComboboxControl = ( props ) => {
 	 * Fetch saved post by id
 	 */
 	const getSelectedPost = async () => {
-		const post = await fetchPostById( query.post__in );
+		const post = await fetchPostById( query.post__in[ 0 ] );
 
 		setOptions( mapPostsToOptions( post ) );
 	};
@@ -56,9 +56,9 @@ const StickyPostComboboxControl = ( props ) => {
 			<ComboboxControl
 				label={ __( 'Selecteer item' ) }
 				hideLabelFromVision={ true }
-				value={ query.post__in }
+				value={ query.post__in ? query.post__in[ 0 ] : '' }
 				options={ options }
-				onChange={ ( value ) => setParameter( 'post__in', value ) }
+				onChange={ ( value ) => setParameter( 'post__in', [ value ] ) }
 				help={ __(
 					'Selecteer het item wat als eerste in de lijst getoond moet worden'
 				) }

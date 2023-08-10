@@ -3,6 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
+import ServerSideRender from '@wordpress/server-side-render';
 
 /**
  * Internal dependencies
@@ -10,15 +11,16 @@ import { useBlockProps } from '@wordpress/block-editor';
 import Inspector from './components/inspector';
 
 const Edit = ( props ) => {
+	const { attributes } = props;
+
 	return (
 		<div { ...useBlockProps() }>
 			<Inspector { ...props } />
-			<p>
-				{ __(
-					'Example Dynamic – hello from the editor!',
-					'yard-gutenberg'
-				) }
-			</p>
+
+			<ServerSideRender
+				block="yard-gutenberg/listposts"
+				attributes={ attributes }
+			/>
 		</div>
 	);
 };

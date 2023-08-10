@@ -5,7 +5,7 @@ import { ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 const StickyPostToggleControl = ( props ) => {
-	const { removeParameter, setAttributes, attributes } = props;
+	const { setParameter, setAttributes, attributes } = props;
 	const { enableStickyPost, enableManuelSelection } = attributes;
 
 	/**
@@ -17,7 +17,7 @@ const StickyPostToggleControl = ( props ) => {
 		setAttributes( { enableStickyPost: state } );
 
 		if ( ! state ) {
-			removeParameter( 'post__in' );
+			setParameter( 'post__in', [] );
 		}
 	};
 

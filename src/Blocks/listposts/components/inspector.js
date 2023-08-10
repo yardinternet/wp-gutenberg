@@ -70,12 +70,13 @@ const Inspector = ( props ) => {
 			{ query.post_type.length > 0 && (
 				<PanelBody title={ __( 'Filters' ) } initialOpen={ false }>
 					<ManuelSelectionToggleControl
+						setParameter={ setParameter }
 						removeParameter={ removeParameter }
 						{ ...props }
 					/>
 					{ /* @todo Add multi select control to select manuel posts */ }
 					<StickyPostToggleControl
-						removeParameter={ removeParameter }
+						setParameter={ setParameter }
 						{ ...props }
 					/>
 					<StickyPostComboboxControl

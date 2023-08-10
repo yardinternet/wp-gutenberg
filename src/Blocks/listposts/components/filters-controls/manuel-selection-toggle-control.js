@@ -5,7 +5,7 @@ import { ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 const ManuelSelectionToggleControl = ( props ) => {
-	const { removeParameter, setAttributes, attributes } = props;
+	const { setParameter, removeParameter, setAttributes, attributes } = props;
 	const { enableManuelSelection } = attributes;
 
 	/**
@@ -24,7 +24,7 @@ const ManuelSelectionToggleControl = ( props ) => {
 				enableExcludePosts: false,
 				enablePostParent: false,
 			} );
-			removeParameter( 'post__in' );
+			setParameter( 'post__in', [] );
 			removeParameter( 'post_parent' );
 		}
 	};
