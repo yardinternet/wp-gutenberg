@@ -78,7 +78,13 @@ class PluginServiceProvider
      */
     public function isDynamicBlock($blockName): bool
     {
-        return strpos($blockName, '-dynamic') !== false;
+		$files = glob(__DIR__ . '/*/*/' . ucfirst($blockName) . '.php') ?? [];
+
+		if (count($files)) {
+			return true;
+		}
+
+		return false;
     }
 
     /**
@@ -97,13 +103,12 @@ class PluginServiceProvider
         $classPath      = dirname(__DIR__, 1) . '/src/Blocks/' . $blockName . '/' . $className . '.php';
 
         if (file_exists($classPath)) {
-            require_once $classPath;
+			require_once $classPath;
 
             $nameSpacedClass = 'Yard\\Gutenberg\\Blocks\\' . $className . '\\' . $className;
 
             return [ $nameSpacedClass, 'renderCallback'];
         }
-
 
         return null;
     }
