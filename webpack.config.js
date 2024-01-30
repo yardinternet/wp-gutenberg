@@ -11,6 +11,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			'@components': path.resolve( __dirname, 'src/EditorComponents/' ),
+			'@hooks': path.resolve( __dirname, 'src/Hooks/' ),
 		},
 	},
 	entry: {

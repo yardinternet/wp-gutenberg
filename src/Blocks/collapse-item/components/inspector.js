@@ -8,35 +8,19 @@ import {
 	TextControl,
 	ToggleControl,
 } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 /**
  * Internal dependencies
  */
 import { IconPickerControlInspector } from '@components/icon-picker-control';
+import { useParentBlock } from '@hooks';
 
 const Inspector = ( props ) => {
-	const { attributes, setAttributes, clientId, enableIcon } = props;
+	const { attributes, setAttributes, enableIcon } = props;
 	const { icon, iconAltText, isOpen } = attributes;
 
-	/**
-	 * getBlockParents @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
-	 */
-	const { parentClientId } = useSelect( ( select ) => ( {
-		parentClientId: select( 'core/block-editor' )
-			.getBlockParents( clientId )
-			.at( -1 ),
-	} ) );
-
-	/**
-	 * selectBlock @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#selectblock
-	 */
-	const { selectBlock } = useDispatch( 'core/block-editor' );
-
-	const selectParentBlock = () => {
-		selectBlock( parentClientId );
-	};
+	const { selectParentBlock } = useParentBlock();
 
 	return (
 		<InspectorControls>

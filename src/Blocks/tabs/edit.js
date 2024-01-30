@@ -3,11 +3,12 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import { useSelect } from '@wordpress/data';
-import { useEffect } from '@wordpress/element';
+import { useCallback, useEffect } from '@wordpress/element';
 
 /**
  * Internal dependencies
  */
+import { useCurrentBlock } from '@hooks';
 import Inspector from './components/inspector';
 import './editor.scss';
 
@@ -15,28 +16,81 @@ const TEMPLATE = [ [ 'yard-gutenberg/tabs-item' ] ];
 const ALLOWED_BLOCKS = [ 'yard-gutenberg/tabs-item' ];
 
 const Edit = ( props ) => {
-	const { attributes, clientId, setAttributes } = props;
-	const { defaultTab, defaultTabEnabled } = attributes;
+	const { attributes, setAttributes, clientId } = props;
+	const { currentTab, defaultTab, defaultTabEnabled } = attributes;
 
-	/**
-	 * getBlocks @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
-	 */
-	const { innerblocks } = useSelect( ( select ) => ( {
-		innerblocks: select( 'core/block-editor' ).getBlocks( clientId ),
+	const { currentBlockInnerBlocks, currentBlockHasSelectedInnerBlock } =
+		useCurrentBlock();
+
+	const {
+		currentSelectedBlock,
+		getClientIdsOfDescendants,
+		getBlockAttributes,
+	} = useSelect( ( select ) => ( {
+		currentSelectedBlock:
+			select( 'core/block-editor' ).getSelectedBlockClientId(),
+		getClientIdsOfDescendants:
+			select( 'core/block-editor' ).getClientIdsOfDescendants( clientId ),
+		getBlockAttributes: select( 'core/block-editor' ).getBlockAttributes,
 	} ) );
+
+	const clientIdExist = useCallback(
+		( idToCheck ) => {
+			return getClientIdsOfDescendants?.some( ( _clientId ) => {
+				const { id: _id } = getBlockAttributes( _clientId );
+				return idToCheck === _id;
+			} );
+		},
+		[ getClientIdsOfDescendants, getBlockAttributes ]
+	);
 
 	/**
 	 * Set current tab attribute to use context 'yard-gutenberg/tabs-current-tab' in child blocks.
 	 * 1. When a defaultTab is selected, set the tab as currentTab
-	 * 2. Fallback to open the first tab
+	 * 2. Fallback to open the first tab and reset defaultTab
 	 */
 	useEffect( () => {
+		if ( currentSelectedBlock || currentBlockHasSelectedInnerBlock ) return;
+
 		if ( defaultTabEnabled && defaultTab ) {
-			setAttributes( { currentTab: defaultTab } );
-		} else if ( innerblocks && innerblocks.length > 0 ) {
-			setAttributes( { currentTab: innerblocks.at( 0 )?.attributes.id } );
+			return setAttributes( { currentTab: defaultTab } );
 		}
-	}, [ defaultTab, defaultTabEnabled, innerblocks, setAttributes ] );
+
+		if ( currentBlockInnerBlocks.length > 0 ) {
+			setAttributes( {
+				defaultTab: currentBlockInnerBlocks.at( 0 )?.attributes.id,
+				currentTab: currentBlockInnerBlocks.at( 0 )?.attributes.id,
+			} );
+		}
+	}, [
+		defaultTab,
+		defaultTabEnabled,
+		currentSelectedBlock,
+		currentBlockInnerBlocks,
+		currentBlockHasSelectedInnerBlock,
+		setAttributes,
+	] );
+
+	/**
+	 * When the user duplicate the tabs block, the currentTab en defaultTab need to be changed
+	 */
+	useEffect( () => {
+		const currentTabExist = clientIdExist( currentTab );
+		const defaultTabExist = clientIdExist( defaultTab );
+
+		if ( ! currentTabExist || ! defaultTabExist ) {
+			setAttributes( {
+				defaultTab: currentBlockInnerBlocks.at( 0 )?.attributes.id,
+				currentTab: currentBlockInnerBlocks.at( 0 )?.attributes.id,
+			} );
+		}
+	}, [
+		defaultTab,
+		currentTab,
+		clientIdExist,
+		currentBlockInnerBlocks,
+		setAttributes,
+	] );
 
 	return (
 		<>

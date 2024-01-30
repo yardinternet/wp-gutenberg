@@ -3,7 +3,6 @@
  */
 import { useBlockProps, PlainText, InnerBlocks } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components';
-import { useSelect } from '@wordpress/data';
 import { useEffect, useState } from '@wordpress/element';
 import { applyFilters } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
@@ -13,6 +12,7 @@ import { __ } from '@wordpress/i18n';
  */
 import { IconPickerControlToolbar } from '@components/icon-picker-control';
 import Icon from '@components/icon';
+import { useParentBlock } from '@hooks';
 import Inspector from './components/inspector';
 import './editor.scss';
 
@@ -26,25 +26,17 @@ const TEMPLATE = [
 ];
 
 const Edit = ( props ) => {
-	const { attributes, setAttributes, clientId } = props;
+	const { attributes, setAttributes } = props;
 	const { headingText, icon } = attributes;
 
 	const enableIcon = applyFilters(
-		'yard-gutenberg.enable-collapse-icon',
+		'yard-gutenberg.collapse-item-enable-icon',
 		false
 	);
 
 	const [ isOpen, setIsOpen ] = useState( false );
 
-	/**
-	 * getBlockAttributes @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
-	 * getBlockParents @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
-	 */
-	const { parentAttributes } = useSelect( ( select ) => ( {
-		parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
-			select( 'core/block-editor' ).getBlockParents( clientId ).at( -1 )
-		),
-	} ) );
+	const { parentAttributes } = useParentBlock();
 
 	useEffect( () => {
 		setAttributes( {

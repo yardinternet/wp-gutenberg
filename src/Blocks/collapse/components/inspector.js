@@ -3,57 +3,37 @@
  */
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, ToggleControl } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
+/**
+ * Internal dependencies
+ */
+import { useCurrentBlock } from '@hooks';
+
 const Inspector = ( props ) => {
-	const { clientId, setAttributes, attributes } = props;
+	const { setAttributes, attributes } = props;
 	const { hasStructuredData, headingLevel, showMultiple } = attributes;
 
-	/**
-	 * getBlocksByClientId @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocksbyclientid
-	 */
-	const { getBlocksByClientId } = useSelect( ( select ) => ( {
-		getBlocksByClientId:
-			select( 'core/block-editor' ).getBlocksByClientId( clientId ),
-	} ) );
-
-	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
+	const { setAllCurrentBlockInnerBlocksAttributes } = useCurrentBlock();
 
 	/**
-	 * Handles the change event for heading level and update childs attribute.
+	 * Handles the change event for heading level and update inner blocks attributes.
 	 *
 	 * @param {string} value - The new value for heading level.
 	 */
 	const onChangeHeadingLevel = ( value ) => {
 		setAttributes( { headingLevel: value } );
-
-		if ( getBlocksByClientId.length <= 0 ) return;
-
-		const children = getBlocksByClientId.at( 0 )?.innerBlocks;
-
-		children.forEach( ( child ) =>
-			updateBlockAttributes( child.clientId, { headingLevel: value } )
-		);
+		setAllCurrentBlockInnerBlocksAttributes( { headingLevel: value } );
 	};
 
 	/**
-	 * Handles the change event for structured data  and update childs attribute.
+	 * Handles the change event for structured data and update inner blocks attributes.
 	 *
 	 * @param {boolean} value - The new value for structured data.
 	 */
 	const onChangeHasStructuredData = ( value ) => {
 		setAttributes( { hasStructuredData: value } );
-
-		if ( getBlocksByClientId.length <= 0 ) return;
-
-		const children = getBlocksByClientId.at( 0 )?.innerBlocks;
-
-		children.forEach( ( child ) =>
-			updateBlockAttributes( child.clientId, {
-				hasStructuredData: value,
-			} )
-		);
+		setAllCurrentBlockInnerBlocksAttributes( { hasStructuredData: value } );
 	};
 
 	return (

@@ -2,7 +2,7 @@
  * WordPress dependencies
  */
 import { useBlockProps, PlainText, InnerBlocks } from '@wordpress/block-editor';
-import { useDispatch, useSelect } from '@wordpress/data';
+import { useSelect } from '@wordpress/data';
 import { useCallback, useEffect, useState } from '@wordpress/element';
 import { applyFilters } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
@@ -12,6 +12,7 @@ import { __ } from '@wordpress/i18n';
  */
 import { IconPickerControlToolbar } from '@components/icon-picker-control';
 import Icon from '@components/icon';
+import { useCurrentBlock, useParentBlock } from '@hooks';
 import Inspector from './components/inspector';
 import './editor.scss';
 
@@ -28,38 +29,24 @@ const Edit = ( props ) => {
 	const { attributes, clientId, context, setAttributes, isSelected } = props;
 	const { headingText, icon, id } = attributes;
 
-	const enableIcon = applyFilters( 'yard-gutenberg.enable-tabs-icon', false );
+	const enableIcon = applyFilters(
+		'yard-gutenberg.tabs-item-enable-icon',
+		false
+	);
 
 	const [ isOpen, setIsOpen ] = useState( false );
 
-	/**
-	 * hasSelectedInnerBlock @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#hasselectedinnerblock
-	 * getBlockParents @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
-	 * getBlockAttributes @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockattributes
-	 * getClientIdsWithDescendants @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getclientidsofdescendants
-	 */
-	const {
-		hasSelectedInnerBlock,
-		getParentClientId,
-		parentAttributes,
-		getClientIdsWithDescendants,
-		getBlockAttributes,
-	} = useSelect( ( select ) => ( {
-		hasSelectedInnerBlock: select(
-			'core/block-editor'
-		).hasSelectedInnerBlock( clientId, true ),
-		getParentClientId: select( 'core/block-editor' )
-			.getBlockParents( clientId )
-			.at( -1 ),
-		parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
-			select( 'core/block-editor' ).getBlockParents( clientId ).at( -1 )
-		),
-		getClientIdsWithDescendants:
-			select( 'core/block-editor' ).getClientIdsWithDescendants(),
-		getBlockAttributes: select( 'core/block-editor' ).getBlockAttributes,
-	} ) );
+	const { currentBlockHasSelectedInnerBlock } = useCurrentBlock();
+	const { parentAttributes, setParentAttributes } = useParentBlock();
 
-	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
+	const { getClientIdsWithDescendants, getBlockAttributes } = useSelect(
+		( select ) => ( {
+			getClientIdsWithDescendants:
+				select( 'core/block-editor' ).getClientIdsWithDescendants(),
+			getBlockAttributes:
+				select( 'core/block-editor' ).getBlockAttributes,
+		} )
+	);
 
 	/**
 	 * Get the block ID, ensuring it is unique.
@@ -85,37 +72,34 @@ const Edit = ( props ) => {
 		return id;
 	}, [ clientId, id, getClientIdsWithDescendants, getBlockAttributes ] );
 
-	// Update attributes id and heading level on init
+	useEffect( () => {
+		setAttributes( { id: getBlockId() } );
+	}, [ setAttributes, getBlockId ] );
+
 	useEffect( () => {
 		setAttributes( {
-			id: getBlockId(),
 			headingLevel: parentAttributes.headingLevel ?? 'h3',
 		} );
-	}, [ setAttributes, getBlockId, parentAttributes.headingLevel ] );
+	}, [ setAttributes, parentAttributes.headingLevel ] );
 
-	// Set isOpen state based on context 'yard-gutenberg/tabs-current-tab'
 	useEffect( () => {
 		setIsOpen( context[ 'yard-gutenberg/tabs-current-tab' ] === id );
 	}, [ context, id ] );
 
 	// When the current block or inner blocks are selected, open the panel and update the parent currentTab attribute to close other tabs
 	useEffect( () => {
-		if ( isSelected || hasSelectedInnerBlock ) {
-			updateBlockAttributes( getParentClientId, {
-				currentTab: id ?? clientId,
-			} );
-
+		if ( isSelected || currentBlockHasSelectedInnerBlock ) {
+			setParentAttributes( { currentTab: getBlockId() } );
 			setIsOpen( true );
 		}
 	}, [
 		isSelected,
-		hasSelectedInnerBlock,
-		updateBlockAttributes,
-		getParentClientId,
-		id,
-		clientId,
+		currentBlockHasSelectedInnerBlock,
+		setParentAttributes,
+		getBlockId,
 	] );
 
+	// Reset icon and iconAltText when the enableIcon is disabled
 	useEffect( () => {
 		if ( ! enableIcon ) {
 			setAttributes( { icon: '', iconAltText: '' } );
@@ -140,16 +124,22 @@ const Edit = ( props ) => {
 			<Inspector { ...props } enableIcon={ enableIcon } />
 
 			<div className="wp-block-yard-tabs-item__heading">
-				{ icon && <Icon { ...props } /> }
-				<PlainText
-					{ ...useBlockProps( {
-						className: 'wp-block-yard-tabs-item__heading-input',
-					} ) }
-					onChange={ ( value ) =>
-						setAttributes( { headingText: value } )
-					}
-					value={ headingText }
-				/>
+				<div
+					className={ `wp-block-yard-tabs-item__button ${
+						isOpen ? 'active' : ''
+					}` }
+				>
+					{ icon && <Icon { ...props } /> }
+					<PlainText
+						{ ...useBlockProps( {
+							className: 'wp-block-yard-tabs-item__heading-input',
+						} ) }
+						onChange={ ( value ) =>
+							setAttributes( { headingText: value } )
+						}
+						value={ headingText }
+					/>
+				</div>
 			</div>
 
 			<div
