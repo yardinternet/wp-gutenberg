@@ -17,20 +17,22 @@
 		},
 		"headingText": {
 			"type": "string",
-			"default": " "
+			"default": ""
 		},
 		"icon": {
-			"type": "string"
+			"type": "string",
+			"default": ""
 		},
 		"iconAltText": {
-			"type": "string"
+			"type": "string",
+			"default": ""
 		},
 		"isOpen": {
 			"type": "boolean",
 			"default": false
 		}
 	},
-	"parent": [ "yard-gutenberg/collapse" ],
+	"parent": ["yard-gutenberg/collapse"],
 	"supports": {
 		"html": false,
 		"reusable": false

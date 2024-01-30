@@ -2,7 +2,13 @@
  * WordPress dependencies
  */
 import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
+import {
+	Button,
+	PanelBody,
+	TextControl,
+	ToggleControl,
+} from '@wordpress/components';
+import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 /**
@@ -11,8 +17,26 @@ import { __ } from '@wordpress/i18n';
 import { IconPickerControlInspector } from '@components/icon-picker-control';
 
 const Inspector = ( props ) => {
-	const { attributes, setAttributes, enableIcon } = props;
+	const { attributes, setAttributes, clientId, enableIcon } = props;
 	const { icon, iconAltText, isOpen } = attributes;
+
+	/**
+	 * getBlockParents @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
+	 */
+	const { parentClientId } = useSelect( ( select ) => ( {
+		parentClientId: select( 'core/block-editor' )
+			.getBlockParents( clientId )
+			.at( -1 ),
+	} ) );
+
+	/**
+	 * selectBlock @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#selectblock
+	 */
+	const { selectBlock } = useDispatch( 'core/block-editor' );
+
+	const selectParentBlock = () => {
+		selectBlock( parentClientId );
+	};
 
 	return (
 		<InspectorControls>
@@ -51,6 +75,26 @@ const Inspector = ( props ) => {
 					/>
 				</PanelBody>
 			) }
+			<PanelBody title={ __( 'Toegankelijkheid' ) } initialOpen={ false }>
+				<p>
+					{ __(
+						'Pas de koptekst niveaus aan via het hoofdblok (Uitklap).'
+					) }
+				</p>
+				<Button variant="secondary" onClick={ selectParentBlock }>
+					{ __( 'Selecteer hoofdblok (Uitklap)' ) }
+				</Button>
+			</PanelBody>
+			<PanelBody title={ __( 'SEO instellingen' ) } initialOpen={ false }>
+				<p>
+					{ __(
+						'Pas de SEO instellingen aan via het hoofdblok (Uitklap).'
+					) }
+				</p>
+				<Button variant="secondary" onClick={ selectParentBlock }>
+					{ __( 'Selecteer hoofdblok (Uitklap)' ) }
+				</Button>
+			</PanelBody>
 		</InspectorControls>
 	);
 };
