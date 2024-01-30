@@ -30,13 +30,13 @@ const Inspector = ( props ) => {
 	const onChangeHeadingLevel = ( value ) => {
 		setAttributes( { headingLevel: value } );
 
-		if ( getBlocksByClientId.length > 0 ) {
-			const children = getBlocksByClientId[ 0 ].innerBlocks;
+		if ( getBlocksByClientId.length <= 0 ) return;
 
-			children.forEach( ( child ) =>
-				updateBlockAttributes( child.clientId, { headingLevel: value } )
-			);
-		}
+		const children = getBlocksByClientId.at( -1 )?.innerBlocks;
+
+		children.forEach( ( child ) =>
+			updateBlockAttributes( child.clientId, { headingLevel: value } )
+		);
 	};
 
 	return (

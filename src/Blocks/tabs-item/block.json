@@ -13,19 +13,21 @@
 		},
 		"headingText": {
 			"type": "string",
-			"default": " "
+			"default": ""
 		},
 		"icon": {
-			"type": "string"
+			"type": "string",
+			"default": ""
 		},
 		"iconAltText": {
-			"type": "string"
+			"type": "string",
+			"default": ""
 		},
 		"id": {
 			"type": "string"
 		}
 	},
-	"parent": [ "yard-gutenberg/tabs" ],
+	"parent": ["yard-gutenberg/tabs"],
 	"supports": {
 		"anchor": true,
 		"html": false,
