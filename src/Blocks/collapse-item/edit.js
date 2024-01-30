@@ -16,20 +16,23 @@ import Icon from '@components/icon';
 import Inspector from './components/inspector';
 import './editor.scss';
 
+const TEMPLATE = [
+	[
+		'core/paragraph',
+		{
+			placeholder: __( 'Vul hier de uitklap inhoud in' ),
+		},
+	],
+];
+
 const Edit = ( props ) => {
 	const { attributes, setAttributes, clientId } = props;
 	const { headingText, icon } = attributes;
 
-	const TEMPLATE = [
-		[
-			'core/paragraph',
-			{
-				placeholder: __( 'Vul hier de uitklap inhoud in' ),
-			},
-		],
-	];
-
-	const enableIcon = applyFilters( 'yard-gutenberg.enable-collapse-icon', false );
+	const enableIcon = applyFilters(
+		'yard-gutenberg.enable-collapse-icon',
+		false
+	);
 
 	const [ isOpen, setIsOpen ] = useState( false );
 
@@ -39,7 +42,7 @@ const Edit = ( props ) => {
 	 */
 	const { parentAttributes } = useSelect( ( select ) => ( {
 		parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
-			select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ]
+			select( 'core/block-editor' ).getBlockParents( clientId ).at( -1 )
 		),
 	} ) );
 
@@ -47,7 +50,13 @@ const Edit = ( props ) => {
 		setAttributes( {
 			headingLevel: parentAttributes.headingLevel ?? 'h3',
 		} );
-	}, [ parentAttributes ] );
+	}, [ setAttributes, parentAttributes.headingLevel ] );
+
+	useEffect( () => {
+		if ( ! enableIcon ) {
+			setAttributes( { icon: '', iconAltText: '' } );
+		}
+	}, [ setAttributes, enableIcon ] );
 
 	return (
 		<>
