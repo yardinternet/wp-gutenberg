@@ -11,12 +11,12 @@ import { useEffect } from '@wordpress/element';
 import Inspector from './components/inspector';
 import './editor.scss';
 
+const TEMPLATE = [ [ 'yard-gutenberg/tabs-item' ] ];
+const ALLOWED_BLOCKS = [ 'yard-gutenberg/tabs-item' ];
+
 const Edit = ( props ) => {
 	const { attributes, clientId, setAttributes } = props;
 	const { defaultTab, defaultTabEnabled } = attributes;
-
-	const TEMPLATE = [ [ 'yard-gutenberg/tabs-item' ] ];
-	const ALLOWED_BLOCKS = [ 'yard-gutenberg/tabs-item' ];
 
 	/**
 	 * getBlocks @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
@@ -34,9 +34,9 @@ const Edit = ( props ) => {
 		if ( defaultTabEnabled && defaultTab ) {
 			setAttributes( { currentTab: defaultTab } );
 		} else if ( innerblocks && innerblocks.length > 0 ) {
-			setAttributes( { currentTab: innerblocks[ 0 ]?.attributes.id } );
+			setAttributes( { currentTab: innerblocks.at( 0 )?.attributes.id } );
 		}
-	}, [] );
+	}, [ defaultTab, defaultTabEnabled, innerblocks, setAttributes ] );
 
 	return (
 		<>

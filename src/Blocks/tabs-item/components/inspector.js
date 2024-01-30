@@ -2,7 +2,8 @@
  * WordPress dependencies
  */
 import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl } from '@wordpress/components';
+import { Button, PanelBody, TextControl } from '@wordpress/components';
+import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 /**
@@ -11,8 +12,26 @@ import { __ } from '@wordpress/i18n';
 import { IconPickerControlInspector } from '@components/icon-picker-control';
 
 const Inspector = ( props ) => {
-	const { attributes, setAttributes, enableIcon } = props;
+	const { attributes, setAttributes, clientId, enableIcon } = props;
 	const { icon, iconAltText } = attributes;
+
+	/**
+	 * getBlockParents @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblockparents
+	 */
+	const { parentClientId } = useSelect( ( select ) => ( {
+		parentClientId: select( 'core/block-editor' )
+			.getBlockParents( clientId )
+			.at( -1 ),
+	} ) );
+
+	/**
+	 * selectBlock @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#selectblock
+	 */
+	const { selectBlock } = useDispatch( 'core/block-editor' );
+
+	const selectParentBlock = () => {
+		selectBlock( parentClientId );
+	};
 
 	return (
 		<InspectorControls>
@@ -44,6 +63,16 @@ const Inspector = ( props ) => {
 					/>
 				</PanelBody>
 			) }
+			<PanelBody title={ __( 'Toegankelijkheid' ) } initialOpen={ false }>
+				<p>
+					{ __(
+						'Pas de koptekst niveaus aan via het hoofdblok (Tabbladen).'
+					) }
+				</p>
+				<Button variant="secondary" onClick={ selectParentBlock }>
+					{ __( 'Selecteer hoofdblok (Tabbladen)' ) }
+				</Button>
+			</PanelBody>
 		</InspectorControls>
 	);
 };

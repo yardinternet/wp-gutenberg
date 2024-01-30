@@ -3,7 +3,7 @@
  */
 import { useBlockProps, PlainText, InnerBlocks } from '@wordpress/block-editor';
 import { useDispatch, useSelect } from '@wordpress/data';
-import { useEffect, useState } from '@wordpress/element';
+import { useCallback, useEffect, useState } from '@wordpress/element';
 import { applyFilters } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
 
@@ -15,18 +15,18 @@ import Icon from '@components/icon';
 import Inspector from './components/inspector';
 import './editor.scss';
 
+const TEMPLATE = [
+	[
+		'core/paragraph',
+		{
+			placeholder: __( 'Vul hier de tabblad inhoud in' ),
+		},
+	],
+];
+
 const Edit = ( props ) => {
 	const { attributes, clientId, context, setAttributes, isSelected } = props;
 	const { headingText, icon, id } = attributes;
-
-	const TEMPLATE = [
-		[
-			'core/paragraph',
-			{
-				placeholder: __( 'Vul hier de tabblad inhoud in' ),
-			},
-		],
-	];
 
 	const enableIcon = applyFilters( 'yard-gutenberg.enable-tabs-icon', false );
 
@@ -48,10 +48,11 @@ const Edit = ( props ) => {
 		hasSelectedInnerBlock: select(
 			'core/block-editor'
 		).hasSelectedInnerBlock( clientId, true ),
-		getParentClientId:
-			select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ],
+		getParentClientId: select( 'core/block-editor' )
+			.getBlockParents( clientId )
+			.at( -1 ),
 		parentAttributes: select( 'core/block-editor' ).getBlockAttributes(
-			select( 'core/block-editor' ).getBlockParents( clientId )[ 0 ]
+			select( 'core/block-editor' ).getBlockParents( clientId ).at( -1 )
 		),
 		getClientIdsWithDescendants:
 			select( 'core/block-editor' ).getClientIdsWithDescendants(),
@@ -59,34 +60,6 @@ const Edit = ( props ) => {
 	} ) );
 
 	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
-
-	// Update attributes id and heading level on init
-	useEffect( () => {
-		setAttributes( {
-			id: getBlockId(),
-			headingLevel: parentAttributes.headingLevel ?? 'h3',
-		} );
-	}, [ parentAttributes ] );
-
-	// Set isOpen state based on context 'yard-gutenberg/tabs-current-tab'
-	useEffect( () => {
-		if ( context[ 'yard-gutenberg/tabs-current-tab' ] === id ) {
-			setIsOpen( true );
-		} else {
-			setIsOpen( false );
-		}
-	}, [ context, id ] );
-
-	// When the current block or inner blocks are selected, open the panel and update the parent currentTab attribute to close other tabs
-	useEffect( () => {
-		if ( isSelected || hasSelectedInnerBlock ) {
-			updateBlockAttributes( getParentClientId, {
-				currentTab: id ?? clientId,
-			} );
-
-			setIsOpen( true );
-		}
-	}, [ isSelected, hasSelectedInnerBlock ] );
 
 	/**
 	 * Get the block ID, ensuring it is unique.
@@ -97,7 +70,7 @@ const Edit = ( props ) => {
 	 *
 	 * @return {string} The block ID.
 	 */
-	const getBlockId = () => {
+	const getBlockId = useCallback( () => {
 		const idAlreadyExist = getClientIdsWithDescendants?.some(
 			( _clientId ) => {
 				const { id: _id } = getBlockAttributes( _clientId );
@@ -110,7 +83,44 @@ const Edit = ( props ) => {
 		}
 
 		return id;
-	};
+	}, [ clientId, id, getClientIdsWithDescendants, getBlockAttributes ] );
+
+	// Update attributes id and heading level on init
+	useEffect( () => {
+		setAttributes( {
+			id: getBlockId(),
+			headingLevel: parentAttributes.headingLevel ?? 'h3',
+		} );
+	}, [ setAttributes, getBlockId, parentAttributes.headingLevel ] );
+
+	// Set isOpen state based on context 'yard-gutenberg/tabs-current-tab'
+	useEffect( () => {
+		setIsOpen( context[ 'yard-gutenberg/tabs-current-tab' ] === id );
+	}, [ context, id ] );
+
+	// When the current block or inner blocks are selected, open the panel and update the parent currentTab attribute to close other tabs
+	useEffect( () => {
+		if ( isSelected || hasSelectedInnerBlock ) {
+			updateBlockAttributes( getParentClientId, {
+				currentTab: id ?? clientId,
+			} );
+
+			setIsOpen( true );
+		}
+	}, [
+		isSelected,
+		hasSelectedInnerBlock,
+		updateBlockAttributes,
+		getParentClientId,
+		id,
+		clientId,
+	] );
+
+	useEffect( () => {
+		if ( ! enableIcon ) {
+			setAttributes( { icon: '', iconAltText: '' } );
+		}
+	}, [ setAttributes, enableIcon ] );
 
 	return (
 		<>
