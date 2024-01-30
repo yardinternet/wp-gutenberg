@@ -24,7 +24,7 @@
 	"attributes": {
 		"icon": {
 			"type": "string",
-			"default": "fa-light fa-envelope"
+			"default": "fa-classic fa-light fa-envelope"
 		},
 		"iconAltText": {
 			"type": "string",

@@ -7,5 +7,5 @@ By default the option to select an icon is disabled. Use this filter to enable t
 ```JS
 import { addFilter } from '@wordpress/hooks';
 
-addFilter('yard-gutenberg.enable-collapse-icon', 'yard-gutenberg', () => true);
+addFilter('yard-gutenberg.collapse-item-enable-icon', 'yard-gutenberg', () => true);
 ```

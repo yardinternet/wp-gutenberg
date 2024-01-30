@@ -7,6 +7,10 @@
 	"category": "yard-gutenberg",
 	"description": "Groepeer gemakkelijk content in verschillende tabbladen.",
 	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
 		"currentTab": {
 			"type": "string"
 		},
@@ -24,7 +28,7 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ]
+		"align": ["wide", "full"]
 	},
 	"textdomain": "tabs",
 	"editorScript": "file:./index.js",

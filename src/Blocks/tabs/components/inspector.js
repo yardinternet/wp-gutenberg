@@ -3,40 +3,28 @@
  */
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, ToggleControl } from '@wordpress/components';
-import { useDispatch, useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
+/**
+ * Internal dependencies
+ */
+import { useCurrentBlock } from '@hooks';
+
 const Inspector = ( props ) => {
-	const { attributes, clientId, setAttributes } = props;
+	const { attributes, setAttributes } = props;
 	const { defaultTab, defaultTabEnabled, headingLevel } = attributes;
 
-	/**
-	 * getBlocksByClientId @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocksbyclientid
-	 * getBlocks @see https://developer.wordpress.org/block-editor/reference-guides/data/data-core-block-editor/#getblocks
-	 */
-	const { getBlocksByClientId, innerblocks } = useSelect( ( select ) => ( {
-		getBlocksByClientId:
-			select( 'core/block-editor' ).getBlocksByClientId( clientId ),
-		innerblocks: select( 'core/block-editor' ).getBlocks( clientId ),
-	} ) );
-
-	const { updateBlockAttributes } = useDispatch( 'core/block-editor' );
+	const { currentBlockInnerBlocks, setAllCurrentBlockInnerBlocksAttributes } =
+		useCurrentBlock();
 
 	/**
-	 * Handles the change event for heading level and update childs attribute.
+	 * Handles the change event for heading level and update inner blocks attributes.
 	 *
 	 * @param {string} value - The new value for heading level.
 	 */
 	const onChangeHeadingLevel = ( value ) => {
 		setAttributes( { headingLevel: value } );
-
-		if ( getBlocksByClientId.length <= 0 ) return;
-
-		const children = getBlocksByClientId.at( -1 )?.innerBlocks;
-
-		children.forEach( ( child ) =>
-			updateBlockAttributes( child.clientId, { headingLevel: value } )
-		);
+		setAllCurrentBlockInnerBlocksAttributes( { headingLevel: value } );
 	};
 
 	return (
@@ -55,7 +43,7 @@ const Inspector = ( props ) => {
 					<SelectControl
 						label={ __( 'Tabblad' ) }
 						value={ defaultTab }
-						options={ innerblocks?.map( ( block ) => ( {
+						options={ currentBlockInnerBlocks?.map( ( block ) => ( {
 							label: block.attributes.headingText,
 							value: block.attributes.id,
 						} ) ) }
