@@ -13,13 +13,15 @@
     },
     "headingText": {
       "type": "string",
-      "default": " "
+      "default": ""
     },
     "icon": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "iconAltText": {
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "id": {
       "type": "string"
