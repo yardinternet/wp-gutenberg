@@ -8,19 +8,12 @@ const Icon = ( props ) => {
 	const { icon, iconAltText, iconColor } = attributes;
 
 	return (
-		<>
-			<i
-				className={ `wp-block-yard-icon-component fa-fw ${ icon } ` }
-				title={ iconAltText ? iconAltText : null }
-				aria-hidden="true"
-				style={ { color: iconColor } }
-			></i>
-			{ iconAltText && (
-				<span className="wp-block-yard-icon-component__sr-only">
-					{ iconAltText }
-				</span>
-			) }
-		</>
+		<i
+			className={ `wp-block-yard-icon-component fa-fw ${ icon } ` }
+			title={ iconAltText ? iconAltText : null }
+			aria-hidden="true"
+			style={ { color: iconColor } }
+		></i>
 	);
 };
 

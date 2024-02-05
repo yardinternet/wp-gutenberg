@@ -84,18 +84,17 @@ const openCollapseItemByHash = ( accordion, collapseItems ) => {
 };
 
 /**
- * Remove all child elements, only return de innerText
+ * Returns only header text without other childs
  *
  * @param {HTMLElement} headerButton
  */
 const extractHeaderText = ( headerButton ) => {
-	const clonedButton = headerButton.cloneNode( true );
+	const buttonChildren = [ ...headerButton.childNodes ];
+	const nodeSearchQuery = ( node ) =>
+		node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== '';
+	const foundTextNode = buttonChildren.find( nodeSearchQuery );
 
-	Array.from( clonedButton.children ).forEach( ( child ) => {
-		clonedButton.removeChild( child );
-	} );
-
-	return clonedButton.innerText.trim();
+	return foundTextNode?.nodeValue.trim();
 };
 
 init();
