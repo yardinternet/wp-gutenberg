@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "yard-gutenberg/tabs-item",
 	"version": "0.1.0",
 	"title": "Tabblad",
@@ -33,7 +33,7 @@
 		"html": false,
 		"reusable": false
 	},
-	"textdomain": "tab-item",
+	"textdomain": "yard-gutenberg",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

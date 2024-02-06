@@ -1,8 +1,3 @@
-/**
- * Internal dependencies
- */
-import './style.scss';
-
 const Icon = ( props ) => {
 	const { attributes } = props;
 	const { icon, iconAltText, iconColor } = attributes;

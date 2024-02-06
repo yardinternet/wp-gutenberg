@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "yard-gutenberg/tabs",
 	"version": "0.1.0",
 	"title": "Tabbladen",
@@ -30,7 +30,7 @@
 		"html": false,
 		"align": ["wide", "full"]
 	},
-	"textdomain": "tabs",
+	"textdomain": "yard-gutenberg",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"viewScript": "file:./frontend.js",

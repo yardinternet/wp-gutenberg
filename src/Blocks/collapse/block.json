@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 2,
+	"apiVersion": 3,
 	"name": "yard-gutenberg/collapse",
 	"version": "0.1.0",
 	"title": "Uitklap",
@@ -22,9 +22,9 @@
 	},
 	"supports": {
 		"html": false,
-		"align": [ "wide", "full" ]
+		"align": ["wide", "full"]
 	},
-	"textdomain": "collapse",
+	"textdomain": "yard-gutenberg",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"viewScript": "file:./frontend.js"
