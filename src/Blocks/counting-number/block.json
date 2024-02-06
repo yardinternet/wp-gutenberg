@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yard-gutenberg/counting-number",
+	"version": "0.0.1",
+	"title": "Oplopende teller",
+	"category": "yard-gutenberg",
+	"description": "Toont een oplopende cijfer.",
+	"attributes": {
+		"number": {
+			"type": "string",
+			"default": "100"
+		},
+		"numberPrefix": {
+			"type": "string"
+		},
+		"numberSuffix": {
+			"type": "string"
+		},
+		"hasThousandsSeparator": {
+			"type": "boolean",
+			"default": false
+		},
+		"animationDuration": {
+			"type": "number",
+			"default": 2.5
+		}
+	},
+	"supports": {
+		"align": true,
+		"color": {
+			"background": true,
+			"color": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"textdomain": "yard-gutenberg",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./frontend.js"
+}
