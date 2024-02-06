@@ -24,6 +24,7 @@
 		"@wordpress/components": "^25.0.0",
 		"@wordpress/element": "^5.11.0",
 		"@wordpress/server-side-render": "^4.15.0",
-		"accordion-js": "^3.3.4"
+		"accordion-js": "^3.3.4",
+		"countup.js": "^2.8.0"
 	}
 }
