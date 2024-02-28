@@ -1,10 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "yard-gutenberg/iconlist",
+  "name": "yard/iconlist",
   "version": "0.1.0",
   "title": "Iconenlijst",
-  "category": "yard-gutenberg",
+  "category": "yard",
   "description": "Voeg een lijst met Font Awesome iconen toe. Verander de tekst en iconen afzonderlijk van elkaar.",
   "attributes": {},
   "supports": {
@@ -14,7 +14,7 @@
     ],
     "html": false
   },
-  "textdomain": "yard-gutenberg",
+  "textdomain": "yard",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"

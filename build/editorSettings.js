@@ -1,1 +1,0 @@
-!function(){"use strict";(0,window.wp.hooks.addFilter)("blocks.getBlockDefaultClassName","yard-gutenberg",((e,a)=>e.replace("wp-block-yard-gutenberg","wp-block-yard")))}();
