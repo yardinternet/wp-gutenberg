@@ -17,10 +17,7 @@ const Edit = ( props ) => {
 		<div { ...useBlockProps() }>
 			<Inspector { ...props } />
 
-			<ServerSideRender
-				block="yard-gutenberg/query"
-				attributes={ attributes }
-			/>
+			<ServerSideRender block="yard/query" attributes={ attributes } />
 		</div>
 	);
 };

@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "yard-gutenberg/query",
+	"name": "yard/query",
 	"version": "0.1.0",
 	"title": "Berichtenlijst",
-	"category": "yard-gutenberg",
+	"category": "yard",
 	"description": "Een geavanceerd blok waarmee berichttypen kunnen worden weergegeven op basis van verschillende zoekopdracht parameters en visuele configuraties.",
 	"attributes": {
 		"query": {
@@ -73,7 +73,7 @@
 		"html": false,
 		"align": ["wide", "full"]
 	},
-	"textdomain": "yard-gutenberg",
+	"textdomain": "yard",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"viewScript": "file:./frontend.js"

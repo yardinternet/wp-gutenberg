@@ -7,5 +7,5 @@ By default the option to select an icon is disabled. Use this filter to enable t
 ```JS
 import { addFilter } from '@wordpress/hooks';
 
-addFilter('yard-gutenberg.tabs-item-enable-icon', 'yard-gutenberg', () => true);
+addFilter('yard.tabs-item-enable-icon', 'yard', () => true);
 ```

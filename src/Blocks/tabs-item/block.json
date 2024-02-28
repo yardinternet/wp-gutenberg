@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "yard-gutenberg/tabs-item",
+	"name": "yard/tabs-item",
 	"version": "0.1.0",
 	"title": "Tabblad",
-	"category": "yard-gutenberg",
+	"category": "yard",
 	"description": "Tabblad item.",
 	"attributes": {
 		"headingLevel": {
@@ -27,13 +27,13 @@
 			"type": "string"
 		}
 	},
-	"parent": ["yard-gutenberg/tabs"],
+	"parent": ["yard/tabs"],
 	"supports": {
 		"anchor": true,
 		"html": false,
 		"reusable": false
 	},
-	"textdomain": "yard-gutenberg",
+	"textdomain": "yard",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

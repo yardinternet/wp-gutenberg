@@ -6,7 +6,7 @@ If you wish to write custom JavaScript for the counting functionality, you can u
 
 ```PHP
 add_filter( 'block_type_metadata', function($metadata) {
-    if($metadata["name"] == "yard-gutenberg/counting-number") {
+    if($metadata["name"] == "yard/counting-number") {
         unset($metadata["viewScript"]);
     }
     return $metadata;

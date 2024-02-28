@@ -9,7 +9,7 @@ By default all the styles from Font Awesome are loaded. Use this filter to chang
 ```JS
 import { addFilter } from '@wordpress/hooks';
 
-addFilter('yard-gutenberg.fontawesome-family-styles', 'yard-gutenberg', () => [
+addFilter('yard.fontawesome-family-styles', 'yard', () => [
   { family: 'classic', style: 'solid' },
   { family: 'classic', style: 'regular' },
   { family: 'classic', style: 'light' },

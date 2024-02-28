@@ -11,15 +11,14 @@ const transforms = {
 			transform: ( attributes, innerBlocks ) => {
 				const transformedInnerBlocks = innerBlocks?.map(
 					( { attributes: childAttributes } ) => {
-						return createBlock(
-							'yard-gutenberg/iconlist-item',
-							{ listText: childAttributes.content },
-						);
+						return createBlock( 'yard/iconlist-item', {
+							listText: childAttributes.content,
+						} );
 					}
 				);
 
 				return createBlock(
-					'yard-gutenberg/iconlist',
+					'yard/iconlist',
 					{},
 					transformedInnerBlocks
 				);
@@ -33,18 +32,13 @@ const transforms = {
 			transform: ( attributes, innerBlocks ) => {
 				const transformedInnerBlocks = innerBlocks?.map(
 					( { attributes: childAttributes } ) => {
-						return createBlock(
-							'core/list-item',
-							{ content: childAttributes.listText },
-						);
+						return createBlock( 'core/list-item', {
+							content: childAttributes.listText,
+						} );
 					}
 				);
 
-				return createBlock(
-					'core/list',
-					{},
-					transformedInnerBlocks
-				);
+				return createBlock( 'core/list', {}, transformedInnerBlocks );
 			},
 		},
 	],

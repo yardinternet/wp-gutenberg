@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "yard-gutenberg/iconlist-item",
+	"name": "yard/iconlist-item",
 	"version": "0.1.0",
 	"title": "Iconenlijst item",
-	"category": "yard-gutenberg",
+	"category": "yard",
 	"description": "Een enkele iconenlijst item.",
 	"attributes": {
 		"icon": {
@@ -23,7 +23,7 @@
 			"default": ""
 		}
 	},
-	"parent": ["yard-gutenberg/iconlist"],
+	"parent": ["yard/iconlist"],
 	"supports": {
 		"align": false,
 		"color": {
@@ -35,7 +35,7 @@
 			"fontSize": true
 		}
 	},
-	"textdomain": "yard-gutenberg",
+	"textdomain": "yard",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

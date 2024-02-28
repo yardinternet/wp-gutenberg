@@ -29,10 +29,7 @@ const Edit = ( props ) => {
 	const { attributes, setAttributes } = props;
 	const { headingText, icon } = attributes;
 
-	const enableIcon = applyFilters(
-		'yard-gutenberg.collapse-item-enable-icon',
-		false
-	);
+	const enableIcon = applyFilters( 'yard.collapse-item-enable-icon', false );
 
 	const [ isOpen, setIsOpen ] = useState( false );
 

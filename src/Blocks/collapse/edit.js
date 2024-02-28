@@ -9,8 +9,8 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import Inspector from './components/inspector';
 import './editor.scss';
 
-const TEMPLATE = [ [ 'yard-gutenberg/collapse-item' ] ];
-const ALLOWED_BLOCKS = [ 'yard-gutenberg/collapse-item' ];
+const TEMPLATE = [ [ 'yard/collapse-item' ] ];
+const ALLOWED_BLOCKS = [ 'yard/collapse-item' ];
 
 const Edit = ( props ) => {
 	return (

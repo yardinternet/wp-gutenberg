@@ -16,5 +16,5 @@ registerBlockType( metadata.name, {
 	edit,
 	icon,
 	save,
-	usesContext: [ 'yard-gutenberg/tabs-current-tab' ],
+	usesContext: [ 'yard/tabs-current-tab' ],
 } );

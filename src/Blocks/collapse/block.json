@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "yard-gutenberg/collapse",
+	"name": "yard/collapse",
 	"version": "0.1.0",
 	"title": "Uitklap",
-	"category": "yard-gutenberg",
+	"category": "yard",
 	"description": "Voeg uitklapbare blokken toe om inhoud in en uit te kunnen vouwen.",
 	"attributes": {
 		"hasStructuredData": {
@@ -24,7 +24,7 @@
 		"html": false,
 		"align": ["wide", "full"]
 	},
-	"textdomain": "yard-gutenberg",
+	"textdomain": "yard",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"viewScript": "file:./frontend.js"

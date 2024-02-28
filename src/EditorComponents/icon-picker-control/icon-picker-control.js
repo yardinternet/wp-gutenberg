@@ -33,7 +33,7 @@ export const IconPickerControl = ( {
 	const { createNotice } = useDispatch( noticesStore );
 
 	const allowedFamilyStyles = applyFilters(
-		'yard-gutenberg.fontawesome-family-styles',
+		'yard.fontawesome-family-styles',
 		[
 			{ family: 'classic', style: 'solid' },
 			{ family: 'classic', style: 'regular' },
@@ -55,11 +55,12 @@ export const IconPickerControl = ( {
 
 			const result = response?.data?.search.reduce(
 				( iconResults, iconData ) => {
-					convertResponseToClassnames( iconData, allowedFamilyStyles ).forEach(
-						( value ) => {
-							iconResults.push( value );
-						}
-					);
+					convertResponseToClassnames(
+						iconData,
+						allowedFamilyStyles
+					).forEach( ( value ) => {
+						iconResults.push( value );
+					} );
 
 					return iconResults;
 				},

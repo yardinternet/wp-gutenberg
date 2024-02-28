@@ -29,10 +29,7 @@ const Edit = ( props ) => {
 	const { attributes, clientId, context, setAttributes, isSelected } = props;
 	const { headingText, icon, id } = attributes;
 
-	const enableIcon = applyFilters(
-		'yard-gutenberg.tabs-item-enable-icon',
-		false
-	);
+	const enableIcon = applyFilters( 'yard.tabs-item-enable-icon', false );
 
 	const [ isOpen, setIsOpen ] = useState( false );
 
@@ -83,7 +80,7 @@ const Edit = ( props ) => {
 	}, [ setAttributes, parentAttributes.headingLevel ] );
 
 	useEffect( () => {
-		setIsOpen( context[ 'yard-gutenberg/tabs-current-tab' ] === id );
+		setIsOpen( context[ 'yard/tabs-current-tab' ] === id );
 	}, [ context, id ] );
 
 	// When the current block or inner blocks are selected, open the panel and update the parent currentTab attribute to close other tabs

@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "yard-gutenberg/tabs",
+	"name": "yard/tabs",
 	"version": "0.1.0",
 	"title": "Tabbladen",
-	"category": "yard-gutenberg",
+	"category": "yard",
 	"description": "Groepeer gemakkelijk content in verschillende tabbladen.",
 	"attributes": {
 		"align": {
@@ -30,7 +30,7 @@
 		"html": false,
 		"align": ["wide", "full"]
 	},
-	"textdomain": "yard-gutenberg",
+	"textdomain": "yard",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"viewScript": "file:./frontend.js",

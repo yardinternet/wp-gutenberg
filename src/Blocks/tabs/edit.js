@@ -12,8 +12,8 @@ import { useCurrentBlock } from '@hooks';
 import Inspector from './components/inspector';
 import './editor.scss';
 
-const TEMPLATE = [ [ 'yard-gutenberg/tabs-item' ] ];
-const ALLOWED_BLOCKS = [ 'yard-gutenberg/tabs-item' ];
+const TEMPLATE = [ [ 'yard/tabs-item' ] ];
+const ALLOWED_BLOCKS = [ 'yard/tabs-item' ];
 
 const Edit = ( props ) => {
 	const { attributes, setAttributes, clientId } = props;
@@ -45,7 +45,7 @@ const Edit = ( props ) => {
 	);
 
 	/**
-	 * Set current tab attribute to use context 'yard-gutenberg/tabs-current-tab' in child blocks.
+	 * Set current tab attribute to use context 'yard/tabs-current-tab' in child blocks.
 	 * 1. When a defaultTab is selected, set the tab as currentTab
 	 * 2. Fallback to open the first tab and reset defaultTab
 	 */

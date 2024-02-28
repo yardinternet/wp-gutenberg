@@ -36,7 +36,7 @@ class PluginServiceProvider
     {
         $categories = array_merge($categories, [
             [
-                'slug'  => 'yard-gutenberg',
+                'slug'  => 'yard',
                 'title' => 'Yard'
             ],
         ]);

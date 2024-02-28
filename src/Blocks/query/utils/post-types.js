@@ -24,7 +24,7 @@ export const excludePostTypes = [
  */
 export const filterPostTypes = ( postTypes = {} ) => {
 	const excluded = applyFilters(
-		'yard-gutenberg.query-exclude-post-types',
+		'yard.query-exclude-post-types',
 		excludePostTypes
 	);
 

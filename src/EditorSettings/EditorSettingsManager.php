@@ -14,7 +14,7 @@ class EditorSettingsManager
     public function enqueueAssets()
     {
         \wp_enqueue_script(
-            'yard-gutenberg-editor-settings-js',
+            'yard-editor-settings-js',
             YARD_GUTENBERG_PLUGIN_DIR_URL . 'build/editorSettings.js',
             [],
             YARD_GUTENBERG_PLUGIN_VERSION,

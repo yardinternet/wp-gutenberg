@@ -9,8 +9,8 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 
 const Edit = () => {
-	const TEMPLATE = [ [ 'yard-gutenberg/iconlist-item' ] ];
-	const ALLOWED_BLOCKS = [ 'yard-gutenberg/iconlist-item' ];
+	const TEMPLATE = [ [ 'yard/iconlist-item' ] ];
+	const ALLOWED_BLOCKS = [ 'yard/iconlist-item' ];
 
 	return (
 		<ul { ...useBlockProps() }>

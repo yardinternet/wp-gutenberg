@@ -7,7 +7,7 @@ const transforms = {
 	to: [
 		{
 			type: 'block',
-			blocks: [ 'yard-gutenberg/tabs' ],
+			blocks: [ 'yard/tabs' ],
 			transform: ( attributes, innerBlocks ) => {
 				const transformedInnerBlocks = innerBlocks?.map(
 					( {
@@ -16,7 +16,7 @@ const transforms = {
 						innerBlocks: childInnerBlocks,
 					} ) => {
 						return createBlock(
-							'yard-gutenberg/tabs-item',
+							'yard/tabs-item',
 							{
 								headingLevel: childAttributes.headingLevel,
 								headingText: childAttributes.headingText,
@@ -30,7 +30,7 @@ const transforms = {
 				);
 
 				return createBlock(
-					'yard-gutenberg/tabs',
+					'yard/tabs',
 					{ headingLevel: attributes.headingLevel },
 					transformedInnerBlocks
 				);

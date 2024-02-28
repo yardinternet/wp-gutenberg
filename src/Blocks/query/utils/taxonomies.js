@@ -17,7 +17,7 @@ export const excludeTaxonomies = [
  */
 export const filterTaxonomies = ( taxonomies = {} ) => {
 	const excluded = applyFilters(
-		'yard-gutenberg.query-exclude-taxonomies',
+		'yard.query-exclude-taxonomies',
 		excludeTaxonomies
 	);
 

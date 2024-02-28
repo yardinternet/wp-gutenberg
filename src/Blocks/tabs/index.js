@@ -19,6 +19,6 @@ registerBlockType( metadata.name, {
 	save,
 	transforms,
 	providesContext: {
-		'yard-gutenberg/tabs-current-tab': 'currentTab',
+		'yard/tabs-current-tab': 'currentTab',
 	},
 } );

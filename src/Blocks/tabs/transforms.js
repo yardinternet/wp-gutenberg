@@ -7,7 +7,7 @@ const transforms = {
 	to: [
 		{
 			type: 'block',
-			blocks: [ 'yard-gutenberg/collapse' ],
+			blocks: [ 'yard/collapse' ],
 			transform: ( attributes, innerBlocks ) => {
 				const transformedInnerBlocks = innerBlocks?.map(
 					( {
@@ -15,7 +15,7 @@ const transforms = {
 						innerBlocks: childInnerBlocks,
 					} ) => {
 						return createBlock(
-							'yard-gutenberg/collapse-item',
+							'yard/collapse-item',
 							{
 								headingLevel: childAttributes.headingLevel,
 								headingText: childAttributes.headingText,
@@ -28,7 +28,7 @@ const transforms = {
 				);
 
 				return createBlock(
-					'yard-gutenberg/collapse',
+					'yard/collapse',
 					{ headingLevel: attributes.headingLevel },
 					transformedInnerBlocks
 				);
