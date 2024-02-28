@@ -40,6 +40,7 @@ const Inspector = ( props ) => {
 					) }
 				/>
 				<ColorPalette
+					clearable={ false }
 					value={ iconColor }
 					onChange={ ( color ) =>
 						setAttributes( { iconColor: color } )
