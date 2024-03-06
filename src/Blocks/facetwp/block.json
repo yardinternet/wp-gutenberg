@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yard/facetwp",
+	"version": "0.1.0",
+	"title": "FacetWP",
+	"category": "yard",
+	"description": "Plaats filtering op de pagina.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"selectedFacets": {
+			"type": "array",
+			"default": []
+		},
+		"selectedTemplate": {
+			"type": "object",
+			"default": {}
+		},
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"textdomain": "yard",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css"
+}

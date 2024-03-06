@@ -1,0 +1,16 @@
+$block: 'wp-block-yard-facetwp';
+
+.#{$block} {
+	.components-placeholder__fieldset {
+		flex-direction: column;
+
+		[class*='-control'] {
+			border-width: 1px !important;
+		}
+	}
+}
+
+.facetwp-settings-label {
+	margin-top: 0.75rem !important;
+	margin-bottom: 0.25rem !important;
+}
