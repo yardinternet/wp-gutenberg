@@ -8,9 +8,6 @@ const DisplayExcerptToggleControl = ( props ) => {
 	const { setAttributes, attributes } = props;
 	const { displayExcerpt } = attributes;
 
-	/**
-	 * @todo Retrieve from template if option is available
-	 */
 	return (
 		<ToggleControl
 			label={ __( 'Toon samenvatting' ) }

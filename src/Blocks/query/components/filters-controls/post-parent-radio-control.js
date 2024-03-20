@@ -4,13 +4,24 @@
 import { RadioControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
+const DEFAULT_POST_PARENT_OPTIONS = [
+	{
+		label: __( 'Toon alleen hoofdberichten' ),
+		value: 'only-parents',
+	},
+	{
+		label: __( 'Toon subberichten van een specifieke hoofdbericht' ),
+		value: 'specific-parent',
+	},
+];
+
 const PostParentRadioControl = ( props ) => {
-	const { setParameter, removeParameter, setAttributes, attributes } = props;
+	const { attributes, setAttributes } = props;
 	const { postParentOption, enableManualSelection, enablePostParent } =
 		attributes;
 
 	/**
-	 * Save option in attributes and set/remove post_parent query parameter
+	 * Save option in attributes and set/remove postParent attribute
 	 *
 	 * @param {string} value - Selected option
 	 */
@@ -18,9 +29,9 @@ const PostParentRadioControl = ( props ) => {
 		setAttributes( { postParentOption: value } );
 
 		if ( value === 'only-parents' ) {
-			setParameter( 'post_parent', 0 );
+			setAttributes( { postParent: 0 } );
 		} else {
-			removeParameter( 'post_parent' );
+			setAttributes( { postParent: undefined } );
 		}
 	};
 
@@ -31,18 +42,7 @@ const PostParentRadioControl = ( props ) => {
 				label={ __( 'Hoofd- en subberichten' ) }
 				hideLabelFromVision={ true }
 				selected={ postParentOption }
-				options={ [
-					{
-						label: __( 'Toon alleen hoofdberichten' ),
-						value: 'only-parents',
-					},
-					{
-						label: __(
-							'Toon subberichten van een specifieke hoofdbericht'
-						),
-						value: 'specific-parent',
-					},
-				] }
+				options={ DEFAULT_POST_PARENT_OPTIONS }
 				onChange={ onChange }
 			/>
 		)

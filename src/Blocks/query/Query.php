@@ -6,11 +6,8 @@ class Query
 {
     public function renderCallback($attributes)
     {
-		// @todo: Sticky post is not working correct
-		$queryArgs = $attributes['query'];
-		$query = new \WP_Query($queryArgs);
-
-		$posts = $query->posts;
+		// @todo: Get posts with the arguments
+		$posts = [];
 
 		// @todo: return correct view
 		if (count($posts) === 0 ) {

@@ -5,7 +5,7 @@ import { ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 const PostParentToggleControl = ( props ) => {
-	const { removeParameter, setAttributes, attributes } = props;
+	const { attributes, setAttributes } = props;
 	const { enablePostParent, enableManualSelection } = attributes;
 
 	/**
@@ -17,7 +17,7 @@ const PostParentToggleControl = ( props ) => {
 		setAttributes( { enablePostParent: state } );
 
 		if ( ! state ) {
-			removeParameter( 'post_parent' );
+			setAttributes( { postParent: undefined } );
 		}
 	};
 

@@ -18,34 +18,39 @@ const TRIBE_EVENTS_DATE_OPTION = {
 };
 
 const OrderbySelectControl = ( props ) => {
-	const { query, setParameter } = props;
+	const { attributes, setAttributes } = props;
+	const { postTypes, orderBy } = attributes;
 	const [ options, setOptions ] = useState( DEFAULT_ORDERBY_OPTIONS );
 
 	/**
 	 * Change options if tribe_events post type is selected
 	 */
 	useEffect( () => {
+		const includesTribeEvents = postTypes.some(
+			( type ) => type.value === 'tribe_events'
+		);
+
 		if (
-			query.post_type.includes( 'tribe_events' ) &&
+			includesTribeEvents &&
 			! options.includes( TRIBE_EVENTS_DATE_OPTION )
 		) {
 			setOptions( [ ...options, TRIBE_EVENTS_DATE_OPTION ] );
 		}
 
 		if (
-			! query.post_type.includes( 'tribe_events' ) &&
+			! includesTribeEvents &&
 			options.includes( TRIBE_EVENTS_DATE_OPTION )
 		) {
 			setOptions( DEFAULT_ORDERBY_OPTIONS );
 		}
-	}, [ query.post_type ] );
+	}, [ postTypes ] );
 
 	return (
 		<SelectControl
 			label={ __( 'Sorteer op' ) }
-			value={ query.orderby }
+			value={ orderBy }
 			options={ options }
-			onChange={ ( value ) => setParameter( 'orderby', value ) }
+			onChange={ ( value ) => setAttributes( { orderBy: value } ) }
 		/>
 	);
 };

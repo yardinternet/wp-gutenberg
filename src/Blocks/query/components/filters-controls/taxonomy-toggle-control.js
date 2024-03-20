@@ -5,11 +5,11 @@ import { ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 const TaxonomyToggleControl = ( props ) => {
-	const { removeParameter, setAttributes, attributes } = props;
+	const { attributes, setAttributes } = props;
 	const { enableTaxonomies } = attributes;
 
 	/**
-	 * Save state in attributes and remove tax_query parameter if the toggle is disabled
+	 * Save state in attributes and reset taxonomies attribute if the toggle is disabled
 	 *
 	 * @param {boolean} state - State of toggle
 	 */
@@ -17,7 +17,7 @@ const TaxonomyToggleControl = ( props ) => {
 		setAttributes( { enableTaxonomies: state } );
 
 		if ( ! state ) {
-			removeParameter( 'tax_query' );
+			setAttributes( { taxonomyTerms: undefined } );
 		}
 	};
 

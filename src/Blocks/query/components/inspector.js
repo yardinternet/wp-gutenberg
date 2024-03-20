@@ -4,7 +4,6 @@
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
-import { useEffect } from '@wordpress/element';
 
 /**
  * Internal dependencies
@@ -14,7 +13,6 @@ import DisplayExcerptToggleControl from './display-controls/display-excerpt-togg
 import DisplayImageToggleControl from './display-controls/display-image-toggle-control';
 import DisplayLabelToggleControl from './display-controls/display-label-toggle-control';
 import ExcludePostsToggleControl from './filters-controls/exclude-posts-toggle-control';
-import LabelTypeSelectControl from './display-controls/label-type-select-control';
 import ManualSelectionToggleControl from './filters-controls/manual-selection-toggle-control';
 import NumberOfPostsRangeControl from './settings-controls/number-of-posts-range-control';
 import OffsetRangeControl from './settings-controls/offset-range-control';
@@ -28,95 +26,52 @@ import StickyPostComboboxControl from './filters-controls/sticky-post-combobox-c
 import StickyPostToggleControl from './filters-controls/sticky-post-toggle-control';
 import TaxonomyControl from './filters-controls/taxonomy-control';
 import TemplateSelectControl from './display-controls/template-select-control';
-import useQueryReducer from '../hooks/useQueryReducer';
 
 const Inspector = ( props ) => {
-	const { setAttributes, attributes } = props;
-	const { query } = attributes;
-	const { queryState, setParameter, removeParameter } =
-		useQueryReducer( query );
-
-	useEffect( () => {
-		setAttributes( { query: queryState } );
-	}, [ JSON.stringify( queryState ) ] );
+	const { attributes } = props;
+	const { postTypes } = attributes;
 
 	return (
 		<InspectorControls>
 			<PanelBody title={ __( 'Instellingen' ) } initialOpen={ true }>
-				<PostTypeSelectControl
-					query={ queryState }
-					setParameter={ setParameter }
-				/>
-				{ query.post_type.length > 0 && (
+				<PostTypeSelectControl { ...props } />
+				{ postTypes.length > 0 && (
 					<>
-						<NumberOfPostsRangeControl
-							query={ queryState }
-							setParameter={ setParameter }
-						/>
-						<OffsetRangeControl
-							query={ queryState }
-							setParameter={ setParameter }
-						/>
-						<OrderbySelectControl
-							query={ queryState }
-							setParameter={ setParameter }
-						/>
-						<OrderSelectControl
-							query={ queryState }
-							setParameter={ setParameter }
-						/>
+						<NumberOfPostsRangeControl { ...props } />
+						<OffsetRangeControl { ...props } />
+						<OrderbySelectControl { ...props } />
+						<OrderSelectControl { ...props } />
 					</>
 				) }
 			</PanelBody>
-			{ query.post_type.length > 0 && (
+			{ postTypes.length > 0 && (
 				<PanelBody title={ __( 'Filters' ) } initialOpen={ false }>
-					<ManualSelectionToggleControl
-						setParameter={ setParameter }
-						removeParameter={ removeParameter }
-						{ ...props }
-					/>
+					<ManualSelectionToggleControl { ...props } />
 					{ /* @todo Add multi select control to select manual posts */ }
-					<StickyPostToggleControl
-						setParameter={ setParameter }
-						{ ...props }
-					/>
-					<StickyPostComboboxControl
-						query={ queryState }
-						setParameter={ setParameter }
-						{ ...props }
-					/>
+					<StickyPostToggleControl { ...props } />
+					<StickyPostComboboxControl { ...props } />
 					<ExcludePostsToggleControl { ...props } />
 					{ /* @todo Add multi select control to select posts to exclude */ }
-					<PostParentToggleControl
-						removeParameter={ removeParameter }
-						{ ...props }
-					/>
-					<PostParentRadioControl
-						setParameter={ setParameter }
-						removeParameter={ removeParameter }
-						{ ...props }
-					/>
-					<PostParentComboboxControl
-						query={ queryState }
-						setParameter={ setParameter }
-						{ ...props }
-					/>
-					<TaxonomyControl
-						query={ queryState }
-						setParameter={ setParameter }
-						removeParameter={ removeParameter }
-						{ ...props }
-					/>
+					<PostParentToggleControl { ...props } />
+					<PostParentRadioControl { ...props } />
+					<PostParentComboboxControl { ...props } />
+					<TaxonomyControl { ...props } />
 				</PanelBody>
 			) }
-			<PanelBody title={ __( 'Weergave' ) } initialOpen={ false }>
-				<TemplateSelectControl { ...props } />
-				<DisplayImageToggleControl { ...props } />
-				<DisplayDateToggleControl { ...props } />
-				<DisplayExcerptToggleControl { ...props } />
-				<DisplayLabelToggleControl { ...props } />
-				<LabelTypeSelectControl { ...props } />
-			</PanelBody>
+			{ postTypes.length > 0 && (
+				<PanelBody title={ __( 'Weergave' ) } initialOpen={ false }>
+					<TemplateSelectControl { ...props } />
+					<DisplayImageToggleControl { ...props } />
+					<DisplayDateToggleControl { ...props } />
+					<DisplayExcerptToggleControl { ...props } />
+					<DisplayLabelToggleControl { ...props } />
+					<p>
+						{ __(
+							'Let op: Niet alle opties hebben invloed op elk sjabloon.'
+						) }
+					</p>
+				</PanelBody>
+			) }
 		</InspectorControls>
 	);
 };

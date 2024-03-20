@@ -12,24 +12,24 @@ import { mapPostsToOptions } from '../../utils/helpers';
 import { searchPosts, fetchPostById } from '../../utils/api';
 
 const StickyPostComboboxControl = ( props ) => {
-	const { query, setParameter, attributes } = props;
-	const { enableStickyPost } = attributes;
+	const { attributes, setAttributes } = props;
+	const { postTypes, enableStickyPost, stickyPost } = attributes;
 	const [ options, setOptions ] = useState( [] );
 
 	/**
-	 * Check if post__in is set
+	 * Check if stickyPost is set
 	 */
 	useEffect( () => {
-		if ( query.post__in ) {
+		if ( stickyPost ) {
 			getSelectedPost();
 		}
-	}, [] );
+	}, [ stickyPost ] );
 
 	/**
 	 * Fetch saved post by id
 	 */
 	const getSelectedPost = async () => {
-		const post = await fetchPostById( query.post__in[ 0 ] );
+		const post = await fetchPostById( stickyPost );
 
 		setOptions( mapPostsToOptions( post ) );
 	};
@@ -42,8 +42,8 @@ const StickyPostComboboxControl = ( props ) => {
 	const onFilterValueChange = async ( searchValue ) => {
 		let subtype = 'any';
 
-		if ( query.post_type.length > 0 ) {
-			subtype = query.post_type.join( ',' );
+		if ( postTypes.length > 0 ) {
+			subtype = postTypes.map( ( type ) => type.value ).join( ',' );
 		}
 
 		const posts = await searchPosts( searchValue, subtype );
@@ -56,9 +56,9 @@ const StickyPostComboboxControl = ( props ) => {
 			<ComboboxControl
 				label={ __( 'Selecteer bericht' ) }
 				hideLabelFromVision={ true }
-				value={ query.post__in ? query.post__in[ 0 ] : '' }
+				value={ stickyPost }
 				options={ options }
-				onChange={ ( value ) => setParameter( 'post__in', [ value ] ) }
+				onChange={ ( value ) => setAttributes( { stickyPost: value } ) }
 				help={ __(
 					'Selecteer het bericht dat als eerste in de lijst moet worden weergegeven.'
 				) }

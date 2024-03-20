@@ -1,8 +1,13 @@
 /**
+ * External dependencies
+ */
+import Select from 'react-select';
+
+/**
  * WordPress dependencies
  */
 import { useEffect, useState } from '@wordpress/element';
-import { SelectControl, Spinner } from '@wordpress/components';
+import { Spinner } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
@@ -13,12 +18,32 @@ import { mapPostTypesToOptions } from '../../utils/helpers';
 import { filterPostTypes } from '../../utils/post-types';
 
 const PostTypeSelectControl = ( props ) => {
-	const { query, setParameter } = props;
+	const { attributes, setAttributes } = props;
+	const { postTypes } = attributes;
 	const [ options, setOptions ] = useState( [] );
 
 	useEffect( () => {
 		getOptions();
 	}, [] );
+
+	/**
+	 * Reset attributes when the post types changed
+	 */
+	useEffect( () => {
+		setAttributes( {
+			enableManualSelection: false,
+			manualSelectionPosts: [],
+			enableStickyPost: false,
+			stickyPost: undefined,
+			enableExcludePosts: false,
+			excludePosts: [],
+			enablePostParent: false,
+			postParentOption: 'only-parents',
+			postParent: undefined,
+			enableTaxonomies: false,
+			taxonomyTerms: undefined,
+		} );
+	}, [ postTypes ] );
 
 	/**
 	 * Fetch and map all post types without the unwanted post types
@@ -33,17 +58,18 @@ const PostTypeSelectControl = ( props ) => {
 		setOptions( mappedPostTypes );
 	};
 
-	/**
-	 * @todo A better multi select
-	 */
 	return options.length > 0 ? (
-		<SelectControl
-			multiple
-			label={ __( 'Selecteer content type' ) }
-			value={ query.post_type }
-			options={ options }
-			onChange={ ( value ) => setParameter( 'post_type', value ) }
-		/>
+		<>
+			<p className="yard-query-inspector-label">
+				{ __( 'Selecteer content type' ) }
+			</p>
+			<Select
+				isMulti
+				value={ postTypes }
+				options={ options }
+				onChange={ ( value ) => setAttributes( { postTypes: value } ) }
+			/>
+		</>
 	) : (
 		<Spinner />
 	);

@@ -5,13 +5,11 @@ import { ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 const ManualSelectionToggleControl = ( props ) => {
-	const { setParameter, removeParameter, setAttributes, attributes } = props;
+	const { attributes, setAttributes } = props;
 	const { enableManualSelection } = attributes;
 
 	/**
-	 * Save state in attributes and remove parameters if the toggle is enabled
-	 *
-	 * @todo More parameters need to be removed
+	 * Save state in attributes and reset attributes if the toggle is enabled
 	 *
 	 * @param {boolean} state - State of toggle
 	 */
@@ -21,12 +19,15 @@ const ManualSelectionToggleControl = ( props ) => {
 		if ( state ) {
 			setAttributes( {
 				enableStickyPost: false,
+				stickyPost: undefined,
 				enableExcludePosts: false,
+				excludePosts: [],
 				enablePostParent: false,
+				postParentOption: 'only-parents',
+				postParent: undefined,
+				enableTaxonomies: false,
+				taxonomyTerms: undefined,
 			} );
-			setParameter( 'post__in', [] );
-			removeParameter( 'post_parent' );
-			removeParameter( 'tax_query' );
 		}
 	};
 

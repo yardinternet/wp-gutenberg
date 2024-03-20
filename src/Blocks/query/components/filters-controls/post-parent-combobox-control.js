@@ -12,25 +12,30 @@ import { mapPostsToOptions } from '../../utils/helpers';
 import { searchPosts, fetchPostById } from '../../utils/api';
 
 const PostParentComboboxControl = ( props ) => {
-	const { query, setParameter, attributes } = props;
-	const { postParentOption, enableManualSelection, enablePostParent } =
-		attributes;
+	const { attributes, setAttributes } = props;
+	const {
+		postTypes,
+		postParentOption,
+		postParent,
+		enableManualSelection,
+		enablePostParent,
+	} = attributes;
 	const [ options, setOptions ] = useState( [] );
 
 	/**
-	 * Check if post_parent is set
+	 * Check if postParent is set
 	 */
 	useEffect( () => {
-		if ( query.post_parent && query.post_parent !== 0 ) {
+		if ( postParent && postParent !== 0 ) {
 			getSelectedPost();
 		}
-	}, [query.post_parent] );
+	}, [ postParent ] );
 
 	/**
 	 * Fetch saved post by id
 	 */
 	const getSelectedPost = async () => {
-		const post = await fetchPostById( query.post_parent );
+		const post = await fetchPostById( postParent );
 
 		setOptions( mapPostsToOptions( post ) );
 	};
@@ -43,8 +48,8 @@ const PostParentComboboxControl = ( props ) => {
 	const onFilterValueChange = async ( searchValue ) => {
 		let subtype = 'any';
 
-		if ( query.post_type.length > 0 ) {
-			subtype = query.post_type.join( ',' );
+		if ( postTypes.length > 0 ) {
+			subtype = postTypes.map( ( type ) => type.value ).join( ',' );
 		}
 
 		const posts = await searchPosts( searchValue, subtype );
@@ -59,9 +64,11 @@ const PostParentComboboxControl = ( props ) => {
 			<ComboboxControl
 				label={ __( 'Selecteer berichten' ) }
 				hideLabelFromVision={ true }
-				value={ query.post_parent }
+				value={ postParent }
 				options={ options }
-				onChange={ ( value ) => setParameter( 'post_parent', value ) }
+				onChange={ ( value ) =>
+					setAttributes( { postParent: value ?? undefined } )
+				}
 				help={ __(
 					'Selecteer het hoofdbericht waar de subberichten van getoond moeten worden.'
 				) }

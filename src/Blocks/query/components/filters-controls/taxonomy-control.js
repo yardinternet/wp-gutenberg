@@ -13,13 +13,13 @@ import { fetchTaxonomiesByPostType } from '../../utils/api';
 import { filterTaxonomies } from '../../utils/taxonomies';
 
 const TaxonomyControl = ( props ) => {
-	const { query, removeParameter, attributes } = props;
-	const { enableTaxonomies, enableManualSelection } = attributes;
+	const { attributes } = props;
+	const { postTypes, enableTaxonomies, enableManualSelection } = attributes;
 	const [ taxonomies, setTaxonomies ] = useState( [] );
 
 	useEffect( () => {
 		getTaxonomies();
-	}, [ query.post_type ] );
+	}, [ postTypes ] );
 
 	/**
 	 * Fetch taxonomies of selected post types
@@ -27,9 +27,9 @@ const TaxonomyControl = ( props ) => {
 	const getTaxonomies = async () => {
 		let allTaxonomies = {};
 
-		for ( const key in query.post_type ) {
+		for ( const key in postTypes ) {
 			const typeTaxonomies = await fetchTaxonomiesByPostType(
-				query.post_type[ key ]
+				postTypes[ key ][ 'value' ]
 			);
 			allTaxonomies = { ...allTaxonomies, ...typeTaxonomies };
 		}
@@ -43,10 +43,7 @@ const TaxonomyControl = ( props ) => {
 		! enableManualSelection &&
 		taxonomies.length !== 0 && (
 			<>
-				<TaxonomyToggleControl
-					removeParameter={ removeParameter }
-					{ ...props }
-				/>
+				<TaxonomyToggleControl { ...props } />
 
 				{ enableTaxonomies &&
 					taxonomies.map( ( taxonomy ) => {

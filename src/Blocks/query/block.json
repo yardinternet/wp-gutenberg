@@ -7,27 +7,48 @@
 	"category": "yard",
 	"description": "Een geavanceerd blok waarmee berichttypen kunnen worden weergegeven op basis van verschillende zoekopdracht parameters en visuele configuraties.",
 	"attributes": {
-		"query": {
-			"type": "object",
-			"default": {
-				"post_type": [],
-				"posts_per_page": 3,
-				"offset": 0,
-				"order": "DESC",
-				"orderby": "date"
-			}
+		"postTypes": {
+			"type": "array",
+			"default": []
+		},
+		"postsPerPage": {
+			"type": "number",
+			"default": 3
+		},
+		"offset": {
+			"type": "number",
+			"default": 0
+		},
+		"orderBy": {
+			"type": "string",
+			"default": "date"
+		},
+		"order": {
+			"type": "string",
+			"default": "DESC"
 		},
 		"enableManualSelection": {
 			"type": "boolean",
 			"default": false
 		},
+		"manualSelectionPosts": {
+			"type": "array",
+			"default": []
+		},
 		"enableStickyPost": {
 			"type": "boolean",
 			"default": false
 		},
+		"stickyPost": {
+			"type": "number"
+		},
 		"enableExcludePosts": {
 			"type": "boolean",
 			"default": false
+		},
+		"excludePosts": {
+			"type": "array",
+			"default": []
 		},
 		"enablePostParent": {
 			"type": "boolean",
@@ -37,9 +58,15 @@
 			"type": "string",
 			"default": "only-parents"
 		},
+		"postParent": {
+			"type": "number"
+		},
 		"enableTaxonomies": {
 			"type": "boolean",
 			"default": false
+		},
+		"taxonomyTerms": {
+			"type": "object"
 		},
 		"template": {
 			"type": "string",
@@ -60,9 +87,6 @@
 		"displayLabel": {
 			"type": "boolean",
 			"default": false
-		},
-		"labelType": {
-			"type": "string"
 		},
 		"align": {
 			"type": "string",

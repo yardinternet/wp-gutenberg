@@ -5,15 +5,16 @@ import { RangeControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 const OffsetRangeControl = ( props ) => {
-	const { query, setParameter } = props;
+	const { attributes, setAttributes } = props;
+	const { offset } = attributes;
 
 	return (
 		<RangeControl
 			label={ __( 'Afwijking' ) }
-			value={ query.offset }
+			value={ offset }
 			min={ 0 }
 			max={ 10 }
-			onChange={ ( value ) => setParameter( 'offset', value ) }
+			onChange={ ( value ) => setAttributes( { offset: value } ) }
 		/>
 	);
 };
