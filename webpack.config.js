@@ -8,12 +8,6 @@ const { getWebpackEntryPoints } = require( '@wordpress/scripts/utils/config' );
 // Add any new entry point by extending the webpack config.
 module.exports = {
 	...defaultConfig,
-	resolve: {
-		alias: {
-			'@components': path.resolve( __dirname, 'src/EditorComponents/' ),
-			'@hooks': path.resolve( __dirname, 'src/Hooks/' ),
-		},
-	},
 	entry: {
 		...getWebpackEntryPoints(),
 		// Add additional entry points here.
