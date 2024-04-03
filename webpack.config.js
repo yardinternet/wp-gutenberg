@@ -1,9 +1,18 @@
 // Import the original config from the @wordpress/scripts package.
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
-const path = require( 'path' );
+const includePackages = require( '@yardinternet/webpack-include-packages' );
 
 // Import the helper to automatically find and generate the block entry points in the src directory based on block.json.
 const { getWebpackEntryPoints } = require( '@wordpress/scripts/utils/config' );
+
+// Include packages from node_modules that needs to be parsed.
+const exclude = includePackages( [
+	'@yardinternet/gutenberg-components',
+	'@yardinternet/gutenberg-hooks',
+] );
+
+const isProduction = process.env.NODE_ENV === 'production';
+defaultConfig.module.rules[ isProduction ? 0 : 1 ].exclude = exclude;
 
 // Add any new entry point by extending the webpack config.
 module.exports = {

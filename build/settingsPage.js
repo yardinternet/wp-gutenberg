@@ -1,11 +1,11 @@
-/******/ (function() { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
   \*************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
 
@@ -15,7 +15,7 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 /*!************************************************!*\
   !*** ./node_modules/axios/lib/adapters/xhr.js ***!
   \************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -238,7 +238,7 @@ module.exports = function xhrAdapter(config) {
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/axios.js ***!
   \*****************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -306,7 +306,7 @@ module.exports["default"] = axios;
 /*!*************************************************!*\
   !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
   \*************************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -336,7 +336,7 @@ module.exports = Cancel;
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
   \******************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -466,7 +466,7 @@ module.exports = CancelToken;
 /*!***************************************************!*\
   !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
   \***************************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -482,7 +482,7 @@ module.exports = function isCancel(value) {
 /*!**********************************************!*\
   !*** ./node_modules/axios/lib/core/Axios.js ***!
   \**********************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -648,7 +648,7 @@ module.exports = Axios;
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
   \***********************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -713,7 +713,7 @@ module.exports = InterceptorManager;
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
   \******************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -744,7 +744,7 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/createError.js ***!
   \****************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -773,7 +773,7 @@ module.exports = function createError(message, config, code, request, response) 
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
   \********************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -871,7 +871,7 @@ module.exports = function dispatchRequest(config) {
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/core/enhanceError.js ***!
   \*****************************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -925,7 +925,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
   \****************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1035,7 +1035,7 @@ module.exports = function mergeConfig(config1, config2) {
 /*!***********************************************!*\
   !*** ./node_modules/axios/lib/core/settle.js ***!
   \***********************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1071,7 +1071,7 @@ module.exports = function settle(resolve, reject, response) {
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/core/transformData.js ***!
   \******************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1104,7 +1104,7 @@ module.exports = function transformData(data, headers, fns) {
 /*!********************************************!*\
   !*** ./node_modules/axios/lib/defaults.js ***!
   \********************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1249,7 +1249,7 @@ module.exports = defaults;
 /*!********************************************!*\
   !*** ./node_modules/axios/lib/env/data.js ***!
   \********************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = {
   "version": "0.25.0"
@@ -1261,7 +1261,7 @@ module.exports = {
 /*!************************************************!*\
   !*** ./node_modules/axios/lib/helpers/bind.js ***!
   \************************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1283,7 +1283,7 @@ module.exports = function bind(fn, thisArg) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
   \****************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1364,7 +1364,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 /*!*******************************************************!*\
   !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
   \*******************************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1389,7 +1389,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 /*!***************************************************!*\
   !*** ./node_modules/axios/lib/helpers/cookies.js ***!
   \***************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1453,7 +1453,7 @@ module.exports = (
 /*!*********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
   \*********************************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1478,7 +1478,7 @@ module.exports = function isAbsoluteURL(url) {
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isAxiosError.js ***!
   \********************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1502,7 +1502,7 @@ module.exports = function isAxiosError(payload) {
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
   \***********************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1581,7 +1581,7 @@ module.exports = (
 /*!***************************************************************!*\
   !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
   \***************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1604,7 +1604,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
   \********************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1668,7 +1668,7 @@ module.exports = function parseHeaders(headers) {
 /*!**************************************************!*\
   !*** ./node_modules/axios/lib/helpers/spread.js ***!
   \**************************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1706,7 +1706,7 @@ module.exports = function spread(callback) {
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/helpers/validator.js ***!
   \*****************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1799,7 +1799,7 @@ module.exports = {
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/utils.js ***!
   \*****************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -2159,10 +2159,13 @@ module.exports = {
 /*!**********************************************!*\
   !*** ./src/SettingsPage/resources/js/App.js ***!
   \**********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
@@ -2227,7 +2230,7 @@ const App = () => {
     help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Zet de uitklap aan of uit.')
   })))));
 };
-/* harmony default export */ __webpack_exports__["default"] = (App);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 
 /***/ }),
 
@@ -2235,12 +2238,12 @@ const App = () => {
 /*!*************************************************************!*\
   !*** ./src/SettingsPage/resources/js/hooks/useWordpress.js ***!
   \*************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ useWordpress; }
+/* harmony export */   "default": () => (/* binding */ useWordpress)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
@@ -2290,7 +2293,7 @@ function useWordpress() {
 /*!************************************************!*\
   !*** ./src/SettingsPage/resources/js/index.js ***!
   \************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2321,7 +2324,7 @@ if (domNode) {
 /*!****************************************************!*\
   !*** ./src/SettingsPage/resources/scss/style.scss ***!
   \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -2334,7 +2337,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************!*\
   !*** external "React" ***!
   \************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["React"];
@@ -2345,7 +2348,7 @@ module.exports = window["React"];
 /*!********************************!*\
   !*** external ["wp","blocks"] ***!
   \********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["blocks"];
@@ -2356,7 +2359,7 @@ module.exports = window["wp"]["blocks"];
 /*!************************************!*\
   !*** external ["wp","components"] ***!
   \************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["components"];
@@ -2367,7 +2370,7 @@ module.exports = window["wp"]["components"];
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
   \*********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["element"];
@@ -2378,7 +2381,7 @@ module.exports = window["wp"]["element"];
 /*!******************************!*\
   !*** external ["wp","i18n"] ***!
   \******************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 "use strict";
 module.exports = window["wp"]["i18n"];
@@ -2416,9 +2419,9 @@ module.exports = window["wp"]["i18n"];
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = function(result, chunkIds, fn, priority) {
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
 /******/ 			if(chunkIds) {
 /******/ 				priority = priority || 0;
 /******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
@@ -2427,12 +2430,10 @@ module.exports = window["wp"]["i18n"];
 /******/ 			}
 /******/ 			var notFulfilled = Infinity;
 /******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var chunkIds = deferred[i][0];
-/******/ 				var fn = deferred[i][1];
-/******/ 				var priority = deferred[i][2];
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
 /******/ 				var fulfilled = true;
 /******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every(function(key) { return __webpack_require__.O[key](chunkIds[j]); })) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
 /******/ 						chunkIds.splice(j--, 1);
 /******/ 					} else {
 /******/ 						fulfilled = false;
@@ -2447,50 +2448,50 @@ module.exports = window["wp"]["i18n"];
 /******/ 			}
 /******/ 			return result;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
+/******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 		__webpack_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
+/******/ 		__webpack_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// no baseURI
 /******/ 		
 /******/ 		// object to store loaded and loading chunks
@@ -2511,17 +2512,15 @@ module.exports = window["wp"]["i18n"];
 /******/ 		
 /******/ 		// no HMR manifest
 /******/ 		
-/******/ 		__webpack_require__.O.j = function(chunkId) { return installedChunks[chunkId] === 0; };
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
 /******/ 		
 /******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = function(parentChunkLoadingFunction, data) {
-/******/ 			var chunkIds = data[0];
-/******/ 			var moreModules = data[1];
-/******/ 			var runtime = data[2];
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
 /******/ 			// add "moreModules" to the modules object,
 /******/ 			// then flag all "chunkIds" as loaded and fire callback
 /******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some(function(id) { return installedChunks[id] !== 0; })) {
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
 /******/ 				for(moduleId in moreModules) {
 /******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
 /******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
@@ -2540,18 +2539,18 @@ module.exports = window["wp"]["i18n"];
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkyard_gutenberg"] = self["webpackChunkyard_gutenberg"] || [];
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkyard_gutenberg"] = globalThis["webpackChunkyard_gutenberg"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["./style-settingsPage"], function() { return __webpack_require__("./src/SettingsPage/resources/js/index.js"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["./style-settingsPage"], function() { return __webpack_require__("./src/SettingsPage/resources/scss/style.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["./style-settingsPage"], () => (__webpack_require__("./src/SettingsPage/resources/js/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["./style-settingsPage"], () => (__webpack_require__("./src/SettingsPage/resources/scss/style.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

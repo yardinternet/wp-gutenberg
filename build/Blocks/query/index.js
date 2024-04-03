@@ -1,4 +1,4 @@
-/******/ (function() { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -6,11 +6,11 @@
 /*!***********************************************************************!*\
   !*** ./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ createCache; }
+/* harmony export */   "default": () => (/* binding */ createCache)
 /* harmony export */ });
 /* harmony import */ var _emotion_sheet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/sheet */ "./node_modules/@emotion/sheet/dist/emotion-sheet.browser.esm.js");
 /* harmony import */ var stylis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! stylis */ "./node_modules/stylis/src/Tokenizer.js");
@@ -610,11 +610,11 @@ var createCache = function createCache(options) {
 /*!*************************************************************!*\
   !*** ./node_modules/@emotion/hash/dist/emotion-hash.esm.js ***!
   \*************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ murmur2; }
+/* harmony export */   "default": () => (/* binding */ murmur2)
 /* harmony export */ });
 /* eslint-disable */
 // Inspired by https://github.com/garycourt/murmurhash-js
@@ -679,11 +679,11 @@ function murmur2(str) {
 /*!*******************************************************************!*\
   !*** ./node_modules/@emotion/memoize/dist/emotion-memoize.esm.js ***!
   \*******************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ memoize; }
+/* harmony export */   "default": () => (/* binding */ memoize)
 /* harmony export */ });
 function memoize(fn) {
   var cache = Object.create(null);
@@ -702,11 +702,11 @@ function memoize(fn) {
 /*!*****************************************************************************************************!*\
   !*** ./node_modules/@emotion/react/_isolated-hnrs/dist/emotion-react-_isolated-hnrs.browser.esm.js ***!
   \*****************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ hoistNonReactStatics; }
+/* harmony export */   "default": () => (/* binding */ hoistNonReactStatics)
 /* harmony export */ });
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_0__);
@@ -729,21 +729,21 @@ var hoistNonReactStatics = (function (targetComponent, sourceComponent) {
 /*!**********************************************************************************!*\
   !*** ./node_modules/@emotion/react/dist/emotion-element-c39617d8.browser.esm.js ***!
   \**********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   C: function() { return /* binding */ CacheProvider; },
-/* harmony export */   E: function() { return /* binding */ Emotion$1; },
-/* harmony export */   T: function() { return /* binding */ ThemeContext; },
-/* harmony export */   _: function() { return /* binding */ __unsafe_useEmotionCache; },
-/* harmony export */   a: function() { return /* binding */ ThemeProvider; },
-/* harmony export */   b: function() { return /* binding */ withTheme; },
-/* harmony export */   c: function() { return /* binding */ createEmotionProps; },
-/* harmony export */   h: function() { return /* binding */ hasOwnProperty; },
-/* harmony export */   i: function() { return /* binding */ isBrowser; },
-/* harmony export */   u: function() { return /* binding */ useTheme; },
-/* harmony export */   w: function() { return /* binding */ withEmotionCache; }
+/* harmony export */   C: () => (/* binding */ CacheProvider),
+/* harmony export */   E: () => (/* binding */ Emotion$1),
+/* harmony export */   T: () => (/* binding */ ThemeContext),
+/* harmony export */   _: () => (/* binding */ __unsafe_useEmotionCache),
+/* harmony export */   a: () => (/* binding */ ThemeProvider),
+/* harmony export */   b: () => (/* binding */ withTheme),
+/* harmony export */   c: () => (/* binding */ createEmotionProps),
+/* harmony export */   h: () => (/* binding */ hasOwnProperty),
+/* harmony export */   i: () => (/* binding */ isBrowser),
+/* harmony export */   u: () => (/* binding */ useTheme),
+/* harmony export */   w: () => (/* binding */ withEmotionCache)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -1024,23 +1024,23 @@ var Emotion$1 = Emotion;
 /*!***********************************************************************!*\
   !*** ./node_modules/@emotion/react/dist/emotion-react.browser.esm.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CacheProvider: function() { return /* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.C; },
-/* harmony export */   ClassNames: function() { return /* binding */ ClassNames; },
-/* harmony export */   Global: function() { return /* binding */ Global; },
-/* harmony export */   ThemeContext: function() { return /* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.T; },
-/* harmony export */   ThemeProvider: function() { return /* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.a; },
-/* harmony export */   __unsafe_useEmotionCache: function() { return /* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__._; },
-/* harmony export */   createElement: function() { return /* binding */ jsx; },
-/* harmony export */   css: function() { return /* binding */ css; },
-/* harmony export */   jsx: function() { return /* binding */ jsx; },
-/* harmony export */   keyframes: function() { return /* binding */ keyframes; },
-/* harmony export */   useTheme: function() { return /* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.u; },
-/* harmony export */   withEmotionCache: function() { return /* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.w; },
-/* harmony export */   withTheme: function() { return /* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.b; }
+/* harmony export */   CacheProvider: () => (/* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.C),
+/* harmony export */   ClassNames: () => (/* binding */ ClassNames),
+/* harmony export */   Global: () => (/* binding */ Global),
+/* harmony export */   ThemeContext: () => (/* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.T),
+/* harmony export */   ThemeProvider: () => (/* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.a),
+/* harmony export */   __unsafe_useEmotionCache: () => (/* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__._),
+/* harmony export */   createElement: () => (/* binding */ jsx),
+/* harmony export */   css: () => (/* binding */ css),
+/* harmony export */   jsx: () => (/* binding */ jsx),
+/* harmony export */   keyframes: () => (/* binding */ keyframes),
+/* harmony export */   useTheme: () => (/* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.u),
+/* harmony export */   withEmotionCache: () => (/* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.w),
+/* harmony export */   withTheme: () => (/* reexport safe */ _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__.b)
 /* harmony export */ });
 /* harmony import */ var _emotion_element_c39617d8_browser_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./emotion-element-c39617d8.browser.esm.js */ "./node_modules/@emotion/react/dist/emotion-element-c39617d8.browser.esm.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
@@ -1503,11 +1503,11 @@ if (true) {
 /*!*******************************************************************************!*\
   !*** ./node_modules/@emotion/serialize/dist/emotion-serialize.browser.esm.js ***!
   \*******************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   serializeStyles: function() { return /* binding */ serializeStyles; }
+/* harmony export */   serializeStyles: () => (/* binding */ serializeStyles)
 /* harmony export */ });
 /* harmony import */ var _emotion_hash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/hash */ "./node_modules/@emotion/hash/dist/emotion-hash.esm.js");
 /* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/unitless */ "./node_modules/@emotion/unitless/dist/emotion-unitless.esm.js");
@@ -1836,11 +1836,11 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
 /*!***********************************************************************!*\
   !*** ./node_modules/@emotion/sheet/dist/emotion-sheet.browser.esm.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   StyleSheet: function() { return /* binding */ StyleSheet; }
+/* harmony export */   StyleSheet: () => (/* binding */ StyleSheet)
 /* harmony export */ });
 /*
 
@@ -2004,11 +2004,11 @@ var StyleSheet = /*#__PURE__*/function () {
 /*!*********************************************************************!*\
   !*** ./node_modules/@emotion/unitless/dist/emotion-unitless.esm.js ***!
   \*********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ unitlessKeys; }
+/* harmony export */   "default": () => (/* binding */ unitlessKeys)
 /* harmony export */ });
 var unitlessKeys = {
   animationIterationCount: 1,
@@ -2069,12 +2069,12 @@ var unitlessKeys = {
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/@emotion/use-insertion-effect-with-fallbacks/dist/emotion-use-insertion-effect-with-fallbacks.browser.esm.js ***!
   \***********************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   useInsertionEffectAlwaysWithSyncFallback: function() { return /* binding */ useInsertionEffectAlwaysWithSyncFallback; },
-/* harmony export */   useInsertionEffectWithLayoutFallback: function() { return /* binding */ useInsertionEffectWithLayoutFallback; }
+/* harmony export */   useInsertionEffectAlwaysWithSyncFallback: () => (/* binding */ useInsertionEffectAlwaysWithSyncFallback),
+/* harmony export */   useInsertionEffectWithLayoutFallback: () => (/* binding */ useInsertionEffectWithLayoutFallback)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -2097,13 +2097,13 @@ var useInsertionEffectWithLayoutFallback = useInsertionEffect || react__WEBPACK_
 /*!***********************************************************************!*\
   !*** ./node_modules/@emotion/utils/dist/emotion-utils.browser.esm.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getRegisteredStyles: function() { return /* binding */ getRegisteredStyles; },
-/* harmony export */   insertStyles: function() { return /* binding */ insertStyles; },
-/* harmony export */   registerStyles: function() { return /* binding */ registerStyles; }
+/* harmony export */   getRegisteredStyles: () => (/* binding */ getRegisteredStyles),
+/* harmony export */   insertStyles: () => (/* binding */ insertStyles),
+/* harmony export */   registerStyles: () => (/* binding */ registerStyles)
 /* harmony export */ });
 var isBrowser = "object" !== 'undefined';
 function getRegisteredStyles(registered, registeredStyles, classNames) {
@@ -2157,11 +2157,11 @@ var insertStyles = function insertStyles(cache, serialized, isStringTag) {
 /*!*****************************************************************************!*\
   !*** ./node_modules/@emotion/weak-memoize/dist/emotion-weak-memoize.esm.js ***!
   \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ weakMemoize; }
+/* harmony export */   "default": () => (/* binding */ weakMemoize)
 /* harmony export */ });
 var weakMemoize = function weakMemoize(func) {
   // $FlowFixMe flow doesn't include all non-primitive types as allowed for weakmaps
@@ -2183,1605 +2183,17 @@ var weakMemoize = function weakMemoize(func) {
 
 /***/ }),
 
-/***/ "./src/Blocks/query/components/display-controls/display-date-toggle-control.js":
-/*!*************************************************************************************!*\
-  !*** ./src/Blocks/query/components/display-controls/display-date-toggle-control.js ***!
-  \*************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const DisplayDateToggleControl = props => {
-  const {
-    setAttributes,
-    attributes
-  } = props;
-  const {
-    displayDate
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon datum'),
-    checked: displayDate,
-    onChange: () => {
-      setAttributes({
-        displayDate: !displayDate
-      });
-    }
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (DisplayDateToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/display-controls/display-excerpt-toggle-control.js":
-/*!****************************************************************************************!*\
-  !*** ./src/Blocks/query/components/display-controls/display-excerpt-toggle-control.js ***!
-  \****************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const DisplayExcerptToggleControl = props => {
-  const {
-    setAttributes,
-    attributes
-  } = props;
-  const {
-    displayExcerpt
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon samenvatting'),
-    checked: displayExcerpt,
-    onChange: () => {
-      setAttributes({
-        displayExcerpt: !displayExcerpt
-      });
-    }
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (DisplayExcerptToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/display-controls/display-image-toggle-control.js":
-/*!**************************************************************************************!*\
-  !*** ./src/Blocks/query/components/display-controls/display-image-toggle-control.js ***!
-  \**************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const DisplayImageToggleControl = props => {
-  const {
-    setAttributes,
-    attributes
-  } = props;
-  const {
-    displayImage
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon afbeelding'),
-    checked: displayImage,
-    onChange: () => {
-      setAttributes({
-        displayImage: !displayImage
-      });
-    }
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (DisplayImageToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/display-controls/display-label-toggle-control.js":
-/*!**************************************************************************************!*\
-  !*** ./src/Blocks/query/components/display-controls/display-label-toggle-control.js ***!
-  \**************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const DisplayLabelToggleControl = props => {
-  const {
-    setAttributes,
-    attributes
-  } = props;
-  const {
-    displayLabel
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon label'),
-    checked: displayLabel,
-    onChange: () => {
-      setAttributes({
-        displayLabel: !displayLabel
-      });
-    }
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (DisplayLabelToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/display-controls/template-select-control.js":
-/*!*********************************************************************************!*\
-  !*** ./src/Blocks/query/components/display-controls/template-select-control.js ***!
-  \*********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const TemplateSelectControl = props => {
-  const {
-    setAttributes,
-    attributes
-  } = props;
-  const {
-    template
-  } = attributes;
-  const templateOptions = [{
-    label: 'Standaard',
-    value: 'default'
-  }];
-
-  /**
-   * @todo Retrieve from template if option is available and what the options are
-   *
-   * Options:
-   * - Template name (not the file name)
-   */
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Sjabloon'),
-    value: template,
-    options: templateOptions,
-    onChange: value => setAttributes({
-      template: value
-    })
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (TemplateSelectControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/exclude-posts-toggle-control.js":
-/*!**************************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/exclude-posts-toggle-control.js ***!
-  \**************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const ExcludePostsToggleControl = props => {
-  const {
-    setAttributes,
-    attributes
-  } = props;
-  const {
-    enableExcludePosts,
-    enableManualSelection
-  } = attributes;
-  return !enableManualSelection && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Berichten uitsluiten'),
-    checked: enableExcludePosts,
-    onChange: state => setAttributes({
-      enableExcludePosts: state
-    })
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (ExcludePostsToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/manual-selection-toggle-control.js":
-/*!*****************************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/manual-selection-toggle-control.js ***!
-  \*****************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const ManualSelectionToggleControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    enableManualSelection
-  } = attributes;
-
-  /**
-   * Save state in attributes and reset attributes if the toggle is enabled
-   *
-   * @param {boolean} state - State of toggle
-   */
-  const onChange = state => {
-    setAttributes({
-      enableManualSelection: state
-    });
-    if (state) {
-      setAttributes({
-        enableStickyPost: false,
-        stickyPost: undefined,
-        enableExcludePosts: false,
-        excludePosts: [],
-        enablePostParent: false,
-        postParentOption: 'only-parents',
-        postParent: undefined,
-        enableTaxonomies: false,
-        taxonomyTerms: undefined
-      });
-    }
-  };
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Handmatige selectie'),
-    checked: enableManualSelection,
-    onChange: onChange
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (ManualSelectionToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/post-parent-combobox-control.js":
-/*!**************************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/post-parent-combobox-control.js ***!
-  \**************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-const PostParentComboboxControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    postTypes,
-    postParentOption,
-    postParent,
-    enableManualSelection,
-    enablePostParent
-  } = attributes;
-  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
-
-  /**
-   * Check if postParent is set
-   */
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
-    if (postParent && postParent !== 0) {
-      getSelectedPost();
-    }
-  }, [postParent]);
-
-  /**
-   * Fetch saved post by id
-   */
-  const getSelectedPost = async () => {
-    const post = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.fetchPostById)(postParent);
-    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(post));
-  };
-
-  /**
-   * Fetch new options based on the entered search term
-   *
-   * @param {string} searchValue - Entered search term
-   */
-  const onFilterValueChange = async searchValue => {
-    let subtype = 'any';
-    if (postTypes.length > 0) {
-      subtype = postTypes.map(type => type.value).join(',');
-    }
-    const posts = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.searchPosts)(searchValue, subtype);
-    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(posts));
-  };
-  return !enableManualSelection && enablePostParent && postParentOption === 'specific-parent' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ComboboxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer berichten'),
-    hideLabelFromVision: true,
-    value: postParent,
-    options: options,
-    onChange: value => setAttributes({
-      postParent: value !== null && value !== void 0 ? value : undefined
-    }),
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer het hoofdbericht waar de subberichten van getoond moeten worden.'),
-    onFilterValueChange: onFilterValueChange
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (PostParentComboboxControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/post-parent-radio-control.js":
-/*!***********************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/post-parent-radio-control.js ***!
-  \***********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const DEFAULT_POST_PARENT_OPTIONS = [{
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon alleen hoofdberichten'),
-  value: 'only-parents'
-}, {
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon subberichten van een specifieke hoofdbericht'),
-  value: 'specific-parent'
-}];
-const PostParentRadioControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    postParentOption,
-    enableManualSelection,
-    enablePostParent
-  } = attributes;
-
-  /**
-   * Save option in attributes and set/remove postParent attribute
-   *
-   * @param {string} value - Selected option
-   */
-  const onChange = value => {
-    setAttributes({
-      postParentOption: value
-    });
-    if (value === 'only-parents') {
-      setAttributes({
-        postParent: 0
-      });
-    } else {
-      setAttributes({
-        postParent: undefined
-      });
-    }
-  };
-  return !enableManualSelection && enablePostParent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RadioControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Hoofd- en subberichten'),
-    hideLabelFromVision: true,
-    selected: postParentOption,
-    options: DEFAULT_POST_PARENT_OPTIONS,
-    onChange: onChange
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (PostParentRadioControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/post-parent-toggle-control.js":
-/*!************************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/post-parent-toggle-control.js ***!
-  \************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const PostParentToggleControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    enablePostParent,
-    enableManualSelection
-  } = attributes;
-
-  /**
-   * Save state in attributes and remove post_parent parameter if the toggle is disabled
-   *
-   * @param {boolean} state - State of toggle
-   */
-  const onChange = state => {
-    setAttributes({
-      enablePostParent: state
-    });
-    if (!state) {
-      setAttributes({
-        postParent: undefined
-      });
-    }
-  };
-  return !enableManualSelection && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Filter op hoofdbericht'),
-    checked: enablePostParent,
-    onChange: onChange
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (PostParentToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/sticky-post-combobox-control.js":
-/*!**************************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/sticky-post-combobox-control.js ***!
-  \**************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-const StickyPostComboboxControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    postTypes,
-    enableStickyPost,
-    stickyPost
-  } = attributes;
-  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
-
-  /**
-   * Check if stickyPost is set
-   */
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
-    if (stickyPost) {
-      getSelectedPost();
-    }
-  }, [stickyPost]);
-
-  /**
-   * Fetch saved post by id
-   */
-  const getSelectedPost = async () => {
-    const post = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.fetchPostById)(stickyPost);
-    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(post));
-  };
-
-  /**
-   * Fetch new options based on the entered search term
-   *
-   * @param {string} searchValue - Entered search term
-   */
-  const onFilterValueChange = async searchValue => {
-    let subtype = 'any';
-    if (postTypes.length > 0) {
-      subtype = postTypes.map(type => type.value).join(',');
-    }
-    const posts = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.searchPosts)(searchValue, subtype);
-    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(posts));
-  };
-  return enableStickyPost && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ComboboxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer bericht'),
-    hideLabelFromVision: true,
-    value: stickyPost,
-    options: options,
-    onChange: value => setAttributes({
-      stickyPost: value
-    }),
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer het bericht dat als eerste in de lijst moet worden weergegeven.'),
-    onFilterValueChange: onFilterValueChange
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (StickyPostComboboxControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/sticky-post-toggle-control.js":
-/*!************************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/sticky-post-toggle-control.js ***!
-  \************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const StickyPostToggleControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    enableStickyPost,
-    enableManualSelection
-  } = attributes;
-
-  /**
-   * Save state in attributes and reset stickyPost attribute if the toggle is disabled
-   *
-   * @param {boolean} state - State of toggle
-   */
-  const onChange = state => {
-    setAttributes({
-      enableStickyPost: state
-    });
-    if (!state) {
-      setAttributes({
-        stickyPost: undefined
-      });
-    }
-  };
-  return !enableManualSelection && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Klevend bericht'),
-    checked: enableStickyPost,
-    onChange: onChange
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (StickyPostToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/taxonomy-control.js":
-/*!**************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/taxonomy-control.js ***!
-  \**************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _taxonomy_toggle_control__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./taxonomy-toggle-control */ "./src/Blocks/query/components/filters-controls/taxonomy-toggle-control.js");
-/* harmony import */ var _taxonomy_select_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./taxonomy-select-control */ "./src/Blocks/query/components/filters-controls/taxonomy-select-control.js");
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
-/* harmony import */ var _utils_taxonomies__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/taxonomies */ "./src/Blocks/query/utils/taxonomies.js");
-
-/**
- * WordPress dependencies
- */
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-
-const TaxonomyControl = props => {
-  const {
-    attributes
-  } = props;
-  const {
-    postTypes,
-    enableTaxonomies,
-    enableManualSelection
-  } = attributes;
-  const [taxonomies, setTaxonomies] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useState)([]);
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-    getTaxonomies();
-  }, [postTypes]);
-
-  /**
-   * Fetch taxonomies of selected post types
-   */
-  const getTaxonomies = async () => {
-    let allTaxonomies = {};
-    for (const key in postTypes) {
-      const typeTaxonomies = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.fetchTaxonomiesByPostType)(postTypes[key]['value']);
-      allTaxonomies = {
-        ...allTaxonomies,
-        ...typeTaxonomies
-      };
-    }
-    const filteredTaxonomies = (0,_utils_taxonomies__WEBPACK_IMPORTED_MODULE_6__.filterTaxonomies)(allTaxonomies);
-    setTaxonomies(filteredTaxonomies);
-  };
-  return !enableManualSelection && taxonomies.length !== 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_taxonomy_toggle_control__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    ...props
-  }), enableTaxonomies && taxonomies.map(taxonomy => {
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      key: taxonomy.slug
-    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_taxonomy_select_control__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      taxonomy: taxonomy,
-      ...props
-    }));
-  }));
-};
-/* harmony default export */ __webpack_exports__["default"] = (TaxonomyControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/taxonomy-select-control.js":
-/*!*********************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/taxonomy-select-control.js ***!
-  \*********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.esm.js");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
-/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
-
-/**
- * External dependencies
- */
-
-
-/**
- * WordPress dependencies
- */
-
-
-
-/**
- * Internal dependencies
- */
-
-
-const TaxonomySelectControl = props => {
-  const {
-    taxonomy,
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    taxonomyTerms
-  } = attributes;
-  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    const getTerms = async () => {
-      const allTerms = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_3__.fetchTermsByTaxonomy)(taxonomy.rest_base);
-      const mappedTerms = (0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapTermsToOptions)(allTerms);
-      setOptions(mappedTerms);
-    };
-    getTerms();
-  }, [taxonomy.rest_base]);
-
-  /**
-   * Save the selected terms as an attribute
-   *
-   * @param {array} option - The new terms to save
-   */
-  const onChange = option => {
-    const newOption = {
-      [taxonomy.slug]: option
-    };
-    if (!taxonomyTerms) {
-      setAttributes({
-        taxonomyTerms: newOption
-      });
-    } else {
-      const newTaxonomyTerms = {
-        ...taxonomyTerms,
-        ...newOption
-      };
-      setAttributes({
-        taxonomyTerms: newTaxonomyTerms
-      });
-    }
-  };
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "yard-query-inspector-label"
-  }, taxonomy.name), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_select__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    isMulti: true,
-    value: taxonomyTerms?.[taxonomy.slug] ? taxonomyTerms[taxonomy.slug] : [],
-    options: options,
-    onChange: onChange
-  }));
-};
-/* harmony default export */ __webpack_exports__["default"] = (TaxonomySelectControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/filters-controls/taxonomy-toggle-control.js":
-/*!*********************************************************************************!*\
-  !*** ./src/Blocks/query/components/filters-controls/taxonomy-toggle-control.js ***!
-  \*********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const TaxonomyToggleControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    enableTaxonomies
-  } = attributes;
-
-  /**
-   * Save state in attributes and reset taxonomies attribute if the toggle is disabled
-   *
-   * @param {boolean} state - State of toggle
-   */
-  const onChange = state => {
-    setAttributes({
-      enableTaxonomies: state
-    });
-    if (!state) {
-      setAttributes({
-        taxonomyTerms: undefined
-      });
-    }
-  };
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Filter op taxonomie'),
-    checked: enableTaxonomies,
-    onChange: onChange
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (TaxonomyToggleControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/inspector.js":
-/*!**************************************************!*\
-  !*** ./src/Blocks/query/components/inspector.js ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _display_controls_display_date_toggle_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./display-controls/display-date-toggle-control */ "./src/Blocks/query/components/display-controls/display-date-toggle-control.js");
-/* harmony import */ var _display_controls_display_excerpt_toggle_control__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./display-controls/display-excerpt-toggle-control */ "./src/Blocks/query/components/display-controls/display-excerpt-toggle-control.js");
-/* harmony import */ var _display_controls_display_image_toggle_control__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./display-controls/display-image-toggle-control */ "./src/Blocks/query/components/display-controls/display-image-toggle-control.js");
-/* harmony import */ var _display_controls_display_label_toggle_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./display-controls/display-label-toggle-control */ "./src/Blocks/query/components/display-controls/display-label-toggle-control.js");
-/* harmony import */ var _filters_controls_exclude_posts_toggle_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./filters-controls/exclude-posts-toggle-control */ "./src/Blocks/query/components/filters-controls/exclude-posts-toggle-control.js");
-/* harmony import */ var _filters_controls_manual_selection_toggle_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./filters-controls/manual-selection-toggle-control */ "./src/Blocks/query/components/filters-controls/manual-selection-toggle-control.js");
-/* harmony import */ var _settings_controls_number_of_posts_range_control__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./settings-controls/number-of-posts-range-control */ "./src/Blocks/query/components/settings-controls/number-of-posts-range-control.js");
-/* harmony import */ var _settings_controls_offset_range_control__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./settings-controls/offset-range-control */ "./src/Blocks/query/components/settings-controls/offset-range-control.js");
-/* harmony import */ var _settings_controls_order_select_control__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./settings-controls/order-select-control */ "./src/Blocks/query/components/settings-controls/order-select-control.js");
-/* harmony import */ var _settings_controls_orderby_select_control__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./settings-controls/orderby-select-control */ "./src/Blocks/query/components/settings-controls/orderby-select-control.js");
-/* harmony import */ var _filters_controls_post_parent_combobox_control__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./filters-controls/post-parent-combobox-control */ "./src/Blocks/query/components/filters-controls/post-parent-combobox-control.js");
-/* harmony import */ var _filters_controls_post_parent_radio_control__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./filters-controls/post-parent-radio-control */ "./src/Blocks/query/components/filters-controls/post-parent-radio-control.js");
-/* harmony import */ var _filters_controls_post_parent_toggle_control__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./filters-controls/post-parent-toggle-control */ "./src/Blocks/query/components/filters-controls/post-parent-toggle-control.js");
-/* harmony import */ var _settings_controls_post_type_select_control__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./settings-controls/post-type-select-control */ "./src/Blocks/query/components/settings-controls/post-type-select-control.js");
-/* harmony import */ var _filters_controls_sticky_post_combobox_control__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./filters-controls/sticky-post-combobox-control */ "./src/Blocks/query/components/filters-controls/sticky-post-combobox-control.js");
-/* harmony import */ var _filters_controls_sticky_post_toggle_control__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./filters-controls/sticky-post-toggle-control */ "./src/Blocks/query/components/filters-controls/sticky-post-toggle-control.js");
-/* harmony import */ var _filters_controls_taxonomy_control__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./filters-controls/taxonomy-control */ "./src/Blocks/query/components/filters-controls/taxonomy-control.js");
-/* harmony import */ var _display_controls_template_select_control__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./display-controls/template-select-control */ "./src/Blocks/query/components/display-controls/template-select-control.js");
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const Inspector = props => {
-  const {
-    attributes
-  } = props;
-  const {
-    postTypes
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Instellingen'),
-    initialOpen: true
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_post_type_select_control__WEBPACK_IMPORTED_MODULE_17__["default"], {
-    ...props
-  }), postTypes.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_number_of_posts_range_control__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_offset_range_control__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_orderby_select_control__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_order_select_control__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    ...props
-  }))), postTypes.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Filters'),
-    initialOpen: false
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_manual_selection_toggle_control__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_sticky_post_toggle_control__WEBPACK_IMPORTED_MODULE_19__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_sticky_post_combobox_control__WEBPACK_IMPORTED_MODULE_18__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_exclude_posts_toggle_control__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_post_parent_toggle_control__WEBPACK_IMPORTED_MODULE_16__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_post_parent_radio_control__WEBPACK_IMPORTED_MODULE_15__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_post_parent_combobox_control__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_taxonomy_control__WEBPACK_IMPORTED_MODULE_20__["default"], {
-    ...props
-  })), postTypes.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Weergave'),
-    initialOpen: false
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_template_select_control__WEBPACK_IMPORTED_MODULE_21__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_image_toggle_control__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_date_toggle_control__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_excerpt_toggle_control__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_label_toggle_control__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Let op: Niet alle opties hebben invloed op elk sjabloon.'))));
-};
-/* harmony default export */ __webpack_exports__["default"] = (Inspector);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/settings-controls/number-of-posts-range-control.js":
-/*!****************************************************************************************!*\
-  !*** ./src/Blocks/query/components/settings-controls/number-of-posts-range-control.js ***!
-  \****************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const NumberOfPostsRangeControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    postsPerPage
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Aantal berichten'),
-    value: postsPerPage,
-    min: 1,
-    max: 100,
-    onChange: value => setAttributes({
-      postsPerPage: value
-    })
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (NumberOfPostsRangeControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/settings-controls/offset-range-control.js":
-/*!*******************************************************************************!*\
-  !*** ./src/Blocks/query/components/settings-controls/offset-range-control.js ***!
-  \*******************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const OffsetRangeControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    offset
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Afwijking'),
-    value: offset,
-    min: 0,
-    max: 10,
-    onChange: value => setAttributes({
-      offset: value
-    })
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (OffsetRangeControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/settings-controls/order-select-control.js":
-/*!*******************************************************************************!*\
-  !*** ./src/Blocks/query/components/settings-controls/order-select-control.js ***!
-  \*******************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-
-/**
- * WordPress dependencies
- */
-
-
-const DEFAULT_ORDER_OPTIONS = [{
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Oplopend'),
-  value: 'ASC'
-}, {
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Aflopend'),
-  value: 'DESC'
-}];
-const OrderSelectControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    order,
-    orderBy
-  } = attributes;
-  const getHelpText = () => {
-    const isAscending = order === 'ASC';
-    switch (orderBy) {
-      case 'date':
-      case 'event_date':
-        return isAscending ? 'Oud - Nieuw' : 'Nieuw - Oud';
-      case 'title':
-        return isAscending ? 'A - Z' : 'Z - A';
-      case 'menu_order':
-        return isAscending ? '1 - 100' : '100 - 1';
-      default:
-        return '';
-    }
-  };
-  return orderBy !== 'rand' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Volgorde'),
-    value: order,
-    options: DEFAULT_ORDER_OPTIONS,
-    help: getHelpText(),
-    onChange: value => setAttributes({
-      order: value
-    })
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (OrderSelectControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/settings-controls/orderby-select-control.js":
-/*!*********************************************************************************!*\
-  !*** ./src/Blocks/query/components/settings-controls/orderby-select-control.js ***!
-  \*********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-
-/**
- * WordPress dependencies
- */
-
-
-
-const DEFAULT_ORDERBY_OPTIONS = [{
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Publicatiedatum'),
-  value: 'date'
-}, {
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Titel'),
-  value: 'title'
-}, {
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Attribuut volgorde'),
-  value: 'menu_order'
-}, {
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Willekeurig'),
-  value: 'rand'
-}];
-const TRIBE_EVENTS_DATE_OPTION = {
-  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Event datum'),
-  value: 'event_date'
-};
-const OrderbySelectControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    postTypes,
-    orderBy
-  } = attributes;
-  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useState)(DEFAULT_ORDERBY_OPTIONS);
-
-  /**
-   * Change options if tribe_events post type is selected
-   */
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
-    const includesTribeEvents = postTypes.some(type => type.value === 'tribe_events');
-    if (includesTribeEvents && !options.includes(TRIBE_EVENTS_DATE_OPTION)) {
-      setOptions([...options, TRIBE_EVENTS_DATE_OPTION]);
-    }
-    if (!includesTribeEvents && options.includes(TRIBE_EVENTS_DATE_OPTION)) {
-      setOptions(DEFAULT_ORDERBY_OPTIONS);
-    }
-  }, [postTypes]);
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Sorteer op'),
-    value: orderBy,
-    options: options,
-    onChange: value => setAttributes({
-      orderBy: value
-    })
-  });
-};
-/* harmony default export */ __webpack_exports__["default"] = (OrderbySelectControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/components/settings-controls/post-type-select-control.js":
-/*!***********************************************************************************!*\
-  !*** ./src/Blocks/query/components/settings-controls/post-type-select-control.js ***!
-  \***********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.esm.js");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
-/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
-/* harmony import */ var _utils_post_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/post-types */ "./src/Blocks/query/utils/post-types.js");
-
-/**
- * External dependencies
- */
-
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-
-const PostTypeSelectControl = props => {
-  const {
-    attributes,
-    setAttributes
-  } = props;
-  const {
-    postTypes
-  } = attributes;
-  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    getOptions();
-  }, []);
-
-  /**
-   * Reset attributes when the post types changed
-   */
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    setAttributes({
-      enableManualSelection: false,
-      manualSelectionPosts: [],
-      enableStickyPost: false,
-      stickyPost: undefined,
-      enableExcludePosts: false,
-      excludePosts: [],
-      enablePostParent: false,
-      postParentOption: 'only-parents',
-      postParent: undefined,
-      enableTaxonomies: false,
-      taxonomyTerms: undefined
-    });
-  }, [postTypes]);
-
-  /**
-   * Fetch and map all post types without the unwanted post types
-   *
-   * @todo Add external options
-   */
-  const getOptions = async () => {
-    const allPostTypes = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_4__.fetchRegisteredPostTypes)();
-    const filteredPostTypes = (0,_utils_post_types__WEBPACK_IMPORTED_MODULE_6__.filterPostTypes)(allPostTypes);
-    const mappedPostTypes = (0,_utils_helpers__WEBPACK_IMPORTED_MODULE_5__.mapPostTypesToOptions)(filteredPostTypes);
-    setOptions(mappedPostTypes);
-  };
-  return options.length > 0 ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    className: "yard-query-inspector-label"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Selecteer content type')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_select__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    isMulti: true,
-    value: postTypes,
-    options: options,
-    onChange: value => setAttributes({
-      postTypes: value
-    })
-  })) : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Spinner, null);
-};
-/* harmony default export */ __webpack_exports__["default"] = (PostTypeSelectControl);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/edit.js":
-/*!**********************************!*\
-  !*** ./src/Blocks/query/edit.js ***!
-  \**********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/server-side-render */ "@wordpress/server-side-render");
-/* harmony import */ var _wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_inspector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/inspector */ "./src/Blocks/query/components/inspector.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./src/Blocks/query/editor.scss");
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-/**
- * Internal dependencies
- */
-
-
-const Edit = props => {
-  const {
-    attributes
-  } = props;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_inspector__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default()), {
-    block: "yard/query",
-    attributes: attributes
-  }));
-};
-/* harmony default export */ __webpack_exports__["default"] = (Edit);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/icon.js":
-/*!**********************************!*\
-  !*** ./src/Blocks/query/icon.js ***!
-  \**********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @yardinternet/gutenberg-components */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/index.js");
-
-/**
- * Internal dependencies
- */
-
-const icon = {
-  src: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    height: "1em",
-    viewBox: "0 0 448 512"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
-    d: "M40 160c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8H88c4.4 0 8-3.6 8-8V168c0-4.4-3.6-8-8-8H40zM0 168c0-22.1 17.9-40 40-40H88c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V168zM40 320c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8H88c4.4 0 8-3.6 8-8V328c0-4.4-3.6-8-8-8H40zM0 328c0-22.1 17.9-40 40-40H88c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V328zM248 160H200c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V168c0-4.4-3.6-8-8-8zm-48-32h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H200c-22.1 0-40-17.9-40-40V168c0-22.1 17.9-40 40-40zm0 192c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V328c0-4.4-3.6-8-8-8H200zm-40 8c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H200c-22.1 0-40-17.9-40-40V328zM408 160H360c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V168c0-4.4-3.6-8-8-8zm-48-32h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H360c-22.1 0-40-17.9-40-40V168c0-22.1 17.9-40 40-40zm0 192c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V328c0-4.4-3.6-8-8-8H360zm-40 8c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H360c-22.1 0-40-17.9-40-40V328z"
-  })),
-  ...{
-    BlockIconColor: _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__.BlockIconColor
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (icon);
-
-/***/ }),
-
-/***/ "./src/Blocks/query/utils/api.js":
-/*!***************************************!*\
-  !*** ./src/Blocks/query/utils/api.js ***!
-  \***************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/index.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/index.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   fetchPostById: function() { return /* binding */ fetchPostById; },
-/* harmony export */   fetchRegisteredPostTypes: function() { return /* binding */ fetchRegisteredPostTypes; },
-/* harmony export */   fetchTaxonomiesByPostType: function() { return /* binding */ fetchTaxonomiesByPostType; },
-/* harmony export */   fetchTermsByTaxonomy: function() { return /* binding */ fetchTermsByTaxonomy; },
-/* harmony export */   searchPosts: function() { return /* binding */ searchPosts; }
+/* harmony export */   BlockIconColor: () => (/* binding */ BlockIconColor)
 /* harmony export */ });
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * WordPress dependencies
- */
-
-
-/**
- * Fetch all registered post types
- *
- * @see https://developer.wordpress.org/rest-api/reference/post-types/
- */
-const fetchRegisteredPostTypes = () => {
-  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: 'wp/v2/types?per_page=100'
-  });
-};
-
-/**
- * Search through posts by subtype with a search term
- *
- * @see https://developer.wordpress.org/rest-api/reference/search-results/
- */
-const searchPosts = (search = '', subtype = 'any') => {
-  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: `wp/v2/search?subtype=${subtype}&search=${search}&per_page=100`
-  });
-};
-
-/**
- * Fetch post by an id
- *
- * @see https://developer.wordpress.org/rest-api/reference/search-results/
- */
-const fetchPostById = (id = '') => {
-  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: `wp/v2/search?include=${id}`
-  });
-};
-
-/**
- * Fetch taxonomies by post type
- *
- * @see https://developer.wordpress.org/rest-api/reference/taxonomies/
- */
-const fetchTaxonomiesByPostType = (type = '') => {
-  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: `wp/v2/taxonomies?type=${type}&per_page=100`
-  });
-};
-
-/**
- * Fetch terms by taxonomy
- */
-const fetchTermsByTaxonomy = (taxonomy = '') => {
-  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
-    path: `wp/v2/${taxonomy}`
-  });
-};
-
-/***/ }),
-
-/***/ "./src/Blocks/query/utils/helpers.js":
-/*!*******************************************!*\
-  !*** ./src/Blocks/query/utils/helpers.js ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   mapPostTypesToOptions: function() { return /* binding */ mapPostTypesToOptions; },
-/* harmony export */   mapPostsToOptions: function() { return /* binding */ mapPostsToOptions; },
-/* harmony export */   mapTermsToOptions: function() { return /* binding */ mapTermsToOptions; }
-/* harmony export */ });
-/**
- * Map posts array to an array to use for options in a select control
- *
- * @param {Array} options - Array to map
- */
-const mapPostsToOptions = options => {
-  return options.map(item => ({
-    value: item.id,
-    label: `#${item.id}: ${item.title}`
-  }));
-};
-
-/**
- * Map post types array to an array to use for options in a select control
- *
- * @param {Array} postTypes - Post types to map
- */
-const mapPostTypesToOptions = (postTypes = []) => {
-  return postTypes.map(item => ({
-    label: item.name.replace('&#39;', "'"),
-    value: item.slug
-  }));
-};
-
-/**
- * Map terms array to an array to use for options in a select control
- *
- * @param {Array} terms - Terms to map
- */
-const mapTermsToOptions = (terms = []) => {
-  return terms.map(term => ({
-    label: term.name.replace('&#39;', "'"),
-    value: term.slug
-  }));
-};
-
-/***/ }),
-
-/***/ "./src/Blocks/query/utils/post-types.js":
-/*!**********************************************!*\
-  !*** ./src/Blocks/query/utils/post-types.js ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   excludePostTypes: function() { return /* binding */ excludePostTypes; },
-/* harmony export */   filterPostTypes: function() { return /* binding */ filterPostTypes; }
-/* harmony export */ });
-/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
-/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * WordPress dependencies
- */
-
-const excludePostTypes = ['attachment', 'nav_menu_item', 'post', 'tribe_organizer', 'tribe_venue', 'visibility_preset', 'wp_block', 'wp_navigation', 'wp_template', 'wp_template_part', 'yard-pattern'];
-
-/**
- * Remove unwanted post types from all post types
- *
- * @param {Object} postTypes - All post types
- */
-const filterPostTypes = (postTypes = {}) => {
-  const excluded = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.applyFilters)('yard.query-exclude-post-types', excludePostTypes);
-  return Object.keys(postTypes).filter(item => excluded.indexOf(item) === -1).map(item => postTypes[item]);
-};
-
-/***/ }),
-
-/***/ "./src/Blocks/query/utils/taxonomies.js":
-/*!**********************************************!*\
-  !*** ./src/Blocks/query/utils/taxonomies.js ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   excludeTaxonomies: function() { return /* binding */ excludeTaxonomies; },
-/* harmony export */   filterTaxonomies: function() { return /* binding */ filterTaxonomies; }
-/* harmony export */ });
-/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
-/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * WordPress dependencies
- */
-
-const excludeTaxonomies = ['category', 'nav_menu', 'post_tag', 'yard-pattern-category'];
-
-/**
- * Remove unwanted taxonomies from all taxonomies
- *
- * @param {Object} taxonomies - All taxonomies
- */
-const filterTaxonomies = (taxonomies = {}) => {
-  const excluded = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.applyFilters)('yard.query-exclude-taxonomies', excludeTaxonomies);
-  return Object.keys(taxonomies).filter(item => excluded.indexOf(item) === -1).map(item => taxonomies[item]);
-};
-
-/***/ }),
-
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/index.js":
-/*!*************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/index.js ***!
-  \*************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   BlockIconColor: function() { return /* binding */ BlockIconColor; }
-/* harmony export */ });
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/editor.scss");
 /**
  * Internal dependencies
  */
@@ -3792,13 +2204,16 @@ const BlockIconColor = {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/delete-icon.js":
-/*!*********************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/delete-icon.js ***!
-  \*********************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/delete-icon.js":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/delete-icon.js ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
@@ -3818,17 +2233,20 @@ const DeleteIcon = ({
     isDestructive: true
   }, "Verwijder icoon");
 };
-/* harmony default export */ __webpack_exports__["default"] = (DeleteIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DeleteIcon);
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/icon-results.js":
-/*!**********************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/icon-results.js ***!
-  \**********************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/icon-results.js":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/icon-results.js ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
@@ -3858,23 +2276,23 @@ const IconResults = ({
     })));
   }), !searchResults?.length && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Er zijn geen iconen gevonden')));
 };
-/* harmony default export */ __webpack_exports__["default"] = (IconResults);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IconResults);
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-inspector.js":
-/*!****************************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-inspector.js ***!
-  \****************************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-inspector.js":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-inspector.js ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControlInspector: function() { return /* binding */ IconPickerControlInspector; }
+/* harmony export */   IconPickerControlInspector: () => (/* binding */ IconPickerControlInspector)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js");
 
 /**
  * Internal dependencies
@@ -3898,15 +2316,15 @@ const IconPickerControlInspector = ({
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-toolbar.js":
-/*!**************************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-toolbar.js ***!
-  \**************************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-toolbar.js":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-toolbar.js ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControlToolbar: function() { return /* binding */ IconPickerControlToolbar; }
+/* harmony export */   IconPickerControlToolbar: () => (/* binding */ IconPickerControlToolbar)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -3916,7 +2334,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js");
 
 /**
  * WordPress dependencies
@@ -3953,15 +2371,15 @@ const IconPickerControlToolbar = ({
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js":
-/*!******************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js ***!
-  \******************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControl: function() { return /* binding */ IconPickerControl; }
+/* harmony export */   IconPickerControl: () => (/* binding */ IconPickerControl)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -3977,11 +2395,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/notices */ "@wordpress/notices");
 /* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_notices__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_delete_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/delete-icon */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/delete-icon.js");
-/* harmony import */ var _components_icon_results__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/icon-results */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/icon-results.js");
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/api */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/api.js");
-/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils/helpers */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/helpers.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./editor.scss */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/editor.scss");
+/* harmony import */ var _components_delete_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/delete-icon */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/delete-icon.js");
+/* harmony import */ var _components_icon_results__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/icon-results */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/icon-results.js");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/api */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/api.js");
+/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils/helpers */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/helpers.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./editor.scss */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/editor.scss");
 
 /**
  * WordPress dependencies
@@ -4105,36 +2523,36 @@ const IconPickerControl = ({
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/index.js":
-/*!****************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/index.js ***!
-  \****************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/index.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/index.js ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControl: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl; },
-/* harmony export */   IconPickerControlInspector: function() { return /* reexport safe */ _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__.IconPickerControlInspector; },
-/* harmony export */   IconPickerControlToolbar: function() { return /* reexport safe */ _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__.IconPickerControlToolbar; }
+/* harmony export */   IconPickerControl: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl),
+/* harmony export */   IconPickerControlInspector: () => (/* reexport safe */ _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__.IconPickerControlInspector),
+/* harmony export */   IconPickerControlToolbar: () => (/* reexport safe */ _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__.IconPickerControlToolbar)
 /* harmony export */ });
-/* harmony import */ var _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icon-picker-control-inspector */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-inspector.js");
-/* harmony import */ var _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control-toolbar */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-toolbar.js");
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js");
+/* harmony import */ var _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icon-picker-control-inspector */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-inspector.js");
+/* harmony import */ var _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control-toolbar */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-toolbar.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js");
 
 
 
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/api.js":
-/*!********************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/api.js ***!
-  \********************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/api.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/api.js ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getFontAwesomeIcons: function() { return /* binding */ getFontAwesomeIcons; }
+/* harmony export */   getFontAwesomeIcons: () => (/* binding */ getFontAwesomeIcons)
 /* harmony export */ });
 /**
  * Use FontAwesome API to search for icons
@@ -4182,21 +2600,21 @@ const getFontAwesomeIcons = async search => {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/helpers.js":
-/*!************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/helpers.js ***!
-  \************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/helpers.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/helpers.js ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   convertResponseToClassnames: function() { return /* binding */ convertResponseToClassnames; }
+/* harmony export */   convertResponseToClassnames: () => (/* binding */ convertResponseToClassnames)
 /* harmony export */ });
 /**
  * Create a classname based on the response from the FontAwesome API with only the allowed familyStyles
  *
- * @param {Object} response - The response from the Font Awesome API.
- * @param {Array} allowedFamilyStyles - The allowed family styles
+ * @param {Object} response            - The response from the Font Awesome API.
+ * @param {Array}  allowedFamilyStyles - The allowed family styles
  */
 const convertResponseToClassnames = (response, allowedFamilyStyles) => {
   const allFamilyStyles = getAllFamilyStyles(response);
@@ -4220,8 +2638,8 @@ const getAllFamilyStyles = response => {
 /**
  * Check if the current familyStyle exist in allowedFamilyStyles
  *
- * @param {Object} familyStyle - The familyStyle to check if it's allowed.
- * @param {Array} allowedFamilyStyles - The allowed family styles
+ * @param {Object} familyStyle         - The familyStyle to check if it's allowed.
+ * @param {Array}  allowedFamilyStyles - The allowed family styles
  */
 const checkIfFamilyStyleIsAllowed = (familyStyle, allowedFamilyStyles) => {
   return allowedFamilyStyles.some(obj => obj.family === familyStyle.family && obj.style === familyStyle.style);
@@ -4229,15 +2647,15 @@ const checkIfFamilyStyleIsAllowed = (familyStyle, allowedFamilyStyles) => {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon/index.js":
-/*!*************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon/index.js ***!
-  \*************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon/index.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon/index.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Icon: function() { return /* binding */ Icon; }
+/* harmony export */   Icon: () => (/* binding */ Icon)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -4263,26 +2681,1683 @@ const Icon = props => {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/index.js":
-/*!********************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/index.js ***!
-  \********************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/index.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   BlockIconColor: function() { return /* reexport safe */ _block_icon_color__WEBPACK_IMPORTED_MODULE_0__.BlockIconColor; },
-/* harmony export */   Icon: function() { return /* reexport safe */ _icon__WEBPACK_IMPORTED_MODULE_1__.Icon; },
-/* harmony export */   IconPickerControl: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl; },
-/* harmony export */   IconPickerControlInspector: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlInspector; },
-/* harmony export */   IconPickerControlToolbar: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlToolbar; }
+/* harmony export */   BlockIconColor: () => (/* reexport safe */ _block_icon_color__WEBPACK_IMPORTED_MODULE_0__.BlockIconColor),
+/* harmony export */   Icon: () => (/* reexport safe */ _icon__WEBPACK_IMPORTED_MODULE_1__.Icon),
+/* harmony export */   IconPickerControl: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl),
+/* harmony export */   IconPickerControlInspector: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlInspector),
+/* harmony export */   IconPickerControlToolbar: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlToolbar)
 /* harmony export */ });
-/* harmony import */ var _block_icon_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./block-icon-color */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/index.js");
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon/index.js");
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/index.js");
+/* harmony import */ var _block_icon_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./block-icon-color */ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/index.js");
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "./node_modules/@yardinternet/gutenberg-components/src/icon/index.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/index.js");
 
 
 
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/display-controls/display-date-toggle-control.js":
+/*!*************************************************************************************!*\
+  !*** ./src/Blocks/query/components/display-controls/display-date-toggle-control.js ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const DisplayDateToggleControl = props => {
+  const {
+    setAttributes,
+    attributes
+  } = props;
+  const {
+    displayDate
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon datum'),
+    checked: displayDate,
+    onChange: () => {
+      setAttributes({
+        displayDate: !displayDate
+      });
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DisplayDateToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/display-controls/display-excerpt-toggle-control.js":
+/*!****************************************************************************************!*\
+  !*** ./src/Blocks/query/components/display-controls/display-excerpt-toggle-control.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const DisplayExcerptToggleControl = props => {
+  const {
+    setAttributes,
+    attributes
+  } = props;
+  const {
+    displayExcerpt
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon samenvatting'),
+    checked: displayExcerpt,
+    onChange: () => {
+      setAttributes({
+        displayExcerpt: !displayExcerpt
+      });
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DisplayExcerptToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/display-controls/display-image-toggle-control.js":
+/*!**************************************************************************************!*\
+  !*** ./src/Blocks/query/components/display-controls/display-image-toggle-control.js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const DisplayImageToggleControl = props => {
+  const {
+    setAttributes,
+    attributes
+  } = props;
+  const {
+    displayImage
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon afbeelding'),
+    checked: displayImage,
+    onChange: () => {
+      setAttributes({
+        displayImage: !displayImage
+      });
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DisplayImageToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/display-controls/display-label-toggle-control.js":
+/*!**************************************************************************************!*\
+  !*** ./src/Blocks/query/components/display-controls/display-label-toggle-control.js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const DisplayLabelToggleControl = props => {
+  const {
+    setAttributes,
+    attributes
+  } = props;
+  const {
+    displayLabel
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon label'),
+    checked: displayLabel,
+    onChange: () => {
+      setAttributes({
+        displayLabel: !displayLabel
+      });
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DisplayLabelToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/display-controls/template-select-control.js":
+/*!*********************************************************************************!*\
+  !*** ./src/Blocks/query/components/display-controls/template-select-control.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const TemplateSelectControl = props => {
+  const {
+    setAttributes,
+    attributes
+  } = props;
+  const {
+    template
+  } = attributes;
+  const templateOptions = [{
+    label: 'Standaard',
+    value: 'default'
+  }];
+
+  /**
+   * @todo Retrieve from template if option is available and what the options are
+   *
+   * Options:
+   * - Template name (not the file name)
+   */
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Sjabloon'),
+    value: template,
+    options: templateOptions,
+    onChange: value => setAttributes({
+      template: value
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TemplateSelectControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/exclude-posts-toggle-control.js":
+/*!**************************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/exclude-posts-toggle-control.js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const ExcludePostsToggleControl = props => {
+  const {
+    setAttributes,
+    attributes
+  } = props;
+  const {
+    enableExcludePosts,
+    enableManualSelection
+  } = attributes;
+  return !enableManualSelection && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Berichten uitsluiten'),
+    checked: enableExcludePosts,
+    onChange: state => setAttributes({
+      enableExcludePosts: state
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ExcludePostsToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/manual-selection-toggle-control.js":
+/*!*****************************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/manual-selection-toggle-control.js ***!
+  \*****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const ManualSelectionToggleControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    enableManualSelection
+  } = attributes;
+
+  /**
+   * Save state in attributes and reset attributes if the toggle is enabled
+   *
+   * @param {boolean} state - State of toggle
+   */
+  const onChange = state => {
+    setAttributes({
+      enableManualSelection: state
+    });
+    if (state) {
+      setAttributes({
+        enableStickyPost: false,
+        stickyPost: undefined,
+        enableExcludePosts: false,
+        excludePosts: [],
+        enablePostParent: false,
+        postParentOption: 'only-parents',
+        postParent: undefined,
+        enableTaxonomies: false,
+        taxonomyTerms: undefined
+      });
+    }
+  };
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Handmatige selectie'),
+    checked: enableManualSelection,
+    onChange: onChange
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ManualSelectionToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/post-parent-combobox-control.js":
+/*!**************************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/post-parent-combobox-control.js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+const PostParentComboboxControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    postTypes,
+    postParentOption,
+    postParent,
+    enableManualSelection,
+    enablePostParent
+  } = attributes;
+  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
+
+  /**
+   * Check if postParent is set
+   */
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
+    if (postParent && postParent !== 0) {
+      getSelectedPost();
+    }
+  }, [postParent]);
+
+  /**
+   * Fetch saved post by id
+   */
+  const getSelectedPost = async () => {
+    const post = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.fetchPostById)(postParent);
+    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(post));
+  };
+
+  /**
+   * Fetch new options based on the entered search term
+   *
+   * @param {string} searchValue - Entered search term
+   */
+  const onFilterValueChange = async searchValue => {
+    let subtype = 'any';
+    if (postTypes.length > 0) {
+      subtype = postTypes.map(type => type.value).join(',');
+    }
+    const posts = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.searchPosts)(searchValue, subtype);
+    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(posts));
+  };
+  return !enableManualSelection && enablePostParent && postParentOption === 'specific-parent' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ComboboxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer berichten'),
+    hideLabelFromVision: true,
+    value: postParent,
+    options: options,
+    onChange: value => setAttributes({
+      postParent: value !== null && value !== void 0 ? value : undefined
+    }),
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer het hoofdbericht waar de subberichten van getoond moeten worden.'),
+    onFilterValueChange: onFilterValueChange
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PostParentComboboxControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/post-parent-radio-control.js":
+/*!***********************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/post-parent-radio-control.js ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const DEFAULT_POST_PARENT_OPTIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon alleen hoofdberichten'),
+  value: 'only-parents'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Toon subberichten van een specifieke hoofdbericht'),
+  value: 'specific-parent'
+}];
+const PostParentRadioControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    postParentOption,
+    enableManualSelection,
+    enablePostParent
+  } = attributes;
+
+  /**
+   * Save option in attributes and set/remove postParent attribute
+   *
+   * @param {string} value - Selected option
+   */
+  const onChange = value => {
+    setAttributes({
+      postParentOption: value
+    });
+    if (value === 'only-parents') {
+      setAttributes({
+        postParent: 0
+      });
+    } else {
+      setAttributes({
+        postParent: undefined
+      });
+    }
+  };
+  return !enableManualSelection && enablePostParent && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RadioControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Hoofd- en subberichten'),
+    hideLabelFromVision: true,
+    selected: postParentOption,
+    options: DEFAULT_POST_PARENT_OPTIONS,
+    onChange: onChange
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PostParentRadioControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/post-parent-toggle-control.js":
+/*!************************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/post-parent-toggle-control.js ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const PostParentToggleControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    enablePostParent,
+    enableManualSelection
+  } = attributes;
+
+  /**
+   * Save state in attributes and remove post_parent parameter if the toggle is disabled
+   *
+   * @param {boolean} state - State of toggle
+   */
+  const onChange = state => {
+    setAttributes({
+      enablePostParent: state
+    });
+    if (!state) {
+      setAttributes({
+        postParent: undefined
+      });
+    }
+  };
+  return !enableManualSelection && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Filter op hoofdbericht'),
+    checked: enablePostParent,
+    onChange: onChange
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PostParentToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/sticky-post-combobox-control.js":
+/*!**************************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/sticky-post-combobox-control.js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+const StickyPostComboboxControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    postTypes,
+    enableStickyPost,
+    stickyPost
+  } = attributes;
+  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
+
+  /**
+   * Check if stickyPost is set
+   */
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
+    if (stickyPost) {
+      getSelectedPost();
+    }
+  }, [stickyPost]);
+
+  /**
+   * Fetch saved post by id
+   */
+  const getSelectedPost = async () => {
+    const post = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.fetchPostById)(stickyPost);
+    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(post));
+  };
+
+  /**
+   * Fetch new options based on the entered search term
+   *
+   * @param {string} searchValue - Entered search term
+   */
+  const onFilterValueChange = async searchValue => {
+    let subtype = 'any';
+    if (postTypes.length > 0) {
+      subtype = postTypes.map(type => type.value).join(',');
+    }
+    const posts = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.searchPosts)(searchValue, subtype);
+    setOptions((0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapPostsToOptions)(posts));
+  };
+  return enableStickyPost && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ComboboxControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer bericht'),
+    hideLabelFromVision: true,
+    value: stickyPost,
+    options: options,
+    onChange: value => setAttributes({
+      stickyPost: value
+    }),
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Selecteer het bericht dat als eerste in de lijst moet worden weergegeven.'),
+    onFilterValueChange: onFilterValueChange
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StickyPostComboboxControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/sticky-post-toggle-control.js":
+/*!************************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/sticky-post-toggle-control.js ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const StickyPostToggleControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    enableStickyPost,
+    enableManualSelection
+  } = attributes;
+
+  /**
+   * Save state in attributes and reset stickyPost attribute if the toggle is disabled
+   *
+   * @param {boolean} state - State of toggle
+   */
+  const onChange = state => {
+    setAttributes({
+      enableStickyPost: state
+    });
+    if (!state) {
+      setAttributes({
+        stickyPost: undefined
+      });
+    }
+  };
+  return !enableManualSelection && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Klevend bericht'),
+    checked: enableStickyPost,
+    onChange: onChange
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StickyPostToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/taxonomy-control.js":
+/*!**************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/taxonomy-control.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _taxonomy_toggle_control__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./taxonomy-toggle-control */ "./src/Blocks/query/components/filters-controls/taxonomy-toggle-control.js");
+/* harmony import */ var _taxonomy_select_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./taxonomy-select-control */ "./src/Blocks/query/components/filters-controls/taxonomy-select-control.js");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
+/* harmony import */ var _utils_taxonomies__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/taxonomies */ "./src/Blocks/query/utils/taxonomies.js");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+const TaxonomyControl = props => {
+  const {
+    attributes
+  } = props;
+  const {
+    postTypes,
+    enableTaxonomies,
+    enableManualSelection
+  } = attributes;
+  const [taxonomies, setTaxonomies] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useState)([]);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+    getTaxonomies();
+  }, [postTypes]);
+
+  /**
+   * Fetch taxonomies of selected post types
+   */
+  const getTaxonomies = async () => {
+    let allTaxonomies = {};
+    for (const key in postTypes) {
+      const typeTaxonomies = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_5__.fetchTaxonomiesByPostType)(postTypes[key]['value']);
+      allTaxonomies = {
+        ...allTaxonomies,
+        ...typeTaxonomies
+      };
+    }
+    const filteredTaxonomies = (0,_utils_taxonomies__WEBPACK_IMPORTED_MODULE_6__.filterTaxonomies)(allTaxonomies);
+    setTaxonomies(filteredTaxonomies);
+  };
+  return !enableManualSelection && taxonomies.length !== 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_taxonomy_toggle_control__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    ...props
+  }), enableTaxonomies && taxonomies.map(taxonomy => {
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      key: taxonomy.slug
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_taxonomy_select_control__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      taxonomy: taxonomy,
+      ...props
+    }));
+  }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TaxonomyControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/taxonomy-select-control.js":
+/*!*********************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/taxonomy-select-control.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.esm.js");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
+/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
+
+/**
+ * External dependencies
+ */
+
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+const TaxonomySelectControl = props => {
+  const {
+    taxonomy,
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    taxonomyTerms
+  } = attributes;
+  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    const getTerms = async () => {
+      const allTerms = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_3__.fetchTermsByTaxonomy)(taxonomy.rest_base);
+      const mappedTerms = (0,_utils_helpers__WEBPACK_IMPORTED_MODULE_4__.mapTermsToOptions)(allTerms);
+      setOptions(mappedTerms);
+    };
+    getTerms();
+  }, [taxonomy.rest_base]);
+
+  /**
+   * Save the selected terms as an attribute
+   *
+   * @param {array} option - The new terms to save
+   */
+  const onChange = option => {
+    const newOption = {
+      [taxonomy.slug]: option
+    };
+    if (!taxonomyTerms) {
+      setAttributes({
+        taxonomyTerms: newOption
+      });
+    } else {
+      const newTaxonomyTerms = {
+        ...taxonomyTerms,
+        ...newOption
+      };
+      setAttributes({
+        taxonomyTerms: newTaxonomyTerms
+      });
+    }
+  };
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "yard-query-inspector-label"
+  }, taxonomy.name), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_select__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    isMulti: true,
+    value: taxonomyTerms?.[taxonomy.slug] ? taxonomyTerms[taxonomy.slug] : [],
+    options: options,
+    onChange: onChange
+  }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TaxonomySelectControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/filters-controls/taxonomy-toggle-control.js":
+/*!*********************************************************************************!*\
+  !*** ./src/Blocks/query/components/filters-controls/taxonomy-toggle-control.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const TaxonomyToggleControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    enableTaxonomies
+  } = attributes;
+
+  /**
+   * Save state in attributes and reset taxonomies attribute if the toggle is disabled
+   *
+   * @param {boolean} state - State of toggle
+   */
+  const onChange = state => {
+    setAttributes({
+      enableTaxonomies: state
+    });
+    if (!state) {
+      setAttributes({
+        taxonomyTerms: undefined
+      });
+    }
+  };
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Filter op taxonomie'),
+    checked: enableTaxonomies,
+    onChange: onChange
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TaxonomyToggleControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/inspector.js":
+/*!**************************************************!*\
+  !*** ./src/Blocks/query/components/inspector.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _display_controls_display_date_toggle_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./display-controls/display-date-toggle-control */ "./src/Blocks/query/components/display-controls/display-date-toggle-control.js");
+/* harmony import */ var _display_controls_display_excerpt_toggle_control__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./display-controls/display-excerpt-toggle-control */ "./src/Blocks/query/components/display-controls/display-excerpt-toggle-control.js");
+/* harmony import */ var _display_controls_display_image_toggle_control__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./display-controls/display-image-toggle-control */ "./src/Blocks/query/components/display-controls/display-image-toggle-control.js");
+/* harmony import */ var _display_controls_display_label_toggle_control__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./display-controls/display-label-toggle-control */ "./src/Blocks/query/components/display-controls/display-label-toggle-control.js");
+/* harmony import */ var _filters_controls_exclude_posts_toggle_control__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./filters-controls/exclude-posts-toggle-control */ "./src/Blocks/query/components/filters-controls/exclude-posts-toggle-control.js");
+/* harmony import */ var _filters_controls_manual_selection_toggle_control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./filters-controls/manual-selection-toggle-control */ "./src/Blocks/query/components/filters-controls/manual-selection-toggle-control.js");
+/* harmony import */ var _settings_controls_number_of_posts_range_control__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./settings-controls/number-of-posts-range-control */ "./src/Blocks/query/components/settings-controls/number-of-posts-range-control.js");
+/* harmony import */ var _settings_controls_offset_range_control__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./settings-controls/offset-range-control */ "./src/Blocks/query/components/settings-controls/offset-range-control.js");
+/* harmony import */ var _settings_controls_order_select_control__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./settings-controls/order-select-control */ "./src/Blocks/query/components/settings-controls/order-select-control.js");
+/* harmony import */ var _settings_controls_orderby_select_control__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./settings-controls/orderby-select-control */ "./src/Blocks/query/components/settings-controls/orderby-select-control.js");
+/* harmony import */ var _filters_controls_post_parent_combobox_control__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./filters-controls/post-parent-combobox-control */ "./src/Blocks/query/components/filters-controls/post-parent-combobox-control.js");
+/* harmony import */ var _filters_controls_post_parent_radio_control__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./filters-controls/post-parent-radio-control */ "./src/Blocks/query/components/filters-controls/post-parent-radio-control.js");
+/* harmony import */ var _filters_controls_post_parent_toggle_control__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./filters-controls/post-parent-toggle-control */ "./src/Blocks/query/components/filters-controls/post-parent-toggle-control.js");
+/* harmony import */ var _settings_controls_post_type_select_control__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./settings-controls/post-type-select-control */ "./src/Blocks/query/components/settings-controls/post-type-select-control.js");
+/* harmony import */ var _filters_controls_sticky_post_combobox_control__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./filters-controls/sticky-post-combobox-control */ "./src/Blocks/query/components/filters-controls/sticky-post-combobox-control.js");
+/* harmony import */ var _filters_controls_sticky_post_toggle_control__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./filters-controls/sticky-post-toggle-control */ "./src/Blocks/query/components/filters-controls/sticky-post-toggle-control.js");
+/* harmony import */ var _filters_controls_taxonomy_control__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./filters-controls/taxonomy-control */ "./src/Blocks/query/components/filters-controls/taxonomy-control.js");
+/* harmony import */ var _display_controls_template_select_control__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./display-controls/template-select-control */ "./src/Blocks/query/components/display-controls/template-select-control.js");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const Inspector = props => {
+  const {
+    attributes
+  } = props;
+  const {
+    postTypes
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Instellingen'),
+    initialOpen: true
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_post_type_select_control__WEBPACK_IMPORTED_MODULE_17__["default"], {
+    ...props
+  }), postTypes.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_number_of_posts_range_control__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_offset_range_control__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_orderby_select_control__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_settings_controls_order_select_control__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    ...props
+  }))), postTypes.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Filters'),
+    initialOpen: false
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_manual_selection_toggle_control__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_sticky_post_toggle_control__WEBPACK_IMPORTED_MODULE_19__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_sticky_post_combobox_control__WEBPACK_IMPORTED_MODULE_18__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_exclude_posts_toggle_control__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_post_parent_toggle_control__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_post_parent_radio_control__WEBPACK_IMPORTED_MODULE_15__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_post_parent_combobox_control__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_filters_controls_taxonomy_control__WEBPACK_IMPORTED_MODULE_20__["default"], {
+    ...props
+  })), postTypes.length > 0 && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Weergave'),
+    initialOpen: false
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_template_select_control__WEBPACK_IMPORTED_MODULE_21__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_image_toggle_control__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_date_toggle_control__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_excerpt_toggle_control__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_display_controls_display_label_toggle_control__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Let op: Niet alle opties hebben invloed op elk sjabloon.'))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Inspector);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/settings-controls/number-of-posts-range-control.js":
+/*!****************************************************************************************!*\
+  !*** ./src/Blocks/query/components/settings-controls/number-of-posts-range-control.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const NumberOfPostsRangeControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    postsPerPage
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Aantal berichten'),
+    value: postsPerPage,
+    min: 1,
+    max: 100,
+    onChange: value => setAttributes({
+      postsPerPage: value
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NumberOfPostsRangeControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/settings-controls/offset-range-control.js":
+/*!*******************************************************************************!*\
+  !*** ./src/Blocks/query/components/settings-controls/offset-range-control.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const OffsetRangeControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    offset
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Afwijking'),
+    value: offset,
+    min: 0,
+    max: 10,
+    onChange: value => setAttributes({
+      offset: value
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OffsetRangeControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/settings-controls/order-select-control.js":
+/*!*******************************************************************************!*\
+  !*** ./src/Blocks/query/components/settings-controls/order-select-control.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+const DEFAULT_ORDER_OPTIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Oplopend'),
+  value: 'ASC'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Aflopend'),
+  value: 'DESC'
+}];
+const OrderSelectControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    order,
+    orderBy
+  } = attributes;
+  const getHelpText = () => {
+    const isAscending = order === 'ASC';
+    switch (orderBy) {
+      case 'date':
+      case 'event_date':
+        return isAscending ? 'Oud - Nieuw' : 'Nieuw - Oud';
+      case 'title':
+        return isAscending ? 'A - Z' : 'Z - A';
+      case 'menu_order':
+        return isAscending ? '1 - 100' : '100 - 1';
+      default:
+        return '';
+    }
+  };
+  return orderBy !== 'rand' && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Volgorde'),
+    value: order,
+    options: DEFAULT_ORDER_OPTIONS,
+    help: getHelpText(),
+    onChange: value => setAttributes({
+      order: value
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OrderSelectControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/settings-controls/orderby-select-control.js":
+/*!*********************************************************************************!*\
+  !*** ./src/Blocks/query/components/settings-controls/orderby-select-control.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+const DEFAULT_ORDERBY_OPTIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Publicatiedatum'),
+  value: 'date'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Titel'),
+  value: 'title'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Attribuut volgorde'),
+  value: 'menu_order'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Willekeurig'),
+  value: 'rand'
+}];
+const TRIBE_EVENTS_DATE_OPTION = {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Event datum'),
+  value: 'event_date'
+};
+const OrderbySelectControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    postTypes,
+    orderBy
+  } = attributes;
+  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useState)(DEFAULT_ORDERBY_OPTIONS);
+
+  /**
+   * Change options if tribe_events post type is selected
+   */
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+    const includesTribeEvents = postTypes.some(type => type.value === 'tribe_events');
+    if (includesTribeEvents && !options.includes(TRIBE_EVENTS_DATE_OPTION)) {
+      setOptions([...options, TRIBE_EVENTS_DATE_OPTION]);
+    }
+    if (!includesTribeEvents && options.includes(TRIBE_EVENTS_DATE_OPTION)) {
+      setOptions(DEFAULT_ORDERBY_OPTIONS);
+    }
+  }, [postTypes]);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Sorteer op'),
+    value: orderBy,
+    options: options,
+    onChange: value => setAttributes({
+      orderBy: value
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OrderbySelectControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/components/settings-controls/post-type-select-control.js":
+/*!***********************************************************************************!*\
+  !*** ./src/Blocks/query/components/settings-controls/post-type-select-control.js ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.esm.js");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/api */ "./src/Blocks/query/utils/api.js");
+/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../utils/helpers */ "./src/Blocks/query/utils/helpers.js");
+/* harmony import */ var _utils_post_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils/post-types */ "./src/Blocks/query/utils/post-types.js");
+
+/**
+ * External dependencies
+ */
+
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+const PostTypeSelectControl = props => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    postTypes
+  } = attributes;
+  const [options, setOptions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    getOptions();
+  }, []);
+
+  /**
+   * Reset attributes when the post types changed
+   */
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    setAttributes({
+      enableManualSelection: false,
+      manualSelectionPosts: [],
+      enableStickyPost: false,
+      stickyPost: undefined,
+      enableExcludePosts: false,
+      excludePosts: [],
+      enablePostParent: false,
+      postParentOption: 'only-parents',
+      postParent: undefined,
+      enableTaxonomies: false,
+      taxonomyTerms: undefined
+    });
+  }, [postTypes]);
+
+  /**
+   * Fetch and map all post types without the unwanted post types
+   *
+   * @todo Add external options
+   */
+  const getOptions = async () => {
+    const allPostTypes = await (0,_utils_api__WEBPACK_IMPORTED_MODULE_4__.fetchRegisteredPostTypes)();
+    const filteredPostTypes = (0,_utils_post_types__WEBPACK_IMPORTED_MODULE_6__.filterPostTypes)(allPostTypes);
+    const mappedPostTypes = (0,_utils_helpers__WEBPACK_IMPORTED_MODULE_5__.mapPostTypesToOptions)(filteredPostTypes);
+    setOptions(mappedPostTypes);
+  };
+  return options.length > 0 ? (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "yard-query-inspector-label"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Selecteer content type')), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_select__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    isMulti: true,
+    value: postTypes,
+    options: options,
+    onChange: value => setAttributes({
+      postTypes: value
+    })
+  })) : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Spinner, null);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PostTypeSelectControl);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/edit.js":
+/*!**********************************!*\
+  !*** ./src/Blocks/query/edit.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/server-side-render */ "@wordpress/server-side-render");
+/* harmony import */ var _wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_inspector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/inspector */ "./src/Blocks/query/components/inspector.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./src/Blocks/query/editor.scss");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+const Edit = props => {
+  const {
+    attributes
+  } = props;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)()
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_inspector__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_3___default()), {
+    block: "yard/query",
+    attributes: attributes
+  }));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Edit);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/icon.js":
+/*!**********************************!*\
+  !*** ./src/Blocks/query/icon.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @yardinternet/gutenberg-components */ "./node_modules/@yardinternet/gutenberg-components/src/index.js");
+
+/**
+ * Internal dependencies
+ */
+
+const icon = {
+  src: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    height: "1em",
+    viewBox: "0 0 448 512"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    d: "M40 160c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8H88c4.4 0 8-3.6 8-8V168c0-4.4-3.6-8-8-8H40zM0 168c0-22.1 17.9-40 40-40H88c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V168zM40 320c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8H88c4.4 0 8-3.6 8-8V328c0-4.4-3.6-8-8-8H40zM0 328c0-22.1 17.9-40 40-40H88c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H40c-22.1 0-40-17.9-40-40V328zM248 160H200c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V168c0-4.4-3.6-8-8-8zm-48-32h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H200c-22.1 0-40-17.9-40-40V168c0-22.1 17.9-40 40-40zm0 192c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V328c0-4.4-3.6-8-8-8H200zm-40 8c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H200c-22.1 0-40-17.9-40-40V328zM408 160H360c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V168c0-4.4-3.6-8-8-8zm-48-32h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H360c-22.1 0-40-17.9-40-40V168c0-22.1 17.9-40 40-40zm0 192c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V328c0-4.4-3.6-8-8-8H360zm-40 8c0-22.1 17.9-40 40-40h48c22.1 0 40 17.9 40 40v48c0 22.1-17.9 40-40 40H360c-22.1 0-40-17.9-40-40V328z"
+  })),
+  ...{
+    BlockIconColor: _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__.BlockIconColor
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (icon);
+
+/***/ }),
+
+/***/ "./src/Blocks/query/utils/api.js":
+/*!***************************************!*\
+  !*** ./src/Blocks/query/utils/api.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   fetchPostById: () => (/* binding */ fetchPostById),
+/* harmony export */   fetchRegisteredPostTypes: () => (/* binding */ fetchRegisteredPostTypes),
+/* harmony export */   fetchTaxonomiesByPostType: () => (/* binding */ fetchTaxonomiesByPostType),
+/* harmony export */   fetchTermsByTaxonomy: () => (/* binding */ fetchTermsByTaxonomy),
+/* harmony export */   searchPosts: () => (/* binding */ searchPosts)
+/* harmony export */ });
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * Fetch all registered post types
+ *
+ * @see https://developer.wordpress.org/rest-api/reference/post-types/
+ */
+const fetchRegisteredPostTypes = () => {
+  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+    path: 'wp/v2/types?per_page=100'
+  });
+};
+
+/**
+ * Search through posts by subtype with a search term
+ *
+ * @see https://developer.wordpress.org/rest-api/reference/search-results/
+ */
+const searchPosts = (search = '', subtype = 'any') => {
+  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+    path: `wp/v2/search?subtype=${subtype}&search=${search}&per_page=100`
+  });
+};
+
+/**
+ * Fetch post by an id
+ *
+ * @see https://developer.wordpress.org/rest-api/reference/search-results/
+ */
+const fetchPostById = (id = '') => {
+  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+    path: `wp/v2/search?include=${id}`
+  });
+};
+
+/**
+ * Fetch taxonomies by post type
+ *
+ * @see https://developer.wordpress.org/rest-api/reference/taxonomies/
+ */
+const fetchTaxonomiesByPostType = (type = '') => {
+  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+    path: `wp/v2/taxonomies?type=${type}&per_page=100`
+  });
+};
+
+/**
+ * Fetch terms by taxonomy
+ */
+const fetchTermsByTaxonomy = (taxonomy = '') => {
+  return _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+    path: `wp/v2/${taxonomy}`
+  });
+};
+
+/***/ }),
+
+/***/ "./src/Blocks/query/utils/helpers.js":
+/*!*******************************************!*\
+  !*** ./src/Blocks/query/utils/helpers.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mapPostTypesToOptions: () => (/* binding */ mapPostTypesToOptions),
+/* harmony export */   mapPostsToOptions: () => (/* binding */ mapPostsToOptions),
+/* harmony export */   mapTermsToOptions: () => (/* binding */ mapTermsToOptions)
+/* harmony export */ });
+/**
+ * Map posts array to an array to use for options in a select control
+ *
+ * @param {Array} options - Array to map
+ */
+const mapPostsToOptions = options => {
+  return options.map(item => ({
+    value: item.id,
+    label: `#${item.id}: ${item.title}`
+  }));
+};
+
+/**
+ * Map post types array to an array to use for options in a select control
+ *
+ * @param {Array} postTypes - Post types to map
+ */
+const mapPostTypesToOptions = (postTypes = []) => {
+  return postTypes.map(item => ({
+    label: item.name.replace('&#39;', "'"),
+    value: item.slug
+  }));
+};
+
+/**
+ * Map terms array to an array to use for options in a select control
+ *
+ * @param {Array} terms - Terms to map
+ */
+const mapTermsToOptions = (terms = []) => {
+  return terms.map(term => ({
+    label: term.name.replace('&#39;', "'"),
+    value: term.slug
+  }));
+};
+
+/***/ }),
+
+/***/ "./src/Blocks/query/utils/post-types.js":
+/*!**********************************************!*\
+  !*** ./src/Blocks/query/utils/post-types.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   excludePostTypes: () => (/* binding */ excludePostTypes),
+/* harmony export */   filterPostTypes: () => (/* binding */ filterPostTypes)
+/* harmony export */ });
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+const excludePostTypes = ['attachment', 'nav_menu_item', 'post', 'tribe_organizer', 'tribe_venue', 'visibility_preset', 'wp_block', 'wp_navigation', 'wp_template', 'wp_template_part', 'yard-pattern'];
+
+/**
+ * Remove unwanted post types from all post types
+ *
+ * @param {Object} postTypes - All post types
+ */
+const filterPostTypes = (postTypes = {}) => {
+  const excluded = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.applyFilters)('yard.query-exclude-post-types', excludePostTypes);
+  return Object.keys(postTypes).filter(item => excluded.indexOf(item) === -1).map(item => postTypes[item]);
+};
+
+/***/ }),
+
+/***/ "./src/Blocks/query/utils/taxonomies.js":
+/*!**********************************************!*\
+  !*** ./src/Blocks/query/utils/taxonomies.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   excludeTaxonomies: () => (/* binding */ excludeTaxonomies),
+/* harmony export */   filterTaxonomies: () => (/* binding */ filterTaxonomies)
+/* harmony export */ });
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+const excludeTaxonomies = ['category', 'nav_menu', 'post_tag', 'yard-pattern-category'];
+
+/**
+ * Remove unwanted taxonomies from all taxonomies
+ *
+ * @param {Object} taxonomies - All taxonomies
+ */
+const filterTaxonomies = (taxonomies = {}) => {
+  const excluded = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.applyFilters)('yard.query-exclude-taxonomies', excludeTaxonomies);
+  return Object.keys(taxonomies).filter(item => excluded.indexOf(item) === -1).map(item => taxonomies[item]);
+};
 
 /***/ }),
 
@@ -4290,7 +4365,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
   \**********************************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
 
@@ -4403,7 +4478,7 @@ module.exports = hoistNonReactStatics;
 /*!************************************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/node_modules/react-is/cjs/react-is.development.js ***!
   \************************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
+/***/ ((__unused_webpack_module, exports) => {
 
 /** @license React v16.13.1
  * react-is.development.js
@@ -4594,7 +4669,7 @@ exports.typeOf = typeOf;
 /*!*****************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/node_modules/react-is/index.js ***!
   \*****************************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 
 
@@ -4609,11 +4684,11 @@ if (false) {} else {
 /*!**********************************************************!*\
   !*** ./node_modules/memoize-one/dist/memoize-one.esm.js ***!
   \**********************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ memoizeOne; }
+/* harmony export */   "default": () => (/* binding */ memoizeOne)
 /* harmony export */ });
 var safeIsNaN = Number.isNaN ||
     function ponyfill(value) {
@@ -4670,35 +4745,35 @@ function memoizeOne(resultFn, isEqual) {
 
 /***/ }),
 
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/editor.scss":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/editor.scss ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/editor.scss":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/editor.scss ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/Blocks/query/editor.scss":
 /*!**************************************!*\
   !*** ./src/Blocks/query/editor.scss ***!
   \**************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/editor.scss":
-/*!****************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/editor.scss ***!
-  \****************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/editor.scss":
-/*!*******************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/editor.scss ***!
-  \*******************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
@@ -4710,17 +4785,17 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************************!*\
   !*** ./node_modules/react-select/dist/Select-49a62830.esm.js ***!
   \***************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   S: function() { return /* binding */ Select; },
-/* harmony export */   a: function() { return /* binding */ defaultProps; },
-/* harmony export */   b: function() { return /* binding */ getOptionLabel$1; },
-/* harmony export */   c: function() { return /* binding */ createFilter; },
-/* harmony export */   d: function() { return /* binding */ defaultTheme; },
-/* harmony export */   g: function() { return /* binding */ getOptionValue$1; },
-/* harmony export */   m: function() { return /* binding */ mergeStyles; }
+/* harmony export */   S: () => (/* binding */ Select),
+/* harmony export */   a: () => (/* binding */ defaultProps),
+/* harmony export */   b: () => (/* binding */ getOptionLabel$1),
+/* harmony export */   c: () => (/* binding */ createFilter),
+/* harmony export */   d: () => (/* binding */ defaultTheme),
+/* harmony export */   g: () => (/* binding */ getOptionValue$1),
+/* harmony export */   m: () => (/* binding */ mergeStyles)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
@@ -7397,49 +7472,49 @@ Select.defaultProps = defaultProps;
 /*!**************************************************************!*\
   !*** ./node_modules/react-select/dist/index-a301f526.esm.js ***!
   \**************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: function() { return /* binding */ isMobileDevice; },
-/* harmony export */   B: function() { return /* binding */ multiValueAsValue; },
-/* harmony export */   C: function() { return /* binding */ singleValueAsValue; },
-/* harmony export */   D: function() { return /* binding */ valueTernary; },
-/* harmony export */   E: function() { return /* binding */ classNames; },
-/* harmony export */   F: function() { return /* binding */ defaultComponents; },
-/* harmony export */   G: function() { return /* binding */ isDocumentElement; },
-/* harmony export */   H: function() { return /* binding */ cleanValue; },
-/* harmony export */   I: function() { return /* binding */ scrollIntoView; },
-/* harmony export */   J: function() { return /* binding */ noop; },
-/* harmony export */   K: function() { return /* binding */ notNullish; },
-/* harmony export */   L: function() { return /* binding */ handleInputChange; },
-/* harmony export */   M: function() { return /* binding */ MenuPlacer; },
-/* harmony export */   a: function() { return /* binding */ clearIndicatorCSS; },
-/* harmony export */   b: function() { return /* binding */ containerCSS; },
-/* harmony export */   c: function() { return /* binding */ components; },
-/* harmony export */   d: function() { return /* binding */ css$1; },
-/* harmony export */   e: function() { return /* binding */ dropdownIndicatorCSS; },
-/* harmony export */   f: function() { return /* binding */ groupHeadingCSS; },
-/* harmony export */   g: function() { return /* binding */ groupCSS; },
-/* harmony export */   h: function() { return /* binding */ indicatorSeparatorCSS; },
-/* harmony export */   i: function() { return /* binding */ indicatorsContainerCSS; },
-/* harmony export */   j: function() { return /* binding */ inputCSS; },
-/* harmony export */   k: function() { return /* binding */ loadingMessageCSS; },
-/* harmony export */   l: function() { return /* binding */ loadingIndicatorCSS; },
-/* harmony export */   m: function() { return /* binding */ menuCSS; },
-/* harmony export */   n: function() { return /* binding */ menuListCSS; },
-/* harmony export */   o: function() { return /* binding */ menuPortalCSS; },
-/* harmony export */   p: function() { return /* binding */ multiValueCSS; },
-/* harmony export */   q: function() { return /* binding */ multiValueLabelCSS; },
-/* harmony export */   r: function() { return /* binding */ removeProps; },
-/* harmony export */   s: function() { return /* binding */ supportsPassiveEvents; },
-/* harmony export */   t: function() { return /* binding */ multiValueRemoveCSS; },
-/* harmony export */   u: function() { return /* binding */ noOptionsMessageCSS; },
-/* harmony export */   v: function() { return /* binding */ optionCSS; },
-/* harmony export */   w: function() { return /* binding */ placeholderCSS; },
-/* harmony export */   x: function() { return /* binding */ css; },
-/* harmony export */   y: function() { return /* binding */ valueContainerCSS; },
-/* harmony export */   z: function() { return /* binding */ isTouchCapable; }
+/* harmony export */   A: () => (/* binding */ isMobileDevice),
+/* harmony export */   B: () => (/* binding */ multiValueAsValue),
+/* harmony export */   C: () => (/* binding */ singleValueAsValue),
+/* harmony export */   D: () => (/* binding */ valueTernary),
+/* harmony export */   E: () => (/* binding */ classNames),
+/* harmony export */   F: () => (/* binding */ defaultComponents),
+/* harmony export */   G: () => (/* binding */ isDocumentElement),
+/* harmony export */   H: () => (/* binding */ cleanValue),
+/* harmony export */   I: () => (/* binding */ scrollIntoView),
+/* harmony export */   J: () => (/* binding */ noop),
+/* harmony export */   K: () => (/* binding */ notNullish),
+/* harmony export */   L: () => (/* binding */ handleInputChange),
+/* harmony export */   M: () => (/* binding */ MenuPlacer),
+/* harmony export */   a: () => (/* binding */ clearIndicatorCSS),
+/* harmony export */   b: () => (/* binding */ containerCSS),
+/* harmony export */   c: () => (/* binding */ components),
+/* harmony export */   d: () => (/* binding */ css$1),
+/* harmony export */   e: () => (/* binding */ dropdownIndicatorCSS),
+/* harmony export */   f: () => (/* binding */ groupHeadingCSS),
+/* harmony export */   g: () => (/* binding */ groupCSS),
+/* harmony export */   h: () => (/* binding */ indicatorSeparatorCSS),
+/* harmony export */   i: () => (/* binding */ indicatorsContainerCSS),
+/* harmony export */   j: () => (/* binding */ inputCSS),
+/* harmony export */   k: () => (/* binding */ loadingMessageCSS),
+/* harmony export */   l: () => (/* binding */ loadingIndicatorCSS),
+/* harmony export */   m: () => (/* binding */ menuCSS),
+/* harmony export */   n: () => (/* binding */ menuListCSS),
+/* harmony export */   o: () => (/* binding */ menuPortalCSS),
+/* harmony export */   p: () => (/* binding */ multiValueCSS),
+/* harmony export */   q: () => (/* binding */ multiValueLabelCSS),
+/* harmony export */   r: () => (/* binding */ removeProps),
+/* harmony export */   s: () => (/* binding */ supportsPassiveEvents),
+/* harmony export */   t: () => (/* binding */ multiValueRemoveCSS),
+/* harmony export */   u: () => (/* binding */ noOptionsMessageCSS),
+/* harmony export */   v: () => (/* binding */ optionCSS),
+/* harmony export */   w: () => (/* binding */ placeholderCSS),
+/* harmony export */   x: () => (/* binding */ css),
+/* harmony export */   y: () => (/* binding */ valueContainerCSS),
+/* harmony export */   z: () => (/* binding */ isTouchCapable)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
@@ -8855,17 +8930,17 @@ var defaultComponents = function defaultComponents(props) {
 /*!************************************************************!*\
   !*** ./node_modules/react-select/dist/react-select.esm.js ***!
   \************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   NonceProvider: function() { return /* binding */ NonceProvider; },
-/* harmony export */   components: function() { return /* reexport safe */ _index_a301f526_esm_js__WEBPACK_IMPORTED_MODULE_5__.c; },
-/* harmony export */   createFilter: function() { return /* reexport safe */ _Select_49a62830_esm_js__WEBPACK_IMPORTED_MODULE_3__.c; },
-/* harmony export */   "default": function() { return /* binding */ StateManagedSelect$1; },
-/* harmony export */   defaultTheme: function() { return /* reexport safe */ _Select_49a62830_esm_js__WEBPACK_IMPORTED_MODULE_3__.d; },
-/* harmony export */   mergeStyles: function() { return /* reexport safe */ _Select_49a62830_esm_js__WEBPACK_IMPORTED_MODULE_3__.m; },
-/* harmony export */   useStateManager: function() { return /* reexport safe */ _useStateManager_7e1e8489_esm_js__WEBPACK_IMPORTED_MODULE_0__.u; }
+/* harmony export */   NonceProvider: () => (/* binding */ NonceProvider),
+/* harmony export */   components: () => (/* reexport safe */ _index_a301f526_esm_js__WEBPACK_IMPORTED_MODULE_5__.c),
+/* harmony export */   createFilter: () => (/* reexport safe */ _Select_49a62830_esm_js__WEBPACK_IMPORTED_MODULE_3__.c),
+/* harmony export */   "default": () => (/* binding */ StateManagedSelect$1),
+/* harmony export */   defaultTheme: () => (/* reexport safe */ _Select_49a62830_esm_js__WEBPACK_IMPORTED_MODULE_3__.d),
+/* harmony export */   mergeStyles: () => (/* reexport safe */ _Select_49a62830_esm_js__WEBPACK_IMPORTED_MODULE_3__.m),
+/* harmony export */   useStateManager: () => (/* reexport safe */ _useStateManager_7e1e8489_esm_js__WEBPACK_IMPORTED_MODULE_0__.u)
 /* harmony export */ });
 /* harmony import */ var _useStateManager_7e1e8489_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./useStateManager-7e1e8489.esm.js */ "./node_modules/react-select/dist/useStateManager-7e1e8489.esm.js");
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
@@ -8947,11 +9022,11 @@ var NonceProvider = (function (_ref) {
 /*!************************************************************************!*\
   !*** ./node_modules/react-select/dist/useStateManager-7e1e8489.esm.js ***!
   \************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   u: function() { return /* binding */ useStateManager; }
+/* harmony export */   u: () => (/* binding */ useStateManager)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
@@ -9039,16 +9114,19 @@ function useStateManager(_ref) {
 /*!****************************************************************************************************!*\
   !*** ./node_modules/use-isomorphic-layout-effect/dist/use-isomorphic-layout-effect.browser.esm.js ***!
   \****************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
 var index =  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect ;
 
-/* harmony default export */ __webpack_exports__["default"] = (index);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
 
 
 /***/ }),
@@ -9057,7 +9135,7 @@ var index =  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect ;
 /*!************************!*\
   !*** external "React" ***!
   \************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["React"];
 
@@ -9067,7 +9145,7 @@ module.exports = window["React"];
 /*!***************************!*\
   !*** external "ReactDOM" ***!
   \***************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["ReactDOM"];
 
@@ -9077,7 +9155,7 @@ module.exports = window["ReactDOM"];
 /*!**********************************!*\
   !*** external ["wp","apiFetch"] ***!
   \**********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["apiFetch"];
 
@@ -9087,7 +9165,7 @@ module.exports = window["wp"]["apiFetch"];
 /*!*************************************!*\
   !*** external ["wp","blockEditor"] ***!
   \*************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["blockEditor"];
 
@@ -9097,7 +9175,7 @@ module.exports = window["wp"]["blockEditor"];
 /*!********************************!*\
   !*** external ["wp","blocks"] ***!
   \********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["blocks"];
 
@@ -9107,7 +9185,7 @@ module.exports = window["wp"]["blocks"];
 /*!************************************!*\
   !*** external ["wp","components"] ***!
   \************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["components"];
 
@@ -9117,7 +9195,7 @@ module.exports = window["wp"]["components"];
 /*!******************************!*\
   !*** external ["wp","data"] ***!
   \******************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["data"];
 
@@ -9127,7 +9205,7 @@ module.exports = window["wp"]["data"];
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
   \*********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["element"];
 
@@ -9137,7 +9215,7 @@ module.exports = window["wp"]["element"];
 /*!*******************************!*\
   !*** external ["wp","hooks"] ***!
   \*******************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["hooks"];
 
@@ -9147,7 +9225,7 @@ module.exports = window["wp"]["hooks"];
 /*!******************************!*\
   !*** external ["wp","i18n"] ***!
   \******************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["i18n"];
 
@@ -9157,7 +9235,7 @@ module.exports = window["wp"]["i18n"];
 /*!*********************************!*\
   !*** external ["wp","notices"] ***!
   \*********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["notices"];
 
@@ -9167,7 +9245,7 @@ module.exports = window["wp"]["notices"];
 /*!******************************************!*\
   !*** external ["wp","serverSideRender"] ***!
   \******************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["serverSideRender"];
 
@@ -9177,11 +9255,11 @@ module.exports = window["wp"]["serverSideRender"];
 /*!*********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
   \*********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _arrayLikeToArray; }
+/* harmony export */   "default": () => (/* binding */ _arrayLikeToArray)
 /* harmony export */ });
 function _arrayLikeToArray(arr, len) {
   if (len == null || len > arr.length) len = arr.length;
@@ -9195,11 +9273,11 @@ function _arrayLikeToArray(arr, len) {
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js ***!
   \*******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _arrayWithHoles; }
+/* harmony export */   "default": () => (/* binding */ _arrayWithHoles)
 /* harmony export */ });
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
@@ -9211,11 +9289,11 @@ function _arrayWithHoles(arr) {
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
   \**********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _arrayWithoutHoles; }
+/* harmony export */   "default": () => (/* binding */ _arrayWithoutHoles)
 /* harmony export */ });
 /* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
 
@@ -9229,11 +9307,11 @@ function _arrayWithoutHoles(arr) {
 /*!**************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
   \**************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _assertThisInitialized; }
+/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
 /* harmony export */ });
 function _assertThisInitialized(self) {
   if (self === void 0) {
@@ -9248,11 +9326,11 @@ function _assertThisInitialized(self) {
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js ***!
   \*******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _classCallCheck; }
+/* harmony export */   "default": () => (/* binding */ _classCallCheck)
 /* harmony export */ });
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -9266,11 +9344,11 @@ function _classCallCheck(instance, Constructor) {
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/createClass.js ***!
   \****************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _createClass; }
+/* harmony export */   "default": () => (/* binding */ _createClass)
 /* harmony export */ });
 /* harmony import */ var _toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js");
 
@@ -9298,11 +9376,11 @@ function _createClass(Constructor, protoProps, staticProps) {
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/createSuper.js ***!
   \****************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _createSuper; }
+/* harmony export */   "default": () => (/* binding */ _createSuper)
 /* harmony export */ });
 /* harmony import */ var _getPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _isNativeReflectConstruct_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js");
@@ -9331,11 +9409,11 @@ function _createSuper(Derived) {
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
   \*******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _defineProperty; }
+/* harmony export */   "default": () => (/* binding */ _defineProperty)
 /* harmony export */ });
 /* harmony import */ var _toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js");
 
@@ -9360,11 +9438,11 @@ function _defineProperty(obj, key, value) {
 /*!************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
   \************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _extends; }
+/* harmony export */   "default": () => (/* binding */ _extends)
 /* harmony export */ });
 function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function (target) {
@@ -9387,11 +9465,11 @@ function _extends() {
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js ***!
   \*******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _getPrototypeOf; }
+/* harmony export */   "default": () => (/* binding */ _getPrototypeOf)
 /* harmony export */ });
 function _getPrototypeOf(o) {
   _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
@@ -9406,11 +9484,11 @@ function _getPrototypeOf(o) {
 /*!*************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/inherits.js ***!
   \*************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _inherits; }
+/* harmony export */   "default": () => (/* binding */ _inherits)
 /* harmony export */ });
 /* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
 
@@ -9437,11 +9515,11 @@ function _inherits(subClass, superClass) {
 /*!*****************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/isNativeReflectConstruct.js ***!
   \*****************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _isNativeReflectConstruct; }
+/* harmony export */   "default": () => (/* binding */ _isNativeReflectConstruct)
 /* harmony export */ });
 function _isNativeReflectConstruct() {
   if (typeof Reflect === "undefined" || !Reflect.construct) return false;
@@ -9461,11 +9539,11 @@ function _isNativeReflectConstruct() {
 /*!********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
   \********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _iterableToArray; }
+/* harmony export */   "default": () => (/* binding */ _iterableToArray)
 /* harmony export */ });
 function _iterableToArray(iter) {
   if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
@@ -9477,11 +9555,11 @@ function _iterableToArray(iter) {
 /*!*************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js ***!
   \*************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _iterableToArrayLimit; }
+/* harmony export */   "default": () => (/* binding */ _iterableToArrayLimit)
 /* harmony export */ });
 function _iterableToArrayLimit(r, l) {
   var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
@@ -9517,11 +9595,11 @@ function _iterableToArrayLimit(r, l) {
 /*!********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js ***!
   \********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _nonIterableRest; }
+/* harmony export */   "default": () => (/* binding */ _nonIterableRest)
 /* harmony export */ });
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -9533,11 +9611,11 @@ function _nonIterableRest() {
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
   \**********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _nonIterableSpread; }
+/* harmony export */   "default": () => (/* binding */ _nonIterableSpread)
 /* harmony export */ });
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -9549,11 +9627,11 @@ function _nonIterableSpread() {
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js ***!
   \******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _objectSpread2; }
+/* harmony export */   "default": () => (/* binding */ _objectSpread2)
 /* harmony export */ });
 /* harmony import */ var _defineProperty_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defineProperty.js */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 
@@ -9585,11 +9663,11 @@ function _objectSpread2(e) {
 /*!****************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js ***!
   \****************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _objectWithoutProperties; }
+/* harmony export */   "default": () => (/* binding */ _objectWithoutProperties)
 /* harmony export */ });
 /* harmony import */ var _objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 
@@ -9615,11 +9693,11 @@ function _objectWithoutProperties(source, excluded) {
 /*!*********************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
   \*********************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _objectWithoutPropertiesLoose; }
+/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
 /* harmony export */ });
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
@@ -9640,11 +9718,11 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /*!******************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js ***!
   \******************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _possibleConstructorReturn; }
+/* harmony export */   "default": () => (/* binding */ _possibleConstructorReturn)
 /* harmony export */ });
 /* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _assertThisInitialized_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assertThisInitialized.js */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
@@ -9665,11 +9743,11 @@ function _possibleConstructorReturn(self, call) {
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
   \*******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _setPrototypeOf; }
+/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
 /* harmony export */ });
 function _setPrototypeOf(o, p) {
   _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
@@ -9685,11 +9763,11 @@ function _setPrototypeOf(o, p) {
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js ***!
   \******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _slicedToArray; }
+/* harmony export */   "default": () => (/* binding */ _slicedToArray)
 /* harmony export */ });
 /* harmony import */ var _arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles.js */ "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js");
 /* harmony import */ var _iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit.js */ "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js");
@@ -9709,11 +9787,11 @@ function _slicedToArray(arr, i) {
 /*!**************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js ***!
   \**************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _taggedTemplateLiteral; }
+/* harmony export */   "default": () => (/* binding */ _taggedTemplateLiteral)
 /* harmony export */ });
 function _taggedTemplateLiteral(strings, raw) {
   if (!raw) {
@@ -9732,11 +9810,11 @@ function _taggedTemplateLiteral(strings, raw) {
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
   \**********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _toConsumableArray; }
+/* harmony export */   "default": () => (/* binding */ _toConsumableArray)
 /* harmony export */ });
 /* harmony import */ var _arrayWithoutHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles.js */ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
 /* harmony import */ var _iterableToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray.js */ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
@@ -9756,11 +9834,11 @@ function _toConsumableArray(arr) {
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/toPrimitive.js ***!
   \****************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _toPrimitive; }
+/* harmony export */   "default": () => (/* binding */ _toPrimitive)
 /* harmony export */ });
 /* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 
@@ -9781,11 +9859,11 @@ function _toPrimitive(input, hint) {
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js ***!
   \******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _toPropertyKey; }
+/* harmony export */   "default": () => (/* binding */ _toPropertyKey)
 /* harmony export */ });
 /* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toPrimitive.js */ "./node_modules/@babel/runtime/helpers/esm/toPrimitive.js");
@@ -9802,11 +9880,11 @@ function _toPropertyKey(arg) {
 /*!***********************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
   \***********************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _typeof; }
+/* harmony export */   "default": () => (/* binding */ _typeof)
 /* harmony export */ });
 function _typeof(o) {
   "@babel/helpers - typeof";
@@ -9824,11 +9902,11 @@ function _typeof(o) {
 /*!*******************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
   \*******************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ _unsupportedIterableToArray; }
+/* harmony export */   "default": () => (/* binding */ _unsupportedIterableToArray)
 /* harmony export */ });
 /* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
 
@@ -9847,22 +9925,22 @@ function _unsupportedIterableToArray(o, minLen) {
 /*!******************************************************************!*\
   !*** ./node_modules/@floating-ui/core/dist/floating-ui.core.mjs ***!
   \******************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   arrow: function() { return /* binding */ arrow; },
-/* harmony export */   autoPlacement: function() { return /* binding */ autoPlacement; },
-/* harmony export */   computePosition: function() { return /* binding */ computePosition; },
-/* harmony export */   detectOverflow: function() { return /* binding */ detectOverflow; },
-/* harmony export */   flip: function() { return /* binding */ flip; },
-/* harmony export */   hide: function() { return /* binding */ hide; },
-/* harmony export */   inline: function() { return /* binding */ inline; },
-/* harmony export */   limitShift: function() { return /* binding */ limitShift; },
-/* harmony export */   offset: function() { return /* binding */ offset; },
-/* harmony export */   rectToClientRect: function() { return /* reexport safe */ _floating_ui_utils__WEBPACK_IMPORTED_MODULE_0__.rectToClientRect; },
-/* harmony export */   shift: function() { return /* binding */ shift; },
-/* harmony export */   size: function() { return /* binding */ size; }
+/* harmony export */   arrow: () => (/* binding */ arrow),
+/* harmony export */   autoPlacement: () => (/* binding */ autoPlacement),
+/* harmony export */   computePosition: () => (/* binding */ computePosition),
+/* harmony export */   detectOverflow: () => (/* binding */ detectOverflow),
+/* harmony export */   flip: () => (/* binding */ flip),
+/* harmony export */   hide: () => (/* binding */ hide),
+/* harmony export */   inline: () => (/* binding */ inline),
+/* harmony export */   limitShift: () => (/* binding */ limitShift),
+/* harmony export */   offset: () => (/* binding */ offset),
+/* harmony export */   rectToClientRect: () => (/* reexport safe */ _floating_ui_utils__WEBPACK_IMPORTED_MODULE_0__.rectToClientRect),
+/* harmony export */   shift: () => (/* binding */ shift),
+/* harmony export */   size: () => (/* binding */ size)
 /* harmony export */ });
 /* harmony import */ var _floating_ui_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @floating-ui/utils */ "./node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs");
 
@@ -10884,24 +10962,24 @@ const size = function (options) {
 /*!****************************************************************!*\
   !*** ./node_modules/@floating-ui/dom/dist/floating-ui.dom.mjs ***!
   \****************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   arrow: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.arrow; },
-/* harmony export */   autoPlacement: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.autoPlacement; },
-/* harmony export */   autoUpdate: function() { return /* binding */ autoUpdate; },
-/* harmony export */   computePosition: function() { return /* binding */ computePosition; },
-/* harmony export */   detectOverflow: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.detectOverflow; },
-/* harmony export */   flip: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.flip; },
-/* harmony export */   getOverflowAncestors: function() { return /* reexport safe */ _floating_ui_utils_dom__WEBPACK_IMPORTED_MODULE_1__.getOverflowAncestors; },
-/* harmony export */   hide: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.hide; },
-/* harmony export */   inline: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.inline; },
-/* harmony export */   limitShift: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.limitShift; },
-/* harmony export */   offset: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.offset; },
-/* harmony export */   platform: function() { return /* binding */ platform; },
-/* harmony export */   shift: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.shift; },
-/* harmony export */   size: function() { return /* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.size; }
+/* harmony export */   arrow: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.arrow),
+/* harmony export */   autoPlacement: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.autoPlacement),
+/* harmony export */   autoUpdate: () => (/* binding */ autoUpdate),
+/* harmony export */   computePosition: () => (/* binding */ computePosition),
+/* harmony export */   detectOverflow: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.detectOverflow),
+/* harmony export */   flip: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.flip),
+/* harmony export */   getOverflowAncestors: () => (/* reexport safe */ _floating_ui_utils_dom__WEBPACK_IMPORTED_MODULE_1__.getOverflowAncestors),
+/* harmony export */   hide: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.hide),
+/* harmony export */   inline: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.inline),
+/* harmony export */   limitShift: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.limitShift),
+/* harmony export */   offset: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.offset),
+/* harmony export */   platform: () => (/* binding */ platform),
+/* harmony export */   shift: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.shift),
+/* harmony export */   size: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.size)
 /* harmony export */ });
 /* harmony import */ var _floating_ui_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @floating-ui/utils */ "./node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs");
 /* harmony import */ var _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @floating-ui/core */ "./node_modules/@floating-ui/core/dist/floating-ui.core.mjs");
@@ -11514,34 +11592,34 @@ const computePosition = (reference, floating, options) => {
 /*!********************************************************************!*\
   !*** ./node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs ***!
   \********************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   alignments: function() { return /* binding */ alignments; },
-/* harmony export */   clamp: function() { return /* binding */ clamp; },
-/* harmony export */   createCoords: function() { return /* binding */ createCoords; },
-/* harmony export */   evaluate: function() { return /* binding */ evaluate; },
-/* harmony export */   expandPaddingObject: function() { return /* binding */ expandPaddingObject; },
-/* harmony export */   floor: function() { return /* binding */ floor; },
-/* harmony export */   getAlignment: function() { return /* binding */ getAlignment; },
-/* harmony export */   getAlignmentAxis: function() { return /* binding */ getAlignmentAxis; },
-/* harmony export */   getAlignmentSides: function() { return /* binding */ getAlignmentSides; },
-/* harmony export */   getAxisLength: function() { return /* binding */ getAxisLength; },
-/* harmony export */   getExpandedPlacements: function() { return /* binding */ getExpandedPlacements; },
-/* harmony export */   getOppositeAlignmentPlacement: function() { return /* binding */ getOppositeAlignmentPlacement; },
-/* harmony export */   getOppositeAxis: function() { return /* binding */ getOppositeAxis; },
-/* harmony export */   getOppositeAxisPlacements: function() { return /* binding */ getOppositeAxisPlacements; },
-/* harmony export */   getOppositePlacement: function() { return /* binding */ getOppositePlacement; },
-/* harmony export */   getPaddingObject: function() { return /* binding */ getPaddingObject; },
-/* harmony export */   getSide: function() { return /* binding */ getSide; },
-/* harmony export */   getSideAxis: function() { return /* binding */ getSideAxis; },
-/* harmony export */   max: function() { return /* binding */ max; },
-/* harmony export */   min: function() { return /* binding */ min; },
-/* harmony export */   placements: function() { return /* binding */ placements; },
-/* harmony export */   rectToClientRect: function() { return /* binding */ rectToClientRect; },
-/* harmony export */   round: function() { return /* binding */ round; },
-/* harmony export */   sides: function() { return /* binding */ sides; }
+/* harmony export */   alignments: () => (/* binding */ alignments),
+/* harmony export */   clamp: () => (/* binding */ clamp),
+/* harmony export */   createCoords: () => (/* binding */ createCoords),
+/* harmony export */   evaluate: () => (/* binding */ evaluate),
+/* harmony export */   expandPaddingObject: () => (/* binding */ expandPaddingObject),
+/* harmony export */   floor: () => (/* binding */ floor),
+/* harmony export */   getAlignment: () => (/* binding */ getAlignment),
+/* harmony export */   getAlignmentAxis: () => (/* binding */ getAlignmentAxis),
+/* harmony export */   getAlignmentSides: () => (/* binding */ getAlignmentSides),
+/* harmony export */   getAxisLength: () => (/* binding */ getAxisLength),
+/* harmony export */   getExpandedPlacements: () => (/* binding */ getExpandedPlacements),
+/* harmony export */   getOppositeAlignmentPlacement: () => (/* binding */ getOppositeAlignmentPlacement),
+/* harmony export */   getOppositeAxis: () => (/* binding */ getOppositeAxis),
+/* harmony export */   getOppositeAxisPlacements: () => (/* binding */ getOppositeAxisPlacements),
+/* harmony export */   getOppositePlacement: () => (/* binding */ getOppositePlacement),
+/* harmony export */   getPaddingObject: () => (/* binding */ getPaddingObject),
+/* harmony export */   getSide: () => (/* binding */ getSide),
+/* harmony export */   getSideAxis: () => (/* binding */ getSideAxis),
+/* harmony export */   max: () => (/* binding */ max),
+/* harmony export */   min: () => (/* binding */ min),
+/* harmony export */   placements: () => (/* binding */ placements),
+/* harmony export */   rectToClientRect: () => (/* binding */ rectToClientRect),
+/* harmony export */   round: () => (/* binding */ round),
+/* harmony export */   sides: () => (/* binding */ sides)
 /* harmony export */ });
 const sides = ['top', 'right', 'bottom', 'left'];
 const alignments = ['start', 'end'];
@@ -11675,28 +11753,28 @@ function rectToClientRect(rect) {
 /*!****************************************************************************!*\
   !*** ./node_modules/@floating-ui/utils/dom/dist/floating-ui.utils.dom.mjs ***!
   \****************************************************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getComputedStyle: function() { return /* binding */ getComputedStyle; },
-/* harmony export */   getContainingBlock: function() { return /* binding */ getContainingBlock; },
-/* harmony export */   getDocumentElement: function() { return /* binding */ getDocumentElement; },
-/* harmony export */   getNearestOverflowAncestor: function() { return /* binding */ getNearestOverflowAncestor; },
-/* harmony export */   getNodeName: function() { return /* binding */ getNodeName; },
-/* harmony export */   getNodeScroll: function() { return /* binding */ getNodeScroll; },
-/* harmony export */   getOverflowAncestors: function() { return /* binding */ getOverflowAncestors; },
-/* harmony export */   getParentNode: function() { return /* binding */ getParentNode; },
-/* harmony export */   getWindow: function() { return /* binding */ getWindow; },
-/* harmony export */   isContainingBlock: function() { return /* binding */ isContainingBlock; },
-/* harmony export */   isElement: function() { return /* binding */ isElement; },
-/* harmony export */   isHTMLElement: function() { return /* binding */ isHTMLElement; },
-/* harmony export */   isLastTraversableNode: function() { return /* binding */ isLastTraversableNode; },
-/* harmony export */   isNode: function() { return /* binding */ isNode; },
-/* harmony export */   isOverflowElement: function() { return /* binding */ isOverflowElement; },
-/* harmony export */   isShadowRoot: function() { return /* binding */ isShadowRoot; },
-/* harmony export */   isTableElement: function() { return /* binding */ isTableElement; },
-/* harmony export */   isWebKit: function() { return /* binding */ isWebKit; }
+/* harmony export */   getComputedStyle: () => (/* binding */ getComputedStyle),
+/* harmony export */   getContainingBlock: () => (/* binding */ getContainingBlock),
+/* harmony export */   getDocumentElement: () => (/* binding */ getDocumentElement),
+/* harmony export */   getNearestOverflowAncestor: () => (/* binding */ getNearestOverflowAncestor),
+/* harmony export */   getNodeName: () => (/* binding */ getNodeName),
+/* harmony export */   getNodeScroll: () => (/* binding */ getNodeScroll),
+/* harmony export */   getOverflowAncestors: () => (/* binding */ getOverflowAncestors),
+/* harmony export */   getParentNode: () => (/* binding */ getParentNode),
+/* harmony export */   getWindow: () => (/* binding */ getWindow),
+/* harmony export */   isContainingBlock: () => (/* binding */ isContainingBlock),
+/* harmony export */   isElement: () => (/* binding */ isElement),
+/* harmony export */   isHTMLElement: () => (/* binding */ isHTMLElement),
+/* harmony export */   isLastTraversableNode: () => (/* binding */ isLastTraversableNode),
+/* harmony export */   isNode: () => (/* binding */ isNode),
+/* harmony export */   isOverflowElement: () => (/* binding */ isOverflowElement),
+/* harmony export */   isShadowRoot: () => (/* binding */ isShadowRoot),
+/* harmony export */   isTableElement: () => (/* binding */ isTableElement),
+/* harmony export */   isWebKit: () => (/* binding */ isWebKit)
 /* harmony export */ });
 function getNodeName(node) {
   if (isNode(node)) {
@@ -11834,29 +11912,29 @@ function getOverflowAncestors(node, list, traverseIframes) {
 /*!*****************************************!*\
   !*** ./node_modules/stylis/src/Enum.js ***!
   \*****************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CHARSET: function() { return /* binding */ CHARSET; },
-/* harmony export */   COMMENT: function() { return /* binding */ COMMENT; },
-/* harmony export */   COUNTER_STYLE: function() { return /* binding */ COUNTER_STYLE; },
-/* harmony export */   DECLARATION: function() { return /* binding */ DECLARATION; },
-/* harmony export */   DOCUMENT: function() { return /* binding */ DOCUMENT; },
-/* harmony export */   FONT_FACE: function() { return /* binding */ FONT_FACE; },
-/* harmony export */   FONT_FEATURE_VALUES: function() { return /* binding */ FONT_FEATURE_VALUES; },
-/* harmony export */   IMPORT: function() { return /* binding */ IMPORT; },
-/* harmony export */   KEYFRAMES: function() { return /* binding */ KEYFRAMES; },
-/* harmony export */   LAYER: function() { return /* binding */ LAYER; },
-/* harmony export */   MEDIA: function() { return /* binding */ MEDIA; },
-/* harmony export */   MOZ: function() { return /* binding */ MOZ; },
-/* harmony export */   MS: function() { return /* binding */ MS; },
-/* harmony export */   NAMESPACE: function() { return /* binding */ NAMESPACE; },
-/* harmony export */   PAGE: function() { return /* binding */ PAGE; },
-/* harmony export */   RULESET: function() { return /* binding */ RULESET; },
-/* harmony export */   SUPPORTS: function() { return /* binding */ SUPPORTS; },
-/* harmony export */   VIEWPORT: function() { return /* binding */ VIEWPORT; },
-/* harmony export */   WEBKIT: function() { return /* binding */ WEBKIT; }
+/* harmony export */   CHARSET: () => (/* binding */ CHARSET),
+/* harmony export */   COMMENT: () => (/* binding */ COMMENT),
+/* harmony export */   COUNTER_STYLE: () => (/* binding */ COUNTER_STYLE),
+/* harmony export */   DECLARATION: () => (/* binding */ DECLARATION),
+/* harmony export */   DOCUMENT: () => (/* binding */ DOCUMENT),
+/* harmony export */   FONT_FACE: () => (/* binding */ FONT_FACE),
+/* harmony export */   FONT_FEATURE_VALUES: () => (/* binding */ FONT_FEATURE_VALUES),
+/* harmony export */   IMPORT: () => (/* binding */ IMPORT),
+/* harmony export */   KEYFRAMES: () => (/* binding */ KEYFRAMES),
+/* harmony export */   LAYER: () => (/* binding */ LAYER),
+/* harmony export */   MEDIA: () => (/* binding */ MEDIA),
+/* harmony export */   MOZ: () => (/* binding */ MOZ),
+/* harmony export */   MS: () => (/* binding */ MS),
+/* harmony export */   NAMESPACE: () => (/* binding */ NAMESPACE),
+/* harmony export */   PAGE: () => (/* binding */ PAGE),
+/* harmony export */   RULESET: () => (/* binding */ RULESET),
+/* harmony export */   SUPPORTS: () => (/* binding */ SUPPORTS),
+/* harmony export */   VIEWPORT: () => (/* binding */ VIEWPORT),
+/* harmony export */   WEBKIT: () => (/* binding */ WEBKIT)
 /* harmony export */ });
 var MS = '-ms-'
 var MOZ = '-moz-'
@@ -11887,14 +11965,14 @@ var LAYER = '@layer'
 /*!***********************************************!*\
   !*** ./node_modules/stylis/src/Middleware.js ***!
   \***********************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   middleware: function() { return /* binding */ middleware; },
-/* harmony export */   namespace: function() { return /* binding */ namespace; },
-/* harmony export */   prefixer: function() { return /* binding */ prefixer; },
-/* harmony export */   rulesheet: function() { return /* binding */ rulesheet; }
+/* harmony export */   middleware: () => (/* binding */ middleware),
+/* harmony export */   namespace: () => (/* binding */ namespace),
+/* harmony export */   prefixer: () => (/* binding */ prefixer),
+/* harmony export */   rulesheet: () => (/* binding */ rulesheet)
 /* harmony export */ });
 /* harmony import */ var _Enum_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Enum.js */ "./node_modules/stylis/src/Enum.js");
 /* harmony import */ var _Utility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Utility.js */ "./node_modules/stylis/src/Utility.js");
@@ -12017,15 +12095,15 @@ function namespace (element) {
 /*!*******************************************!*\
   !*** ./node_modules/stylis/src/Parser.js ***!
   \*******************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   comment: function() { return /* binding */ comment; },
-/* harmony export */   compile: function() { return /* binding */ compile; },
-/* harmony export */   declaration: function() { return /* binding */ declaration; },
-/* harmony export */   parse: function() { return /* binding */ parse; },
-/* harmony export */   ruleset: function() { return /* binding */ ruleset; }
+/* harmony export */   comment: () => (/* binding */ comment),
+/* harmony export */   compile: () => (/* binding */ compile),
+/* harmony export */   declaration: () => (/* binding */ declaration),
+/* harmony export */   parse: () => (/* binding */ parse),
+/* harmony export */   ruleset: () => (/* binding */ ruleset)
 /* harmony export */ });
 /* harmony import */ var _Enum_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Enum.js */ "./node_modules/stylis/src/Enum.js");
 /* harmony import */ var _Utility_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Utility.js */ "./node_modules/stylis/src/Utility.js");
@@ -12229,11 +12307,11 @@ function declaration (value, root, parent, length) {
 /*!*********************************************!*\
   !*** ./node_modules/stylis/src/Prefixer.js ***!
   \*********************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   prefix: function() { return /* binding */ prefix; }
+/* harmony export */   prefix: () => (/* binding */ prefix)
 /* harmony export */ });
 /* harmony import */ var _Enum_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Enum.js */ "./node_modules/stylis/src/Enum.js");
 /* harmony import */ var _Utility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Utility.js */ "./node_modules/stylis/src/Utility.js");
@@ -12390,12 +12468,12 @@ function prefix (value, length, children) {
 /*!***********************************************!*\
   !*** ./node_modules/stylis/src/Serializer.js ***!
   \***********************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   serialize: function() { return /* binding */ serialize; },
-/* harmony export */   stringify: function() { return /* binding */ stringify; }
+/* harmony export */   serialize: () => (/* binding */ serialize),
+/* harmony export */   stringify: () => (/* binding */ stringify)
 /* harmony export */ });
 /* harmony import */ var _Enum_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Enum.js */ "./node_modules/stylis/src/Enum.js");
 /* harmony import */ var _Utility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Utility.js */ "./node_modules/stylis/src/Utility.js");
@@ -12443,35 +12521,35 @@ function stringify (element, index, children, callback) {
 /*!**********************************************!*\
   !*** ./node_modules/stylis/src/Tokenizer.js ***!
   \**********************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   alloc: function() { return /* binding */ alloc; },
-/* harmony export */   caret: function() { return /* binding */ caret; },
-/* harmony export */   char: function() { return /* binding */ char; },
-/* harmony export */   character: function() { return /* binding */ character; },
-/* harmony export */   characters: function() { return /* binding */ characters; },
-/* harmony export */   column: function() { return /* binding */ column; },
-/* harmony export */   commenter: function() { return /* binding */ commenter; },
-/* harmony export */   copy: function() { return /* binding */ copy; },
-/* harmony export */   dealloc: function() { return /* binding */ dealloc; },
-/* harmony export */   delimit: function() { return /* binding */ delimit; },
-/* harmony export */   delimiter: function() { return /* binding */ delimiter; },
-/* harmony export */   escaping: function() { return /* binding */ escaping; },
-/* harmony export */   identifier: function() { return /* binding */ identifier; },
-/* harmony export */   length: function() { return /* binding */ length; },
-/* harmony export */   line: function() { return /* binding */ line; },
-/* harmony export */   next: function() { return /* binding */ next; },
-/* harmony export */   node: function() { return /* binding */ node; },
-/* harmony export */   peek: function() { return /* binding */ peek; },
-/* harmony export */   position: function() { return /* binding */ position; },
-/* harmony export */   prev: function() { return /* binding */ prev; },
-/* harmony export */   slice: function() { return /* binding */ slice; },
-/* harmony export */   token: function() { return /* binding */ token; },
-/* harmony export */   tokenize: function() { return /* binding */ tokenize; },
-/* harmony export */   tokenizer: function() { return /* binding */ tokenizer; },
-/* harmony export */   whitespace: function() { return /* binding */ whitespace; }
+/* harmony export */   alloc: () => (/* binding */ alloc),
+/* harmony export */   caret: () => (/* binding */ caret),
+/* harmony export */   char: () => (/* binding */ char),
+/* harmony export */   character: () => (/* binding */ character),
+/* harmony export */   characters: () => (/* binding */ characters),
+/* harmony export */   column: () => (/* binding */ column),
+/* harmony export */   commenter: () => (/* binding */ commenter),
+/* harmony export */   copy: () => (/* binding */ copy),
+/* harmony export */   dealloc: () => (/* binding */ dealloc),
+/* harmony export */   delimit: () => (/* binding */ delimit),
+/* harmony export */   delimiter: () => (/* binding */ delimiter),
+/* harmony export */   escaping: () => (/* binding */ escaping),
+/* harmony export */   identifier: () => (/* binding */ identifier),
+/* harmony export */   length: () => (/* binding */ length),
+/* harmony export */   line: () => (/* binding */ line),
+/* harmony export */   next: () => (/* binding */ next),
+/* harmony export */   node: () => (/* binding */ node),
+/* harmony export */   peek: () => (/* binding */ peek),
+/* harmony export */   position: () => (/* binding */ position),
+/* harmony export */   prev: () => (/* binding */ prev),
+/* harmony export */   slice: () => (/* binding */ slice),
+/* harmony export */   token: () => (/* binding */ token),
+/* harmony export */   tokenize: () => (/* binding */ tokenize),
+/* harmony export */   tokenizer: () => (/* binding */ tokenizer),
+/* harmony export */   whitespace: () => (/* binding */ whitespace)
 /* harmony export */ });
 /* harmony import */ var _Utility_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Utility.js */ "./node_modules/stylis/src/Utility.js");
 
@@ -12728,24 +12806,24 @@ function identifier (index) {
 /*!********************************************!*\
   !*** ./node_modules/stylis/src/Utility.js ***!
   \********************************************/
-/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   abs: function() { return /* binding */ abs; },
-/* harmony export */   append: function() { return /* binding */ append; },
-/* harmony export */   assign: function() { return /* binding */ assign; },
-/* harmony export */   charat: function() { return /* binding */ charat; },
-/* harmony export */   combine: function() { return /* binding */ combine; },
-/* harmony export */   from: function() { return /* binding */ from; },
-/* harmony export */   hash: function() { return /* binding */ hash; },
-/* harmony export */   indexof: function() { return /* binding */ indexof; },
-/* harmony export */   match: function() { return /* binding */ match; },
-/* harmony export */   replace: function() { return /* binding */ replace; },
-/* harmony export */   sizeof: function() { return /* binding */ sizeof; },
-/* harmony export */   strlen: function() { return /* binding */ strlen; },
-/* harmony export */   substr: function() { return /* binding */ substr; },
-/* harmony export */   trim: function() { return /* binding */ trim; }
+/* harmony export */   abs: () => (/* binding */ abs),
+/* harmony export */   append: () => (/* binding */ append),
+/* harmony export */   assign: () => (/* binding */ assign),
+/* harmony export */   charat: () => (/* binding */ charat),
+/* harmony export */   combine: () => (/* binding */ combine),
+/* harmony export */   from: () => (/* binding */ from),
+/* harmony export */   hash: () => (/* binding */ hash),
+/* harmony export */   indexof: () => (/* binding */ indexof),
+/* harmony export */   match: () => (/* binding */ match),
+/* harmony export */   replace: () => (/* binding */ replace),
+/* harmony export */   sizeof: () => (/* binding */ sizeof),
+/* harmony export */   strlen: () => (/* binding */ strlen),
+/* harmony export */   substr: () => (/* binding */ substr),
+/* harmony export */   trim: () => (/* binding */ trim)
 /* harmony export */ });
 /**
  * @param {number}
@@ -12870,7 +12948,7 @@ function combine (array, callback) {
 /*!*************************************!*\
   !*** ./src/Blocks/query/block.json ***!
   \*************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"yard/query","version":"0.1.0","title":"Berichtenlijst","category":"yard","description":"Een geavanceerd blok waarmee berichttypen kunnen worden weergegeven op basis van verschillende zoekopdracht parameters en visuele configuraties.","attributes":{"postTypes":{"type":"array","default":[]},"postsPerPage":{"type":"number","default":3},"offset":{"type":"number","default":0},"orderBy":{"type":"string","default":"date"},"order":{"type":"string","default":"DESC"},"enableManualSelection":{"type":"boolean","default":false},"manualSelectionPosts":{"type":"array","default":[]},"enableStickyPost":{"type":"boolean","default":false},"stickyPost":{"type":"number"},"enableExcludePosts":{"type":"boolean","default":false},"excludePosts":{"type":"array","default":[]},"enablePostParent":{"type":"boolean","default":false},"postParentOption":{"type":"string","default":"only-parents"},"postParent":{"type":"number"},"enableTaxonomies":{"type":"boolean","default":false},"taxonomyTerms":{"type":"object"},"template":{"type":"string","default":"default"},"displayImage":{"type":"boolean","default":true},"displayDate":{"type":"boolean","default":true},"displayExcerpt":{"type":"boolean","default":true},"displayLabel":{"type":"boolean","default":false},"align":{"type":"string","default":"wide"}},"supports":{"html":false,"align":["wide","full"]},"textdomain":"yard","editorScript":"file:./index.js","editorStyle":"file:./index.css","viewScript":"file:./frontend.js"}');
 
@@ -12904,31 +12982,31 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
+/******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 		__webpack_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
 /******/ 			if (typeof globalThis === 'object') return globalThis;
 /******/ 			try {
@@ -12937,28 +13015,28 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
+/******/ 		__webpack_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-!function() {
+(() => {
 /*!***********************************!*\
   !*** ./src/Blocks/query/index.js ***!
   \***********************************/
@@ -12983,7 +13061,8 @@ __webpack_require__.r(__webpack_exports__);
   edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
   icon: _icon__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
-}();
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map

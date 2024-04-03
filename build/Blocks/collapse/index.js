@@ -1,283 +1,18 @@
-/******/ (function() { // webpackBootstrap
+/******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/Blocks/collapse/components/inspector.js":
-/*!*****************************************************!*\
-  !*** ./src/Blocks/collapse/components/inspector.js ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _yardinternet_gutenberg_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @yardinternet/gutenberg-hooks */ "../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/index.js");
-
-/**
- * WordPress dependencies
- */
-
-
-
-
-/**
- * Internal dependencies
- */
-
-const Inspector = props => {
-  const {
-    setAttributes,
-    attributes
-  } = props;
-  const {
-    hasStructuredData,
-    headingLevel,
-    showMultiple
-  } = attributes;
-  const {
-    setAllCurrentBlockInnerBlocksAttributes
-  } = (0,_yardinternet_gutenberg_hooks__WEBPACK_IMPORTED_MODULE_4__.useCurrentBlock)();
-
-  /**
-   * Handles the change event for heading level and update inner blocks attributes.
-   *
-   * @param {string} value - The new value for heading level.
-   */
-  const onChangeHeadingLevel = value => {
-    setAttributes({
-      headingLevel: value
-    });
-    setAllCurrentBlockInnerBlocksAttributes({
-      headingLevel: value
-    });
-  };
-
-  /**
-   * Handles the change event for structured data and update inner blocks attributes.
-   *
-   * @param {boolean} value - The new value for structured data.
-   */
-  const onChangeHasStructuredData = value => {
-    setAttributes({
-      hasStructuredData: value
-    });
-    setAllCurrentBlockInnerBlocksAttributes({
-      hasStructuredData: value
-    });
-  };
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Instellingen')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Toon als accordion'),
-    checked: showMultiple,
-    onChange: value => setAttributes({
-      showMultiple: value
-    }),
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Als accordion sluiten de uitklap items na klik op een ander item.')
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Toegankelijkheid')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Koptekst'),
-    value: headingLevel,
-    options: [{
-      label: 'Geen',
-      value: 'div'
-    }, {
-      label: 'H2',
-      value: 'h2'
-    }, {
-      label: 'H3',
-      value: 'h3'
-    }, {
-      label: 'H4',
-      value: 'h4'
-    }, {
-      label: 'H5',
-      value: 'h5'
-    }, {
-      label: 'H6',
-      value: 'h6'
-    }],
-    onChange: onChangeHeadingLevel,
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Selecteer het koptekst niveau voor de titels van de uitklap items.')
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('SEO instellingen')
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Voeg FAQ structured data toe'),
-    checked: hasStructuredData,
-    onChange: onChangeHasStructuredData,
-    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Als in dit blok veelgestelde vragen worden weergegeven, kan er structured data worden toegevoegd voor SEO.')
-  })));
-};
-/* harmony default export */ __webpack_exports__["default"] = (Inspector);
-
-/***/ }),
-
-/***/ "./src/Blocks/collapse/edit.js":
-/*!*************************************!*\
-  !*** ./src/Blocks/collapse/edit.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_inspector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/inspector */ "./src/Blocks/collapse/components/inspector.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/Blocks/collapse/editor.scss");
-
-/**
- * WordPress dependencies
- */
-
-
-/**
- * Internal dependencies
- */
-
-
-const TEMPLATE = [['yard/collapse-item']];
-const ALLOWED_BLOCKS = ['yard/collapse-item'];
-const Edit = props => {
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_inspector__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    ...props
-  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-    allowedBlocks: ALLOWED_BLOCKS,
-    renderAppender: () => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.ButtonBlockAppender, null),
-    template: TEMPLATE
-  })));
-};
-/* harmony default export */ __webpack_exports__["default"] = (Edit);
-
-/***/ }),
-
-/***/ "./src/Blocks/collapse/icon.js":
-/*!*************************************!*\
-  !*** ./src/Blocks/collapse/icon.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @yardinternet/gutenberg-components */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/index.js");
-
-/**
- * Internal dependencies
- */
-
-const icon = {
-  src: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    height: "1em",
-    viewBox: "0 0 512 512"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
-    d: "M52.7 75.3l192 192c6.2 6.2 16.4 6.2 22.6 0l192-192c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L256 233.4 75.3 52.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6zm0 192l192 192c6.2 6.2 16.4 6.2 22.6 0l192-192c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L256 425.4 75.3 244.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6z"
-  })),
-  ...{
-    BlockIconColor: _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__.BlockIconColor
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (icon);
-
-/***/ }),
-
-/***/ "./src/Blocks/collapse/save.js":
-/*!*************************************!*\
-  !*** ./src/Blocks/collapse/save.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-
-/**
- * WordPress dependencies
- */
-
-const Save = props => {
-  const {
-    attributes
-  } = props;
-  const {
-    hasStructuredData,
-    showMultiple
-  } = attributes;
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save(),
-    "data-multiple": showMultiple,
-    itemScope: hasStructuredData,
-    itemType: hasStructuredData ? 'https://schema.org/FAQPage' : null
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null));
-};
-/* harmony default export */ __webpack_exports__["default"] = (Save);
-
-/***/ }),
-
-/***/ "./src/Blocks/collapse/transforms.js":
-/*!*******************************************!*\
-  !*** ./src/Blocks/collapse/transforms.js ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/**
- * WordPress dependencies
- */
-
-const transforms = {
-  to: [{
-    type: 'block',
-    blocks: ['yard/tabs'],
-    transform: (attributes, innerBlocks) => {
-      const transformedInnerBlocks = innerBlocks?.map(({
-        attributes: childAttributes,
-        clientId: childClientId,
-        innerBlocks: childInnerBlocks
-      }) => {
-        return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.createBlock)('yard/tabs-item', {
-          headingLevel: childAttributes.headingLevel,
-          headingText: childAttributes.headingText,
-          icon: childAttributes.icon,
-          iconAltText: childAttributes.iconAltText,
-          id: childClientId
-        }, childInnerBlocks);
-      });
-      return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.createBlock)('yard/tabs', {
-        headingLevel: attributes.headingLevel
-      }, transformedInnerBlocks);
-    }
-  }]
-};
-/* harmony default export */ __webpack_exports__["default"] = (transforms);
-
-/***/ }),
-
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/index.js":
-/*!*************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/index.js ***!
-  \*************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/index.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/index.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   BlockIconColor: function() { return /* binding */ BlockIconColor; }
+/* harmony export */   BlockIconColor: () => (/* binding */ BlockIconColor)
 /* harmony export */ });
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./editor.scss */ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/editor.scss");
 /**
  * Internal dependencies
  */
@@ -288,13 +23,16 @@ const BlockIconColor = {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/delete-icon.js":
-/*!*********************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/delete-icon.js ***!
-  \*********************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/delete-icon.js":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/delete-icon.js ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
@@ -314,17 +52,20 @@ const DeleteIcon = ({
     isDestructive: true
   }, "Verwijder icoon");
 };
-/* harmony default export */ __webpack_exports__["default"] = (DeleteIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DeleteIcon);
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/icon-results.js":
-/*!**********************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/icon-results.js ***!
-  \**********************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/icon-results.js":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/icon-results.js ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
@@ -354,23 +95,23 @@ const IconResults = ({
     })));
   }), !searchResults?.length && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Er zijn geen iconen gevonden')));
 };
-/* harmony default export */ __webpack_exports__["default"] = (IconResults);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IconResults);
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-inspector.js":
-/*!****************************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-inspector.js ***!
-  \****************************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-inspector.js":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-inspector.js ***!
+  \******************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControlInspector: function() { return /* binding */ IconPickerControlInspector; }
+/* harmony export */   IconPickerControlInspector: () => (/* binding */ IconPickerControlInspector)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js");
 
 /**
  * Internal dependencies
@@ -394,15 +135,15 @@ const IconPickerControlInspector = ({
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-toolbar.js":
-/*!**************************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-toolbar.js ***!
-  \**************************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-toolbar.js":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-toolbar.js ***!
+  \****************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControlToolbar: function() { return /* binding */ IconPickerControlToolbar; }
+/* harmony export */   IconPickerControlToolbar: () => (/* binding */ IconPickerControlToolbar)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -412,7 +153,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js");
 
 /**
  * WordPress dependencies
@@ -449,15 +190,15 @@ const IconPickerControlToolbar = ({
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js":
-/*!******************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js ***!
-  \******************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControl: function() { return /* binding */ IconPickerControl; }
+/* harmony export */   IconPickerControl: () => (/* binding */ IconPickerControl)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -473,11 +214,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @wordpress/notices */ "@wordpress/notices");
 /* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_wordpress_notices__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_delete_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/delete-icon */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/delete-icon.js");
-/* harmony import */ var _components_icon_results__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/icon-results */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/components/icon-results.js");
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/api */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/api.js");
-/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils/helpers */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/helpers.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./editor.scss */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/editor.scss");
+/* harmony import */ var _components_delete_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/delete-icon */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/delete-icon.js");
+/* harmony import */ var _components_icon_results__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/icon-results */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/components/icon-results.js");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/api */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/api.js");
+/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils/helpers */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/helpers.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./editor.scss */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/editor.scss");
 
 /**
  * WordPress dependencies
@@ -601,36 +342,36 @@ const IconPickerControl = ({
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/index.js":
-/*!****************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/index.js ***!
-  \****************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/index.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/index.js ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   IconPickerControl: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl; },
-/* harmony export */   IconPickerControlInspector: function() { return /* reexport safe */ _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__.IconPickerControlInspector; },
-/* harmony export */   IconPickerControlToolbar: function() { return /* reexport safe */ _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__.IconPickerControlToolbar; }
+/* harmony export */   IconPickerControl: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl),
+/* harmony export */   IconPickerControlInspector: () => (/* reexport safe */ _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__.IconPickerControlInspector),
+/* harmony export */   IconPickerControlToolbar: () => (/* reexport safe */ _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__.IconPickerControlToolbar)
 /* harmony export */ });
-/* harmony import */ var _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icon-picker-control-inspector */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-inspector.js");
-/* harmony import */ var _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control-toolbar */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control-toolbar.js");
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/icon-picker-control.js");
+/* harmony import */ var _icon_picker_control_inspector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./icon-picker-control-inspector */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-inspector.js");
+/* harmony import */ var _icon_picker_control_toolbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon-picker-control-toolbar */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control-toolbar.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/icon-picker-control.js");
 
 
 
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/api.js":
-/*!********************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/api.js ***!
-  \********************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/api.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/api.js ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getFontAwesomeIcons: function() { return /* binding */ getFontAwesomeIcons; }
+/* harmony export */   getFontAwesomeIcons: () => (/* binding */ getFontAwesomeIcons)
 /* harmony export */ });
 /**
  * Use FontAwesome API to search for icons
@@ -678,21 +419,21 @@ const getFontAwesomeIcons = async search => {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/helpers.js":
-/*!************************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/utils/helpers.js ***!
-  \************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/helpers.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/utils/helpers.js ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   convertResponseToClassnames: function() { return /* binding */ convertResponseToClassnames; }
+/* harmony export */   convertResponseToClassnames: () => (/* binding */ convertResponseToClassnames)
 /* harmony export */ });
 /**
  * Create a classname based on the response from the FontAwesome API with only the allowed familyStyles
  *
- * @param {Object} response - The response from the Font Awesome API.
- * @param {Array} allowedFamilyStyles - The allowed family styles
+ * @param {Object} response            - The response from the Font Awesome API.
+ * @param {Array}  allowedFamilyStyles - The allowed family styles
  */
 const convertResponseToClassnames = (response, allowedFamilyStyles) => {
   const allFamilyStyles = getAllFamilyStyles(response);
@@ -716,8 +457,8 @@ const getAllFamilyStyles = response => {
 /**
  * Check if the current familyStyle exist in allowedFamilyStyles
  *
- * @param {Object} familyStyle - The familyStyle to check if it's allowed.
- * @param {Array} allowedFamilyStyles - The allowed family styles
+ * @param {Object} familyStyle         - The familyStyle to check if it's allowed.
+ * @param {Array}  allowedFamilyStyles - The allowed family styles
  */
 const checkIfFamilyStyleIsAllowed = (familyStyle, allowedFamilyStyles) => {
   return allowedFamilyStyles.some(obj => obj.family === familyStyle.family && obj.style === familyStyle.style);
@@ -725,15 +466,15 @@ const checkIfFamilyStyleIsAllowed = (familyStyle, allowedFamilyStyles) => {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon/index.js":
-/*!*************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon/index.js ***!
-  \*************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon/index.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon/index.js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Icon: function() { return /* binding */ Icon; }
+/* harmony export */   Icon: () => (/* binding */ Icon)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -759,56 +500,56 @@ const Icon = props => {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/index.js":
-/*!********************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/index.js ***!
-  \********************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/index.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   BlockIconColor: function() { return /* reexport safe */ _block_icon_color__WEBPACK_IMPORTED_MODULE_0__.BlockIconColor; },
-/* harmony export */   Icon: function() { return /* reexport safe */ _icon__WEBPACK_IMPORTED_MODULE_1__.Icon; },
-/* harmony export */   IconPickerControl: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl; },
-/* harmony export */   IconPickerControlInspector: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlInspector; },
-/* harmony export */   IconPickerControlToolbar: function() { return /* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlToolbar; }
+/* harmony export */   BlockIconColor: () => (/* reexport safe */ _block_icon_color__WEBPACK_IMPORTED_MODULE_0__.BlockIconColor),
+/* harmony export */   Icon: () => (/* reexport safe */ _icon__WEBPACK_IMPORTED_MODULE_1__.Icon),
+/* harmony export */   IconPickerControl: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControl),
+/* harmony export */   IconPickerControlInspector: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlInspector),
+/* harmony export */   IconPickerControlToolbar: () => (/* reexport safe */ _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__.IconPickerControlToolbar)
 /* harmony export */ });
-/* harmony import */ var _block_icon_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./block-icon-color */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/index.js");
-/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon/index.js");
-/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/index.js");
+/* harmony import */ var _block_icon_color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./block-icon-color */ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/index.js");
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./icon */ "./node_modules/@yardinternet/gutenberg-components/src/icon/index.js");
+/* harmony import */ var _icon_picker_control__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon-picker-control */ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/index.js");
 
 
 
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/index.js":
-/*!***************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/index.js ***!
-  \***************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-hooks/src/index.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-hooks/src/index.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   useCurrentBlock: function() { return /* reexport safe */ _use_current_block__WEBPACK_IMPORTED_MODULE_0__.useCurrentBlock; },
-/* harmony export */   useParentBlock: function() { return /* reexport safe */ _use_parent_block__WEBPACK_IMPORTED_MODULE_1__.useParentBlock; }
+/* harmony export */   useCurrentBlock: () => (/* reexport safe */ _use_current_block__WEBPACK_IMPORTED_MODULE_0__.useCurrentBlock),
+/* harmony export */   useParentBlock: () => (/* reexport safe */ _use_parent_block__WEBPACK_IMPORTED_MODULE_1__.useParentBlock)
 /* harmony export */ });
-/* harmony import */ var _use_current_block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./use-current-block */ "../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/use-current-block/index.js");
-/* harmony import */ var _use_parent_block__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-parent-block */ "../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/use-parent-block/index.js");
+/* harmony import */ var _use_current_block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./use-current-block */ "./node_modules/@yardinternet/gutenberg-hooks/src/use-current-block/index.js");
+/* harmony import */ var _use_parent_block__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./use-parent-block */ "./node_modules/@yardinternet/gutenberg-hooks/src/use-parent-block/index.js");
 
 
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/use-current-block/index.js":
-/*!*********************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/use-current-block/index.js ***!
-  \*********************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-hooks/src/use-current-block/index.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-hooks/src/use-current-block/index.js ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   useCurrentBlock: function() { return /* binding */ useCurrentBlock; }
+/* harmony export */   useCurrentBlock: () => (/* binding */ useCurrentBlock)
 /* harmony export */ });
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
 /* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_0__);
@@ -876,15 +617,15 @@ const useCurrentBlock = () => {
 
 /***/ }),
 
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/use-parent-block/index.js":
-/*!********************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/hooks/src/use-parent-block/index.js ***!
-  \********************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@yardinternet/gutenberg-hooks/src/use-parent-block/index.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-hooks/src/use-parent-block/index.js ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   useParentBlock: function() { return /* binding */ useParentBlock; }
+/* harmony export */   useParentBlock: () => (/* binding */ useParentBlock)
 /* harmony export */ });
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
@@ -958,35 +699,315 @@ const useParentBlock = () => {
 
 /***/ }),
 
+/***/ "./src/Blocks/collapse/components/inspector.js":
+/*!*****************************************************!*\
+  !*** ./src/Blocks/collapse/components/inspector.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _yardinternet_gutenberg_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @yardinternet/gutenberg-hooks */ "./node_modules/@yardinternet/gutenberg-hooks/src/index.js");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal dependencies
+ */
+
+const Inspector = props => {
+  const {
+    setAttributes,
+    attributes
+  } = props;
+  const {
+    hasStructuredData,
+    headingLevel,
+    showMultiple
+  } = attributes;
+  const {
+    setAllCurrentBlockInnerBlocksAttributes
+  } = (0,_yardinternet_gutenberg_hooks__WEBPACK_IMPORTED_MODULE_4__.useCurrentBlock)();
+
+  /**
+   * Handles the change event for heading level and update inner blocks attributes.
+   *
+   * @param {string} value - The new value for heading level.
+   */
+  const onChangeHeadingLevel = value => {
+    setAttributes({
+      headingLevel: value
+    });
+    setAllCurrentBlockInnerBlocksAttributes({
+      headingLevel: value
+    });
+  };
+
+  /**
+   * Handles the change event for structured data and update inner blocks attributes.
+   *
+   * @param {boolean} value - The new value for structured data.
+   */
+  const onChangeHasStructuredData = value => {
+    setAttributes({
+      hasStructuredData: value
+    });
+    setAllCurrentBlockInnerBlocksAttributes({
+      hasStructuredData: value
+    });
+  };
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Instellingen')
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Toon als accordion'),
+    checked: showMultiple,
+    onChange: value => setAttributes({
+      showMultiple: value
+    }),
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Als accordion sluiten de uitklap items na klik op een ander item.')
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Toegankelijkheid')
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Koptekst'),
+    value: headingLevel,
+    options: [{
+      label: 'Geen',
+      value: 'div'
+    }, {
+      label: 'H2',
+      value: 'h2'
+    }, {
+      label: 'H3',
+      value: 'h3'
+    }, {
+      label: 'H4',
+      value: 'h4'
+    }, {
+      label: 'H5',
+      value: 'h5'
+    }, {
+      label: 'H6',
+      value: 'h6'
+    }],
+    onChange: onChangeHeadingLevel,
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Selecteer het koptekst niveau voor de titels van de uitklap items.')
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('SEO instellingen')
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Voeg FAQ structured data toe'),
+    checked: hasStructuredData,
+    onChange: onChangeHasStructuredData,
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Als in dit blok veelgestelde vragen worden weergegeven, kan er structured data worden toegevoegd voor SEO.')
+  })));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Inspector);
+
+/***/ }),
+
+/***/ "./src/Blocks/collapse/edit.js":
+/*!*************************************!*\
+  !*** ./src/Blocks/collapse/edit.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_inspector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/inspector */ "./src/Blocks/collapse/components/inspector.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/Blocks/collapse/editor.scss");
+
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+const TEMPLATE = [['yard/collapse-item']];
+const ALLOWED_BLOCKS = ['yard/collapse-item'];
+const Edit = props => {
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_inspector__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    ...props
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
+    allowedBlocks: ALLOWED_BLOCKS,
+    renderAppender: () => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.ButtonBlockAppender, null),
+    template: TEMPLATE
+  })));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Edit);
+
+/***/ }),
+
+/***/ "./src/Blocks/collapse/icon.js":
+/*!*************************************!*\
+  !*** ./src/Blocks/collapse/icon.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @yardinternet/gutenberg-components */ "./node_modules/@yardinternet/gutenberg-components/src/index.js");
+
+/**
+ * Internal dependencies
+ */
+
+const icon = {
+  src: (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    height: "1em",
+    viewBox: "0 0 512 512"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+    d: "M52.7 75.3l192 192c6.2 6.2 16.4 6.2 22.6 0l192-192c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L256 233.4 75.3 52.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6zm0 192l192 192c6.2 6.2 16.4 6.2 22.6 0l192-192c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L256 425.4 75.3 244.7c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6z"
+  })),
+  ...{
+    BlockIconColor: _yardinternet_gutenberg_components__WEBPACK_IMPORTED_MODULE_1__.BlockIconColor
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (icon);
+
+/***/ }),
+
+/***/ "./src/Blocks/collapse/save.js":
+/*!*************************************!*\
+  !*** ./src/Blocks/collapse/save.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+
+/**
+ * WordPress dependencies
+ */
+
+const Save = props => {
+  const {
+    attributes
+  } = props;
+  const {
+    hasStructuredData,
+    showMultiple
+  } = attributes;
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save(),
+    "data-multiple": showMultiple,
+    itemScope: hasStructuredData,
+    itemType: hasStructuredData ? 'https://schema.org/FAQPage' : null
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Save);
+
+/***/ }),
+
+/***/ "./src/Blocks/collapse/transforms.js":
+/*!*******************************************!*\
+  !*** ./src/Blocks/collapse/transforms.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+const transforms = {
+  to: [{
+    type: 'block',
+    blocks: ['yard/tabs'],
+    transform: (attributes, innerBlocks) => {
+      const transformedInnerBlocks = innerBlocks?.map(({
+        attributes: childAttributes,
+        clientId: childClientId,
+        innerBlocks: childInnerBlocks
+      }) => {
+        return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.createBlock)('yard/tabs-item', {
+          headingLevel: childAttributes.headingLevel,
+          headingText: childAttributes.headingText,
+          icon: childAttributes.icon,
+          iconAltText: childAttributes.iconAltText,
+          id: childClientId
+        }, childInnerBlocks);
+      });
+      return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.createBlock)('yard/tabs', {
+        headingLevel: attributes.headingLevel
+      }, transformedInnerBlocks);
+    }
+  }]
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (transforms);
+
+/***/ }),
+
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/editor.scss":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/block-icon-color/editor.scss ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/editor.scss":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/@yardinternet/gutenberg-components/src/icon-picker-control/editor.scss ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/Blocks/collapse/editor.scss":
 /*!*****************************************!*\
   !*** ./src/Blocks/collapse/editor.scss ***!
   \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/editor.scss":
-/*!****************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/block-icon-color/editor.scss ***!
-  \****************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/editor.scss":
-/*!*******************************************************************************************************************!*\
-  !*** ../../../../../../../../Projects/gutenberg-packages/packages/components/src/icon-picker-control/editor.scss ***!
-  \*******************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
@@ -998,7 +1019,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************!*\
   !*** external "React" ***!
   \************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["React"];
 
@@ -1008,7 +1029,7 @@ module.exports = window["React"];
 /*!*************************************!*\
   !*** external ["wp","blockEditor"] ***!
   \*************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["blockEditor"];
 
@@ -1018,7 +1039,7 @@ module.exports = window["wp"]["blockEditor"];
 /*!********************************!*\
   !*** external ["wp","blocks"] ***!
   \********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["blocks"];
 
@@ -1028,7 +1049,7 @@ module.exports = window["wp"]["blocks"];
 /*!************************************!*\
   !*** external ["wp","components"] ***!
   \************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["components"];
 
@@ -1038,7 +1059,7 @@ module.exports = window["wp"]["components"];
 /*!******************************!*\
   !*** external ["wp","data"] ***!
   \******************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["data"];
 
@@ -1048,7 +1069,7 @@ module.exports = window["wp"]["data"];
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
   \*********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["element"];
 
@@ -1058,7 +1079,7 @@ module.exports = window["wp"]["element"];
 /*!*******************************!*\
   !*** external ["wp","hooks"] ***!
   \*******************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["hooks"];
 
@@ -1068,7 +1089,7 @@ module.exports = window["wp"]["hooks"];
 /*!******************************!*\
   !*** external ["wp","i18n"] ***!
   \******************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["i18n"];
 
@@ -1078,7 +1099,7 @@ module.exports = window["wp"]["i18n"];
 /*!*********************************!*\
   !*** external ["wp","notices"] ***!
   \*********************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = window["wp"]["notices"];
 
@@ -1088,7 +1109,7 @@ module.exports = window["wp"]["notices"];
 /*!****************************************!*\
   !*** ./src/Blocks/collapse/block.json ***!
   \****************************************/
-/***/ (function(module) {
+/***/ ((module) => {
 
 module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"yard/collapse","version":"0.1.0","title":"Uitklap","category":"yard","description":"Voeg uitklapbare blokken toe om inhoud in en uit te kunnen vouwen.","attributes":{"hasStructuredData":{"type":"boolean","default":false},"headingLevel":{"type":"string","default":"h3"},"showMultiple":{"type":"boolean","default":true}},"supports":{"html":false,"align":["wide","full"]},"textdomain":"yard","editorScript":"file:./index.js","editorStyle":"file:./index.css","viewScript":"file:./frontend.js"}');
 
@@ -1122,49 +1143,49 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
+/******/ 		__webpack_require__.n = (module) => {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 		__webpack_require__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
+/******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
+/******/ 		__webpack_require__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	}();
+/******/ 	})();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-!function() {
+(() => {
 /*!**************************************!*\
   !*** ./src/Blocks/collapse/index.js ***!
   \**************************************/
@@ -1195,7 +1216,8 @@ __webpack_require__.r(__webpack_exports__);
   save: _save__WEBPACK_IMPORTED_MODULE_4__["default"],
   transforms: _transforms__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
-}();
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=index.js.map
