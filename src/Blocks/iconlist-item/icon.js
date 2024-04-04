@@ -14,7 +14,7 @@ const icon = {
 			/>
 		</svg>
 	),
-	...{ BlockIconColor },
+	...BlockIconColor,
 };
 
 export default icon;
