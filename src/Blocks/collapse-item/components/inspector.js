@@ -11,7 +11,7 @@ import {
 import { __ } from '@wordpress/i18n';
 
 /**
- * Internal dependencies
+ * External dependencies
  */
 import { IconPickerControlInspector } from '@yardinternet/gutenberg-components';
 import { useParentBlock } from '@yardinternet/gutenberg-hooks';

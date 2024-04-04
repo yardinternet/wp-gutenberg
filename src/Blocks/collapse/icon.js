@@ -1,5 +1,5 @@
 /**
- * Internal dependencies
+ * External dependencies
  */
 import { BlockIconColor } from '@yardinternet/gutenberg-components';
 

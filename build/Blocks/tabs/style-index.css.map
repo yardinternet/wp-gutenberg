@@ -1,0 +1,1 @@
+{"version":3,"file":"Blocks/tabs/style-index.css","mappings":";;;AAEA;EACC;EACA;EACA;AADD,C","sources":["webpack://yard-gutenberg/./src/Blocks/tabs/style.scss"],"sourcesContent":["$block: 'wp-block-yard-tabs';\n\n.#{$block} {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tgap: 1rem;\n}\n"],"names":[],"sourceRoot":""}

@@ -8,11 +8,17 @@ import { applyFilters } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
 
 /**
+ * External dependencies
+ */
+import {
+	Icon,
+	IconPickerControlToolbar,
+} from '@yardinternet/gutenberg-components';
+import { useParentBlock } from '@yardinternet/gutenberg-hooks';
+
+/**
  * Internal dependencies
  */
-import { IconPickerControlToolbar } from '@yardinternet/gutenberg-components';
-import { Icon } from '@yardinternet/gutenberg-components';
-import { useParentBlock } from '@yardinternet/gutenberg-hooks';
 import Inspector from './components/inspector';
 import './editor.scss';
 
@@ -29,7 +35,7 @@ const Edit = ( props ) => {
 	const { attributes, setAttributes } = props;
 	const { headingText, icon } = attributes;
 
-	const enableIcon = applyFilters( 'yard.collapse-item-enable-icon', true );
+	const enableIcon = applyFilters( 'yard.collapse-item-enable-icon', false );
 
 	const [ isOpen, setIsOpen ] = useState( false );
 

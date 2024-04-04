@@ -4,7 +4,7 @@
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 /**
- * Internal dependencies
+ * External dependencies
  */
 import { Icon } from '@yardinternet/gutenberg-components';
 

@@ -5,10 +5,16 @@ import { RichText, useBlockProps } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
 /**
+ * External dependencies
+ */
+import {
+	Icon,
+	IconPickerControlToolbar,
+} from '@yardinternet/gutenberg-components';
+
+/**
  * Internal dependencies
  */
-import { IconPickerControlToolbar } from '@yardinternet/gutenberg-components';
-import { Icon } from '@yardinternet/gutenberg-components';
 import Inspector from './components/inspector';
 import './editor.scss';
 

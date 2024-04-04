@@ -8,10 +8,16 @@ import { applyFilters } from '@wordpress/hooks';
 import { __ } from '@wordpress/i18n';
 
 /**
+ * External dependencies
+ */
+import {
+	Icon,
+	IconPickerControlToolbar,
+} from '@yardinternet/gutenberg-components';
+
+/**
  * Internal dependencies
  */
-import { IconPickerControlToolbar } from '@yardinternet/gutenberg-components';
-import { Icon } from '@yardinternet/gutenberg-components';
 import { useCurrentBlock, useParentBlock } from '@yardinternet/gutenberg-hooks';
 import Inspector from './components/inspector';
 import './editor.scss';

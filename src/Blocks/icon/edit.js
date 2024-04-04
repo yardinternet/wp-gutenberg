@@ -4,10 +4,16 @@
 import { useBlockProps } from '@wordpress/block-editor';
 
 /**
+ * External dependencies
+ */
+import {
+	Icon,
+	IconPickerControlToolbar,
+} from '@yardinternet/gutenberg-components';
+
+/**
  * Internal dependencies
  */
-import { IconPickerControlToolbar } from '@yardinternet/gutenberg-components';
-import { Icon } from '@yardinternet/gutenberg-components';
 import Inspector from './components/inspector';
 
 const Edit = ( props ) => {
