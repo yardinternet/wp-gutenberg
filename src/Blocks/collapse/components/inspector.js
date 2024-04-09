@@ -6,7 +6,7 @@ import { PanelBody, SelectControl, ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
- * Internal dependencies
+ * External dependencies
  */
 import { useCurrentBlock } from '@yardinternet/gutenberg-hooks';
 
