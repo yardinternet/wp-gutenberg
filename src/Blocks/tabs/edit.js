@@ -6,9 +6,13 @@ import { useSelect } from '@wordpress/data';
 import { useCallback, useEffect } from '@wordpress/element';
 
 /**
- * Internal dependencies
+ * External dependencies
  */
 import { useCurrentBlock } from '@yardinternet/gutenberg-hooks';
+
+/**
+ * Internal dependencies
+ */
 import Inspector from './components/inspector';
 import './editor.scss';
 

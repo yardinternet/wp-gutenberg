@@ -7,9 +7,13 @@ import { useEffect, useState } from '@wordpress/element';
 import { useSelect, useDispatch } from '@wordpress/data';
 
 /**
- * Internal dependencies
+ * External dependencies
  */
 import { useCurrentBlock } from '@yardinternet/gutenberg-hooks';
+
+/**
+ * Internal dependencies
+ */
 import Track from './components/track';
 import './editor.scss';
 

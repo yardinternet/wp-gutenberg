@@ -14,11 +14,11 @@ import {
 	Icon,
 	IconPickerControlToolbar,
 } from '@yardinternet/gutenberg-components';
+import { useCurrentBlock, useParentBlock } from '@yardinternet/gutenberg-hooks';
 
 /**
  * Internal dependencies
  */
-import { useCurrentBlock, useParentBlock } from '@yardinternet/gutenberg-hooks';
 import Inspector from './components/inspector';
 import './editor.scss';
 

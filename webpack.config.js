@@ -11,11 +11,6 @@ module.exports = {
 	] ),
 	entry: {
 		...getWebpackEntryPoints(), // Automatically find and generate the block.json entry points
-
 		menu: [ './src/Menu/resources/scss/style.scss' ],
-		settingsPage: [
-			'./src/SettingsPage/resources/js/index.js',
-			'./src/SettingsPage/resources/scss/style.scss',
-		],
 	},
 };
