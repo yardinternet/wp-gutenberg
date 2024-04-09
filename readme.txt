@@ -1,8 +1,8 @@
 === Yard Gutenberg ===
 Contributors:      Yard | Digital Agency
 Tags:              block
-Tested up to:      6.3
-Stable tag:        0.1.4
+Tested up to:      6.4
+Stable tag:        0.1.5
 License:           MIT License
 License URI:       https://opensource.org/licenses/MIT
 

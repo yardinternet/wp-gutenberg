@@ -4,7 +4,7 @@ declare(strict_types=1);
 /**
  * Plugin Name:       Yard Gutenberg
  * Description:       A collection of components for the WordPress Gutenberg editor.
- * Version:           0.1.4
+ * Version:           0.1.5
  * Author:            Yard | Digital Agency
  * Author URI:        https://www.yard.nl/
  *
@@ -20,7 +20,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-define('YARD_GUTENBERG_PLUGIN_VERSION', '0.1.4');
+define('YARD_GUTENBERG_PLUGIN_VERSION', '0.1.5');
 define('YARD_GUTENBERG_PLUGIN_DIR_URL', \plugin_dir_url(__FILE__));
 
 /**
