@@ -1,15 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Yard\Gutenberg;
 
 class PluginServiceProvider
 {
-    public function boot()
-    {
-        $this->bootProviders();
+	public function boot()
+	{
+		$this->bootProviders();
 
-        \add_filter('block_categories_all', [$this, 'addBlockCategory']);
-        \add_action('init', [$this, 'registerBlocks']);
+		\add_filter('block_categories_all', [$this, 'addBlockCategory']);
+		\add_action('init', [$this, 'registerBlocks']);
 
 		\add_action('enqueue_block_editor_assets', function () {
 			wp_register_script('yard-facetwp', null);
@@ -20,74 +22,78 @@ class PluginServiceProvider
 			]);
 			wp_enqueue_script('yard-facetwp');
 		});
-    }
+	}
 
-    /**
-     * Boot all providers
-     */
-    public function bootProviders(): void
-    {
-        $providers = [
-            Menu\MenuManager::class,
-            Patterns\PatternManager::class,
+	/**
+	 * Boot all providers
+	 */
+	public function bootProviders(): void
+	{
+		$providers = [
+			Menu\MenuManager::class,
+			Patterns\PatternManager::class,
 			MyPatterns\MyPatternManager::class,
-        ];
+		];
 
-        foreach ($providers as $provider) {
-            $provider = new $provider();
-            $provider->boot();
-        }
-    }
+		foreach ($providers as $provider) {
+			$provider = new $provider();
+			$provider->boot();
+		}
+	}
 
-    /**
-     * Add a custom block category
-     */
-    public function addBlockCategory(array $categories)
-    {
-        $categories = array_merge($categories, [
-            [
-                'slug'  => 'yard',
-                'title' => 'Yard'
-            ],
-        ]);
+	/**
+	 * Add a custom block category
+	 */
+	public function addBlockCategory(array $categories)
+	{
+		if (in_array('yard', array_column($categories, 'slug'))) {
+			return $categories;
+		}
 
-        return $categories;
-    }
+		$categories = array_merge($categories, [
+			[
+				'slug' => 'yard',
+				'title' => 'Yard',
+			],
+		]);
 
-    /**
-     * Registers the block using the metadata loaded from the `block.json` file.
-     * Behind the scenes, it registers also all assets so they can be enqueued
-     * through the block editor in the corresponding context.
-     *
-     * @see https://developer.wordpress.org/reference/functions/register_block_type/
-     */
-    public function registerBlocks()
-    {
-        $blocksPath = dirname(__DIR__, 1) . '/build/Blocks/';
-        $folders    = array_filter(glob($blocksPath . '*'), 'is_dir');
+		return $categories;
+	}
 
-        foreach ($folders as $folder) {
-            $blockName = basename($folder);
-            $blockPath = $blocksPath . $blockName;
+	/**
+	 * Registers the block using the metadata loaded from the `block.json` file.
+	 * Behind the scenes, it registers also all assets so they can be enqueued
+	 * through the block editor in the corresponding context.
+	 *
+	 * @see https://developer.wordpress.org/reference/functions/register_block_type/
+	 */
+	public function registerBlocks()
+	{
+		$blocksPath = dirname(__DIR__, 1) . '/build/Blocks/';
+		$folders = array_filter(glob($blocksPath . '*'), 'is_dir');
 
-            if ($this->isDynamicBlock($blockName)) {
-                \register_block_type($blockPath, [
-                    'render_callback' => $this->getRenderCallback($blockName),
-                ]);
-            } else {
-                \register_block_type($blockPath);
-            }
-        }
-    }
+		foreach ($folders as $folder) {
+			$blockName = basename($folder);
+			$blockPath = $blocksPath . $blockName;
+
+			if ($this->isDynamicBlock($blockName)) {
+				\register_block_type($blockPath, [
+					'render_callback' => $this->getRenderCallback($blockName),
+				]);
+			} else {
+				\register_block_type($blockPath);
+			}
+		}
+	}
 
 
-    /**
-     * Check if the block is dynamic.
-     *
-     * @param string $blockName The name of the block.
-     */
-    public function isDynamicBlock($blockName): bool
-    {
+	/**
+	 * Check if the block is dynamic.
+	 *
+	 * @param string $blockName The name of the block.
+	 */
+	public function isDynamicBlock($blockName): bool
+	{
 		$files = glob(__DIR__ . '/*/*/' . ucfirst($blockName) . '.php') ?? [];
 
 		if (count($files)) {
@@ -95,24 +101,25 @@ class PluginServiceProvider
 		}
 
 		return false;
-    }
+	}
 
-    /**
-     * Get the render callback for a dynamic block if it exists.
-     *
-     * @param string $blockName The name of the block.
-     *
-     * @return callable|null The render callback or null if not found.
-     */
-    public function getRenderCallback(string $blockName)
-    {
+	/**
+	 * Get the render callback for a dynamic block if it exists.
+	 *
+	 * @param string $blockName The name of the block.
+	 *
+	 * @return callable|null The render callback or null if not found.
+	 */
+	public function getRenderCallback(string $blockName)
+	{
 		$nameSpacedClass = 'Yard\\Gutenberg\\Blocks\\' . $blockName . '\\' . ucfirst($blockName);
 
 		if (class_exists($nameSpacedClass)) {
-            $blockClass = new $nameSpacedClass;
-            return [$blockClass, 'renderCallback'];
-        }
+			$blockClass = new $nameSpacedClass;
 
-        return null;
-    }
+			return [$blockClass, 'renderCallback'];
+		}
+
+		return null;
+	}
 }
