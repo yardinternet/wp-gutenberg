@@ -13,7 +13,7 @@ import Settings from './settings';
 const Inspector = ( props ) => {
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Instellingen' ) }>
+			<PanelBody title={ __( 'Instellingen', 'yard-gutenberg' ) }>
 				<Settings { ...props } />
 			</PanelBody>
 		</InspectorControls>

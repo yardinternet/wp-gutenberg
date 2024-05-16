@@ -16,7 +16,7 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Kies een icoon' ) }>
+			<PanelBody title={ __( 'Kies een icoon', 'yard-gutenberg' ) }>
 				<IconPickerControlInspector
 					icon={ icon }
 					onChange={ ( result ) => {
@@ -28,9 +28,12 @@ const Inspector = ( props ) => {
 					} }
 				/>
 			</PanelBody>
-			<PanelBody title={ __( 'Toegankelijkheid' ) } initialOpen={ false }>
+			<PanelBody
+				title={ __( 'Toegankelijkheid', 'yard-gutenberg' ) }
+				initialOpen={ false }
+			>
 				<TextControl
-					label={ __( 'Alternatieve tekst' ) }
+					label={ __( 'Alternatieve tekst', 'yard-gutenberg' ) }
 					value={ iconAltText }
 					onChange={ ( value ) =>
 						setAttributes( {
@@ -38,7 +41,8 @@ const Inspector = ( props ) => {
 						} )
 					}
 					help={ __(
-						'Voeg een alternatieve tekst toe als een icoon betekenis heeft.'
+						'Voeg een alternatieve tekst toe als een icoon betekenis heeft.',
+						'yard-gutenberg'
 					) }
 				/>
 			</PanelBody>

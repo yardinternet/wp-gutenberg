@@ -33,7 +33,10 @@ const AddLinkToSynchedPatternInspectorControls = createHigherOrderComponent(
 								<ToolbarGroup>
 									<ToolbarButton
 										icon={ 'edit' }
-										label={ __( 'Patroon bewerken' ) }
+										label={ __(
+											'Patroon bewerken',
+											'yard-gutenberg'
+										) }
 										onClick={ () =>
 											( window.location.href = editUrl )
 										}
@@ -42,23 +45,29 @@ const AddLinkToSynchedPatternInspectorControls = createHigherOrderComponent(
 							</BlockControls>
 							<InspectorControls>
 								<PanelBody
-									title={ __( 'Beheer' ) }
+									title={ __( 'Beheer', 'yard-gutenberg' ) }
 									initialOpen={ true }
 								>
 									<Button
 										href={ editUrl }
 										variant="secondary"
 									>
-										{ __( 'Patroon bewerken' ) }
+										{ __(
+											'Patroon bewerken',
+											'yard-gutenberg'
+										) }
 									</Button>
 									<Button
-										href="/wp-admin/edit.php?post_type=wp_block"
+										href="/wp/wp-admin/edit.php?post_type=wp_block"
 										variant="default"
 										style={ {
 											marginLeft: '7px',
 										} }
 									>
-										{ __( 'Alle patronen' ) }
+										{ __(
+											'Alle patronen',
+											'yard-gutenberg'
+										) }
 									</Button>
 								</PanelBody>
 							</InspectorControls>

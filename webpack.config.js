@@ -10,7 +10,6 @@ module.exports = {
 		'@yardinternet/gutenberg-hooks',
 	] ),
 	entry: {
-		...defaultConfig.entry(),
 		...getWebpackEntryPoints(), // Automatically find and generate the block.json entry points
 		menu: [ './src/Menu/resources/scss/style.scss' ],
 		patterns: [

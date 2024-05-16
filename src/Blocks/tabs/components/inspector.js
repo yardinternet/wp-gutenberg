@@ -29,9 +29,9 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Instellingen' ) }>
+			<PanelBody title={ __( 'Instellingen', 'yard-gutenberg' ) }>
 				<ToggleControl
-					label={ __( 'Actief tabblad opgeven' ) }
+					label={ __( 'Actief tabblad opgeven', 'yard-gutenberg' ) }
 					checked={ defaultTabEnabled }
 					onChange={ () =>
 						setAttributes( {
@@ -41,7 +41,7 @@ const Inspector = ( props ) => {
 				/>
 				{ defaultTabEnabled && (
 					<SelectControl
-						label={ __( 'Tabblad' ) }
+						label={ __( 'Tabblad', 'yard-gutenberg' ) }
 						value={ defaultTab }
 						options={ currentBlockInnerBlocks?.map( ( block ) => ( {
 							label: block.attributes.headingText,
@@ -51,14 +51,15 @@ const Inspector = ( props ) => {
 							setAttributes( { defaultTab: value } );
 						} }
 						help={ __(
-							'Selecteer het tabblad dat standaard geopend moet zijn.'
+							'Selecteer het tabblad dat standaard geopend moet zijn.',
+							'yard-gutenberg'
 						) }
 					/>
 				) }
 			</PanelBody>
-			<PanelBody title={ __( 'Toegankelijkheid' ) }>
+			<PanelBody title={ __( 'Toegankelijkheid', 'yard-gutenberg' ) }>
 				<SelectControl
-					label={ __( 'Koptekst' ) }
+					label={ __( 'Koptekst', 'yard-gutenberg' ) }
 					value={ headingLevel }
 					options={ [
 						{ label: 'Geen', value: 'div' },
@@ -70,7 +71,8 @@ const Inspector = ( props ) => {
 					] }
 					onChange={ onChangeHeadingLevel }
 					help={ __(
-						'Selecteer het koptekst niveau voor de titels van de tab items.'
+						'Selecteer het koptekst niveau voor de titels van de tab items.',
+						'yard-gutenberg'
 					) }
 				/>
 			</PanelBody>

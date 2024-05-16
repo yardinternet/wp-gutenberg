@@ -26,7 +26,10 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Vul hier de tabblad inhoud in' ),
+			placeholder: __(
+				'Vul hier de tabblad inhoud in',
+				'yard-gutenberg'
+			),
 		},
 	],
 ];

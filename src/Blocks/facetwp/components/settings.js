@@ -25,7 +25,7 @@ const Settings = ( props ) => {
 	return (
 		<>
 			<p className="facetwp-settings-label">
-				{ __( 'Selecteer het template' ) }
+				{ __( 'Selecteer het template', 'yard-gutenberg' ) }
 			</p>
 			<Select
 				value={ selectedTemplate }
@@ -37,7 +37,7 @@ const Settings = ( props ) => {
 			/>
 
 			<p className="facetwp-settings-label">
-				{ __( 'Selecteer de filters' ) }
+				{ __( 'Selecteer de filters', 'yard-gutenberg' ) }
 			</p>
 			<Select
 				isMulti

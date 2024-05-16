@@ -26,7 +26,10 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Vul hier de uitklap inhoud in' ),
+			placeholder: __(
+				'Vul hier de uitklap inhoud in',
+				'yard-gutenberg'
+			),
 		},
 	],
 ];
@@ -84,7 +87,7 @@ const Edit = ( props ) => {
 						className="wp-block-yard-collapse-item__header-toggle-button"
 						onClick={ () => setIsOpen( ( current ) => ! current ) }
 						variant="primary"
-						aria-label={ __( 'Toggle uitklap' ) }
+						aria-label={ __( 'Toggle uitklap', 'yard-gutenberg' ) }
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
