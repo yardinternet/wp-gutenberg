@@ -23,6 +23,9 @@ class MyPatternManager
 		\add_action('enqueue_block_editor_assets', [$this, 'enqueuePatternScripts']);
 	}
 
+	/**
+	 * Adds menu items for My Patterns if enabled.
+	 */
 	public function addMyPatternMenuItems(): void
 	{
 		if (! $this->MyPatternsMenuItemExists()) {
@@ -31,6 +34,9 @@ class MyPatternManager
 		}
 	}
 
+	/**
+	 * Checks if My Patterns menu item exists.
+	 */
 	private function MyPatternsMenuItemExists(): bool
 	{
 		global $menu;
@@ -40,11 +46,14 @@ class MyPatternManager
 		}));
 	}
 
+	/**
+	 * Adds My Patterns main menu item.
+	 */
 	private function addMyPatternsMenuItem(): void
 	{
 		add_menu_page(
-			__('Mijn patronen', 'yard-blocks'),
-			__('Mijn patronen', 'yard-blocks'),
+			__('Mijn patronen', 'yard-gutenberg'),
+			__('Mijn patronen', 'yard-gutenberg'),
 			'edit_posts',
 			'edit.php?post_type=wp_block',
 			'',
@@ -53,12 +62,15 @@ class MyPatternManager
 		);
 	}
 
+	/**
+	 * Adds My Patterns submenu item.
+	 */
 	private function addMyPatternsSubMenu(): void
 	{
 		add_submenu_page(
 			'edit.php?post_type=wp_block',
-			__('Patrooncategorieën', 'yard-blocks'),
-			__('Patrooncategorieën', 'yard-blocks'),
+			__('Patrooncategorieën', 'yard-gutenberg'),
+			__('Patrooncategorieën', 'yard-gutenberg'),
 			'edit_posts',
 			'edit-tags.php?taxonomy=wp_pattern_category&post_type=wp_block'
 		);
@@ -66,42 +78,40 @@ class MyPatternManager
 
 	/**
 	 * Add columns to the WP Block admin table.
-	 *
-	 * @param array $columns Current columns in the WP Block admin table.
 	 */
 	public function addMyPatternColumns(array $columns): array
 	{
 		return [
 			'title' => $columns['title'],
-			'category' => __('Categorieën'),
-			'status' => __('Status'),
+			'category' => __('Categorieën', 'yard-gutenberg'),
+			'status' => __('Status', 'yard-gutenberg'),
 			'date' => $columns['date'],
 		];
 	}
 
 	/**
 	 * Add content to the status column. If the wp_pattern_sync_status is empty, it means the pattern is synced.
-	 *
-	 * @param string $column The current column being processed.
-	 * @param int $post_id The ID of the current post.
 	 */
-	public function addPatternStatusColumnContent(string $column, int $post_id): void
+	public function addPatternStatusColumnContent(string $column, int $postID): void
 	{
 		if ('status' !== $column) {
 			return;
 		}
 
-		$syncStatus = get_post_meta($post_id, 'wp_pattern_sync_status', true);
+		$syncStatus = get_post_meta($postID, 'wp_pattern_sync_status', true);
 
 		if (empty($syncStatus)) {
-			echo '<span style="color: var(--wp-block-synced-color);">' . __('Gesynchroniseerd') . '</span>';
+			echo '<span style="color: var(--wp-block-synced-color);">' . __('Gesynchroniseerd', 'yard-gutenberg') . '</span>';
 		} elseif ('unsynced' === $syncStatus) {
-			echo '<span>' . __('Niet gesynchroniseerd') . '</span>';
+			echo '<span>' . __('Niet gesynchroniseerd', 'yard-gutenberg') . '</span>';
 		} else {
-			echo '<span>' . __('Status onbekend') . '</span>';
+			echo '<span>' . __('Status onbekend', 'yard-gutenberg') . '</span>';
 		}
 	}
 
+	/**
+	 * Add content to the category column.
+	 */
 	public function addPatternCategoryColumnContent(string $column, int $postID): void
 	{
 		if ('category' !== $column) {
@@ -111,24 +121,30 @@ class MyPatternManager
 		$terms = get_the_terms($postID, 'wp_pattern_category');
 
 		if (empty($terms)) {
-			echo '<span>' . __('Niet gecategoriseerd') . '</span>';
+			echo '<span>' . __('Niet gecategoriseerd', 'yard-gutenberg') . '</span>';
 		} else {
 			$termNames = wp_list_pluck($terms, 'name');
 			echo implode(', ', $termNames);
 		}
 	}
 
+	/**
+	 * Modifies arguments for the pattern category taxonomy for better Gutenberg controls.
+	 */
 	public function changePatternCategoryTaxonomyArgs(array $args, string $taxonomy): array
 	{
 		if ('wp_pattern_category' !== $taxonomy) {
 			return $args;
 		}
 
-		$args['hierarchical'] = true; // Better Gutenberg controls
+		$args['hierarchical'] = true;
 
 		return $args;
 	}
 
+	/**
+	 * Enqueues styles for the my patterns menu.
+	 */
 	public function enqueuePatternStyles(): void
 	{
 		\wp_enqueue_style(
@@ -139,6 +155,9 @@ class MyPatternManager
 		);
 	}
 
+	/**
+	 * Enqueues scripts for the my patterns functionality.
+	 */
 	public function enqueuePatternScripts(): void
 	{
 		$path = YARD_GUTENBERG_PLUGIN_DIR_PATH . 'build/patterns.asset.php';
