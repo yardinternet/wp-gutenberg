@@ -20,7 +20,9 @@ const Inspector = ( props ) => {
 	return (
 		<InspectorControls>
 			{ enableIcon && (
-				<PanelBody title={ __( 'Icoon instellingen' ) }>
+				<PanelBody
+					title={ __( 'Icoon instellingen', 'yard-gutenberg' ) }
+				>
 					<IconPickerControlInspector
 						icon={ icon }
 						onChange={ ( result ) => {
@@ -34,7 +36,7 @@ const Inspector = ( props ) => {
 						handleRemove={ () => setAttributes( { icon: '' } ) }
 					/>
 					<TextControl
-						label={ __( 'Alternatieve tekst' ) }
+						label={ __( 'Alternatieve tekst', 'yard-gutenberg' ) }
 						value={ iconAltText }
 						onChange={ ( value ) =>
 							setAttributes( {
@@ -42,19 +44,27 @@ const Inspector = ( props ) => {
 							} )
 						}
 						help={ __(
-							'Voeg een alternatieve tekst toe als een icoon betekenis heeft.'
+							'Voeg een alternatieve tekst toe als een icoon betekenis heeft.',
+							'yard-gutenberg'
 						) }
 					/>
 				</PanelBody>
 			) }
-			<PanelBody title={ __( 'Toegankelijkheid' ) } initialOpen={ false }>
+			<PanelBody
+				title={ __( 'Toegankelijkheid', 'yard-gutenberg' ) }
+				initialOpen={ false }
+			>
 				<p>
 					{ __(
-						'Pas de koptekst niveaus aan via het hoofdblok (Tabbladen).'
+						'Pas de koptekst niveaus aan via het hoofdblok (Tabbladen).',
+						'yard-gutenberg'
 					) }
 				</p>
 				<Button variant="secondary" onClick={ selectParentBlock }>
-					{ __( 'Selecteer hoofdblok (Tabbladen)' ) }
+					{ __(
+						'Selecteer hoofdblok (Tabbladen)',
+						'yard-gutenberg'
+					) }
 				</Button>
 			</PanelBody>
 		</InspectorControls>

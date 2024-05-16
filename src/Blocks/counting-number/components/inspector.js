@@ -22,9 +22,9 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Teller instellingen' ) }>
+			<PanelBody title={ __( 'Teller instellingen', 'yard-gutenberg' ) }>
 				<TextControl
-					label={ __( 'Cijfer' ) }
+					label={ __( 'Cijfer', 'yard-gutenberg' ) }
 					onChange={ ( value ) =>
 						setAttributes( {
 							number: value,
@@ -34,7 +34,10 @@ const Inspector = ( props ) => {
 					value={ number }
 				/>
 				<TextControl
-					label={ __( 'Tekst voor cijfer (optioneel)' ) }
+					label={ __(
+						'Tekst voor cijfer (optioneel)',
+						'yard-gutenberg'
+					) }
 					onChange={ ( value ) =>
 						setAttributes( {
 							numberPrefix: value,
@@ -44,7 +47,10 @@ const Inspector = ( props ) => {
 					help="Voeg een teken of woord toe voor de cijfer. Bijvoorbeeld + of -."
 				/>
 				<TextControl
-					label={ __( 'Tekst na cijfer (optioneel)' ) }
+					label={ __(
+						'Tekst na cijfer (optioneel)',
+						'yard-gutenberg'
+					) }
 					onChange={ ( value ) =>
 						setAttributes( {
 							numberSuffix: value,
@@ -54,17 +60,23 @@ const Inspector = ( props ) => {
 					help="Voeg een teken of woord toe na de cijfer. Bijvoorbeeld % of mln."
 				/>
 				<ToggleControl
-					label={ __( 'Toon een punt voor duizendtallen' ) }
+					label={ __(
+						'Toon een punt voor duizendtallen',
+						'yard-gutenberg'
+					) }
 					onChange={ ( value ) =>
 						setAttributes( {
 							hasThousandsSeparator: value,
 						} )
 					}
 					checked={ hasThousandsSeparator }
-					help={ __( 'Bijvoorbeeld 15000 wordt 15.000' ) }
+					help={ __(
+						'Bijvoorbeeld 15000 wordt 15.000',
+						'yard-gutenberg'
+					) }
 				/>
 				<RangeControl
-					label={ __( 'Animatie duur' ) }
+					label={ __( 'Animatie duur', 'yard-gutenberg' ) }
 					onChange={ ( value ) =>
 						setAttributes( {
 							animationDuration: value,

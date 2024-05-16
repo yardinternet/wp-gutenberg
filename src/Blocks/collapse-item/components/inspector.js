@@ -24,15 +24,17 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Instellingen' ) }>
+			<PanelBody title={ __( 'Instellingen', 'yard-gutenberg' ) }>
 				<ToggleControl
 					checked={ isOpen }
-					label={ __( 'Toon standaard open' ) }
+					label={ __( 'Toon standaard open', 'yard-gutenberg' ) }
 					onChange={ ( value ) => setAttributes( { isOpen: value } ) }
 				/>
 			</PanelBody>
 			{ enableIcon && (
-				<PanelBody title={ __( 'Icoon instellingen' ) }>
+				<PanelBody
+					title={ __( 'Icoon instellingen', 'yard-gutenberg' ) }
+				>
 					<IconPickerControlInspector
 						icon={ icon }
 						onChange={ ( result ) => {
@@ -46,7 +48,7 @@ const Inspector = ( props ) => {
 						handleRemove={ () => setAttributes( { icon: '' } ) }
 					/>
 					<TextControl
-						label={ __( 'Alternatieve tekst' ) }
+						label={ __( 'Alternatieve tekst', 'yard-gutenberg' ) }
 						value={ iconAltText }
 						onChange={ ( value ) =>
 							setAttributes( {
@@ -59,24 +61,32 @@ const Inspector = ( props ) => {
 					/>
 				</PanelBody>
 			) }
-			<PanelBody title={ __( 'Toegankelijkheid' ) } initialOpen={ false }>
+			<PanelBody
+				title={ __( 'Toegankelijkheid', 'yard-gutenberg' ) }
+				initialOpen={ false }
+			>
 				<p>
 					{ __(
-						'Pas de koptekst niveaus aan via het hoofdblok (Uitklap).'
+						'Pas de koptekst niveaus aan via het hoofdblok (Uitklap).',
+						'yard-gutenberg'
 					) }
 				</p>
 				<Button variant="secondary" onClick={ selectParentBlock }>
-					{ __( 'Selecteer hoofdblok (Uitklap)' ) }
+					{ __( 'Selecteer hoofdblok (Uitklap)', 'yard-gutenberg' ) }
 				</Button>
 			</PanelBody>
-			<PanelBody title={ __( 'SEO instellingen' ) } initialOpen={ false }>
+			<PanelBody
+				title={ __( 'SEO instellingen', 'yard-gutenberg' ) }
+				initialOpen={ false }
+			>
 				<p>
 					{ __(
-						'Pas de SEO instellingen aan via het hoofdblok (Uitklap).'
+						'Pas de SEO instellingen aan via het hoofdblok (Uitklap).',
+						'yard-gutenberg'
 					) }
 				</p>
 				<Button variant="secondary" onClick={ selectParentBlock }>
-					{ __( 'Selecteer hoofdblok (Uitklap)' ) }
+					{ __( 'Selecteer hoofdblok (Uitklap)', 'yard-gutenberg' ) }
 				</Button>
 			</PanelBody>
 		</InspectorControls>

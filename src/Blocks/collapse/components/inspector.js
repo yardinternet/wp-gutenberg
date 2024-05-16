@@ -38,21 +38,22 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Instellingen' ) }>
+			<PanelBody title={ __( 'Instellingen', 'yard-gutenberg' ) }>
 				<ToggleControl
-					label={ __( 'Toon als accordion' ) }
+					label={ __( 'Toon als accordion', 'yard-gutenberg' ) }
 					checked={ showMultiple }
 					onChange={ ( value ) =>
 						setAttributes( { showMultiple: value } )
 					}
 					help={ __(
-						'Als accordion sluiten de uitklap items na klik op een ander item.'
+						'Als accordion sluiten de uitklap items na klik op een ander item.',
+						'yard-gutenberg'
 					) }
 				/>
 			</PanelBody>
-			<PanelBody title={ __( 'Toegankelijkheid' ) }>
+			<PanelBody title={ __( 'Toegankelijkheid', 'yard-gutenberg' ) }>
 				<SelectControl
-					label={ __( 'Koptekst' ) }
+					label={ __( 'Koptekst', 'yard-gutenberg' ) }
 					value={ headingLevel }
 					options={ [
 						{ label: 'Geen', value: 'div' },
@@ -64,17 +65,22 @@ const Inspector = ( props ) => {
 					] }
 					onChange={ onChangeHeadingLevel }
 					help={ __(
-						'Selecteer het koptekst niveau voor de titels van de uitklap items.'
+						'Selecteer het koptekst niveau voor de titels van de uitklap items.',
+						'yard-gutenberg'
 					) }
 				/>
 			</PanelBody>
-			<PanelBody title={ __( 'SEO instellingen' ) }>
+			<PanelBody title={ __( 'SEO instellingen', 'yard-gutenberg' ) }>
 				<ToggleControl
-					label={ __( 'Voeg FAQ structured data toe' ) }
+					label={ __(
+						'Voeg FAQ structured data toe',
+						'yard-gutenberg'
+					) }
 					checked={ hasStructuredData }
 					onChange={ onChangeHasStructuredData }
 					help={ __(
-						'Als in dit blok veelgestelde vragen worden weergegeven, kan er structured data worden toegevoegd voor SEO.'
+						'Als in dit blok veelgestelde vragen worden weergegeven, kan er structured data worden toegevoegd voor SEO.',
+						'yard-gutenberg'
 					) }
 				/>
 			</PanelBody>

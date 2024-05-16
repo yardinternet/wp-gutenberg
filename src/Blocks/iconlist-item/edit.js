@@ -42,7 +42,10 @@ const Edit = ( props ) => {
 					onChange={ ( value ) =>
 						setAttributes( { listText: value } )
 					}
-					placeholder={ __( 'Begin met schrijven' ) }
+					placeholder={ __(
+						'Begin met schrijven',
+						'yard-gutenberg'
+					) }
 					tagName="span"
 					value={ listText }
 				/>

@@ -8,9 +8,7 @@ class MyPatternManager
 {
 	public function boot()
 	{
-		$enableMyPatternsMenuItem = \apply_filters('yard-gutenberg/enableMyPatternsMenuItem', true);
-
-		if (! $enableMyPatternsMenuItem) {
+		if (! \apply_filters('yard-gutenberg/enableMyPatternsMenuItem', true)) {
 			return;
 		}
 
