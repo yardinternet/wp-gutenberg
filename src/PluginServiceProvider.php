@@ -6,121 +6,133 @@ namespace Yard\Gutenberg;
 
 class PluginServiceProvider
 {
-	public function boot()
-	{
-		$this->bootProviders();
+    public function boot()
+    {
+        $this->bootProviders();
 
-		\add_filter('block_categories_all', [$this, 'addBlockCategory']);
-		\add_action('init', [$this, 'registerBlocks']);
+        \add_filter('block_categories_all', [$this, 'addBlockCategory']);
+        \add_action('init', [$this, 'registerBlocks']);
 
-		\add_action('enqueue_block_editor_assets', function () {
-			wp_register_script('yard-facetwp', null);
+        \add_action('enqueue_block_editor_assets', function () {
+            wp_register_script('yard-facetwp', null);
 
-			wp_localize_script('yard-facetwp', 'facetWP', [
-				'facets' => function_exists('FWP') ? FWP()->helper->get_facets() : [],
-				'templates' => function_exists('FWP') ? FWP()->helper->get_templates() : [],
-			]);
+            wp_localize_script('yard-facetwp', 'facetWP', [
+                'facets' => function_exists('FWP') ? FWP()->helper->get_facets() : [],
+                'templates' => function_exists('FWP') ? FWP()->helper->get_templates() : [],
+            ]);
 
-			wp_enqueue_script('yard-facetwp');
-		});
-	}
+            wp_enqueue_script('yard-facetwp');
+        });
+    }
 
-	/**
-	 * Boot all providers
-	 */
-	public function bootProviders(): void
-	{
-		$providers = [
-			Menu\MenuManager::class,
-			Patterns\PatternManager::class,
-			MyPatterns\MyPatternManager::class,
-		];
+    /**
+     * Boot all providers
+     */
+    public function bootProviders(): void
+    {
+        $providers = [
+            Menu\MenuManager::class,
+            Patterns\PatternManager::class,
+            MyPatterns\MyPatternManager::class,
+        ];
 
-		foreach ($providers as $provider) {
-			$provider = new $provider();
-			$provider->boot();
-		}
-	}
+        foreach ($providers as $provider) {
+            $provider = new $provider();
+            $provider->boot();
+        }
+    }
 
-	/**
-	 * Add a custom block category
-	 */
-	public function addBlockCategory(array $categories)
-	{
-		if (in_array('yard', array_column($categories, 'slug'))) {
-			return $categories;
-		}
+    /**
+     * Add a custom block category
+     */
+    public function addBlockCategory(array $categories)
+    {
+        if (in_array('yard', array_column($categories, 'slug'))) {
+            return $categories;
+        }
 
-		$categories = array_merge($categories, [
-			[
-				'slug' => 'yard',
-				'title' => 'Yard',
-			],
-		]);
+        $categories = array_merge($categories, [
+            [
+                'slug' => 'yard',
+                'title' => 'Yard',
+            ],
+        ]);
 
-		return $categories;
-	}
+        return $categories;
+    }
 
-	/**
-	 * Registers the block using the metadata loaded from the `block.json` file.
-	 * Behind the scenes, it registers also all assets so they can be enqueued
-	 * through the block editor in the corresponding context.
-	 *
-	 * @see https://developer.wordpress.org/reference/functions/register_block_type/
-	 */
-	public function registerBlocks()
-	{
-		$blocksPath = dirname(__DIR__, 1) . '/build/Blocks/';
-		$folders = array_filter(glob($blocksPath . '*'), 'is_dir');
+    /**
+     * Registers the block using the metadata loaded from the `block.json` file.
+     * Behind the scenes, it registers also all assets so they can be enqueued
+     * through the block editor in the corresponding context.
+     *
+     * @see https://developer.wordpress.org/reference/functions/register_block_type/
+     */
+    public function registerBlocks()
+    {
+        $blocksPath = dirname(__DIR__, 1) . '/build/Blocks/';
+        $folders = array_filter(glob($blocksPath . '*', GLOB_ONLYDIR));
 
-		foreach ($folders as $folder) {
-			$blockName = basename($folder);
-			$blockPath = $blocksPath . $blockName;
+        if(has_filter('yard-gutenberg/allowedBlocks')) {
+            $allowedBlocks = apply_filters('yard-gutenberg/allowedBlocks', []);
 
-			if ($this->isDynamicBlock($blockName)) {
-				\register_block_type($blockPath, [
-					'render_callback' => $this->getRenderCallback($blockName),
-				]);
-			} else {
-				\register_block_type($blockPath);
-			}
-		}
-	}
+            $folders = array_filter(
+                $folders,
+                function (string $folder) use ($allowedBlocks) {
+                    return in_array(basename($folder), $allowedBlocks);
+                }
+            );
+        }
+
+        foreach ($folders as $folder) {
+            $blockName = basename($folder);
+
+            $blockPath = $blocksPath . $blockName;
+
+            if ($this->isDynamicBlock($blockName)) {
+                \register_block_type($blockPath, [
+                    'render_callback' => $this->getRenderCallback($blockName),
+                ]);
+            } else {
+                \register_block_type($blockPath);
+            }
+        }
+    }
 
 
-	/**
-	 * Check if the block is dynamic.
-	 *
-	 * @param string $blockName The name of the block.
-	 */
-	public function isDynamicBlock($blockName): bool
-	{
-		$files = glob(__DIR__ . '/*/*/' . ucfirst($blockName) . '.php') ?? [];
+    /**
+     * Check if the block is dynamic.
+     *
+     * @param string $blockName The name of the block.
+     */
+    public function isDynamicBlock($blockName): bool
+    {
+        $files = glob(__DIR__ . '/*/*/' . ucfirst($blockName) . '.php') ?? [];
 
-		if (count($files)) {
-			return true;
-		}
+        if (count($files)) {
+            return true;
+        }
 
-		return false;
-	}
+        return false;
+    }
 
-	/**
-	 * Get the render callback for a dynamic block if it exists.
-	 *
-	 * @param string $blockName The name of the block.
-	 *
-	 * @return callable|null The render callback or null if not found.
-	 */
-	public function getRenderCallback(string $blockName)
-	{
-		$nameSpacedClass = 'Yard\\Gutenberg\\Blocks\\' . $blockName . '\\' . ucfirst($blockName);
+    /**
+     * Get the render callback for a dynamic block if it exists.
+     *
+     * @param string $blockName The name of the block.
+     *
+     * @return callable|null The render callback or null if not found.
+     */
+    public function getRenderCallback(string $blockName)
+    {
+        $nameSpacedClass = 'Yard\\Gutenberg\\Blocks\\' . $blockName . '\\' . ucfirst($blockName);
 
-		if (class_exists($nameSpacedClass)) {
-			$blockClass = new $nameSpacedClass;
+        if (class_exists($nameSpacedClass)) {
+            $blockClass = new $nameSpacedClass;
 
-			return [$blockClass, 'renderCallback'];
-		}
+            return [$blockClass, 'renderCallback'];
+        }
 
-		return null;
-	}
+        return null;
+    }
 }

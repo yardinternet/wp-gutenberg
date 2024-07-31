@@ -14,3 +14,25 @@ TODO: automate this
 
 1. Update plugin versions and run `npm run build` to build assets. Commit and push to remote.
 2. Add tag `git tag v0.1.0` and push to remote `git push origin v0.1.0`
+
+## Hooks
+
+### yard-gutenberg/allowedBlocks
+
+By default, all blocks will be registered. Use this filter to register only the allowed blocks.
+
+```PHP
+add_filter('yard-gutenberg/allowedBlocks', fn () => [
+ 'collapse',
+ 'collapse-item',
+ 'counting-number',
+ 'facetwp',
+ 'icon',
+ 'iconlist',
+ 'iconlist-item',
+ 'slide',
+ 'slider',
+ 'tabs',
+ 'tabs-item',
+]);
+```
