@@ -30,3 +30,4 @@ node_modules/
 .env
 
 vendor
+.php-cs-fixer.cache
