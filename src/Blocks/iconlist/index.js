@@ -17,5 +17,8 @@ registerBlockType( metadata.name, {
 	edit,
 	icon,
 	save,
-	transforms
+	transforms,
+	providesContext: {
+		'yard/iconlist-use-link-component': 'useLinkComponent',
+	},
 } );
