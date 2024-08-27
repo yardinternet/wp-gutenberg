@@ -44,6 +44,7 @@ const Settings = ( props ) => {
 				value={ selectedFacets }
 				options={ facets }
 				getOptionValue={ ( opt ) => opt.value }
+				getOptionLabel={ ( opt ) => `${ opt.label } (${ opt.name })` }
 				onChange={ ( val ) => setAttributes( { selectedFacets: val } ) }
 			/>
 		</>
