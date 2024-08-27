@@ -1,4 +1,4 @@
-=== Yard Gutenberg ===
+=== Yard | Gutenberg ===
 Contributors:      Yard | Digital Agency
 Tags:              block
 Tested up to:      6.4
