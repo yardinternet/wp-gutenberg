@@ -1,4 +1,4 @@
-# Yard Gutenberg
+# Yard | Gutenberg
 
 Plugin with a collection of components for the WordPress Gutenberg editor
 
