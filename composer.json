@@ -1,37 +1,37 @@
 {
 	"name": "plugin/yard-gutenberg",
-	"description": "A collection of components for the WordPress Gutenberg editor.",
+	"description": "A collection of blocks for the WordPress Gutenberg editor.",
 	"authors": [
-	  {
-		"name": "Yard | Digital Agency",
-		"email": "info@yard.nl"
-	  }
+		{
+			"name": "Yard | Digital Agency",
+			"email": "info@yard.nl"
+		}
 	],
 	"type": "wordpress-plugin",
 	"config": {
-	  "sort-packages": true,
-	  "platform": {
-		"php": "7.4"
-	  }
+		"sort-packages": true,
+		"platform": {
+			"php": "7.4"
+		}
 	},
 	"require": {
-	  "php": ">=7.4",
-	  "wp-cli/wp-cli-bundle": "^2.6"
+		"php": ">=7.4",
+		"wp-cli/wp-cli-bundle": "^2.6"
 	},
 	"require-dev": {
-	  "10up/wp_mock": "^0.5.0",
-	  "friendsofphp/php-cs-fixer": "^3.14",
-	  "phpunit/phpunit": "^9.6"
+		"10up/wp_mock": "^0.5.0",
+		"friendsofphp/php-cs-fixer": "^3.14",
+		"phpunit/phpunit": "^9.6"
 	},
 	"scripts": {
-	  "phpunit": "./vendor/bin/phpunit",
-	  "test": "phpunit --testdox --colors=always --bootstrap='./tests/bootstrap.php' tests ",
-	  "format": "vendor/bin/php-cs-fixer fix"
+		"phpunit": "./vendor/bin/phpunit",
+		"test": "phpunit --testdox --colors=always --bootstrap='./tests/bootstrap.php' tests ",
+		"format": "vendor/bin/php-cs-fixer fix"
 	},
 	"extra": {},
 	"autoload": {
-	  "psr-4": {
-		"Yard\\Gutenberg\\": "./src"
-	  }
+		"psr-4": {
+			"Yard\\Gutenberg\\": "./src"
+		}
 	}
 }

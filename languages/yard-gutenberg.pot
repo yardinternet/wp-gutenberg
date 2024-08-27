@@ -19,7 +19,7 @@ msgid "Yard | Gutenberg"
 msgstr ""
 
 #. Description of the plugin
-msgid "A collection of components for the WordPress Gutenberg editor."
+msgid "A collection of blocks for the WordPress Gutenberg editor."
 msgstr ""
 
 #. Author of the plugin
