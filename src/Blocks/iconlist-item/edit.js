@@ -1,8 +1,9 @@
 /**
  * WordPress dependencies
  */
-import { RichText, useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
+import { useEffect } from '@wordpress/element';
 
 /**
  * External dependencies
@@ -16,11 +17,34 @@ import {
  * Internal dependencies
  */
 import Inspector from './components/inspector';
+import ItemLink from './components/link';
+import ItemRichtext from './components/rich-text';
 import './editor.scss';
 
 const Edit = ( props ) => {
-	const { attributes, setAttributes } = props;
-	const { icon, listText } = attributes;
+	const { attributes, setAttributes, context } = props;
+	const { icon, listText, linkUrl, opensInNewTab } = attributes;
+
+	const useLinkComponent = context[ 'yard/iconlist-use-link-component' ];
+
+	const handleTextChange = ( value ) => {
+		setAttributes( { listText: value } );
+	};
+
+	const handleLinkChange = ( value ) => {
+		setAttributes( {
+			linkUrl: value?.url,
+			opensInNewTab: value?.opensInNewTab,
+			listText: value?.title ?? listText,
+		} );
+	};
+
+	const handleLinkRemove = () => {
+		setAttributes( {
+			linkUrl: null,
+			opensInNewTab: null,
+		} );
+	};
 
 	return (
 		<>
@@ -37,18 +61,21 @@ const Edit = ( props ) => {
 			<Inspector { ...props } />
 			<li { ...useBlockProps() }>
 				<Icon { ...props } />
-				<RichText
-					className="wp-block-yard-iconlist-item__text"
-					onChange={ ( value ) =>
-						setAttributes( { listText: value } )
-					}
-					placeholder={ __(
-						'Begin met schrijven',
-						'yard-gutenberg'
-					) }
-					tagName="span"
-					value={ listText }
-				/>
+				{ useLinkComponent ? (
+					<ItemLink
+						handleLinkChange={ handleLinkChange }
+						handleLinkRemove={ handleLinkRemove }
+						handleTextChange={ handleTextChange }
+						linkUrl={ linkUrl }
+						listText={ listText }
+						opensInNewTab={ opensInNewTab }
+					/>
+				) : (
+					<ItemRichtext
+						listText={ listText }
+						handleTextChange={ handleTextChange }
+					/>
+				) }
 			</li>
 		</>
 	);

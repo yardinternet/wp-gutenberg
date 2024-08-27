@@ -21,6 +21,18 @@
     "listText": {
       "type": "string",
       "default": ""
+    },
+    "linkText": {
+      "type": "string",
+      "default": ""
+    },
+    "linkUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "opensInNewTab": {
+      "type": "boolean",
+      "default": false
     }
   },
   "parent": [

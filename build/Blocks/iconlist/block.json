@@ -6,7 +6,12 @@
   "title": "Iconenlijst",
   "category": "yard",
   "description": "Voeg een lijst met Font Awesome iconen toe. Verander de tekst en iconen afzonderlijk van elkaar.",
-  "attributes": {},
+  "attributes": {
+    "useLinkComponent": {
+      "type": "boolean",
+      "default": false
+    }
+  },
   "supports": {
     "align": [
       "wide",
