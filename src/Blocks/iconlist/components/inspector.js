@@ -11,7 +11,7 @@ const Inspector = ( props ) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Icoon instellingen', 'yard-gutenberg' ) }>
+			<PanelBody title={ __( 'Instellingen', 'yard-gutenberg' ) }>
 				<ToggleControl
 					label={ __( 'Gebruik link component', 'yard-gutenberg' ) }
 					checked={ useLinkComponent }
