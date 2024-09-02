@@ -22,7 +22,7 @@ TODO: automate this
 By default, all blocks will be registered. Use this filter to register only the allowed blocks.
 
 ```PHP
-add_filter('yard-gutenberg/allowedBlocks', fn () => [
+add_filter('yard::gutenberg/allowed-blocks', fn () => [
  'collapse',
  'collapse-item',
  'counting-number',

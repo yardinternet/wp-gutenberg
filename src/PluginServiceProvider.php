@@ -73,8 +73,8 @@ class PluginServiceProvider
         $blocksPath = dirname(__DIR__, 1) . '/build/Blocks/';
         $folders = array_filter(glob($blocksPath . '*', GLOB_ONLYDIR));
 
-        if(has_filter('yard-gutenberg/allowedBlocks')) {
-            $allowedBlocks = apply_filters('yard-gutenberg/allowedBlocks', []);
+        if(has_filter('yard::gutenberg/allowed-blocks')) {
+            $allowedBlocks = apply_filters('yard::gutenberg/allowed-blocks', []);
 
             $folders = array_filter(
                 $folders,
