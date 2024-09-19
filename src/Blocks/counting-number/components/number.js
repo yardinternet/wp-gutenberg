@@ -10,7 +10,7 @@ const Number = ( props ) => {
 				</span>
 			) }
 			<span className="wp-block-yard-counting-number__number">
-				{ number.replace( /\./g, ',' ) }
+				{ number?.replace( /\./g, ',' ) }
 			</span>
 			{ numberSuffix && (
 				<span className="wp-block-yard-counting-number__suffix">

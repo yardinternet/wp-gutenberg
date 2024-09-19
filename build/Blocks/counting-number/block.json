@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "yard/counting-number",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "Oplopende teller",
   "category": "yard",
   "description": "Toont een oplopende cijfer.",

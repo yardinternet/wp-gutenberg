@@ -37,7 +37,7 @@ const handleCountUpObserver = ( changes, number ) => {
 				parent.dataset.animationduration
 			);
 
-			let countUpInit = number.innerHTML;
+			let countUpInit = parent.dataset.number ?? number.innerHTML;
 			let options = {
 				duration: animationDuration,
 				separator: '.',
