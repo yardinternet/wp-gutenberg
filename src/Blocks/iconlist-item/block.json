@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "yard/iconlist-item",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"title": "Iconenlijst item",
 	"category": "yard",
 	"description": "Een enkele iconenlijst item.",
@@ -15,14 +15,7 @@
 			"type": "string",
 			"default": ""
 		},
-		"iconColor": {
-			"type": "string"
-		},
 		"listText": {
-			"type": "string",
-			"default": ""
-		},
-		"linkText": {
 			"type": "string",
 			"default": ""
 		},
