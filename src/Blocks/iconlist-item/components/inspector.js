@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import { ColorPalette, InspectorControls } from '@wordpress/block-editor';
+import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
@@ -12,7 +12,7 @@ import { IconPickerControlInspector } from '@yardinternet/gutenberg-components';
 
 const Inspector = ( props ) => {
 	const { setAttributes, attributes } = props;
-	const { icon, iconAltText, iconColor } = attributes;
+	const { icon, iconAltText } = attributes;
 
 	return (
 		<InspectorControls>
@@ -39,13 +39,6 @@ const Inspector = ( props ) => {
 						'Voeg een alternatieve tekst toe als een icoon betekenis heeft.',
 						'yard-gutenberg'
 					) }
-				/>
-				<ColorPalette
-					clearable={ false }
-					value={ iconColor }
-					onChange={ ( color ) =>
-						setAttributes( { iconColor: color } )
-					}
 				/>
 			</PanelBody>
 		</InspectorControls>
