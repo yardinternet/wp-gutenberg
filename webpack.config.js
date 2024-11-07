@@ -15,5 +15,6 @@ module.exports = {
 			'./src/MyPatterns/resources/scss/style.scss',
 			'./src/MyPatterns/resources/js/index.js',
 		],
+		hooks: [ './src/Hooks/resources/js/index.js' ],
 	},
 };
