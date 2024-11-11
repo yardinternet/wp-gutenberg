@@ -19,7 +19,7 @@ TODO: automate this
 
 ### `yard::gutenberg/allowed-blocks`
 
-By default, all blocks will be registered. Use this filter to register only the allowed blocks.
+By default, all blocks are registered. Use this filter to register only the allowed blocks. The example below lists every available block:
 
 ```PHP
 add_filter('yard::gutenberg/allowed-blocks', fn () => [
@@ -39,7 +39,7 @@ add_filter('yard::gutenberg/allowed-blocks', fn () => [
 
 ### `yard::gutenberg/allowed-core-blocks`
 
-Overwrite the allowed blocks.
+Overwrite the allowed (core) blocks.
 
 ```PHP
 add_filter('yard::gutenberg/allowed-core-blocks', $this->registerCoreBlocks(...), 10, 1);
@@ -59,6 +59,17 @@ public function registerCoreBlocks($initialAllowedBlocks): array
   ->reject(fn ($block) => $excludeBlocks->contains($block))
   ->all();
 }
+```
+
+### `yard::gutenberg/allowed-blocks-whitelisted-prefixes`
+
+By default, all blocks are registered. Use this filter to register only the allowed blocks with a specific prefix. The example adds the `tribe` prefix:
+
+```PHP
+add_filter('yard::gutenberg/allowed-blocks-whitelisted-prefixes', fn ($prefixes) => [
+ ...$prefixes,
+ 'tribe',
+] );
 ```
 
 ## JavaScript Hooks
@@ -127,7 +138,7 @@ addFilter(
      ...item,
      attributes: {
       ...item.attributes,
-      height: 'var:preset|spacing|5', // New height value
+      height: 'var:preset|spacing|9', // New height value
      },
     };
    }
