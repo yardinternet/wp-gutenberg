@@ -38,6 +38,8 @@ const init = () => {
 			showMultiple,
 			openOnInit,
 			duration: 400,
+			beforeOpen: ( item ) => togglePanelClosedClass( item, false ),
+			onClose: ( item ) => togglePanelClosedClass( item, true ),
 		} );
 
 		openCollapseItemByHash( accordion, collapseItems );
@@ -46,6 +48,17 @@ const init = () => {
 			openCollapseItemByHash( accordion, collapseItems )
 		);
 	} );
+};
+
+/**
+ * A11y: Toggle "is-collapse-item-closed" class for panel to add display none so content is not tabbable
+ *
+ * @param {HTMLElement} item
+ * @param {boolean}     isClosed
+ */
+const togglePanelClosedClass = ( item, isClosed ) => {
+	const panel = item.querySelector( '.wp-block-yard-collapse-item__panel' );
+	panel?.classList.toggle( 'is-collapse-item-closed', isClosed );
 };
 
 /**

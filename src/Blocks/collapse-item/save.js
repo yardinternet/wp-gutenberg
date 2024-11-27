@@ -48,7 +48,9 @@ const Save = ( props ) => {
 				</button>
 			</HeadingWithLevel>
 			<div
-				className="wp-block-yard-collapse-item__panel | ac-panel"
+				className={ `wp-block-yard-collapse-item__panel ${
+					isOpen ? '' : 'is-collapse-item-closed'
+				} | ac-panel` }
 				itemScope={ hasStructuredData }
 				itemProp={ hasStructuredData ? 'acceptedAnswer' : null }
 				itemType={
