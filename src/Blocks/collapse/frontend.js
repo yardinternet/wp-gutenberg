@@ -57,18 +57,13 @@ const init = () => {
 const openCollapseItemByHash = ( accordion, collapseItems ) => {
 	if ( window.location.hash === '' ) return;
 
-	const slug = window.location.hash.replace( '#', '' );
+	const hash = window.location.hash.replace( '#', '' );
 
-	// Get the index of the collapse item that has the slug as text
+	// Get the index of the collapse item that has the hash as id or text
 	const collapseItemIndex = Array.from( collapseItems ).findIndex(
-		( item ) => {
-			const button = item.querySelector(
-				'.wp-block-yard-collapse-item__header-button'
-			);
-			const text = extractHeaderText( button );
-			const itemSlug = slugify( text );
-			return itemSlug === slug;
-		}
+		( item ) =>
+			compareHashWithId( hash, item ) ||
+			compareHashWithHeaderText( hash, item )
 	);
 
 	if ( collapseItemIndex < 0 ) return;
@@ -81,6 +76,36 @@ const openCollapseItemByHash = ( accordion, collapseItems ) => {
 	setTimeout( () => {
 		accordion.open( collapseItemIndex );
 	}, 500 );
+};
+
+/**
+ * Check if the header id is the same as the hash
+ *
+ * @param {string}      hash
+ * @param {HTMLElement} item
+ */
+const compareHashWithId = ( hash, item ) => {
+	const header = item.querySelector( '.wp-block-yard-collapse-item__header' );
+
+	return header?.id === hash;
+};
+
+/**
+ * Check if the header text slug is the same as the hash
+ *
+ * @param {string}      hash
+ * @param {HTMLElement} item
+ */
+const compareHashWithHeaderText = ( hash, item ) => {
+	const button = item.querySelector(
+		'.wp-block-yard-collapse-item__header-button'
+	);
+
+	if ( ! button ) return false;
+
+	const text = extractHeaderText( button );
+
+	return slugify( text ) === hash;
 };
 
 /**

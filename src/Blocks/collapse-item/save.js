@@ -10,11 +10,17 @@ import { Icon } from '@yardinternet/gutenberg-components';
 
 const Save = ( props ) => {
 	const { attributes } = props;
-	const { hasStructuredData, headingLevel, headingText, icon, isOpen } =
-		attributes;
+	const {
+		hasStructuredData,
+		headingLevel,
+		headingText,
+		icon,
+		isOpen,
+		anchor,
+	} = attributes;
 	const HeadingWithLevel = headingLevel;
 
-	const blockProps = useBlockProps.save( {
+	const { id, ...blockProps } = useBlockProps.save( {
 		className: 'wp-block-yard-collapse-item | ac',
 	} );
 
@@ -28,7 +34,10 @@ const Save = ( props ) => {
 				hasStructuredData ? 'https://schema.org/Question' : null
 			}
 		>
-			<HeadingWithLevel className="wp-block-yard-collapse-item__header | ac-header">
+			<HeadingWithLevel
+				className="wp-block-yard-collapse-item__header | ac-header"
+				id={ anchor }
+			>
 				<button
 					type="button"
 					className="wp-block-yard-collapse-item__header-button | ac-trigger"

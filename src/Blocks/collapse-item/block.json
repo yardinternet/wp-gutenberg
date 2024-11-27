@@ -30,10 +30,15 @@
 		"isOpen": {
 			"type": "boolean",
 			"default": false
+		},
+		"anchor": {
+			"type": "string",
+			"default": ""
 		}
 	},
 	"parent": ["yard/collapse"],
 	"supports": {
+		"anchor": true,
 		"html": false,
 		"reusable": false
 	},
