@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yard/timeline",
+	"version": "0.1.0",
+	"title": "Tijdlijn",
+	"category": "yard",
+	"description": "Creeërt een tijdlijn wrapper waarbij elk blokje een nieuwe stap is.",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		}
+	},
+	"supports": {
+		"align": ["wide"],
+		"html": false,
+		"reusable": false
+	},
+	"textdomain": "yard",
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./frontend.js"
+}
