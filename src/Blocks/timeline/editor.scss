@@ -1,0 +1,16 @@
+@import '../mixins';
+
+.wp-block-yard-timeline .block-list-appender {
+	position: static;
+	margin-bottom: 1rem;
+
+	.block-editor-button-block-appender {
+		@include button-block-appender;
+	}
+}
+
+ul.wp-block-yard-timeline,
+ol.wp-block-yard-timeline {
+	padding-left: 0 !important;
+	list-style: none !important;
+}

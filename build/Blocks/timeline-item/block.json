@@ -9,9 +9,17 @@
   "parent": [
     "yard/timeline"
   ],
+  "attributes": {
+    "number": {
+      "type": "number"
+    }
+  },
   "supports": {
-    "html": false,
-    "reusable": false
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "html": false
   },
   "textdomain": "yard",
   "editorScript": "file:./index.js"

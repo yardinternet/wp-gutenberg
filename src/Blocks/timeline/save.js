@@ -3,14 +3,16 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-const Save = () => {
+const Save = ( props ) => {
+	const { attributes } = props;
+	const { isOrderedList } = attributes;
+
+	const List = isOrderedList ? 'ol' : 'ul';
+
 	return (
-		<div { ...useBlockProps.save() }>
-			<div className="wp-block-yard-timeline-progress-line"></div>
-			<div className="wp-block-yard-timeline-content">
-				<InnerBlocks.Content />
-			</div>
-		</div>
+		<List { ...useBlockProps.save() }>
+			<InnerBlocks.Content />
+		</List>
 	);
 };
 

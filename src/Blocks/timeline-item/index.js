@@ -15,4 +15,5 @@ registerBlockType( metadata, {
 	edit,
 	icon,
 	save,
+	usesContext: [ 'yard/timeline-is-ordered-list' ],
 } );

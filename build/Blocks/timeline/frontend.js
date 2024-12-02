@@ -1,1 +1,0 @@
-(()=>{const e=e=>{const l=e.querySelectorAll(".wp-block-yard-timeline-item"),o=e.querySelector(".wp-block-yard-timeline-progress-line");l.length&&o&&t(l,o)},t=(e,t)=>{e.length<2||(t.style.top=e[0].offsetHeight/2+"px",t.style.bottom=e[e.length-1].offsetHeight/2+"px")};(()=>{const t=document.querySelectorAll(".wp-block-yard-timeline");t.length&&t.forEach(e)})()})();

@@ -3,11 +3,20 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-const Save = () => {
+const Save = ( props ) => {
+	const { attributes } = props;
+	const { number } = attributes;
+
 	return (
-		<div { ...useBlockProps.save() }>
-			<InnerBlocks.Content />
-		</div>
+		<li { ...useBlockProps.save() }>
+			<span className="wp-block-yard-timeline-item-line"></span>
+			<span className="wp-block-yard-timeline-item-dot">
+				{ number ? number : '' }
+			</span>
+			<div className="wp-block-yard-timeline-item-content">
+				<InnerBlocks.Content />
+			</div>
+		</li>
 	);
 };
 

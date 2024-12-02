@@ -10,16 +10,24 @@
     "align": {
       "type": "string",
       "default": "wide"
+    },
+    "isOrderedList": {
+      "type": "boolean",
+      "default": false
     }
   },
   "supports": {
     "align": [
       "wide"
     ],
-    "html": false,
-    "reusable": false
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "html": false
   },
   "textdomain": "yard",
   "editorScript": "file:./index.js",
-  "viewScript": "file:./frontend.js"
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
 }
