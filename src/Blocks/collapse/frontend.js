@@ -26,6 +26,8 @@ const init = () => {
 		collapseItems.forEach( ( item, index ) => {
 			if ( item.dataset.open && item.dataset.open === 'true' ) {
 				openOnInit.push( index );
+			} else {
+				togglePanelClosedClass( item, true );
 			}
 		} );
 
