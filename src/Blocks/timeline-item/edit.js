@@ -7,13 +7,28 @@ import { applyFilters } from '@wordpress/hooks';
 const Edit = () => {
 	const TEMPLATE = applyFilters( 'yard.timeline-item-template', [
 		[ 'core/heading', { level: 3, placeholder: 'Koptekst H3' } ],
-		[ 'core/paragraph', { placeholder: 'Vul hier de tekst in' } ],
+		[ 'core/paragraph', { placeholder: 'Voeg de inhoud toe' } ],
 	] );
 
 	const ALLOWED_BLOCKS = applyFilters( 'yard.timeline-item-allowed-blocks', [
+		'core/audio',
+		'core/block',
+		'core/button',
+		'core/buttons',
 		'core/cover',
+		'core/embed',
+		'core/file',
+		'core/gallery',
+		'core/group',
 		'core/heading',
+		'core/image',
+		'core/list-item',
+		'core/list',
 		'core/paragraph',
+		'core/quote',
+		'core/separator',
+		'core/table',
+		'core/video',
 	] );
 
 	return (
