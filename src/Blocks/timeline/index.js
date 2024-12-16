@@ -16,7 +16,4 @@ registerBlockType( metadata, {
 	edit,
 	icon,
 	save,
-	providesContext: {
-		'yard/timeline-is-ordered-list': 'isOrderedList',
-	},
 } );
