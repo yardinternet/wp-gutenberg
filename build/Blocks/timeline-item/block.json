@@ -9,11 +9,7 @@
   "parent": [
     "yard/timeline"
   ],
-  "attributes": {
-    "number": {
-      "type": "number"
-    }
-  },
+  "attributes": {},
   "supports": {
     "color": {
       "background": true,
