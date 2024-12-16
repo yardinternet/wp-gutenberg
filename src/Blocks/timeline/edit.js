@@ -19,9 +19,7 @@ const Edit = ( props ) => {
 	const TEMPLATE = applyFilters( 'yard.timeline-template', [
 		[ 'yard/timeline-item' ],
 	] );
-	const ALLOWED_BLOCKS = applyFilters( 'yard.timeline-allowed-blocks', [
-		'yard/timeline-item',
-	] );
+	const ALLOWED_BLOCKS = [ 'yard/timeline-item' ];
 
 	// TODO: Ik ben er nog niet overuit of dit nou echt lekker werkt...
 	const orderedList = applyFilters( 'yard.timeline-is-ordered-list', false );
