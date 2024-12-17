@@ -24,6 +24,7 @@ const Edit = () => {
 		'core/image',
 		'core/list-item',
 		'core/list',
+		'core/media-text',
 		'core/paragraph',
 		'core/quote',
 		'core/separator',
