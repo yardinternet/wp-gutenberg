@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "yard/table-of-contents",
+	"version": "0.1.0",
+	"title": "Inhoudsopgave",
+	"category": "yard",
+	"description": "Toont een inhoudsopgave op basis van de koppen op de pagina.",
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"reusable": false
+	},
+	"attributes": {
+		"includeSubheading": {
+			"type": "boolean",
+			"default": true
+		},
+		"contentSelector": {
+			"type": "string",
+			"default": ""
+		},
+		"headingSelector": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "yard",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"viewScript": "file:./view.js"
+}
