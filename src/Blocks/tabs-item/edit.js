@@ -24,10 +24,16 @@ import './editor.scss';
 
 const TEMPLATE = [
 	[
+		'core/heading',
+		{
+			placeholder: __( 'Titel van het tabblad', 'yard-gutenberg' ),
+		},
+	],
+	[
 		'core/paragraph',
 		{
 			placeholder: __(
-				'Vul hier de tabblad inhoud in',
+				'Voeg de rest van de inhoud toe.',
 				'yard-gutenberg'
 			),
 		},
