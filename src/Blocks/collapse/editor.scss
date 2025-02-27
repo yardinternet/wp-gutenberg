@@ -1,4 +1,4 @@
-@import '../mixins';
+@use '../mixins' as *;
 
 .wp-block-yard-collapse .block-list-appender {
 	position: static;

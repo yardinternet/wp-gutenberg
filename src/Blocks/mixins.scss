@@ -1,4 +1,4 @@
-@import './colors';
+@use './colors' as *;
 
 @mixin button-block-appender {
 	padding: 4px;
@@ -6,7 +6,7 @@
 	transition: 0.1s all ease-in-out;
 
 	&:hover {
-		background-color: rgba( var( --wp-admin-theme-color--rgb ), 0.05 );
-		box-shadow: inset 0 0 0 1px var( --wp-admin-theme-color );
+		background-color: rgba(var(--wp-admin-theme-color--rgb), 0.05);
+		box-shadow: inset 0 0 0 1px var(--wp-admin-theme-color);
 	}
 }
