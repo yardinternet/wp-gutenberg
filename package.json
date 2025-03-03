@@ -7,16 +7,21 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
-		"format": "wp-scripts format",
-		"lint:css": "wp-scripts lint-style",
-		"lint:js": "wp-scripts lint-js",
+		"lint:css": "yard-toolkit lint css -m custom './src/**/*.css'",
+		"lint:js": "yard-toolkit lint js -m custom './src/**/*.js'",
+		"lint:scss": "yard-toolkit lint scss -m custom './src/**/*.scss'",
+		"format:css": "yard-toolkit format css -m custom './src/**/*.css'",
+		"format:js": "yard-toolkit format js -m custom './src/**/*.js'",
+		"format:scss": "yard-toolkit format scss -m custom './src/**/*.scss'",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/prettier-config": "^4.18.0",
-		"@wordpress/scripts": "^30.11.0"
+		"@wordpress/scripts": "^30.11.0",
+		"@yardinternet/prettier-config": "^1.0.1",
+		"@yardinternet/toolkit": "^1.0.1",
+		"prettier": "npm:wp-prettier@^3.0.3"
 	},
 	"dependencies": {
 		"@wordpress/api-fetch": "^7.18.0",

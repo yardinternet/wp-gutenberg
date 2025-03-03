@@ -10,10 +10,10 @@ import { Placeholder } from '@wordpress/components';
 import Inspector from './components/inspector';
 import './editor.scss';
 
-const Edit = (props) => {
+const Edit = ( props ) => {
 	return (
-		<div {...useBlockProps()}>
-			<Inspector {...props} />
+		<div { ...useBlockProps() }>
+			<Inspector { ...props } />
 			<Placeholder
 				icon="editor-table"
 				label="Inhoudsopgave"

@@ -11,10 +11,10 @@ import { TableOfContents } from '@yardinternet/table-of-contents';
  * @param {string}      yardTOCKey - The key in window.yardTOC
  * @return {string|undefined} - The attribute value or undefined
  */
-const getAttribute = (element, attribute, yardTOCKey) => {
+const getAttribute = ( element, attribute, yardTOCKey ) => {
 	return (
-		element.getAttribute(attribute) ||
-		(window.yardTOC && window.yardTOC[yardTOCKey]) ||
+		element.getAttribute( attribute ) ||
+		( window.yardTOC && window.yardTOC[ yardTOCKey ] ) ||
 		undefined
 	);
 };
@@ -26,13 +26,13 @@ const getAttribute = (element, attribute, yardTOCKey) => {
  * @param {string}      yardTOCKey - The key in window.yardTOC
  * @return {boolean|undefined} - The attribute value or undefined
  */
-const getBooleanAttribute = (element, attribute, yardTOCKey) => {
-	const attrValue = element.getAttribute(attribute);
-	if (attrValue !== null) {
+const getBooleanAttribute = ( element, attribute, yardTOCKey ) => {
+	const attrValue = element.getAttribute( attribute );
+	if ( attrValue !== null ) {
 		return attrValue === 'true';
 	}
-	return window.yardTOC && window.yardTOC[yardTOCKey] !== undefined
-		? window.yardTOC[yardTOCKey]
+	return window.yardTOC && window.yardTOC[ yardTOCKey ] !== undefined
+		? window.yardTOC[ yardTOCKey ]
 		: undefined;
 };
 
@@ -41,9 +41,9 @@ const getBooleanAttribute = (element, attribute, yardTOCKey) => {
  * @param {string} yardTOCKey - The key in window.yardTOC
  * @return {any|undefined} - The property value or undefined
  */
-const getYardTOCProperty = (yardTOCKey) => {
-	return window.yardTOC && window.yardTOC[yardTOCKey] !== undefined
-		? window.yardTOC[yardTOCKey]
+const getYardTOCProperty = ( yardTOCKey ) => {
+	return window.yardTOC && window.yardTOC[ yardTOCKey ] !== undefined
+		? window.yardTOC[ yardTOCKey ]
 		: undefined;
 };
 
@@ -51,8 +51,8 @@ const getYardTOCProperty = (yardTOCKey) => {
  * Initialize Table of Contents
  */
 const initializeTOC = () => {
-	const tocElement = document.getElementById('js-yard-table-of-contents');
-	if (!tocElement || !window.yardTOC) return;
+	const tocElement = document.getElementById( 'js-yard-table-of-contents' );
+	if ( ! tocElement || ! window.yardTOC ) return;
 
 	const props = {
 		contentSelector: getAttribute(
@@ -70,22 +70,22 @@ const initializeTOC = () => {
 			'data-include-subheading',
 			'includeSubheading'
 		),
-		bodyClassName: getYardTOCProperty('bodyClassName'),
-		mobileButtonIcon: getYardTOCProperty('mobileButtonIcon'),
-		mobileButtonText: getYardTOCProperty('mobileButtonText'),
-		observerOptions: getYardTOCProperty('observerOptions'),
+		bodyClassName: getYardTOCProperty( 'bodyClassName' ),
+		mobileButtonIcon: getYardTOCProperty( 'mobileButtonIcon' ),
+		mobileButtonText: getYardTOCProperty( 'mobileButtonText' ),
+		observerOptions: getYardTOCProperty( 'observerOptions' ),
 		overwriteTextDataAttribute: getYardTOCProperty(
 			'overwriteTextDataAttribute'
 		),
-		titleText: getYardTOCProperty('titleText'),
+		titleText: getYardTOCProperty( 'titleText' ),
 		subheadingListCollapseIcon: getYardTOCProperty(
 			'subheadingListCollapseIcon'
 		),
-		viewportBreakpoint: getYardTOCProperty('viewportBreakpoint'),
+		viewportBreakpoint: getYardTOCProperty( 'viewportBreakpoint' ),
 	};
 
-	createRoot(tocElement).render(<TableOfContents {...props} />);
+	createRoot( tocElement ).render( <TableOfContents { ...props } /> );
 };
 
 // Initialize Table of Contents on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initializeTOC);
+document.addEventListener( 'DOMContentLoaded', initializeTOC );
