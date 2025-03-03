@@ -11,17 +11,18 @@ import { applyFilters } from '@wordpress/hooks';
 const defaultUnusedVariations = [
 	{ block: 'core/group', variation: 'group-stack' },
 	{ block: 'core/group', variation: 'group-columns' },
+	{ block: 'core/group', variation: 'group-grid' }, // Unregister to replace with custom attributes below
 ];
 
 const defaultRegisterVariations = [
-	// Override core/spacer to start with steps instead of custom height
+	// core/spacer - Override to start with steps instead of custom height
 	{
 		block: 'core/spacer',
 		name: 'spacer-with-steps',
 		isDefault: true,
 		attributes: { height: 'var:preset|spacing|5' },
 	},
-	// Change default media-text settings
+	// core/media-text - Override to add innerBlocks
 	{
 		block: 'core/media-text',
 		isDefault: true,
@@ -47,6 +48,28 @@ const defaultRegisterVariations = [
 				],
 			],
 		],
+	},
+	// core/columns - Override to start with alignwide
+	{
+		block: 'core/columns',
+		isDefault: true,
+		attributes: { align: 'wide' },
+		innerBlocks: [],
+	},
+	// core/group-grid - Override start with alignwide and 3 columns
+	{
+		block: 'core/group',
+		isDefault: true,
+		name: 'group-grid',
+		title: 'Raster',
+		attributes: {
+			type: 'grid',
+			align: 'wide',
+			layout: {
+				type: 'grid',
+				columnCount: 3,
+			},
+		},
 	},
 ];
 
