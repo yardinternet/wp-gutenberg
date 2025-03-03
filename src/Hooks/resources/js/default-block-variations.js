@@ -7,6 +7,7 @@ import {
 } from '@wordpress/blocks';
 import domReady from '@wordpress/dom-ready';
 import { applyFilters } from '@wordpress/hooks';
+import { grid } from '@wordpress/icons';
 
 const defaultUnusedVariations = [
 	{ block: 'core/group', variation: 'group-stack' },
@@ -60,8 +61,10 @@ const defaultRegisterVariations = [
 	{
 		block: 'core/group',
 		isDefault: true,
-		name: 'group-grid',
+		name: 'group-grid-columns-3',
+		isActive: [ 'layout.type' ],
 		title: 'Raster',
+		icon: grid,
 		attributes: {
 			type: 'grid',
 			align: 'wide',
