@@ -23,6 +23,7 @@ const Save = ( props ) => {
 				<button
 					id={ `tabs-item-button-${ id }` }
 					className="wp-block-yard-tabs-item__button"
+					role="tab"
 					aria-controls={ `tabs-item-panel-${ id }` }
 					aria-selected="false"
 				>
@@ -36,6 +37,7 @@ const Save = ( props ) => {
 					className: 'wp-block-yard-tabs-item__panel',
 				} ) }
 				id={ `tabs-item-panel-${ id }` }
+				role="tabpanel"
 				aria-hidden="true"
 				aria-labelledby={ `tabs-item-button-${ id }` }
 			>
