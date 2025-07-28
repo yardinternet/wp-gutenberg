@@ -72,6 +72,7 @@ const initializeTOC = () => {
 		),
 		bodyClassName: getYardTOCProperty( 'bodyClassName' ),
 		mobileButtonIcon: getYardTOCProperty( 'mobileButtonIcon' ),
+		mobileButtonIconHtml: getYardTOCProperty( 'mobileButtonIconHtml' ),
 		mobileButtonText: getYardTOCProperty( 'mobileButtonText' ),
 		observerOptions: getYardTOCProperty( 'observerOptions' ),
 		overwriteTextDataAttribute: getYardTOCProperty(
@@ -80,6 +81,9 @@ const initializeTOC = () => {
 		titleText: getYardTOCProperty( 'titleText' ),
 		subheadingListCollapseIcon: getYardTOCProperty(
 			'subheadingListCollapseIcon'
+		),
+		subheadingListCollapseIconHtml: getYardTOCProperty(
+			'subheadingListCollapseIconHtml'
 		),
 		viewportBreakpoint: getYardTOCProperty( 'viewportBreakpoint' ),
 	};
