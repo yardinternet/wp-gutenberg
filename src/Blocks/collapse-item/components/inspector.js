@@ -17,8 +17,9 @@ import { IconPickerControlInspector } from '@yardinternet/gutenberg-components';
 import { useParentBlock } from '@yardinternet/gutenberg-hooks';
 
 const Inspector = ( props ) => {
-	const { attributes, setAttributes, enableIcon } = props;
-	const { icon, iconAltText, isOpen } = attributes;
+	const { attributes, setAttributes, enableIcon, enableSubtitleToggle } =
+		props;
+	const { icon, iconAltText, isOpen, hasSubtitle } = attributes;
 
 	const { selectParentBlock } = useParentBlock();
 
@@ -30,6 +31,15 @@ const Inspector = ( props ) => {
 					label={ __( 'Toon standaard open', 'yard-gutenberg' ) }
 					onChange={ ( value ) => setAttributes( { isOpen: value } ) }
 				/>
+				{ enableSubtitleToggle && (
+					<ToggleControl
+						label={ __( 'Toon ondertitel', 'yard-gutenberg' ) }
+						checked={ hasSubtitle }
+						onChange={ ( value ) =>
+							setAttributes( { hasSubtitle: value } )
+						}
+					/>
+				) }
 			</PanelBody>
 			{ enableIcon && (
 				<PanelBody

@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "yard/collapse-item",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"title": "Uitklap item",
 	"category": "yard",
 	"description": "Uitklapbaar component.",
@@ -34,9 +34,17 @@
 		"anchor": {
 			"type": "string",
 			"default": ""
+		},
+		"hasSubtitle": {
+			"type": "boolean",
+			"default": false
+		},
+		"subtitleText": {
+			"type": "string",
+			"default": ""
 		}
 	},
-	"parent": ["yard/collapse"],
+	"parent": [ "yard/collapse" ],
 	"supports": {
 		"anchor": true,
 		"html": false,

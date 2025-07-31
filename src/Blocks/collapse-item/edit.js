@@ -1,7 +1,12 @@
 /**
  * WordPress dependencies
  */
-import { useBlockProps, PlainText, InnerBlocks } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	PlainText,
+	RichText,
+	InnerBlocks,
+} from '@wordpress/block-editor';
 import { Button } from '@wordpress/components';
 import { useEffect, useState } from '@wordpress/element';
 import { applyFilters } from '@wordpress/hooks';
@@ -36,9 +41,13 @@ const TEMPLATE = [
 
 const Edit = ( props ) => {
 	const { attributes, setAttributes } = props;
-	const { headingText, icon } = attributes;
+	const { headingText, icon, hasSubtitle, subtitleText } = attributes;
 
 	const enableIcon = applyFilters( 'yard.collapse-item-enable-icon', false );
+	const enableSubtitleToggle = applyFilters(
+		'yard.collapse-item-enable-subtitle-toggle',
+		false
+	);
 
 	const [ isOpen, setIsOpen ] = useState( false );
 
@@ -71,7 +80,11 @@ const Edit = ( props ) => {
 				/>
 			) }
 
-			<Inspector { ...props } enableIcon={ enableIcon } />
+			<Inspector
+				{ ...props }
+				enableIcon={ enableIcon }
+				enableSubtitleToggle={ enableSubtitleToggle }
+			/>
 
 			<div { ...useBlockProps() } data-open={ isOpen }>
 				<div className="wp-block-yard-collapse-item__header">
@@ -83,6 +96,24 @@ const Edit = ( props ) => {
 						}
 						value={ headingText }
 					/>
+					{ hasSubtitle && (
+						<RichText
+							className="wp-block-yard-collapse-item__header-subtitle"
+							onChange={ ( value ) =>
+								setAttributes( { subtitleText: value } )
+							}
+							allowedFormats={ [
+								'core/bold',
+								'core/italic',
+								'core/strikethrough',
+							] }
+							value={ subtitleText }
+							placeholder={ __(
+								'Voer een ondertitel in',
+								'yard-gutenberg'
+							) }
+						/>
+					) }
 					<Button
 						className="wp-block-yard-collapse-item__header-toggle-button"
 						onClick={ () => setIsOpen( ( current ) => ! current ) }

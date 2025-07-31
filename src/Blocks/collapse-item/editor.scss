@@ -10,9 +10,40 @@ $block: 'wp-block-yard-collapse-item';
 		align-items: center;
 		gap: 1rem;
 
-		&-toggle-button svg {
-			width: 20px;
-			transition: 0.2s all ease;
+		&:has( &-subtitle ) {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			grid-template-areas:
+				'collapse-title collapse-toggle'
+				'collapse-subtitle collapse-toggle';
+		}
+
+		&:has( &-subtitle ):has( .wp-block-yard-icon-component ) {
+			grid-template-areas:
+				'collapse-icon collapse-toggle'
+				'collapse-title collapse-toggle'
+				'collapse-subtitle collapse-toggle';
+		}
+
+		.wp-block-yard-icon-component {
+			grid-area: collapse-icon;
+		}
+
+		&-input {
+			grid-area: collapse-title;
+		}
+
+		&-subtitle {
+			grid-area: collapse-subtitle;
+		}
+
+		&-toggle-button {
+			grid-area: collapse-toggle;
+
+			svg {
+				width: 20px;
+				transition: 0.2s all ease;
+			}
 		}
 	}
 }

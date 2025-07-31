@@ -17,6 +17,8 @@ const Save = ( props ) => {
 		icon,
 		isOpen,
 		anchor,
+		hasSubtitle,
+		subtitleText,
 	} = attributes;
 	const HeadingWithLevel = headingLevel;
 
@@ -44,7 +46,14 @@ const Save = ( props ) => {
 					itemProp={ hasStructuredData ? 'name' : null }
 				>
 					{ icon && <Icon { ...props } /> }
-					{ headingText }
+					<span className="wp-block-yard-collapse-item__header-button-title">
+						{ headingText }
+					</span>
+					{ hasSubtitle && subtitleText && (
+						<span className="wp-block-yard-collapse-item__header-button-subtitle">
+							{ subtitleText }
+						</span>
+					) }
 				</button>
 			</HeadingWithLevel>
 			<div
