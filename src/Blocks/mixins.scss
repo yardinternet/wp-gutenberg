@@ -5,6 +5,11 @@
 	box-shadow: inset 0 0 0 1px $gray-300;
 	transition: 0.1s all ease-in-out;
 
+	> svg {
+		width: 24px;
+		height: 24px;
+	}
+
 	&:hover {
 		background-color: rgba( var( --wp-admin-theme-color--rgb ), 0.05 );
 		box-shadow: inset 0 0 0 1px var( --wp-admin-theme-color );

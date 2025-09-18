@@ -8,10 +8,11 @@ import { applyFilters } from '@wordpress/hooks';
  * Internal dependencies
  */
 import Inspector from './components/inspector';
+import PrependButtonBlockAppender from './components/prepend-button-block-appender';
 import './editor.scss';
 
 const Edit = ( props ) => {
-	const { attributes } = props;
+	const { attributes, clientId } = props;
 	const { isOrderedList } = attributes;
 
 	const List = isOrderedList ? 'ol' : 'ul';
@@ -24,11 +25,13 @@ const Edit = ( props ) => {
 	return (
 		<List { ...useBlockProps() }>
 			<Inspector { ...props } />
+			<PrependButtonBlockAppender rootClientId={ clientId } />
 			<InnerBlocks
 				allowedBlocks={ ALLOWED_BLOCKS }
-				renderAppender={ () => <InnerBlocks.ButtonBlockAppender /> }
+				renderAppender={ false }
 				template={ TEMPLATE }
 			/>
+			<InnerBlocks.ButtonBlockAppender />
 		</List>
 	);
 };

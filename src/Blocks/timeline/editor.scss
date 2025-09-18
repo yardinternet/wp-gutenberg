@@ -3,10 +3,10 @@
 .wp-block-yard-timeline .block-list-appender {
 	position: static;
 	margin-bottom: 1rem;
+}
 
-	.block-editor-button-block-appender {
-		@include button-block-appender;
-	}
+.wp-block-yard-timeline .block-editor-button-block-appender {
+	@include button-block-appender;
 }
 
 ul.wp-block.wp-block-yard-timeline,
