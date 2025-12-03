@@ -1,6 +1,7 @@
 {
 	"name": "plugin/yard-gutenberg",
 	"description": "A collection of blocks for the WordPress Gutenberg editor.",
+	"license": "EUPL-1.2",
 	"authors": [
 		{
 			"name": "Yard | Digital Agency",
