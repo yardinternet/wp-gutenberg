@@ -1,6 +1,6 @@
-# Yard | Gutenberg
+# WP Gutenberg
 
-Plugin with a collection of components for the WordPress Gutenberg editor
+A WordPress plugin with a collection of components for the Gutenberg editor
 
 ## 👷‍♀️ Development
 
