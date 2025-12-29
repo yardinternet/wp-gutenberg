@@ -8,7 +8,7 @@ const Save = ( props ) => {
 	const { defaultTab } = attributes;
 
 	return (
-		<div { ...useBlockProps.save() } data-default-tab={ defaultTab }>
+		<div { ...useBlockProps.save() } role="tablist" data-default-tab={ defaultTab }>
 			<InnerBlocks.Content />
 		</div>
 	);
