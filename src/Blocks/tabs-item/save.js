@@ -1,45 +1,37 @@
 /**
  * WordPress dependencies
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks } from '@wordpress/block-editor';
 
 /**
  * External dependencies
  */
 import { Icon } from '@yardinternet/gutenberg-components';
 
-const Save = ( props ) => {
-	const { attributes } = props;
-	const { headingLevel, headingText, icon, id } = attributes;
-	const HeadingWithLevel = headingLevel;
+const Save = ( { attributes } ) => {
+	const { headingText, icon, id } = attributes;
 
 	return (
 		<>
-			<HeadingWithLevel
-				{ ...useBlockProps.save( {
-					className: 'wp-block-yard-tabs-item__heading',
-				} ) }
+			<button
+				data-tab-button
+				id={ `tabs-item-button-${ id }` }
+				role="tab"
+				className="wp-block-yard-tabs-item__button"
+				aria-controls={ `tabs-item-panel-${ id }` }
+				aria-selected="false"
 			>
-				<button
-					id={ `tabs-item-button-${ id }` }
-					className="wp-block-yard-tabs-item__button"
-					role="tab"
-					aria-controls={ `tabs-item-panel-${ id }` }
-					aria-selected="false"
-				>
-					{ icon && <Icon { ...props } /> }
-					{ headingText }
-				</button>
-			</HeadingWithLevel>
+				{ icon && <Icon icon={ icon } /> }
+				{ headingText }
+			</button>
 
 			<div
-				{ ...useBlockProps.save( {
-					className: 'wp-block-yard-tabs-item__panel',
-				} ) }
+				data-tab-panel
 				id={ `tabs-item-panel-${ id }` }
 				role="tabpanel"
-				aria-hidden="true"
+				className="wp-block-yard-tabs-item"
 				aria-labelledby={ `tabs-item-button-${ id }` }
+				hidden
 			>
 				<InnerBlocks.Content />
 			</div>

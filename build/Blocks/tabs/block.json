@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "yard/tabs",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "title": "Tabbladen",
   "category": "yard",
   "description": "Groepeer gemakkelijk content in verschillende tabbladen.",

@@ -3,13 +3,18 @@
  */
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-const Save = ( props ) => {
-	const { attributes } = props;
+const Save = ( { attributes } ) => {
 	const { defaultTab } = attributes;
 
 	return (
-		<div { ...useBlockProps.save() } role="tablist" data-default-tab={ defaultTab }>
-			<InnerBlocks.Content />
+		<div { ...useBlockProps.save() } data-default-tab={ defaultTab }>
+			<div role="tablist" className="wp-block-yard-tabs__list">
+				<InnerBlocks.Content />
+			</div>
+
+			<div className="wp-block-yard-tabs__panels">
+				<InnerBlocks.Content />
+			</div>
 		</div>
 	);
 };
