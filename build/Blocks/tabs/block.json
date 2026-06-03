@@ -31,7 +31,9 @@
     "align": [
       "wide",
       "full"
-    ]
+    ],
+    "contentRole": true,
+    "listView": true
   },
   "textdomain": "yard",
   "editorScript": "file:./index.js",

@@ -17,7 +17,8 @@
 		},
 		"headingText": {
 			"type": "string",
-			"default": ""
+			"default": "",
+			"role": "content"
 		},
 		"icon": {
 			"type": "string",
@@ -41,7 +42,8 @@
 		},
 		"subtitleText": {
 			"type": "string",
-			"default": ""
+			"default": "",
+			"role": "content"
 		}
 	},
 	"parent": [ "yard/collapse" ],

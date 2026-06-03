@@ -9,7 +9,8 @@
 	"attributes": {
 		"icon": {
 			"type": "string",
-			"default": "fa-classic fa-light fa-envelope"
+			"default": "fa-classic fa-light fa-envelope",
+			"role": "content"
 		},
 		"iconAltText": {
 			"type": "string",
@@ -17,18 +18,21 @@
 		},
 		"listText": {
 			"type": "string",
-			"default": ""
+			"default": "",
+			"role": "content"
 		},
 		"linkUrl": {
 			"type": "string",
-			"default": ""
+			"default": "",
+			"role": "content"
 		},
 		"opensInNewTab": {
 			"type": "boolean",
-			"default": false
+			"default": false,
+			"role": "content"
 		}
 	},
-	"parent": ["yard/iconlist"],
+	"parent": [ "yard/iconlist" ],
 	"supports": {
 		"align": false,
 		"color": {
