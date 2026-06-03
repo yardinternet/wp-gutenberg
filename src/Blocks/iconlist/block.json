@@ -13,7 +13,8 @@
 		}
 	},
 	"supports": {
-		"align": ["wide", "full"],
+		"align": [ "wide", "full" ],
+		"contentRole": true,
 		"html": false,
 		"layout": {
 			"default": {
@@ -21,7 +22,8 @@
 				"orientation": "vertical"
 			},
 			"allowVerticalAlignment": false
-		}
+		},
+		"listView": true
 	},
 	"textdomain": "yard",
 	"editorScript": "file:./index.js",

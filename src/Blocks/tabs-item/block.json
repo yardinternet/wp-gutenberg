@@ -13,7 +13,8 @@
 		},
 		"headingText": {
 			"type": "string",
-			"default": ""
+			"default": "",
+			"role": "content"
 		},
 		"icon": {
 			"type": "string",
@@ -27,9 +28,11 @@
 			"type": "string"
 		}
 	},
-	"parent": ["yard/tabs"],
+	"parent": [ "yard/tabs" ],
+
 	"supports": {
 		"anchor": true,
+		"contentRole": true,
 		"html": false,
 		"reusable": false
 	},

@@ -13,7 +13,8 @@
     },
     "headingText": {
       "type": "string",
-      "default": ""
+      "default": "",
+      "role": "content"
     },
     "icon": {
       "type": "string",
@@ -32,6 +33,7 @@
   ],
   "supports": {
     "anchor": true,
+    "contentRole": true,
     "html": false,
     "reusable": false
   },

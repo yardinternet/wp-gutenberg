@@ -7,8 +7,9 @@
 	"category": "yard",
 	"description": "Een enkele slide binnen een slider blok.",
 	"attributes": {},
-	"parent": ["yard/slider"],
+	"parent": [ "yard/slider" ],
 	"supports": {
+		"contentRole": true,
 		"html": false,
 		"reusable": false
 	},

@@ -21,8 +21,10 @@
 		}
 	},
 	"supports": {
-		"html": false,
-		"align": ["wide", "full"]
+		"align": [ "wide", "full" ],
+		"contentRole": true,
+		"listView": true,
+		"html": false
 	},
 	"textdomain": "yard",
 	"editorScript": "file:./index.js",

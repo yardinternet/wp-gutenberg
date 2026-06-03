@@ -13,6 +13,7 @@
       "background": true,
       "color": true
     },
+    "contentRole": true,
     "spacing": {
       "margin": true,
       "padding": true

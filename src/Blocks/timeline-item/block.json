@@ -6,13 +6,14 @@
 	"title": "Tijdlijn item",
 	"category": "yard",
 	"description": "Een nieuwe stap van de tijdlijn.",
-	"parent": ["yard/timeline"],
+	"parent": [ "yard/timeline" ],
 	"attributes": {},
 	"supports": {
 		"color": {
 			"background": true,
 			"text": true
 		},
+		"contentRole": true,
 		"html": false
 	},
 	"textdomain": "yard",

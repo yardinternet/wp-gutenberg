@@ -11,7 +11,8 @@
 		"title": {
 			"type": "string",
 			"source": "html",
-			"selector": ".wp-block-yard-timeline-item-collapse__title"
+			"selector": ".wp-block-yard-timeline-item-collapse__title",
+			"role": "content"
 		},
 		"headingLevel": {
 			"type": "string",
@@ -20,7 +21,8 @@
 		"subtitle": {
 			"type": "string",
 			"source": "html",
-			"selector": ".wp-block-yard-timeline-item-collapse__subtitle"
+			"selector": ".wp-block-yard-timeline-item-collapse__subtitle",
+			"role": "content"
 		},
 		"isOpen": {
 			"type": "boolean",

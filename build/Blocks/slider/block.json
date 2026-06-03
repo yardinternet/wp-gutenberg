@@ -17,11 +17,13 @@
     }
   },
   "supports": {
-    "html": false,
     "align": [
       "wide",
       "full"
     ],
+    "contentRole": true,
+    "html": false,
+    "listView": true,
     "spacing": {
       "margin": true,
       "padding": true
