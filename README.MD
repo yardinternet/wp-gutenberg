@@ -10,10 +10,8 @@ A WordPress plugin with a collection of blocks and features for the Gutenberg ed
 
 ## 🚀 Release
 
-TODO: automate this
-
 1. Update plugin versions and run `npm run build` to build assets. Commit and push to remote.
-2. Add tag `git tag v0.1.0` and push to remote `git push origin v0.1.0`
+2. [Create a new release on GitHub](https://github.com/yardinternet/plugin-yard-gutenberg/releases/new) — set the tag (e.g. `v0.1.0`), add release notes, and publish.
 
 ## PHP Hooks
 
