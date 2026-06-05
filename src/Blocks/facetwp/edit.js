@@ -9,7 +9,6 @@ import { __ } from '@wordpress/i18n';
  * Internal dependencies
  */
 import Inspector from './components/inspector';
-import Settings from './components/settings';
 import icon from './icon';
 import metadata from './block.json';
 import './editor.scss';
@@ -23,10 +22,11 @@ const Edit = ( props ) => {
 				<Placeholder
 					icon={ icon.src }
 					label={ metadata.title }
-					instructions={ metadata.description }
-				>
-					<Settings { ...props } />
-				</Placeholder>
+					instructions={ __(
+						'Plaats filtering op de pagina. Configureer het template en de filters bij de blokinstellingen in het rechterpaneel.',
+						'yard-gutenberg'
+					) }
+				/>
 			</div>
 		</>
 	);
