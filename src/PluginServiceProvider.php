@@ -17,8 +17,9 @@ class PluginServiceProvider
 			wp_register_script('yard-facetwp', null);
 
 			wp_localize_script('yard-facetwp', 'facetWP', [
-				'facets' => function_exists('FWP') ? FWP()->helper->get_facets() : [],
-				'templates' => function_exists('FWP') ? FWP()->helper->get_templates() : [],
+				// Remove "pager" facets as they are not used as facets.
+				'facets' => function_exists('FWP') ? array_values(array_filter(\FWP()->helper->get_facets(), fn ($f) => 'pager' !== ($f['type'] ?? ''))) : [],
+				'templates' => function_exists('FWP') ? \FWP()->helper->get_templates() : [],
 			]);
 
 			wp_enqueue_script('yard-facetwp');
