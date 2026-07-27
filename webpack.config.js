@@ -16,5 +16,8 @@ module.exports = {
 			'./src/Hooks/resources/js/index.js',
 			'./src/Hooks/resources/scss/editor.scss',
 		],
+		'fontawesome-v6-shim': [
+			'./src/Hooks/resources/js/fontawesome-v6-shim.js',
+		],
 	},
 };
