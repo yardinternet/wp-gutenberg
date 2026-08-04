@@ -6,7 +6,7 @@
 	"license": "MIT License",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "wp-scripts build --blocks-manifest",
 		"lint:css": "yard-toolkit lint css -m custom './src/**/*.css'",
 		"lint:js": "yard-toolkit lint js -m custom './src/**/*.js'",
 		"lint:scss": "yard-toolkit lint scss -m custom './src/**/*.scss'",
@@ -15,7 +15,7 @@
 		"format:scss": "yard-toolkit format scss -m custom './src/**/*.scss'",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start --blocks-manifest"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^31.5.0",
