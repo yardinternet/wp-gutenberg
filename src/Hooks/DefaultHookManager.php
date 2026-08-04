@@ -10,6 +10,7 @@ class DefaultHookManager
 	{
 		\add_filter('allowed_block_types_all', $this->registerCoreBlocks(...));
 		\add_filter('render_block_core/embed', $this->changeEmbedURL(...), 10, 2);
+		\add_filter('render_block_yard/timeline-item', $this->markCurrentTimelineStep(...), 10, 2);
 		\add_filter('render_block_yard/timeline-item-collapse', $this->markCurrentTimelineStep(...), 10, 2);
 		\add_action('enqueue_block_editor_assets', $this->enqueueDefaultHookAssets(...), 11);
 	}
@@ -138,18 +139,16 @@ class DefaultHookManager
 	}
 
 	/**
-	 * Add a11y context to the timeline item that is styled as the current step:
-	 * 1. aria-current="step" on the list item
-	 * 2. A visually hidden notice before the title
+	 * Mark the timeline item styled as the current step: aria-current plus a hidden notice.
 	 *
-	 * The block style carrying this class is registered by the theme, not by this plugin,
-	 * so match on the word "active" to cover any naming: is-style-active, is-style-active-step, etc.
+	 * The block style comes from the theme, so match the words themes use for it: active, current.
+	 * Styles for completed steps are left alone, they are not the current step.
 	 */
 	public function markCurrentTimelineStep(string $content, array $block): string
 	{
 		$className = $block['attrs']['className'] ?? '';
 
-		if (! is_string($className) || ! preg_match('/\bactive\b/', $className)) {
+		if (! is_string($className) || ! preg_match('/\b(active|current)\b/', $className)) {
 			return $content;
 		}
 
@@ -160,15 +159,16 @@ class DefaultHookManager
 			$content = $tagProcessor->get_updated_html() ?: $content;
 		}
 
-		return $this->prefixCurrentStepTitle($content);
+		return $this->prefixCurrentStepNotice($content);
 	}
 
 	/**
-	 * Announce the current step before the timeline item title.
+	 * The tag processor cannot insert content, so targets are matched on their class.
 	 *
-	 * The tag processor cannot insert content, so the title is matched on its class.
+	 * Preferably inside the title, which makes the notice part of the heading. Plain timeline
+	 * items have no title of their own, so there the notice goes before their content.
 	 */
-	private function prefixCurrentStepTitle(string $content): string
+	private function prefixCurrentStepNotice(string $content): string
 	{
 		$notice = sprintf('<span class="sr-only">%s </span>', __('Huidige stap:', 'yard-gutenberg'));
 
@@ -176,11 +176,19 @@ class DefaultHookManager
 			return $content;
 		}
 
-		return preg_replace(
-			'/(<[^>]*\bwp-block-yard-timeline-item-collapse__title\b[^>]*>)/',
-			'$1' . $notice,
-			$content,
-			1
-		) ?? $content;
+		$targets = [
+			'wp-block-yard-timeline-item-collapse__title',
+			'wp-block-yard-timeline-item__content',
+		];
+
+		foreach ($targets as $target) {
+			$updated = preg_replace('/(<[^>]*\b' . $target . '\b[^>]*>)/', '$1' . $notice, $content, 1);
+
+			if (is_string($updated) && $updated !== $content) {
+				return $updated;
+			}
+		}
+
+		return $content;
 	}
 }
