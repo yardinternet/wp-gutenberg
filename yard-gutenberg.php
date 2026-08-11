@@ -1,13 +1,13 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * Plugin Name:       Yard | Gutenberg
  * Description:       A collection of blocks for the WordPress Gutenberg editor.
- * Version:           1.6.1
+ * Version:           1.8.0
  * Author:            Yard | Digital Agency
  * Author URI:        https://www.yard.nl/
- *
  * License:           MIT License
  * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       yard-gutenberg
@@ -20,7 +20,7 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-define('YARD_GUTENBERG_PLUGIN_VERSION', '1.6.1');
+define('YARD_GUTENBERG_PLUGIN_VERSION', '1.8.0');
 define('YARD_GUTENBERG_PLUGIN_DIR_URL', \plugin_dir_url(__FILE__));
 define('YARD_GUTENBERG_PLUGIN_DIR_PATH', \plugin_dir_path(__FILE__));
 
