@@ -13,6 +13,8 @@ class DefaultHookManager
 		\add_filter('render_block_yard/timeline-item', $this->markCurrentTimelineStep(...), 10, 2);
 		\add_filter('render_block_yard/timeline-item-collapse', $this->markCurrentTimelineStep(...), 10, 2);
 		\add_action('enqueue_block_editor_assets', $this->enqueueDefaultHookAssets(...), 11);
+		\add_action('wp_enqueue_scripts', $this->enqueueFontAwesomeShim(...));
+		\add_action('enqueue_block_editor_assets', $this->enqueueFontAwesomeShim(...));
 	}
 
 	/**
@@ -93,6 +95,24 @@ class DefaultHookManager
 			YARD_GUTENBERG_PLUGIN_DIR_URL . 'build/hooks.css',
 			[],
 			YARD_GUTENBERG_PLUGIN_VERSION
+		);
+	}
+
+	/**
+	 * Enqueue the Font Awesome 6 -> 7 compatibility shim so legacy
+	 * "Font Awesome 6 ..." font-family references keep working.
+	 */
+	public function enqueueFontAwesomeShim(): void
+	{
+		$path = YARD_GUTENBERG_PLUGIN_DIR_PATH . 'build/fontawesome-v6-shim.asset.php';
+		$scriptAsset = file_exists($path) ? require $path : ['dependencies' => [], 'version' => round(microtime(true))];
+
+		\wp_enqueue_script(
+			'yard-gutenberg-fontawesome-v6-shim',
+			YARD_GUTENBERG_PLUGIN_DIR_URL . 'build/fontawesome-v6-shim.js',
+			$scriptAsset['dependencies'],
+			$scriptAsset['version'],
+			true
 		);
 	}
 
