@@ -19,5 +19,6 @@
 			"type": "string",
 			"default": ""
 		}
-	}
+	},
+	"style": "file:./style.css"
 }
