@@ -8,8 +8,8 @@
 	"icon": "smiley",
 	"description": "Toont een begroeting.",
 	"textdomain": "yard",
-	"style": "file:./style.css",
 	"supports": {
+		"align": true,
 		"autoRegister": true,
 		"html": false
 	},
