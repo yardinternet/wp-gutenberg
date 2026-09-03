@@ -12,13 +12,20 @@ A WordPress plugin with a collection of blocks and features for the Gutenberg ed
 
 Blocks that need no JavaScript live in `src/PhpBlocks/` instead of `src/Blocks/`. They are
 registered straight from source and never pass through webpack, so **they need no
-`npm run build`** — adding the two files below is enough.
+`npm run build`** — adding the files below is enough.
 
 ```
-src/PhpBlocks/<block-name>/
-├── block.json
-└── <block-name>.blade.php
+src/PhpBlocks/Greeting/
+├── block.json           "name": "yard/greeting"
+├── greeting.blade.php   named after the slug in block.json
+└── Greeting.php         optional; the block's logic
 ```
+
+The folder is PascalCase because it doubles as a PHP namespace segment. The block's
+identity comes from `block.json`'s `name`, not from the folder: the part after the `/` is
+the slug, which names the Blade template and is the key a site filters on through
+[`yard::gutenberg/allowed-blocks`](#yardgutenbergallowed-blocks). So a folder `OpeningHours`
+with `"name": "yard/opening-hours"` looks for `opening-hours.blade.php`.
 
 `block.json` must set `supports.autoRegister`. That is what makes WordPress list the block
 in the inserter and preview it with core's `ServerSideRender`, without any client-side
@@ -42,23 +49,59 @@ registration:
 }
 ```
 
-The Blade template's filename mirrors its directory name and receives these variables:
+Every template receives these variables:
 
-| Variable            | Description                                                            |
-| ------------------- | ---------------------------------------------------------------------- |
-| `$wrapperAttributes` | Output of `get_block_wrapper_attributes()`. Print it with `{!! !!}`.   |
-| `$attributes`        | The block's attributes, with defaults from `block.json` merged in.      |
-| `$content`           | Inner content, for blocks that have any.                                |
-| `$block`             | The `WP_Block` instance.                                                |
+| Variable             | Description                                                          |
+| -------------------- | -------------------------------------------------------------------- |
+| `$wrapperAttributes` | Output of `get_block_wrapper_attributes()`. Print it with `{!! !!}`. |
+| `$attributes`        | The block's attributes, with the defaults from `block.json` merged.  |
+| `$content`           | Inner content, for blocks that have any.                             |
+| `$block`             | The `WP_Block` instance.                                             |
 
 ```blade
-<p {!! $wrapperAttributes !!}>Hello World</p>
+<p {!! $wrapperAttributes !!}>{{ $greeting }}</p>
 ```
 
 Attributes typed `string`, `number`, `integer`, `boolean` or `enum` get an inspector
 control generated for them automatically — no `edit` component to write.
 
-Notes:
+### View models
+
+To keep logic out of the template, add a class in the block's folder named after the
+folder, extending `BlockViewModel`. It is picked up automatically; a block without one
+renders on the four variables above alone.
+
+```php
+namespace Yard\Gutenberg\PhpBlocks\Greeting;
+
+use Yard\Gutenberg\PhpBlocks\BlockViewModel;
+
+class Greeting extends BlockViewModel
+{
+ public function with(): array
+ {
+  return ['greeting' => $this->greeting()];
+ }
+
+ private function greeting(): string
+ {
+  // $this->attributes(), $this->attribute('name', $default),
+  // $this->content(), $this->block(), $this->wrapperAttributes()
+ }
+}
+```
+
+`with()` supplies data, `override()` supplies data that wins over everything, and the
+merge order is `with()` → the four variables above → `override()`. That is deliberately
+the same shape and precedence as `Roots\Acorn\View\Composer`, so the class reads like the
+composers in a Sage theme.
+
+An actual Acorn view composer cannot serve these blocks, so don't reach for one: composers
+are matched on the *view name*, and rendering a template by absolute path through
+`Illuminate\View\Factory::file()` uses that path as the view name. A composer registered
+for `blocks.greeting` never fires.
+
+### Notes
 
 - **Requires WordPress 7.0+.** On older versions these blocks still render existing
   content, they just don't appear in the inserter.
@@ -66,6 +109,9 @@ Notes:
   ships none. See `src/PhpBlocks/BladeRenderer.php`.
 - `autoRegister` supports no `InnerBlocks`, media pickers or inline rich text. A block
   needing those belongs in `src/Blocks/` with a real `edit` component.
+- Anything time- or request-dependent (such as `yard/greeting`) is frozen by a full-page
+  cache at whatever value the page was cached with. A site that needs it accurate has to
+  exclude the page from caching or render that part client-side.
 
 ## 🚀 Release
 
@@ -118,6 +164,23 @@ public function registerCoreBlocks($initialAllowedBlocks): array
   ->all();
 }
 ```
+
+### `yard::gutenberg/greeting-periods`
+
+Change the greeting the `yard/greeting` block shows, and when. The map is keyed by the hour
+a period starts (in the site's timezone); any number of periods works and the day wraps, so
+a map starting at 6 leaves the small hours to the last period.
+
+```PHP
+add_filter('yard::gutenberg/greeting-periods', fn () => [
+ 6 => 'Goedemorgen,',
+ 12 => 'Goedemiddag,',
+ 18 => 'Goedenavond,',
+]);
+```
+
+The defaults are `0 => 'Goedenacht'`, `6 => 'Goedemorgen'`, `12 => 'Goedemiddag'`,
+`18 => 'Goedenavond'`.
 
 ### `yard::gutenberg/allowed-blocks-whitelisted-prefixes`
 

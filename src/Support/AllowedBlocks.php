@@ -7,7 +7,7 @@ namespace Yard\Gutenberg\Support;
 class AllowedBlocks
 {
 	/**
-	 * Filter a list of block directory names through the
+	 * Filter a list of block names through the
 	 * `yard::gutenberg/allowed-blocks` filter.
 	 *
 	 * By default every block this plugin ships is registered. As soon as a site
@@ -15,9 +15,12 @@ class AllowedBlocks
 	 * in `build/Blocks` and the PHP-only blocks in `src/PhpBlocks` go through
 	 * here, so one filter controls every block in the plugin.
 	 *
-	 * @param string[] $blockNames Block directory names.
+	 * Filtering is on the values and keys are preserved, so callers may pass
+	 * either a plain list of names or a map of something else onto them.
 	 *
-	 * @return string[] The allowed block directory names.
+	 * @param string[] $blockNames Block names.
+	 *
+	 * @return string[] The allowed block names.
 	 */
 	public static function filter(array $blockNames): array
 	{
