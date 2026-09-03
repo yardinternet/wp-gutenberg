@@ -8,6 +8,65 @@ A WordPress plugin with a collection of blocks and features for the Gutenberg ed
 2. Run `npm install` to install dependencies
 3. Run `npm start` for local development
 
+## 🧱 PHP-only blocks
+
+Blocks that need no JavaScript live in `src/PhpBlocks/` instead of `src/Blocks/`. They are
+registered straight from source and never pass through webpack, so **they need no
+`npm run build`** — adding the two files below is enough.
+
+```
+src/PhpBlocks/<block-name>/
+├── block.json
+└── <block-name>.blade.php
+```
+
+`block.json` must set `supports.autoRegister`. That is what makes WordPress list the block
+in the inserter and preview it with core's `ServerSideRender`, without any client-side
+registration:
+
+```json
+{
+ "$schema": "https://schemas.wp.org/trunk/block.json",
+ "apiVersion": 3,
+ "name": "yard/greeting",
+ "version": "0.1.0",
+ "title": "Begroeting",
+ "category": "yard",
+ "icon": "smiley",
+ "description": "Toont een begroeting.",
+ "textdomain": "yard",
+ "supports": {
+  "autoRegister": true,
+  "html": false
+ }
+}
+```
+
+The Blade template's filename mirrors its directory name and receives these variables:
+
+| Variable            | Description                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| `$wrapperAttributes` | Output of `get_block_wrapper_attributes()`. Print it with `{!! !!}`.   |
+| `$attributes`        | The block's attributes, with defaults from `block.json` merged in.      |
+| `$content`           | Inner content, for blocks that have any.                                |
+| `$block`             | The `WP_Block` instance.                                                |
+
+```blade
+<p {!! $wrapperAttributes !!}>Hello World</p>
+```
+
+Attributes typed `string`, `number`, `integer`, `boolean` or `enum` get an inspector
+control generated for them automatically — no `edit` component to write.
+
+Notes:
+
+- **Requires WordPress 7.0+.** On older versions these blocks still render existing
+  content, they just don't appear in the inserter.
+- Blade is rendered through the **host theme's** view engine (Sage/Acorn); this plugin
+  ships none. See `src/PhpBlocks/BladeRenderer.php`.
+- `autoRegister` supports no `InnerBlocks`, media pickers or inline rich text. A block
+  needing those belongs in `src/Blocks/` with a real `edit` component.
+
 ## 🚀 Release
 
 1. Update plugin versions and run `npm run build` to build assets. Commit and push to remote.
@@ -25,6 +84,7 @@ add_filter('yard::gutenberg/allowed-blocks', fn () => [
  'collapse-item',
  'counting-number',
  'facetwp',
+ 'greeting',
  'icon',
  'iconlist',
  'iconlist-item',
