@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Yard\Gutenberg;
 
+use Yard\Gutenberg\Support\AllowedBlocks;
+
 class PluginServiceProvider
 {
 	public function boot()
@@ -35,6 +37,7 @@ class PluginServiceProvider
 			Hooks\DefaultHookManager::class,
 			MyPatterns\MyPatternManager::class,
 			Patterns\PatternManager::class,
+			PhpBlocks\PhpBlockManager::class,
 			YardPatterns\YardPatternsManager::class,
 		];
 
@@ -89,16 +92,12 @@ class PluginServiceProvider
 
 		$blockNames = array_map('basename', array_filter(glob($blocksPath . '*', GLOB_ONLYDIR) ?: []));
 
-		if (has_filter('yard::gutenberg/allowed-blocks')) {
-			$allowedBlocks = apply_filters('yard::gutenberg/allowed-blocks', []);
+		// Skip leftover directories from an earlier build that no longer hold a block.
+		$blockNames = array_filter($blockNames, function (string $blockName) use ($blocksPath) {
+			return file_exists($blocksPath . $blockName . '/block.json');
+		});
 
-			$blockNames = array_filter(
-				$blockNames,
-				function (string $blockName) use ($allowedBlocks) {
-					return in_array($blockName, $allowedBlocks);
-				}
-			);
-		}
+		$blockNames = AllowedBlocks::filter($blockNames);
 
 		foreach ($blockNames as $blockName) {
 			$blockPath = $blocksPath . $blockName;

@@ -1,0 +1,19 @@
+@layer plugins {
+	.wp-block-yard-greeting {
+		color: var( --yard-greeting-color, inherit );
+		font-size: var( --yard-greeting-font-size, inherit );
+		line-height: var( --yard-greeting-line-height, inherit );
+
+		&:has(.wp-block-yard-greeting__suffix) {
+			display: flex;
+			flex-direction: column;
+			row-gap: var( --yard-greeting-spacing, 0 );
+		}
+	}
+
+	.wp-block-yard-greeting__greeting {
+		color: var( --yard-greeting-greeting-color, inherit );
+		font-size: var( --yard-greeting-greeting-font-size, 2rem );
+		font-weight: var( --yard-greeting-greeting-font-weight, 700 );
+	}
+}
