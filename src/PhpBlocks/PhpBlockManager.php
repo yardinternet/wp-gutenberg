@@ -41,23 +41,23 @@ class PhpBlockManager
 
 	public function registerBlocks(): void
 	{
-		foreach ($this->blocks() as $directory => $slug) {
+		foreach ($this->blocks() as $directory => $blockName) {
 			$blockPath = __DIR__ . '/' . $directory;
 
 			\register_block_type($blockPath, [
-				'render_callback' => $this->renderCallback($directory, $slug, $blockPath),
+				'render_callback' => $this->renderCallback($directory, $blockName, $blockPath),
 			]);
 		}
 	}
 
 	/**
-	 * The registrable blocks, as folder name => block slug.
+	 * The registrable blocks, as folder name => block name.
 	 *
-	 * The slug comes from `block.json`, not from the folder: the folder has to be
-	 * a valid namespace segment for the view model to autoload, while the slug is
-	 * the block's actual identity — it names the template and is the key a site
-	 * filters on through `yard::gutenberg/allowed-blocks`, where hyphenated names
-	 * like `opening-hours` are perfectly normal.
+	 * The name comes from `block.json`, not from the folder: the folder has to be
+	 * a valid namespace segment for the view model to autoload, while the name is
+	 * the block's actual identity. Its slug names the template and is the key a
+	 * site filters on through `yard::gutenberg/allowed-blocks`, where hyphenated
+	 * names like `opening-hours` are perfectly normal.
 	 *
 	 * @return array<string, string>
 	 */
@@ -66,23 +66,40 @@ class PhpBlockManager
 		$blocks = [];
 
 		foreach (array_filter(glob(__DIR__ . '/*', GLOB_ONLYDIR) ?: []) as $path) {
-			$slug = $this->slug($path . '/block.json');
+			$blockName = $this->blockName($path . '/block.json');
 
-			if (null !== $slug) {
-				$blocks[basename($path)] = $slug;
+			if (null !== $blockName) {
+				$blocks[basename($path)] = $blockName;
 			}
 		}
 
-		return AllowedBlocks::filter($blocks);
+		return $this->filterAllowed($blocks);
 	}
 
 	/**
-	 * The slug from a `block.json`, e.g. `greeting` for `yard/greeting`.
+	 * Apply `yard::gutenberg/allowed-blocks`, which is keyed on the slug.
+	 *
+	 * `AllowedBlocks::filter()` tests values and preserves keys, so it filters a
+	 * folder => slug map, and the surviving keys select from the original.
+	 *
+	 * @param array<string, string> $blocks Folder name => block name.
+	 *
+	 * @return array<string, string>
+	 */
+	private function filterAllowed(array $blocks): array
+	{
+		$allowed = AllowedBlocks::filter(array_map([$this, 'slug'], $blocks));
+
+		return array_intersect_key($blocks, $allowed);
+	}
+
+	/**
+	 * The namespaced block name from a `block.json`, e.g. `yard/greeting`.
 	 *
 	 * Returns null for a folder that holds no readable metadata with a namespaced
 	 * block name, so a stray directory is skipped rather than fatal.
 	 */
-	private function slug(string $metadataPath): ?string
+	private function blockName(string $metadataPath): ?string
 	{
 		if (! file_exists($metadataPath)) {
 			return null;
@@ -90,42 +107,62 @@ class PhpBlockManager
 
 		$metadata = json_decode((string) file_get_contents($metadataPath), true);
 		$name = is_array($metadata) && is_string($metadata['name'] ?? null) ? $metadata['name'] : '';
-		$separator = strpos($name, '/');
 
-		if (false === $separator) {
-			return null;
-		}
+		return '' === $this->slug($name) ? null : $name;
+	}
 
-		$slug = substr($name, $separator + 1);
+	/**
+	 * The slug of a block name, e.g. `greeting` for `yard/greeting`.
+	 */
+	private function slug(string $blockName): string
+	{
+		$separator = strpos($blockName, '/');
 
-		return '' === $slug ? null : $slug;
+		return false === $separator ? '' : substr($blockName, $separator + 1);
+	}
+
+	/**
+	 * The class WordPress generates for a block, e.g. `wp-block-yard-greeting`.
+	 *
+	 * Going through core's function rather than building the string ourselves
+	 * means a site filtering `block_default_classname` gets `$blockClass` and
+	 * every BEM modifier built on it following along. The function is marked
+	 * `@access private`, hence the guard.
+	 *
+	 * @see wp_get_block_default_classname()
+	 */
+	private function blockClass(string $blockName): string
+	{
+		return function_exists('wp_get_block_default_classname')
+			? (string) \wp_get_block_default_classname($blockName)
+			: 'wp-block-' . str_replace('/', '-', $blockName);
 	}
 
 	/**
 	 * Build the render callback for a single block.
 	 *
+	 * The view model assembles the render data, including the wrapper attributes:
 	 * `get_block_wrapper_attributes()` reads the block currently being rendered,
-	 * so it has to be called inside the callback rather than up front.
+	 * so it has to run inside the callback rather than up front. Blocks without
+	 * their own view model get a plain `BlockViewModel`, which adds nothing.
 	 */
-	private function renderCallback(string $directory, string $slug, string $blockPath): callable
+	private function renderCallback(string $directory, string $blockName, string $blockPath): callable
 	{
-		$templatePath = $blockPath . '/' . $slug . '.blade.php';
+		$templatePath = $blockPath . '/' . $this->slug($blockName) . '.blade.php';
 		$viewModelClass = __NAMESPACE__ . '\\' . $directory . '\\' . $directory;
+		$blockClass = $this->blockClass($blockName);
 
-		return function ($attributes, $content = '', $block = null) use ($templatePath, $viewModelClass) {
-			$data = [
-				'attributes' => is_array($attributes) ? $attributes : [],
-				'content' => $content,
-				'block' => $block,
-				'wrapperAttributes' => \get_block_wrapper_attributes(),
-			];
+		return function ($attributes, $content = '', $block = null) use ($templatePath, $viewModelClass, $blockClass) {
+			$viewModel = is_subclass_of($viewModelClass, BlockViewModel::class)
+				? new $viewModelClass()
+				: new BlockViewModel();
 
-			// Blocks without a view model render on this data alone.
-			if (is_subclass_of($viewModelClass, BlockViewModel::class)) {
-				$data = (new $viewModelClass())->compose($data);
-			}
-
-			return $this->renderer->render($templatePath, $data);
+			return $this->renderer->render($templatePath, $viewModel->compose(
+				is_array($attributes) ? $attributes : [],
+				is_string($content) ? $content : '',
+				$block instanceof \WP_Block ? $block : null,
+				$blockClass
+			));
 		};
 	}
 }

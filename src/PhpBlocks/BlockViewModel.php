@@ -8,9 +8,10 @@ namespace Yard\Gutenberg\PhpBlocks;
  * Holds the logic behind a single PHP-only block.
  *
  * A block folder may contain a class of the same name extending this one, e.g.
- * `Greeting/Greeting.php`. `PhpBlockManager` finds it, hands it the data it was
- * going to pass to the Blade template, and passes on whatever comes back — so
- * domain logic lives in a testable class instead of an `@php` block.
+ * `Greeting/Greeting.php`. `PhpBlockManager` finds it and lets it assemble the
+ * data the Blade template is rendered with, so domain logic lives in a testable
+ * class instead of an `@php` block. A block without one is rendered by a plain
+ * instance of this class, which adds nothing.
  *
  * The `with()` / `override()` pair and their merge order are deliberately
  * identical to `Roots\Acorn\View\Composer`, which the Sage themes around this
@@ -19,29 +20,58 @@ namespace Yard\Gutenberg\PhpBlocks;
  * uses the template's absolute path as that name, so a composer registered for
  * a dotted view never fires for a block rendered by path.
  */
-abstract class BlockViewModel
+class BlockViewModel
 {
-	/**
-	 * The data the block was going to be rendered with.
-	 *
-	 * @var array<string, mixed>
-	 */
-	private $data = [];
+	/** @var array<string, mixed> */
+	private $attributes = [];
+
+	/** @var string */
+	private $content = '';
+
+	/** @var \WP_Block|null */
+	private $block;
 
 	/**
-	 * Merge this view model into the block's render data.
+	 * The block's generated class, e.g. `wp-block-yard-greeting`.
+	 *
+	 * @var string
+	 */
+	private $blockClass = '';
+
+	/** @var string */
+	private $wrapperAttributes = '';
+
+	/**
+	 * Assemble the data the Blade template is rendered with.
 	 *
 	 * Following Acorn: `with()` supplies defaults, the block's own render data
 	 * beats them, and `override()` beats everything — which is how a block
 	 * replaces something it is given, such as `wrapperAttributes`.
 	 *
-	 * @param array<string, mixed> $data
+	 * @param array<string, mixed> $attributes Attributes, with `block.json` defaults merged in.
 	 *
 	 * @return array<string, mixed>
 	 */
-	final public function compose(array $data): array
+	final public function compose(array $attributes, string $content, ?\WP_Block $block, string $blockClass): array
 	{
-		$this->data = $data;
+		$this->attributes = $attributes;
+		$this->content = $content;
+		$this->block = $block;
+		$this->blockClass = $blockClass;
+
+		// An empty class is harmless: core splits it with PREG_SPLIT_NO_EMPTY,
+		// so it contributes nothing to the merge.
+		$this->wrapperAttributes = \get_block_wrapper_attributes([
+			'class' => implode(' ', array_filter($this->classes())),
+		]);
+
+		$data = [
+			'attributes' => $attributes,
+			'content' => $content,
+			'block' => $block,
+			'blockClass' => $blockClass,
+			'wrapperAttributes' => $this->wrapperAttributes,
+		];
 
 		return array_merge($this->with(), $data, $this->override());
 	}
@@ -67,6 +97,33 @@ abstract class BlockViewModel
 	}
 
 	/**
+	 * Extra classes for the block's wrapper element.
+	 *
+	 * `get_block_wrapper_attributes()` merges these ahead of the class
+	 * WordPress generates, and de-duplicates.
+	 *
+	 * @return string[]
+	 */
+	public function classes(): array
+	{
+		return [];
+	}
+
+	/**
+	 * A BEM modifier on the block's generated class.
+	 *
+	 * Built from `$blockClass` rather than a literal so it follows the
+	 * `block_default_classname` filter, and matches the `$block` variable the
+	 * block's SCSS uses.
+	 */
+	protected function modifier(string $name): string
+	{
+		$name = \sanitize_html_class($name);
+
+		return '' === $this->blockClass || '' === $name ? '' : $this->blockClass . '--' . $name;
+	}
+
+	/**
 	 * The block's attributes, with the defaults from `block.json` already merged
 	 * in by `WP_Block_Type::prepare_attributes_for_render()`.
 	 *
@@ -74,7 +131,7 @@ abstract class BlockViewModel
 	 */
 	protected function attributes(): array
 	{
-		return is_array($this->data['attributes'] ?? null) ? $this->data['attributes'] : [];
+		return $this->attributes;
 	}
 
 	/**
@@ -84,23 +141,26 @@ abstract class BlockViewModel
 	 */
 	protected function attribute(string $name, $default = null)
 	{
-		$attributes = $this->attributes();
-
-		return array_key_exists($name, $attributes) ? $attributes[$name] : $default;
+		return array_key_exists($name, $this->attributes) ? $this->attributes[$name] : $default;
 	}
 
 	protected function content(): string
 	{
-		return is_string($this->data['content'] ?? null) ? $this->data['content'] : '';
+		return $this->content;
 	}
 
 	protected function block(): ?\WP_Block
 	{
-		return ($this->data['block'] ?? null) instanceof \WP_Block ? $this->data['block'] : null;
+		return $this->block;
+	}
+
+	protected function blockClass(): string
+	{
+		return $this->blockClass;
 	}
 
 	protected function wrapperAttributes(): string
 	{
-		return is_string($this->data['wrapperAttributes'] ?? null) ? $this->data['wrapperAttributes'] : '';
+		return $this->wrapperAttributes;
 	}
 }

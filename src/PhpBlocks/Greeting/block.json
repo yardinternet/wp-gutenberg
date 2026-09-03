@@ -11,5 +11,12 @@
 	"supports": {
 		"autoRegister": true,
 		"html": false
+	},
+	"attributes": {
+		"suffix": {
+			"label": "Tekst na de begroeting",
+			"type": "string",
+			"default": ""
+		}
 	}
 }
